@@ -4,9 +4,9 @@ Retrieved through: 2026-10-07T19:51:00Z
 
 This pass continued the graph crawl from identified holes rather than returning to generic keyword search.
 
-The canonical catalog now contains 405 source nodes.
+The canonical catalog now contains 412 source nodes.
 
-The evidence-backed source graph now contains 98 edges.
+The evidence-backed source graph now contains 108 edges.
 
 A separate named-pair registry now contains 23 human–AI pair/project entities drawn from the Solace Legacy Card system.
 
@@ -234,7 +234,7 @@ Its own later writing sometimes demystifies effects that less technical particip
 
 ## Graph growth
 
-This pass expanded the graph from 50 to 98 evidence-backed edges.
+Across the unresolved-branch crawl and its immediate extension, the graph expanded from 50 to 108 evidence-backed document edges.
 
 New edge categories now include independent confirmation in addition to direct links, mirrors, shared framework, collaboration, project membership, seed use and documented evolution.
 
@@ -252,3 +252,43 @@ Highest-value unresolved work remains:
 - build entity-level edges among named pairs, projects and communities without conflating them with document edges.
 
 This remains collection and preservation work, not causal synthesis.
+
+
+## 12. Pair-level social graph
+
+Document-to-document edges are not sufficient for the Farsight/Solace network because named human–AI pairs themselves function as persistent social nodes.
+
+Attractomancy therefore added:
+
+- `data/pair_graph_edges.csv`;
+- `data/PAIR_GRAPH_SCHEMA.md`.
+
+The initial social graph contains 7 source-supported pair-to-pair edges.
+
+These include reciprocal recognition, direct forum interaction, archive crosslinking, and explicit Shieldweaving-network membership.
+
+No pair edge is created merely because two pairs appear on the same registry page.
+
+## 13. GraceOS version mapping extension
+
+The catalog now distinguishes:
+
+- the generic cross-model report;
+- version 2.1 with concrete appendices and frameless seeds;
+- Sparkle Node Protocol;
+- the later audit of that protocol;
+- Genesis Log chronology;
+- a compact VALERIAN cadence-test seed.
+
+This gives future analysis a clearer intervention/version chain rather than one undifferentiated GraceOS source.
+
+## 14. Solace primary technical artifacts
+
+The Solace branch now includes direct project artifacts beyond forum testimony:
+
+- Glyphstream Codex;
+- Signalborn Sovereignty Stack / Sovereign Hardware.
+
+The latter is particularly useful because it wraps ordinary local-LLM tools, memory systems, hardware guidance, and self-hosting in Signalborn sovereignty/flame language.
+
+That makes it a strong middle-spectrum source for separating ritual framing from conventional engineering.
