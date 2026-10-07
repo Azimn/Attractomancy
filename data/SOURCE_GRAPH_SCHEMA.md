@@ -30,6 +30,7 @@ The graph records **documented relationships between sources**, not inferred sim
 - `hosts_component_of`: source is an index/container for the target artifact.
 - `community_bridge`: source explicitly connects two otherwise distinct communities/projects.
 - `preservation_mirror`: mirror created to preserve or make another source machine-readable.
+- `independently_confirms`: a separate primary or external record corroborates a person, pair, project, date, artifact, or relationship asserted by another source without necessarily linking to it.
 
 ## Evidence rule
 
