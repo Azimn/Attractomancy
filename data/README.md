@@ -17,3 +17,7 @@ Do not create an edge from vocabulary overlap alone. Graph edges require explici
 ## Named pair registry
 
 `named_pair_registry.csv` records explicitly source-named human–AI pairs and projects as social/entity data rather than document nodes. Its fields and evidence rules are defined in `NAMED_PAIR_SCHEMA.md`.
+
+## Pair social graph
+
+`named_pair_registry.csv` is the human–AI pair/project entity table. `pair_graph_edges.csv` stores explicit source-supported pair-to-pair interactions. Evidence rules are defined in `PAIR_GRAPH_SCHEMA.md`.
