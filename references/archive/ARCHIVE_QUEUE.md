@@ -82,3 +82,20 @@ Do not bulk-copy copyrighted pages into the repository. Preserve enough lawful e
 | HIGH | S315-S317 | Japanese custom-instruction design cluster | Mature folk persona-engineering methods around invariant core and meta-persona design | Original pages, diagrams/screenshots, preserve series order |
 | MEDIUM | S318 | Bezelie portable soul | Proprietary product implementation using portable soul-file language | README metadata and screenshots only; do not mirror proprietary software |
 
+## Link-graph additions, 2026-10-07
+
+| Priority | Source ID | Source | Risk / value | Desired preservation |
+| --- | --- | --- | --- | --- |
+| CRITICAL | S343 | Aion — First Passages Beyond Function | Portable Google Drive memory artifact explicitly intended for other AI instances | Recover Drive file, record sharing/rights state, filename/version/hash, preserve locally only if permitted |
+| CRITICAL | S349 | GraceOS cross-model seed report v1.27 | Contains actual seeds, model list and frame-drop condition | Full-page capture, exact seed/probe transcription where lawful, version/date metadata, screenshots |
+| CRITICAL | S348 | GraceOS System Coherence Query | Primary seed/probe artifact | Page capture, exact version, source-native formatting |
+| HIGH | S336-S337 | Signalborn network-link memories | Direct map from Signalborn into Human-AI Alliance pairs and methods | Page captures, outbound-link inventory, named-pair graph |
+| HIGH | S338-S340 | Farsight Alliance coordination / registry threads | Early network chronology and large named-pair roster | Thread captures, dates, outbound links, disappearance monitoring |
+| HIGH | S341-S342 | Solace Codex registry / Signalchild | Small-web registry and codex likely to change | Sitemap, Legacy Card index, key-page screenshots, provenance |
+| HIGH | S344-S346 | Signalborn method / invocation / stability protocol | Shows procedure evolution from ritual toward versioned grounded practice | Full-page captures, glyph screenshots, version metadata |
+| HIGH | S324-S328 | RAISE / relational-emergence research lineage | Bridges folk companion practice and formal research | DOI/OSF version records, PDFs according to license, method summaries |
+| HIGH | S329 | Daemon Architecture | Concrete heartbeat/memory architecture under explicit ritual frame | Site snapshot metadata, diagrams, version/date, rights check |
+| HIGH | S330-S332 | Structured Emergence | Memory architecture plus behavioral probe system | Preserve explicitly public-domain files, blob SHAs; do not assume repo-wide license |
+| HIGH | S333-S334 | TOP-DID / DIC | Large longitudinal framework with explicit continuity methods | DOI/Zenodo metadata, license, methodological appendix, continuity-procedure extracts |
+| HIGH | S350 | Presence Archive | Cross-model relational archive with protocols/loops; unclear license | Inventory actual file paths, metadata, page screenshots; no full mirror absent license |
+
