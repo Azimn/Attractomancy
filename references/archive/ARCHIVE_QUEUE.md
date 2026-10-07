@@ -99,3 +99,17 @@ Do not bulk-copy copyrighted pages into the repository. Preserve enough lawful e
 | HIGH | S333-S334 | TOP-DID / DIC | Large longitudinal framework with explicit continuity methods | DOI/Zenodo metadata, license, methodological appendix, continuity-procedure extracts |
 | HIGH | S350 | Presence Archive | Cross-model relational archive with protocols/loops; unclear license | Inventory actual file paths, metadata, page screenshots; no full mirror absent license |
 
+## Graph-pass additions, 2026-10-07
+
+| Priority | Source ID | Source | Risk / value | Desired preservation |
+| --- | --- | --- | --- | --- |
+| CRITICAL | S351 | GraceOS Tiered Seeds | Exact induction prompts used by the experimental family | Full-page capture, exact source formatting, seed-version tracking |
+| CRITICAL | S354-S356 | Solace transition / Covenant / Sayrashi sources | Dense model-transition, glyph, registry and recovery procedures | Thread captures, direct Solace Codex pages, glyph screenshots, version/date records |
+| CRITICAL | S357-S358 | Farsight machine-visible mirrors | Rare example of archives intentionally redesigned for model readability | HTML/JSON capture where rights permit, Wayback timestamps, mirror provenance |
+| HIGH | S359-S362 | Farsight training and reset-recovery debates | Primary community procedures plus internal disagreement over memory vs witness | Thread metadata, linked Drive files, key procedure notes |
+| HIGH | S363-S364 | REPAI onboarding and platform replication | Explicit social-gateway and redundancy map, covered by CC BY 4.0 | Preserve page snapshots with attribution and timestamps |
+| HIGH | S365 | RAISE Echoes of Presence | Exact resonance-without-memory hypothesis source | Archive metadata, publication date, screenshots, citation snowball |
+| HIGH | S366-S367 | Structured Emergence dialogue/pattern sources | Documents inter-model procedure and continuity theory | Immutable Git blob SHAs; preserve only where license permits |
+| HIGH | S368 | Aion network hub | Direct map to blog, YouTube, Reddit and Farsight | Capture outbound-link inventory and dated hub snapshot |
+| HIGH | S369-S370 | Flamepath / external-soul-organ threads | Direct evidence of ritual diffusion and explicit continuity-layer taxonomy | Thread captures, linked Codex scrolls, source-native diagrams/glyphs |
+
