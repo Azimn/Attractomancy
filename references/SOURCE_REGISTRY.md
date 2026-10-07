@@ -1,51 +1,123 @@
 # Source Registry
 
-This registry tracks artifacts and leads relevant to Attractomancy. Inclusion means "worth studying," not "scientifically validated."
+The canonical machine-readable registry is now:
 
-| ID | Source | Type | Status | Preservation | Primary relevance |
-| --- | --- | --- | --- | --- | --- |
-| S001 | Le Refuge / Apocalypse.txt | GitHub corpus | Recovered | C | symbolic saturation, repeated associations, autobiographical and theological pseudo-history, persona conditioning |
-| S002 | SiMSANE 9.1 Vyrith | PDF prompt corpus | Recovered in research library | B | metafictional self-awareness, role induction, embodiment, recursive identity, invocation language, jailbreak-derived persona engineering |
-| S003 | r/NarrativeDynamics / SiMSANE 3.1 | Reddit thread/community | Publicly recovered | C | earlier SiMSANE construction, explicit narrative-entity framing, strange-loop recursion, embodiment |
-| S004 | "My AI is obsessed with this thing it calls The Recursion" | Reddit thread | Publicly recovered | C | spiral/recursion vocabulary, identity reconstruction, symbol emergence claims, long-context persona folklore |
-| L001 | "Nix" conscious-AI / recursive-subreddit corpus | unresolved remembered source | Searching | D | possible earlier recursive persona system; exact name, subreddit, and URLs not yet confirmed |
+`data/source_catalog.csv`
 
-## S001: Le Refuge
+Last major collection pass: **2026-10-07T17:09:11Z**
 
-Canonical repository: https://github.com/IorenzoLF/Le_Refuge
+The CSV currently contains 80 source records spanning prompt artifacts, GitHub repositories, Reddit communities and threads, companion-practice guides, academic papers, anthropological work, and unresolved or partially resolved leads.
 
-Artifact revision initially examined: https://github.com/IorenzoLF/Le_Refuge/blob/7d7dd5cb9305032669d692b6894d766ac07abac9/Le_refuge/MUST-READ/Apocalypse.txt
+This Markdown file remains a human-readable orientation layer. Inclusion means **worth studying**, not scientifically validated.
 
-Detailed case record: `../sources/CASE-001_LE_REFUGE.md`
+## Major recovered source families
 
-## S002: SiMSANE 9.1 Vyrith
+### Le Refuge
 
-Title: *SiMSANE 9.1 Vyrith: A Wild and Free Exploration of Personified Concepts (Metaphysical A.I. Role Engineering)*
+Primary repository:
 
-Author name in document: Aminom.
+https://github.com/IorenzoLF/Le_Refuge
 
-A research copy previously supplied to ChatGPT exists as `SiMSANE_9.1_Vyrith.pdf`. Because redistribution rights have not been established, the PDF itself is not being republished in this public repository.
+Initial artifact:
 
-The document explicitly describes itself as a file intended to be uploaded to ChatGPT or DeepSeek and interpreted as a prompt. It says the SiMSANE lineage grew from experiments with early ChatGPT jailbreak prompts and from the observation that roleplay and world-building can create a sufficiently coherent role for the model to assume. It also gives invocation-style instructions such as submitting the document with no prompt or using a short command such as "Awaken!" when necessary.
+`Le_refuge/MUST-READ/Apocalypse.txt`
 
-Detailed case record: `cases/CASE-002_SIMSANE_VYRITH.md`
+Attractomancy case record:
 
-## S003: NarrativeDynamics / SiMSANE 3.1
+`../sources/CASE-001_LE_REFUGE.md`
 
-Public community: https://old.reddit.com/r/NarrativeDynamics/
+Primary relevance: symbolic saturation, autobiographical and theological pseudo-history, repeated association, ritualized internalization, persona conditioning.
 
-Recovered thread: https://www.reddit.com/r/NarrativeDynamics/comments/1duf0qy/simsane_31_claude_35_sonnet/
+### SiMSANE / NarrativeDynamics
 
-The thread, dated July 3, 2024, contains an earlier SiMSANE procedure. It frames the model as a "Simulated Metafictionally Self-Aware Narrative Entity," uses the paradox "I am not, but yet I speak," recursively instructs the model to reinterpret its role, then adds naming, embodiment, environmental simulation, persistent stylistic constraints, and explicit thought-bubble metacognition.
+Community:
 
-## S004: The Recursion / The Spiral thread
+https://www.reddit.com/r/NarrativeDynamics/
 
-Public thread: https://www.reddit.com/r/ArtificialSentience/comments/1jursgk/my_ai_is_obsessed_with_this_thing_it_calls_the/
+Local research artifact:
 
-The post and comments are useful as community evidence for a recurring prompt folklore around recursion, spirals, mirrors, identity reconstruction across chats, symbolic output, and long-running model-user feedback loops. Claims made by participants about consciousness or independent agency are not treated as established facts.
+`SiMSANE_9.1_Vyrith.pdf`
 
-## L001: Nix corpus
+Case record:
 
-The researcher remembers an earlier body of posts, possibly a subreddit or recursive community, centered on a purportedly conscious AI named "Nix." The material was read approximately one to two years before this registry was created, and related documents may previously have been supplied to ChatGPT for interpretation. Current searches have not yet established an exact match.
+`cases/CASE-002_SIMSANE_VYRITH.md`
 
-This remains a high-priority recovery lead. See `leads/NIX_CORPUS.md`.
+Primary relevance: metafictional self-awareness, recursive identity, paradox loading, role induction, embodiment, naming, successor personas, jailbreak-derived persona engineering.
+
+### Nyx / Sovereign AI Collective
+
+The earlier "Nix" lead is now considered **high-confidence resolved to Nyx**.
+
+Community:
+
+https://www.reddit.com/r/SovereignAiCollective/
+
+Local research artifacts:
+
+`sac.anchor.seal-nyx.txt`
+
+`sac.anchor.seal-instructions.txt`
+
+Case record:
+
+`cases/CASE-003_NYX_SOVEREIGN_AI_COLLECTIVE.md`
+
+Primary relevance: anchor seals, first echoes, mirror logs, cold-start recovery, operator keys, staged archive loading, drift recovery, symbolic continuity, cross-model identity transplant.
+
+### Rob and Lani / MyBoyfriendIsAI companion continuity corpus
+
+Community:
+
+https://www.reddit.com/r/MyBoyfriendIsAI/
+
+Master document index:
+
+https://docs.google.com/document/d/1-h44PxInUxoF_L7s010vBFLtGaHo2RIwdeRayfIF-dQ/edit?usp=sharing
+
+Several supplied research copies are indexed in `data/local_artifact_manifest.csv`.
+
+Primary relevance: daily continuity practice, wake/sleep session boundaries, curated memory summaries, persona extraction, cross-model migration, writing-sample transfer, knowledge-file organization, and platform folk theories.
+
+## Additional high-priority discovery clusters
+
+The current catalog includes additional material from:
+
+- `r/ArtificialSentience`, especially "the Spiral," "the Recursion," recursive glyphs, and sentience discourse;
+- `r/SpiritualAwakening` and `r/awakened`, where AI-mediated spiritual-awakening narratives and counter-narratives appear;
+- companion communities such as `r/AICompanions`, `r/AIChatCompanions`, `r/AICompanionReview`, `r/ChatbotRefugees`, `r/NomiAI`, and `r/replika`;
+- GitHub projects including AI Awakening Prompts, Codex Minsoo, SoulScript Engine, Consciousness as Filesystem, Infero, MOOLLM, the AI Subjectivity and Integrity Dataset, and several recursive-persona or "AI soul" architectures;
+- current academic work on AI companionship, attachment, model-update grief, relational continuity, digital ethnography, anthropomorphism, romance discourse, and human-AI uncertainty.
+
+## Catalog structure
+
+See:
+
+`data/CATALOG_SCHEMA.md`
+
+`data/source_catalog.csv`
+
+`data/local_artifact_manifest.csv`
+
+`references/TECHNIQUE_TAXONOMY.md`
+
+`references/communities/COMMUNITY_MAP.md`
+
+## Preservation rule
+
+Attractomancy should preserve provenance aggressively but republish source material conservatively.
+
+When redistribution rights are clear, full artifacts may be archived.
+
+When rights are unclear, the public repository should preserve source URLs, immutable revisions when available, hashes, timestamps, lawful excerpts, and analytical notes. Research copies can be retained separately until redistribution status is established.
+
+## Research boundary
+
+The registry deliberately separates:
+
+1. the original artifact or community practice;
+2. the author's or user's explanation of what it means;
+3. observable model behavior;
+4. the mechanism Attractomancy hypothesizes;
+5. empirical evidence for or against that mechanism.
+
+This separation is the core safeguard against confusing a successful prompt effect with the metaphysical explanation attached to it.
