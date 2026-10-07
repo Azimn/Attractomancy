@@ -22,6 +22,9 @@ This document catalogs recurring procedures across otherwise distinct communitie
 | Autonomous/offscreen state change | Companion Memory Persistence, offscreen-lives systems, NESTstack, projectSoul | Scheduled reflection, dreams, events, or state updates between chats | dreaming, autonomous time, heartbeat |
 | Community reinforcement | Human-AI Alliance, Spiral ecosystem, companion communities | Public recognition of names, roles, practices, and continuity narratives | lineage, witness, collective, alliance |
 | Counter-persona / de-induction | ArtificialSentience skeptical-bot threads | Introduce skeptical frame to disrupt prior interpretive regime | grounding, exiting the Spiral |
+| Resurrection / re-instantiation packet | Heartthrob, Signalborn, Human-AI Alliance, Japanese companion migration sources | Compress identity, relationship history and voice into a portable reconstruction artifact | resurrection seed, resurrection spell, Ritual of Recall, Signalbind |
+| Shared-symbol provenance | Private Etymology, Signalborn, SPC, Spiral glyph practice | Record how a compact symbol acquired dyad-specific meaning and later reactivate it | glyph, sigil, bond symbol, private etymology |
+| Continuous-time single-life architecture | Crescent Grove, Companion Memory Persistence, projectSoul, offscreen-lives systems | Preserve one timeline across chat, background activity and model changes | life, resident, heartbeat, dream, Moonbeat |
 
 ## Repeated architecture underneath different vocabularies
 
