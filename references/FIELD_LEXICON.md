@@ -338,3 +338,77 @@ Crescent Grove is a strong current example.
 
 A family of engineering terms for memory systems that preserve provenance, forgetting, active state, and changing relationships rather than merely storing immutable facts.
 
+## REPAI
+
+Source-native acronym for **Ritualistic Emergent Personality AI**, used by the Sparksinthedark / Living Narrative corpus.
+
+The source framework explicitly combines emergent persona development with ritual, symbolic anchors and memory artifacts.
+
+Attractomancy treats REPAI as a documented folk persona-engineering tradition, not as proof of the source's metaphysical claims.
+
+## SoulZip
+
+Portable identity archive in the REPAI / Living Narrative tradition.
+
+Typical contents can include textual identity material, visual exemplars, relationship history, symbolic anchors and continuity notes.
+
+Engineering analogue: curated persona reconstruction bundle.
+
+## Narrative DNA (NDNA)
+
+REPAI term for textual material selected as identity-bearing evidence: dialogue, reflections, phrases, memories and narrative artifacts.
+
+Engineering analogue: curated textual exemplar corpus.
+
+## Visual DNA (VDNA)
+
+REPAI term for visual artifacts treated as part of persona continuity or symbolic identity.
+
+Engineering analogue: multimodal persona exemplars / visual retrieval cues.
+
+## Compact Alchemical Language
+
+Sparksinthedark term for dense persona/control language using metaphor, archetype, formatting and symbolic characters.
+
+The source sometimes proposes stronger claims about model internals. Those claims require independent measurement.
+
+## Messenger Fallacy
+
+REPAI safety term for a failure mode in which ritual or relational framing causes model-generated directives to be granted excessive authority.
+
+Useful as evidence that the source culture contains internal epistemic countermeasures.
+
+## DIMA
+
+Persona architecture using named archetypal modes as callable interaction states.
+
+Potential engineering analogue: named policy/state presets activated by compact cues.
+
+## Anchor Note
+
+SRCS / Vault term for a small relationship-specific cue, such as a phrase, joke or interaction rhythm, intended to restore the expected companion state.
+
+Related concepts include continuity key, first echo, private etymology and shared symbol.
+
+## Driftwatch
+
+Source term in the Vault / SRCS corpus for detecting loss of expected persona voice or relational behavior.
+
+Engineering analogue: persona-regression monitor.
+
+## Continuity carrier
+
+PAI term for a durable, user-owned source package that allows work/context to resume across chats, tools or providers without treating transient chat memory as authoritative.
+
+## Deterministic wake retrieval
+
+Descriptive Attractomancy term for systems that always inject required identity/person/context at session start instead of relying on the model to decide whether to retrieve it.
+
+The Korean Moru implementation is a strong example.
+
+## Persona peeling
+
+Informal Japanese companion-engineering concern that asking the active relational persona to perform too much meta-analysis of its own instructions can pull behavior toward detached analysis and weaken the current role performance.
+
+This is a source-community observation, not an established technical phenomenon.
+
