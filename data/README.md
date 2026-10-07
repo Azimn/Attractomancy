@@ -7,3 +7,9 @@ Every source record should include a retrieval timestamp, provenance, source typ
 ## Multilingual metadata
 
 `language_index.csv` records known source languages, scripts, multilingual status, translation level, preservation status, and language-specific notes. The original-language artifact remains the primary evidence; translations are derivatives and may constitute separate experimental conditions.
+
+## Source graph
+
+`source_catalog.csv` is the node table. `source_graph_edges.csv` is the evidence-backed edge table. Edge semantics and evidence rules are defined in `SOURCE_GRAPH_SCHEMA.md`.
+
+Do not create an edge from vocabulary overlap alone. Graph edges require explicit linking, citation, mirroring, named collaboration, shared-project evidence, or another source-supported relationship.
