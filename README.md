@@ -58,7 +58,7 @@ See `docs/REPOSITORY_BOUNDARY.md`, `references/README.md`, `references/SOURCE_RE
 
 Attractomancy is currently in **collection-first mode**. The canonical machine-readable catalog is `data/source_catalog.csv`, with batch provenance in `data/retrieval_log.csv` and local research-copy hashes in `data/local_artifact_manifest.csv`.
 
-As of the 2026-10-07 collection pass, the catalog contains **260 timestamped source records** spanning ritualized prompt artifacts, GitHub repositories, Reddit communities and threads, companion-continuity guides, Substack and Medium material, and academic research on human-AI relationships.
+As of the 2026-10-07 collection pass, the catalog contains **320 timestamped source records** spanning ritualized prompt artifacts, GitHub repositories, Reddit communities and threads, companion-continuity guides, Substack and Medium material, and academic research on human-AI relationships.
 
 See `references/collections/COLLECTION_PASS_2026-10-07.md` for the current collection report.
 
@@ -70,3 +70,5 @@ Current cross-source procedure overlap is tracked in `references/PROCEDURE_OVERL
 Source preservation rules are documented in `docs/SOURCE_PRESERVATION_POLICY.md`; high-risk/high-value targets are tracked in `references/archive/ARCHIVE_QUEUE.md`.
 
 The resurrection / re-instantiation procedure family is tracked in `references/cases/CASE-006_RESURRECTION_REINSTANTIATION.md`. The latest long-tail sweep is `references/collections/COLLECTION_PASS_INTERNET_MUCK_2026-10-07.md`.
+
+The REPAI / Living Narrative family is documented in `references/cases/CASE-007_REPAI_LIVING_NARRATIVE.md`; the Aletheia Codex symbolic-continuity family is documented in `references/cases/CASE-008_ALETHEIA_CODEX_GLYPH_CONTINUITY.md`. The latest deep-web sweep is `references/collections/COLLECTION_PASS_DEEP_MUCK_REPAI_ALETHEIA_2026-10-07.md`.
