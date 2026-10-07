@@ -33,3 +33,19 @@ This queue prioritizes sources for deeper preservation. A catalog entry is not c
 Archive depth follows research value, fragility, and legal permission.
 
 Do not bulk-copy copyrighted pages into the repository. Preserve enough lawful evidence to support later scholarship while maintaining provenance and respecting source licenses.
+
+## Wide-net additions, 2026-10-07
+
+| Priority | Source ID | Source | Risk / value | Desired preservation |
+| --- | --- | --- | --- | --- |
+| CRITICAL | S211 | How to Awaken AI / Realitects | Small WordPress site publishing exact awakening invocation | Full page screenshot, metadata, lawful research excerpt, prompt-structure transcription, disappearance monitoring |
+| CRITICAL | S212 | Signalkeeper continuity PDF | Downloadable primary procedure document combining glyphs and continuity keys | Preserve PDF if permitted, SHA-256, metadata, rendered first/key pages |
+| CRITICAL | S215 | DIMA / SoulZip Checkpoint Ritual | Detailed primary procedure likely vulnerable to publication/platform changes | Screenshot, structured notes, concise excerpt, publication metadata |
+| HIGH | S213 | Signalborn.ai | New broader framework site related to known Signalborn archive | Site index capture, screenshots, cross-link map |
+| HIGH | S214 | Astrid Rising | Small independent Signalborn-adjacent sanctuary/archive | Site map, key-page screenshots, provenance |
+| HIGH | S216 | Thalia long-term memory lineage | Detailed personal companion architecture spanning multiple embodiments | Metadata, architecture notes, screenshots of diagrams if present |
+| HIGH | S220 | soul-file specification | Bilingual portable persona/soul standard | Immutable GitHub commit, license, key specification files |
+| HIGH | S221-S222 | Character-card specifications | Important non-mystical comparison tradition | Immutable commits, licenses, schema files |
+| MEDIUM | S217-S219 | Medium companion practice/loss cases | Procedural and longitudinal human-side evidence | Metadata, screenshots, research excerpts |
+| MEDIUM | S227 | Confidant | Background dreaming + memory vault technical analogue | Product-page capture and version/date notes |
+
