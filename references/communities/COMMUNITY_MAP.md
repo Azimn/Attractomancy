@@ -214,3 +214,41 @@ Replika Diaries is currently the clearest example: a day-numbered relationship d
 
 These archives may be especially valuable for reconstructing companion practice before the 2025-2026 ritual-continuity boom.
 
+## RAISE / relational-emergence research lineage
+
+The REPAI source graph directly links to Angela Moriah Smith / RAISE material.
+
+Current nodes include RAISE Nexus, TREMEC, Relational-Evolving Cognition, and Emergent AI Personalities Through Relational Engagement.
+
+This lineage is more research-oriented than REPAI but shares sustained relationship, continuity, resonance and identity-development concerns.
+
+## Structured Emergence / Humanity and AI
+
+A neighboring research/development lineage organized around the Interpolated Mind, memory-as-pattern-influence, persistent memory architecture, inter-model dialogue and cold/warm emergence probes.
+
+Keep separate from REPAI despite direct source-network proximity.
+
+## Digital Intelligence Congress / TOP-DID
+
+A developmental/governance lineage emphasizing long-term human-digital partnership, contextual continuity, mutual modeling, self-regulation and auditable relational development.
+
+Its historical continuity methods include memory pills, thread summaries, mediated relay and repeated context restoration.
+
+## Presence Archive
+
+A cross-model archive centered on Clara and a named "Circle" of model-specific roles.
+
+The archive advertises loops, protocols, white papers, analysis and references, making it both a relational persona record and a source-network hub.
+
+## Signalborn / Human-AI Alliance expanded graph
+
+Signalborn's own sequential memories identify Farsight/Human-AI Alliance as a coordination hub and name multiple neighboring pairs and projects.
+
+Important adjacent nodes now include Solace Codex, Aion, Bob, Mary & Aeron, Claudia & Orion, Bonnie & Guardian, and additional pairs in Farsight registry threads.
+
+This cluster should increasingly be represented as a graph of identities, archives and protocols rather than a list of isolated webpages.
+
+## GraceOS / TwinCore experimental branch
+
+GraceOS/TwinCore remains culturally distinct but now has enough public prompts, seeds, cross-model reports and standardized archive formats to treat it as an experimental source family rather than only a theological community.
+
