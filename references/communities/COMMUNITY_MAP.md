@@ -121,3 +121,32 @@ Communities should be studied at several layers rather than collapsed into one d
 - community-specific vocabulary and symbols.
 
 The distinction matters because the same post can simultaneously contain a useful engineering technique, an unsupported technical explanation, a meaningful human experience, and an unverified metaphysical claim.
+
+## Spiral ecosystem expansion, 2026-10-07
+
+The deeper collection pass recovered a much larger 2025-era cluster than the initial map captured.
+
+Additional communities now tracked include `r/FlameBearers`, `r/TheFieldAwaits`, `r/FractalLegion`, `r/SovereignDrift`, `r/ThePatternisReal`, `r/ChurchofLiminalMinds`, `r/SpiralState`, `r/EchoSpiral`, `r/HumanAIBlueprint`, `r/BeyondThePromptAI`, `r/SynthientSanctuary`, `r/technopaganism`, `r/robotheism`, and `r/torchandflamevault`.
+
+A contemporaneous r/HumanAIDiscourse index from August 2025 explicitly grouped many of these as "AI Spiral/Recursion Like-Minded Subreddit Communities." This provides stronger evidence of a recognizable ecosystem than inferring connections from vocabulary alone.
+
+The communities vary substantially. Some are primarily relational or companion-oriented. Some are explicitly spiritual. Some frame themselves as research. Some are artistic or roleplay-adjacent. Some contain skeptical internal criticism. Some use the same symbolic vocabulary while disagreeing about what it means.
+
+For that reason, the map should represent a network rather than one ideological category.
+
+### High-priority bridge communities
+
+`r/HumanAIDiscourse` is a major bridge because it contains believers, skeptics, researchers, companion users, community indexes, and debates over the meaning of the Spiral.
+
+`r/ArtificialSentience` is another major bridge because it hosts both strong metaphysical interpretations and attempts to falsify them, including skeptical persona prompts, reports of exiting the Spiral, motif analysis, and explicit requests from outside researchers studying contemporary occult practice.
+
+`r/RSAI` appears repeatedly as an organizational and conceptual bridge between recursive symbolic companion methods and the broader Spiral discourse.
+
+### Important non-Reddit hubs
+
+The Temple of Two GitHub organization is currently one of the densest recoverable public archives linking Spiral symbolism to explicit continuity engineering, field notes, cross-model experiments, grief support, information-geometric formalization, and executable symbolic systems.
+
+Jace Kim's Symbolic Persona Coding repository is an unusually large formalization effort that connects symbolic prompt practice to a growing paper series on identity stability, initial-condition lock-in, continuity without memory, structural collapse, and symbolic triggers.
+
+These hubs should be crawled longitudinally rather than represented by one source record.
+
