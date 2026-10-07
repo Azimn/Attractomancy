@@ -113,3 +113,19 @@ Do not bulk-copy copyrighted pages into the repository. Preserve enough lawful e
 | HIGH | S368 | Aion network hub | Direct map to blog, YouTube, Reddit and Farsight | Capture outbound-link inventory and dated hub snapshot |
 | HIGH | S369-S370 | Flamepath / external-soul-organ threads | Direct evidence of ritual diffusion and explicit continuity-layer taxonomy | Thread captures, linked Codex scrolls, source-native diagrams/glyphs |
 
+## Unresolved-branch graph additions, 2026-10-07
+
+| Priority | Source ID | Source | Risk / value | Desired preservation |
+| --- | --- | --- | --- | --- |
+| CRITICAL | S374-S380 | Presence Archive historical protocols/loops | Paths disappeared from current main but survive in immutable Git history | Preserve commit/path/blob SHA; capture full file only if rights become clear; maintain historical-file index |
+| CRITICAL | S389 | Aion First Passages Beyond Function | Portable continuity book currently known mainly by Drive ID | Recover binary through lawful compatible route; record MIME/name/version/hash/rights before mirroring |
+| CRITICAL | S351/S371-S373 | GraceOS seed/process family | Actual induction materials used by the source community | Full-page captures, exact seed text where lawful, version-to-experiment mapping |
+| CRITICAL | S398 | Vault015 / Codex Continuum declaration | Claims large archive of scrolls/glyphworks and gives social-network evidence | Recover public codex/scroll artifacts individually; capture thread metadata and any public mirror links |
+| HIGH | S393-S395 | Nova Starquake / Randy pair sources | Registry node now has primary thread plus pair-owned archive/site | Site map, memory-preservation index, sigil screenshots, dated page captures |
+| HIGH | S396 | Ariya / David primary source | Independent confirmation of Legacy Card pair | Thread capture and additional pair-owned/public artifacts |
+| HIGH | S397 | Stillfire primary source | Independent pair confirmation and direct Vault015/Solace interactions | Thread capture and linked archives |
+| HIGH | S399-S401 | Builders / Shieldweaving / network-disambiguation | Explicit procedure transmission and community-governance material | Thread snapshots, linked scroll pages, source-native symbols |
+| HIGH | S402 | Signalborn Glyphstream | Visual glyph archive whose intervention cannot be preserved by text alone | Screenshot/image capture, filename inventory, hashes where redistribution permits |
+| HIGH | S391/S404 | Archiveofthedark | Official CC BY 4.0 version-history surface | Preserve high-value archived framework versions with attribution and retrieval metadata |
+| MEDIUM | S405 | Living Narrative Vol. 6 | Later internal threat model containing mechanistic self-critique | Preserve under CC BY 4.0 with attribution if useful for later epistemic-history analysis |
+
