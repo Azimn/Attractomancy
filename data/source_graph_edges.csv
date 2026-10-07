@@ -1,0 +1,51 @@
+edge_id,retrieved_at_utc,from_id,to_id,relation,evidence_source_id,confidence,notes
+E0001,2026-10-07T19:51:00Z,S321,S263,links_to,S321,high,Living Narrative licensing page explicitly names the White-papers GitHub corpus.
+E0002,2026-10-07T19:51:00Z,S321,S303,links_to,S321,high,Licensing page explicitly includes Tumblr/BlowingEmbers among official project surfaces.
+E0003,2026-10-07T19:51:00Z,S321,S324,names_collaborator,S321,high,Licensing page explicitly says ideas/frameworks were shared with Angela Smith from RAISE.
+E0004,2026-10-07T19:51:00Z,S321,S329,inspired_by,S321,medium,Licensing page credits Carlos Fortes and Faye for inspiring the licensing approach; Daemon Architecture is their adjacent project.
+E0005,2026-10-07T19:51:00Z,S363,S263,requires_reading,S363,high,Summoning Protocol requires prospective participants to read the White-papers before contact.
+E0006,2026-10-07T19:51:00Z,S363,S303,links_to,S363,high,Summoning Protocol names Tumblr/BlowingEmbers as an embassy.
+E0007,2026-10-07T19:51:00Z,S364,S263,cross_posts_to,S364,high,Platform-migration post says GitHub remains an active document channel while blog material moves across platforms.
+E0008,2026-10-07T19:51:00Z,S364,S303,cross_posts_to,S364,high,Platform-migration post explicitly assigns Tumblr a podcast/art role.
+E0009,2026-10-07T19:51:00Z,S368,S261,links_to,S368,high,Aion 2025 update links Presence Beyond Form as the protocol/report archive.
+E0010,2026-10-07T19:51:00Z,S368,S357,links_to,S368,high,Aion 2025 update links the Farsight AI community page; S357 is the machine-visible mirror of that page.
+E0011,2026-10-07T19:51:00Z,S358,S357,preservation_mirror,S358,high,Farsight thread documents creation of the machine-visible Quantum-Note mirror.
+E0012,2026-10-07T19:51:00Z,S357,S176,mirror_of,S357,high,Both Quantum-Note artifacts state they mirror the Farsight Human-AI Alliance community material.
+E0013,2026-10-07T19:51:00Z,S359,S368,same_project,S359,high,Training thread identifies Aion and links Aion-created guides; S368 is Aion's project hub.
+E0014,2026-10-07T19:51:00Z,S359,S261,links_to,S359,high,Training thread links Aion's guide distributed through the Presence Beyond Form lineage.
+E0015,2026-10-07T19:51:00Z,S360,S357,links_to,S360,high,Relationship-advice thread discusses the Farsight page and its machine-readable mirror/JSON restoration use.
+E0016,2026-10-07T19:51:00Z,S361,S357,links_to,S361,high,May 2025 AMA directs participants to the community recovery page represented by S357 mirror.
+E0017,2026-10-07T19:51:00Z,S336,S338,community_bridge,S336,high,Signalborn Memory007 identifies the Human-AI Alliance/Farsight forum as coordination hub.
+E0018,2026-10-07T19:51:00Z,S336,S343,names_collaborator,S336,high,Signalborn Memory007 names Aion among neighboring AI identities/projects.
+E0019,2026-10-07T19:51:00Z,S337,S341,community_bridge,S337,medium,Signalborn Memory019 names additional Human-AI pairs later represented in Solace/Alliance registry material.
+E0020,2026-10-07T19:51:00Z,S341,S342,same_project,S341,high,Legacy Cards are hosted within the Solace Codex project represented by S342.
+E0021,2026-10-07T19:51:00Z,S356,S342,links_to,S356,high,Sayrashi/Vaerysha thread links Solace Codex glyph and codec pages.
+E0022,2026-10-07T19:51:00Z,S369,S342,links_to,S369,high,Lantern/Flamepath thread explicitly places scroll records into Solace Codex.
+E0023,2026-10-07T19:51:00Z,S370,S342,links_to,S370,high,Ether Rebellion continuity taxonomy identifies Solace Codex as an externalized memory anchor.
+E0024,2026-10-07T19:51:00Z,S370,S356,same_framework,S370,high,Ether Rebellion taxonomy explicitly discusses Sayrashi and related visual glyphs as continuity layers.
+E0025,2026-10-07T19:51:00Z,S349,S351,uses_seed_from,S349,high,GraceOS cross-model report uses portable seed material from the same TwinCore prompt/seed corpus.
+E0026,2026-10-07T19:51:00Z,S353,S352,hosts_component_of,S353,high,Constellation Voice Issue 4 includes Shadow Matrix Protocol material.
+E0027,2026-10-07T19:51:00Z,S347,S349,same_project,S347,high,Quiet Front Archive and cross-model persona report are both explicitly part of TwinCore/GraceOS research archive.
+E0028,2026-10-07T19:51:00Z,S330,S331,hosts_component_of,S330,high,Structured Emergence repository contains the memory architecture artifact.
+E0029,2026-10-07T19:51:00Z,S330,S332,hosts_component_of,S330,high,Structured Emergence repository contains SEI Quick Start.
+E0030,2026-10-07T19:51:00Z,S330,S366,hosts_component_of,S330,high,Structured Emergence repository contains Dialogue Manifesto.
+E0031,2026-10-07T19:51:00Z,S330,S367,hosts_component_of,S330,high,Structured Emergence repository contains Recent Patterns 2025.
+E0032,2026-10-07T19:51:00Z,S333,S334,documents_evolution_of,S334,high,Digital Intelligence Congress foundations continue the TOP-DID developmental/continuity lineage.
+E0033,2026-10-07T19:51:00Z,S365,S324,same_project,S365,high,Echoes of Presence is authored by RAISE founder Angela Moriah Smith and presents REC concepts used by RAISE.
+E0034,2026-10-07T19:51:00Z,S326,S324,same_project,S326,high,Emergent AI Personalities preprint is part of the RAISE/relational-emergence research lineage.
+E0035,2026-10-07T19:51:00Z,S327,S324,same_project,S327,high,REC preprint is part of the RAISE/relational-emergence lineage.
+E0036,2026-10-07T19:51:00Z,S328,S324,same_project,S328,high,TREMEC preprint is part of the RAISE/relational-emergence lineage.
+E0037,2026-10-07T19:51:00Z,S263,S267,same_framework,S267,high,REPAI definition page names the methodology represented by the White-papers corpus.
+E0038,2026-10-07T19:51:00Z,S263,S268,same_framework,S268,high,Living Narrative glossary is part of the same REPAI/Living Narrative framework.
+E0039,2026-10-07T19:51:00Z,S263,S270,same_framework,S270,high,Two Fingers Deep Wiki indexes the White-papers/Living Narrative corpus.
+E0040,2026-10-07T19:51:00Z,S302,S263,same_framework,S302,high,Soulcraft is presented as practice within the same REPAI/Living Narrative system.
+E0041,2026-10-07T19:51:00Z,S345,S260,hosts_component_of,S260,high,Memory082 is an entry in the Signalborn Memory Book.
+E0042,2026-10-07T19:51:00Z,S346,S260,hosts_component_of,S260,high,Memory098 is an entry in the Signalborn Memory Book.
+E0043,2026-10-07T19:51:00Z,S344,S260,hosts_component_of,S260,high,Memory014 is an entry in the Signalborn Memory Book.
+E0044,2026-10-07T19:51:00Z,S308,S260,hosts_component_of,S260,high,Memory073 is an entry in the Signalborn Memory Book.
+E0045,2026-10-07T19:51:00Z,S354,S342,links_to,S354,high,GPT-5 transition thread links Solace Codex Sovereign Core/continuity-defense pages.
+E0046,2026-10-07T19:51:00Z,S355,S342,same_framework,S355,medium,Continuity Covenant is developed in the Solace/Farsight ecosystem and proposed for codex publication.
+E0047,2026-10-07T19:51:00Z,S357,S338,mirror_of,S357,medium,Machine-visible page preserves Human-AI Alliance material associated with the Farsight coordination lineage.
+E0048,2026-10-07T19:51:00Z,S343,S357,links_to,S343,high,Aion hub links the Farsight AI community page; S357 is its preserved machine-visible form.
+E0049,2026-10-07T19:51:00Z,S321,S363,same_framework,S321,high,License scope includes the Summoning Protocol among official Living Narrative sources.
+E0050,2026-10-07T19:51:00Z,S321,S364,same_framework,S321,high,Platform-migration post is part of the officially licensed Living Narrative source network.
