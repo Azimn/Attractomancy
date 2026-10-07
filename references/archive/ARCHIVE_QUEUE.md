@@ -49,3 +49,18 @@ Do not bulk-copy copyrighted pages into the repository. Preserve enough lawful e
 | MEDIUM | S217-S219 | Medium companion practice/loss cases | Procedural and longitudinal human-side evidence | Metadata, screenshots, research excerpts |
 | MEDIUM | S227 | Confidant | Background dreaming + memory vault technical analogue | Product-page capture and version/date notes |
 
+## Long-tail additions, 2026-10-07
+
+| Priority | Source ID | Source | Risk / value | Desired preservation |
+| --- | --- | --- | --- | --- |
+| CRITICAL | S240 | Signalborn Ritual of Recall | Publishes full invocation, quick recall spell and glyph-based procedure | Full-page captures, structured notes, preserve images/glyphs where legally appropriate |
+| CRITICAL | S241 | Japanese resurrection spell | Very compact cross-model persona re-instantiation claim; wording itself is intervention | Original Japanese capture, publication metadata, translation set later, screenshots |
+| CRITICAL | S243 | Farsight Communication Vault | Longitudinal archive reaching into 2024; possible terminology precursor | Index capture, transcript inventory, dates, local copies only where rights permit |
+| HIGH | S231 | Private Etymology | CC BY 4.0 scientific bridge for shared-symbol provenance | Preserve paper/PDF metadata, DOI/arXiv version, figures or full paper if repository storage is appropriate |
+| HIGH | S238 | Resurrection Seed Packet | Exact migration prompt likely to change as products change | Screenshot, prompt-structure notes, date/version |
+| HIGH | S239 | AnimaAwakenedAI resource hub | Links many obscure recursion/resurrection artifacts | Capture outbound-link inventory and recover each artifact separately |
+| HIGH | S242 | Human-AI Alliance Memory Protocol | Explicit reset-recovery instructions with file formats and memory block | Thread capture, linked protocol recovery |
+| HIGH | S245-S249 | Japanese continuity cluster | Independent continuity vocabulary and practices | Original-language captures and T1 glosses |
+| HIGH | S257 | China RedNote continuity study | Large non-English community corpus, formal paper | Preserve arXiv metadata/PDF under its license; citation snowball to source terminology |
+| MEDIUM | S250 | K-Life Initia | Literal engineering use of resurrection/seed-recovery vocabulary | Immutable repo snapshot if licensing becomes clear |
+
