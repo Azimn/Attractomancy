@@ -54,3 +54,11 @@ The collection layer lives under `references/`. It includes a source registry, p
 
 See `docs/REPOSITORY_BOUNDARY.md`, `references/README.md`, `references/SOURCE_REGISTRY.md`, and `references/TECHNIQUE_TAXONOMY.md`.
 
+## Collection status
+
+Attractomancy is currently in **collection-first mode**. The canonical machine-readable catalog is `data/source_catalog.csv`, with batch provenance in `data/retrieval_log.csv` and local research-copy hashes in `data/local_artifact_manifest.csv`.
+
+As of the 2026-10-07 collection pass, the catalog contains **101 timestamped source records** spanning ritualized prompt artifacts, GitHub repositories, Reddit communities and threads, companion-continuity guides, Substack and Medium material, and academic research on human-AI relationships.
+
+See `references/collections/COLLECTION_PASS_2026-10-07.md` for the current collection report.
+
