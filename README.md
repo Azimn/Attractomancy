@@ -45,3 +45,12 @@ The project also distinguishes immediate prompt adherence from continuity. A mod
 ## Status
 
 This repository begins as a methods-first research scaffold. Claims should remain weaker than the evidence. Strange source material should be preserved before it is normalized. Negative results are first-class results. Any mechanism promoted into another cognitive architecture should first survive controlled testing here.
+
+## Repository role
+
+Attractomancy is an upstream evidence base. Source artifacts enter here, are preserved with provenance, decomposed into candidate techniques, and tested under controlled conditions. Other projects may import validated findings from Attractomancy, but Attractomancy should not inherit mechanisms from those projects as assumptions. This protects the research line from circular validation.
+
+The collection layer lives under `references/`. It includes a source registry, preservation policy, technique taxonomy, analyzed cases, community records, papers, transcripts, and unresolved source-recovery leads. The repository deliberately distinguishes archival value from evidentiary strength: fringe, anecdotal, mystical, or incorrect material can still be scientifically useful as an intervention worth testing.
+
+See `docs/REPOSITORY_BOUNDARY.md`, `references/README.md`, `references/SOURCE_REGISTRY.md`, and `references/TECHNIQUE_TAXONOMY.md`.
+
