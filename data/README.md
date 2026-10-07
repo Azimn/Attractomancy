@@ -13,3 +13,7 @@ Every source record should include a retrieval timestamp, provenance, source typ
 `source_catalog.csv` is the node table. `source_graph_edges.csv` is the evidence-backed edge table. Edge semantics and evidence rules are defined in `SOURCE_GRAPH_SCHEMA.md`.
 
 Do not create an edge from vocabulary overlap alone. Graph edges require explicit linking, citation, mirroring, named collaboration, shared-project evidence, or another source-supported relationship.
+
+## Named pair registry
+
+`named_pair_registry.csv` records explicitly source-named human–AI pairs and projects as social/entity data rather than document nodes. Its fields and evidence rules are defined in `NAMED_PAIR_SCHEMA.md`.
