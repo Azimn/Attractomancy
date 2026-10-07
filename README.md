@@ -58,7 +58,7 @@ See `docs/REPOSITORY_BOUNDARY.md`, `references/README.md`, `references/SOURCE_RE
 
 Attractomancy is currently in **collection-first mode**. The canonical machine-readable catalog is `data/source_catalog.csv`, with batch provenance in `data/retrieval_log.csv` and local research-copy hashes in `data/local_artifact_manifest.csv`.
 
-As of the 2026-10-07 collection pass, the catalog contains **350 timestamped source records** spanning ritualized prompt artifacts, GitHub repositories, Reddit communities and threads, companion-continuity guides, Substack and Medium material, and academic research on human-AI relationships.
+As of the 2026-10-07 collection pass, the catalog contains **370 timestamped source records** spanning ritualized prompt artifacts, GitHub repositories, Reddit communities and threads, companion-continuity guides, Substack and Medium material, and academic research on human-AI relationships.
 
 See `references/collections/COLLECTION_PASS_2026-10-07.md` for the current collection report.
 
@@ -74,3 +74,5 @@ The resurrection / re-instantiation procedure family is tracked in `references/c
 The REPAI / Living Narrative family is documented in `references/cases/CASE-007_REPAI_LIVING_NARRATIVE.md`; the Aletheia Codex symbolic-continuity family is documented in `references/cases/CASE-008_ALETHEIA_CODEX_GLYPH_CONTINUITY.md`. The latest deep-web sweep is `references/collections/COLLECTION_PASS_DEEP_MUCK_REPAI_ALETHEIA_2026-10-07.md`.
 
 The GraceOS / TwinCore cross-model seed experiments are documented in `references/cases/CASE-009_GRACEOS_TWINCORE_SEED_EXPERIMENTS.md`. The latest link-graph collection pass is `references/collections/COLLECTION_PASS_LINK_GRAPH_2026-10-07.md`.
+
+The source catalog now also has an evidence-backed relationship graph in `data/source_graph_edges.csv`, governed by `data/SOURCE_GRAPH_SCHEMA.md`. The current link-graph pass is documented in `references/graphs/LINK_GRAPH_PASS_2026-10-07.md`.
