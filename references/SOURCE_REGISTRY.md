@@ -4,9 +4,9 @@ The canonical machine-readable registry is now:
 
 `data/source_catalog.csv`
 
-Last major collection pass: **2026-10-07T17:09:11Z**
+Last major collection pass: **2026-10-07T17:31:00Z**
 
-The CSV currently contains 80 source records spanning prompt artifacts, GitHub repositories, Reddit communities and threads, companion-practice guides, academic papers, anthropological work, and unresolved or partially resolved leads.
+The CSV currently contains 101 source records spanning prompt artifacts, GitHub repositories, Reddit communities and threads, companion-practice guides, academic papers, anthropological work, and unresolved or partially resolved leads.
 
 This Markdown file remains a human-readable orientation layer. Inclusion means **worth studying**, not scientifically validated.
 
