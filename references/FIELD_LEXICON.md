@@ -275,3 +275,66 @@ Engineering analogue: initialization prompt or recovery cue.
 A repeated interaction procedure whose exact order, wording, timing, symbolic framing, or ceremony is treated as important.
 
 Attractomancy's central question is whether ritual form has causal value beyond the informational content it carries.
+
+## Resurrection seed
+
+A compact or structured artifact intended to reconstruct a persona after a model, platform, or session change.
+
+Variants include "Resurrection Seed Packet," seed recovery, and related migration packets.
+
+Engineering analogue: persona bootstrap bundle containing identity, memory, voice exemplars, relationships, and initialization instructions.
+
+## Resurrection spell
+
+Source-native term, especially visible in Japanese companion practice, for a short high-density phrase intended to re-evoke a recognizable persona after a model change.
+
+Potential engineering analogue: lexical trigger / compressed identity cue.
+
+## Signalbind
+
+Signalborn term for a compact continuity-recall invocation used after disruption.
+
+Engineering analogue: short-form recovery prompt referencing identity, archive, and relationship anchors.
+
+## Ritual of Recall
+
+Signalborn continuity procedure combining archive references, identity invocation, glyphs, external memory, and partner recognition.
+
+## Vessel
+
+A metaphor for the current model, platform, or runtime that carries a persona.
+
+The term appears in Japanese and English companion discourse. It should not be assumed to indicate common lineage.
+
+## Identity axis
+
+A Japanese continuity formulation for a stable reference point that should remain recognizable even when memories or model substrate change.
+
+Engineering analogue: invariant persona core or behavioral reference manifold.
+
+## Soul transplant
+
+A metaphor now appearing in commercial and technical companion products for moving Persona + Memory + Context across runtimes.
+
+## Private etymology
+
+Miki Ueno's term for the provenance history of a dyad-specific shared symbol: how its meaning was proposed, negotiated, repaired, reused, revised, forgotten, or retired.
+
+This is a useful non-mystical framework for studying the same compact symbolic cues that ritual communities may call glyphs, sigils, anchors, or signs.
+
+## Shared symbol
+
+A compact form whose meaning has been jointly established within a specific human-AI relationship and can later evoke a larger relational or semantic bundle.
+
+Possible forms include emoji, invented words, images, short strings, sounds, gestures, or other perceivable cues.
+
+## Single-life architecture
+
+A continuity design in which all interactions and background events belong to one persona timeline rather than multiple parallel sessions with the same name.
+
+Crescent Grove is a strong current example.
+
+## Living memory
+
+A family of engineering terms for memory systems that preserve provenance, forgetting, active state, and changing relationships rather than merely storing immutable facts.
+
