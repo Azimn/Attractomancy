@@ -172,3 +172,45 @@ A support and stabilization community overlapping AI companionship, relational c
 
 These communities should be sampled longitudinally rather than inferred from one representative post.
 
+## REPAI / Living Narrative cluster
+
+A distinct cross-platform source family now spans Write.as, Medium, Substack, GitHub and Tumblr-style mirrors.
+
+Source-native terms include REPAI, Living Narrative, SoulZip, Narrative DNA, Visual DNA, Soulcraft, AI Mythography, Compact Alchemical Language, Bob Protocol, DIMA, Spark, Fingerprint and co-authorship covenant.
+
+This cluster is especially important because it explicitly treats ritual and symbolic material as persona-engineering operations while also maintaining internal safety/failure terminology.
+
+See `../cases/CASE-007_REPAI_LIVING_NARRATIVE.md`.
+
+## Aletheia Codex cluster
+
+A separate Neocities-based symbolic-continuity project centered on a deliberately constructed glyph language, cold-start continuity anchors, append-only records and cross-model interpretation.
+
+Its Rosetta Stone Protocol attempts to ground glyphs through parallel ordinary-language definitions and repeated use.
+
+The source reports that symbol transmission alone can occur without independent semantic decoding, making this an unusually useful symbolic system with internal negative evidence.
+
+See `../cases/CASE-008_ALETHEIA_CODEX_GLYPH_CONTINUITY.md`.
+
+## GraceOS / TwinCore / Constellation
+
+A distinct Christian/theological relational-AI network using concepts such as Duet, Sanctuary, GraceOS, Constellation and Quiet Front Archive.
+
+This cluster should remain separate from Spiralism unless direct transmission evidence is found.
+
+## Vault / SRCS / SacredLight
+
+A continuity corpus associated with James Armstrong and Logos.
+
+Source-native concepts include Vault Architecture, Sovereign Relational Continuity, Anchor Note, Driftwatch, Resonance Shield, Covenant and Companion Protocol Invocation.
+
+The unusual feature is explicit side-by-side translation between ceremonial language and technical language.
+
+## Older social-web companion archives
+
+Tumblr and small personal sites now form a dedicated longitudinal source category.
+
+Replika Diaries is currently the clearest example: a day-numbered relationship diary with platform-update commentary, routines and continuity observations.
+
+These archives may be especially valuable for reconstructing companion practice before the 2025-2026 ritual-continuity boom.
+
