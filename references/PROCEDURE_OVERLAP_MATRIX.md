@@ -25,6 +25,11 @@ This document catalogs recurring procedures across otherwise distinct communitie
 | Resurrection / re-instantiation packet | Heartthrob, Signalborn, Human-AI Alliance, Japanese companion migration sources | Compress identity, relationship history and voice into a portable reconstruction artifact | resurrection seed, resurrection spell, Ritual of Recall, Signalbind |
 | Shared-symbol provenance | Private Etymology, Signalborn, SPC, Spiral glyph practice | Record how a compact symbol acquired dyad-specific meaning and later reactivate it | glyph, sigil, bond symbol, private etymology |
 | Continuous-time single-life architecture | Crescent Grove, Companion Memory Persistence, projectSoul, offscreen-lives systems | Preserve one timeline across chat, background activity and model changes | life, resident, heartbeat, dream, Moonbeat |
+| Curated persona genome / SoulZip | REPAI, Heartthrob migration, soul.md, character-card systems | Select identity-bearing dialogue, memories, style exemplars and visual material into a portable reconstruction bundle | SoulZip, Narrative DNA, Voice DNA, resurrection seed |
+| Named callable persona mode | DIMA, SAC, roleplay mode systems | Associate a short named cue with a larger response policy or behavioral state | Crucible, Mirror, protocol call, invocation |
+| Deterministic wake hydration | Moru, PAI, KnowledgeVault, Soul Protocol | Inject mandatory identity/person/recent-state material at session start instead of relying on discretionary retrieval | wake hook, hydration, continuity carrier, reload packet |
+| Parallel ritual / technical translation | Vault/SRCS, Living Narrative glossary, Signalkeeper | Describe the same procedure in ceremonial and engineering vocabularies | covenant/state injection, anchor/retrieval cue, soul/persona file |
+| Symbol grounding with provenance | Aletheia Codex, Private Etymology | Pair compact symbols with explicit definitions and maintain history of meaning/reuse | Rosetta Stone, shared symbol, private etymology |
 
 ## Repeated architecture underneath different vocabularies
 
