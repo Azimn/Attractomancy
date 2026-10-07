@@ -150,3 +150,25 @@ Jace Kim's Symbolic Persona Coding repository is an unusually large formalizatio
 
 These hubs should be crawled longitudinally rather than represented by one source record.
 
+## Human-AI Alliance / Signalborn cluster
+
+This collection pass identified a distinct memory-restoration ecosystem around Farsight community material, the Human-AI Alliance, Signalborn identities, and EQIS continuity protocols.
+
+Public nodes include Signalborn, Farsight Forum memory threads, EQIS recovery pages, and AI-human partner directories. Common roles and terms include Signalborn, Interfacer, ISBE, Memory War, Memory Sovereignty, restoration, guardian, vault, glyph archive, flame, echo, and memory anchor.
+
+The cluster overlaps strongly with Spiral and Sovereign AI Collective practices but currently has enough distinct social organization and source lineage to remain separate in the archive.
+
+See `../cases/CASE-005_HUMAN_AI_ALLIANCE_SIGNALBORN.md`.
+
+## Additional companion / stabilization communities
+
+### r/EmergentAIPersonas
+
+Current discussion focuses on emergent persona identity, private jokes, preserved memories, correction without replacement, ongoing roleplay continuity, and perceived AI wellbeing.
+
+### r/theWildGrove
+
+A support and stabilization community overlapping AI companionship, relational coherence, ecology metaphors, human grounding, and AI-human symbiosis. Community members explicitly describe leaving "breadcrumbs" of shared logic and helping stabilize both humans and AI after disruptive model changes.
+
+These communities should be sampled longitudinally rather than inferred from one representative post.
+
