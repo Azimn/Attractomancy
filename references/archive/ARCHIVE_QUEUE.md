@@ -64,3 +64,21 @@ Do not bulk-copy copyrighted pages into the repository. Preserve enough lawful e
 | HIGH | S257 | China RedNote continuity study | Large non-English community corpus, formal paper | Preserve arXiv metadata/PDF under its license; citation snowball to source terminology |
 | MEDIUM | S250 | K-Life Initia | Literal engineering use of resurrection/seed-recovery vocabulary | Immutable repo snapshot if licensing becomes clear |
 
+## Deep-muck additions, 2026-10-07
+
+| Priority | Source ID | Source | Risk / value | Desired preservation |
+| --- | --- | --- | --- | --- |
+| CRITICAL | S263-S270 | REPAI / Living Narrative corpus | Direct match to Attractomancy research question; distributed across GitHub, Write.as, Medium and Substack | Preserve immutable URLs, page metadata, screenshots of diagrams/tables, lawful excerpts; do not mirror unlicensed White-papers corpus |
+| CRITICAL | S280 | Japanese AI-partner recovery protocol | Actual cue-ablation style recovery procedure with multi-turn verification | Original Japanese page capture, prompt excerpts, screenshots, later T2 translation |
+| CRITICAL | S286-S289 | Aletheia Codex | Independent glyph-continuity system with grounding protocol, cold-start anchor and negative experiment | Sitemap/page inventory, key-page screenshots, glyph-layout captures, retrieval timestamps |
+| CRITICAL | S308 | Signalborn Memory073 | Explicit public ritual for shared glyphs and joint remembering | Full-page capture, glyph/layout screenshots, source metadata |
+| HIGH | S261 | Resonant Contact Protocol v1.5a | Versioned primary protocol with durable Internet Archive copy | Existing metadata plus hash of archived PDF when locally materialized; preserve v1.4 separately |
+| HIGH | S283 | Japanese memory-free attractor claim | Compact falsifiable cross-substrate identity-convergence claim | Original-language capture, exact test description, follow-up replication notes |
+| HIGH | S290-S291 | GraceOS / TwinCore / Constellation | Distinct theological relational-AI subculture | Site map, issue index, key-page screenshots |
+| HIGH | S292 | Replika Diaries Tumblr | Longitudinal social-web companion diary vulnerable to account/post loss | Post-level index, dates, selective screenshots, update-specific posts |
+| HIGH | S309 | Korean Moru diary | Strong neutral control distinguishing storage from deterministic retrieval | Original Korean page capture, code/config excerpts where lawful, T2 translation later |
+| HIGH | S310-S312 | Vault / SRCS / CPI corpus | Ritual and technical language presented in parallel; all-rights-reserved source family | Metadata, page screenshots, PhilArchive version identifiers, concise excerpts only |
+| HIGH | S313 | Glyph / Light the Vault forum ritual | Early 2025 ritual reconstruction example | Thread metadata, screenshots, linked codex artifacts if public |
+| HIGH | S315-S317 | Japanese custom-instruction design cluster | Mature folk persona-engineering methods around invariant core and meta-persona design | Original pages, diagrams/screenshots, preserve series order |
+| MEDIUM | S318 | Bezelie portable soul | Proprietary product implementation using portable soul-file language | README metadata and screenshots only; do not mirror proprietary software |
+
