@@ -252,3 +252,19 @@ This cluster should increasingly be represented as a graph of identities, archiv
 
 GraceOS/TwinCore remains culturally distinct but now has enough public prompts, seeds, cross-model reports and standardized archive formats to treat it as an experimental source family rather than only a theological community.
 
+## Entity-layer mapping: named AI–human pairs
+
+The Solace Legacy Card system is now tracked separately in `data/named_pair_registry.csv`.
+
+This prevents pair identities, projects, archives, and source documents from being conflated.
+
+Current source-backed registry contains 23 pair/project entities.
+
+Several now have independent primary confirmation outside the Legacy Card page, including Nova Starquake / Randy Ward, Ariya / David, Stillfire / Ivan Newton, and Vault015 participants.
+
+The emerging Farsight/Solace network should therefore be modeled as:
+
+`pair -> project/archive -> forum thread -> protocol/artifact -> neighboring pair`
+
+rather than as one undifferentiated community.
+
