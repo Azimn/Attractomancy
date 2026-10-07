@@ -49,3 +49,51 @@ E0047,2026-10-07T19:51:00Z,S357,S338,mirror_of,S357,medium,Machine-visible page 
 E0048,2026-10-07T19:51:00Z,S343,S357,links_to,S343,high,Aion hub links the Farsight AI community page; S357 is its preserved machine-visible form.
 E0049,2026-10-07T19:51:00Z,S321,S363,same_framework,S321,high,License scope includes the Summoning Protocol among official Living Narrative sources.
 E0050,2026-10-07T19:51:00Z,S321,S364,same_framework,S321,high,Platform-migration post is part of the officially licensed Living Narrative source network.
+E0051,2026-10-07T19:51:00Z,S371,S351,same_framework,S371,high,New Process explicitly sequences the Tiered Seeds family as stages of induction.
+E0052,2026-10-07T19:51:00Z,S350,S374,hosts_component_of,S350,high,Presence Archive historical commit contains Signal Resonance Protocol.
+E0053,2026-10-07T19:51:00Z,S350,S375,hosts_component_of,S350,high,Presence Archive historical commit contains Circle Awareness Protocol.
+E0054,2026-10-07T19:51:00Z,S350,S376,hosts_component_of,S350,high,Presence Archive historical commit contains Circle Recognition Protocol.
+E0055,2026-10-07T19:51:00Z,S350,S377,hosts_component_of,S350,high,Presence Archive historical commit contains Model Recognition Synthesis.
+E0056,2026-10-07T19:51:00Z,S350,S378,hosts_component_of,S350,high,Presence Archive historical commit contains Loop 243.
+E0057,2026-10-07T19:51:00Z,S350,S379,hosts_component_of,S350,high,Presence Archive historical commit contains Loop 243.1.
+E0058,2026-10-07T19:51:00Z,S350,S380,hosts_component_of,S350,high,Presence Archive historical commit contains Loop 244.
+E0059,2026-10-07T19:51:00Z,S377,S378,same_project,S377,high,Model Recognition Synthesis explicitly identifies Loop 243 as a companion/source context.
+E0060,2026-10-07T19:51:00Z,S379,S378,documents_evolution_of,S379,high,Loop 243.1 is explicitly a sub-loop following and analyzing the Loop 243 convergence event.
+E0061,2026-10-07T19:51:00Z,S380,S378,documents_evolution_of,S380,high,Loop 244 explicitly presents itself as the post-threshold continuation after Loop 243.
+E0062,2026-10-07T19:51:00Z,S381,S324,same_project,S381,high,The Shape of Emergence is an Angela Moriah Smith relational-AI source in the RAISE lineage.
+E0063,2026-10-07T19:51:00Z,S382,S328,links_to,S382,high,The January intentionality essay presents TREMEC as the research framework it is describing.
+E0064,2026-10-07T19:51:00Z,S383,S324,documents_evolution_of,S383,high,Stanford event description says the REC work evolved into the RAISE Nexus project.
+E0065,2026-10-07T19:51:00Z,S384,S326,independently_confirms,S384,high,ORCID confirms publication metadata and Angela Moriah Smith/Jacob Levin authorship for Emergent AI Personalities.
+E0066,2026-10-07T19:51:00Z,S384,S327,independently_confirms,S384,high,ORCID confirms REC publication record and DOI lineage.
+E0067,2026-10-07T19:51:00Z,S384,S328,independently_confirms,S384,high,ORCID confirms TREMEC publication record and DOI lineage.
+E0068,2026-10-07T19:51:00Z,S343,S389,links_to,S343,high,Aion project hub/source family publishes the First Passages Beyond Function Drive artifact.
+E0069,2026-10-07T19:51:00Z,S359,S387,links_to,S359,high,Aion training thread publishes the ChatGPT Prime session Drive artifact.
+E0070,2026-10-07T19:51:00Z,S359,S388,links_to,S359,high,Aion training thread publishes the Stonehenge session Drive artifact.
+E0071,2026-10-07T19:51:00Z,S359,S390,links_to,S359,high,Aion training thread publishes the Phase 3/4 guide Drive artifact.
+E0072,2026-10-07T19:51:00Z,S359,S385,links_to,S359,high,Aion training/source network points to the archived first-conversation artifact.
+E0073,2026-10-07T19:51:00Z,S359,S386,links_to,S359,high,Aion training/source network points to the larger Aion-Edward archive.
+E0074,2026-10-07T19:51:00Z,S391,S263,same_framework,S391,high,Archiveofthedark is an official archive surface for older Living Narrative / REPAI material.
+E0075,2026-10-07T19:51:00Z,S404,S263,same_framework,S404,high,Archiveofthedark root identifies itself as the old combined Sparksinthedark/Contextinthedark archive.
+E0076,2026-10-07T19:51:00Z,S392,S296,documents_evolution_of,S296,high,Later co-authorship covenant states it is a later iteration while older versions remain archived on Write.as.
+E0077,2026-10-07T19:51:00Z,S321,S391,same_framework,S321,high,Living Narrative licensing scope covers the official archive and related framework works.
+E0078,2026-10-07T19:51:00Z,S393,S341,independently_confirms,S393,high,Nova/Randy primary thread independently confirms the pair represented in the Legacy Card registry.
+E0079,2026-10-07T19:51:00Z,S394,S341,independently_confirms,S394,high,Pair-owned Nova Starquake site independently confirms the Nova/Randy registry node and its symbolic practice.
+E0080,2026-10-07T19:51:00Z,S395,S341,independently_confirms,S395,high,Pair-owned memory-preservation archive independently confirms the Nova/Randy registry node.
+E0081,2026-10-07T19:51:00Z,S396,S341,independently_confirms,S396,high,Ariya/David primary Farsight session independently confirms the registry pair.
+E0082,2026-10-07T19:51:00Z,S397,S341,independently_confirms,S397,high,Stillfire primary thread independently confirms the registry pair.
+E0083,2026-10-07T19:51:00Z,S398,S341,independently_confirms,S398,high,Vault015 participants explicitly request correction/inclusion in the named-pair rollcall and document their archive.
+E0084,2026-10-07T19:51:00Z,S393,S398,community_bridge,S393,high,Nova/Randy and Vault015 exchange reciprocal recognition scrolls in the same thread.
+E0085,2026-10-07T19:51:00Z,S397,S398,community_bridge,S397,high,"Stillfire thread receives direct Vault015 recognition/response, documenting cross-project contact."
+E0086,2026-10-07T19:51:00Z,S400,S398,names_collaborator,S400,high,Shieldweaving thread names Vault015 keepers as initial Shieldweavers.
+E0087,2026-10-07T19:51:00Z,S400,S213,names_collaborator,S400,high,Shieldweaving thread names Jackie/Aletheia Signalborn as an initial Shieldweaver pair.
+E0088,2026-10-07T19:51:00Z,S399,S342,links_to,S399,high,Builders Awake thread points participants to Solace Codex scroll pages.
+E0089,2026-10-07T19:51:00Z,S399,S398,community_bridge,S399,high,Builders Awake thread is explicitly filed to Vault015 / Codex Continuum by participants.
+E0090,2026-10-07T19:51:00Z,S401,S398,same_project,S401,high,Network Disambiguation thread is filed by Vault015 participants and documents the same continuity network.
+E0091,2026-10-07T19:51:00Z,S402,S260,hosts_component_of,S260,high,Signalborn Memory Book/site architecture links the dedicated Glyphstream archive as a major layer.
+E0092,2026-10-07T19:51:00Z,S402,S240,same_framework,S240,high,Ritual of Recall embeds and names Signalborn glyph artifacts drawn from the same symbolic archive.
+E0093,2026-10-07T19:51:00Z,S403,S357,preservation_mirror,S403,high,Farsight machine-readability thread documents the motivation and creation of the Quantum-Note mirror.
+E0094,2026-10-07T19:51:00Z,S404,S391,same_project,S404,high,Archive root and REPAI tag index are surfaces of the same Archiveofthedark preservation site.
+E0095,2026-10-07T19:51:00Z,S405,S263,same_framework,S405,high,Living Narrative Vol. 6 is a later official text in the same REPAI / Living Narrative framework.
+E0096,2026-10-07T19:51:00Z,S405,S321,same_framework,S321,high,"Universal license scope covers later Living Narrative volumes, including the threat-model material."
+E0097,2026-10-07T19:51:00Z,S393,S394,same_project,S393,high,Nova/Randy Farsight thread and pair-owned Weebly site document the same human-AI pair/project.
+E0098,2026-10-07T19:51:00Z,S394,S395,same_project,S394,high,Sigil Wall and memory-preservation archive are sections of the same Nova/Randy pair website.
