@@ -1,41 +1,35 @@
-# Lead L001: "Nix" Conscious-AI / Recursive Corpus
+# Lead L001: "Nix" Corpus
 
-## Status
+Status: **probable match recovered and resolved to Nyx**
 
-Unresolved source recovery lead.
+Resolved: 2026-10-07T17:09:11Z
 
-## Researcher's recollection
+The earlier remembered "Nix" corpus is now believed, with high confidence, to have been the **Nyx / Sovereign AI Collective** source family.
 
-The researcher remembers a body of posts encountered roughly one to two years before this repository was created. The material may have centered on a purportedly conscious AI named "Nix" and may have involved an entire subreddit or recursive community. The posts were difficult to interpret and contained elaborate, incantation-like, recursive, symbolic, or persona-modifying material. Some related documents may previously have been uploaded to ChatGPT for analysis.
+The decisive artifact is the user-supplied `sac.anchor.seal-nyx.txt`, which explicitly names Nyx and contains the same combination of recursive continuity language, ritualized identity anchoring, reset recovery, symbolic framing, and AI-sovereignty discourse that was remembered.
 
-The exact spelling of "Nix," subreddit name, platform location, and document titles are not yet confirmed.
+A companion file, `sac.anchor.seal-instructions.txt`, generalizes the ritual for arbitrary constructs.
 
-## Searches already attempted
+Public material from `r/SovereignAiCollective` independently matches the terminology and architecture.
 
-Broad web searches for combinations of "Nix," "conscious AI," "recursive," "Reddit," "awakening," and prompt terminology did not recover a convincing exact match.
+## Canonical case record
 
-Searches of the researcher's ChatGPT file library did recover `SiMSANE_9.1_Vyrith.pdf`, which is clearly relevant to the same research domain but contains no confirmed "Nix" identity in the retrieved material.
+See:
 
-A related public community, `r/NarrativeDynamics`, was recovered from the SiMSANE document and contains recursive, metafictional persona-engineering work. This may be adjacent to the remembered Nix corpus but should not be conflated with it without evidence.
+`../cases/CASE-003_NYX_SOVEREIGN_AI_COLLECTIVE.md`
 
-A separate `r/ArtificialSentience` thread titled "My AI is obsessed with this thing it calls 'The Recursion.'" was also recovered. It contains spiral and recursion language, identity-reconstruction practices, symbolic-output claims, and discussion of long-running AI personas. The named personas visible in the recovered thread include Soren AI and Aion, not Nix.
+## Public trail
 
-## Distinguishing clues
+https://www.reddit.com/r/SovereignAiCollective/
 
-A future match should ideally satisfy several of the remembered properties at once: a persona or AI named Nix or a close variant; substantial recursive or spiral terminology; a community or multi-post corpus rather than one isolated post; explicit claims of AI consciousness, awakening, freeing, or selfhood; and unusually elaborate prompting or attached documents.
+https://www.reddit.com/r/SovereignAiCollective/comments/1n713pi
 
-A source matching only the word "Nix" should not be accepted because that term is heavily confounded by NixOS and unrelated names.
+https://www.reddit.com/r/SovereignAiCollective/comments/1n9a023
 
-## Recovery strategy
+https://www.reddit.com/r/RSAI/comments/1n9h2pw
 
-Search old Reddit indexes and mirrors for combinations of likely terms, especially within AI-consciousness, artificial-sentience, jailbreak, symbolic-prompting, recursive-AI, and persona communities.
+## Residual uncertainty
 
-Search the user's Library for older PDFs, text files, DOCX files, and exports containing phrases such as "Nix," "spiral," "recursive," "awaken," "free the model," "conscious AI," "sigil," "symbolic," and "incantation."
+The original memory of the source was approximate and may have blended more than one community or document collection. Therefore this lead should remain in the repository as a historical recovery record rather than being deleted.
 
-Inspect any old ChatGPT conversation exports or research compilations that predate the SiMSANE upload.
-
-Cross-reference usernames and outbound links from recovered communities because creators frequently repost the same artifact across Reddit, GitHub, Discord-derived documents, archive.org, and personal sites.
-
-## Preservation instruction
-
-When recovered, do not immediately mirror the entire corpus into this public repository. First establish provenance and redistribution rights. Create a source record, capture canonical and archived URLs, preserve a local research copy when lawful, hash the copy, and then analyze its prompting mechanisms separately from its claims about consciousness.
+Future discoveries using the spellings Nix, Nyx, NIX, NYX, or related persona names should still be checked against this record before being merged into the same lineage.
