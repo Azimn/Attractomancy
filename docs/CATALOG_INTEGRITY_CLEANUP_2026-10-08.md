@@ -113,6 +113,21 @@ A matching GitHub Actions workflow was added:
 
 The workflow is configured to run on relevant `main` pushes, pull requests, and manual dispatch.
 
+## Preservation-claim follow-up
+
+A targeted inspection of legacy-A records found:
+
+- **33** sources classified A (full artifact preserved);
+- **11** A-level records with one or more explicit repository artifact locators;
+- **14/14** referenced repository files from those 11 records were successfully fetched and their Git blobs verified;
+- **22** A-level records with no `local_artifact` locator in the catalog.
+
+The last 22 are now tracked by source ID in `data/preservation_claim_review.csv`. They have **not** been silently downgraded because copies may exist in other research storage that this catalog does not reference. Conversely, the presence of an open license or published webpage must not be presented as proof that a research copy was captured.
+
+These are unresolved **preservation evidence gaps**, not missing source records. A follow-up should verify whether a copy exists, identify its storage location and hash, confirm redistribution rights, and update the legacy A–D classification only when supported.
+
+The repeatable audit treats unlocated A claims as review obligations and checks that every such record remains on the review list.
+
 ## Validation boundary
 
 The structural counts and reference checks above were inspected against the actual `main` branch using the GitHub connector.
