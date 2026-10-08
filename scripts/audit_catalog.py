@@ -11,6 +11,7 @@ assertions made by third-party sources.
 from __future__ import annotations
 
 import csv
+import hashlib
 import re
 import sys
 from collections import Counter, defaultdict
@@ -30,6 +31,8 @@ DATASETS = {
     "duplicate_reviews": ("duplicate_url_review.csv", "review_id"),
     "preservation_reviews": ("preservation_claim_review.csv", "source_id"),
     "retrieval": ("retrieval_log.csv", "batch_id"),
+    "captures": ("repository_capture_manifest.csv", "capture_id"),
+    "scope_reviews": ("source_scope_review.csv", "source_id"),
 }
 README_METRICS = {
     "data/source_catalog.csv": "source",
@@ -38,6 +41,7 @@ README_METRICS = {
     "data/pair_graph_edges.csv": "pair_edges",
     "data/reproducible_procedure_index.csv": "procedures",
     "data/version_lineage.csv": "versions",
+    "data/repository_capture_manifest.csv": "captures",
 }
 
 
@@ -147,6 +151,51 @@ def main() -> int:
         for key in ("earlier_source_id", "later_source_id", "evidence_source_id"):
             source_ref(r.get(key, ""), f"{r.get('lineage_id', '?')}.{key}")
 
+    # Verify saved evidence from the repository checkout, including file content.
+    scoped_sources = set()
+    for r in data["captures"]:
+        capture_id = r.get("capture_id", "?")
+        sid = r.get("source_id", "")
+        source_ref(sid, capture_id)
+        scoped_sources.add(sid)
+        path_text = r.get("repository_path", "")
+        rel = Path(path_text)
+        if not path_text or rel.is_absolute() or ".." in rel.parts:
+            errors.append(f"{capture_id}: invalid capture path {path_text!r}")
+            continue
+        path = ROOT / rel
+        if not path.is_file():
+            errors.append(f"{capture_id}: missing capture {path_text}")
+            continue
+        payload = path.read_bytes()
+        digest = hashlib.sha1(b"blob " + str(len(payload)).encode("ascii") + b"\0" + payload).hexdigest()
+        if digest != r.get("git_blob_sha1", "").lower():
+            errors.append(f"{capture_id}: Git blob mismatch for {path_text}")
+        if r.get("capture_kind") not in {"readme_license", "primary_text", "metadata_only"}:
+            errors.append(f"{capture_id}: unknown capture kind")
+        if r.get("capture_scope") not in {
+            "partial_repository_documentation", "single_primary_document", "metadata_only"
+        }:
+            errors.append(f"{capture_id}: invalid capture scope")
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", r.get("verified_date_utc", "")):
+            errors.append(f"{capture_id}: invalid verification date")
+
+    partial_a = {
+        r["id"] for r in sources
+        if r.get("preservation_level") == "A"
+        and r["id"] in scoped_sources
+        and "repository" in r.get("source_type", "").lower()
+    }
+    if "S263" in scoped_sources:
+        partial_a.add("S263")
+    scoped_reviews = {r.get("source_id", "") for r in data["scope_reviews"]}
+    if partial_a - scoped_reviews:
+        errors.append(f"{len(partial_a - scoped_reviews)} partial A-level captures missing scope review")
+    for r in data["scope_reviews"]:
+        source_ref(r.get("source_id", ""), "source_scope_review")
+        if r.get("review_status") != "partial_source_capture":
+            errors.append(f"{r.get('source_id')}: invalid source-scope review status")
+
     url_groups: dict[str, set[str]] = defaultdict(set)
     for r in sources:
         if r.get("url", "").strip():
@@ -158,6 +207,14 @@ def main() -> int:
         source_ref(a, r.get("review_id", "?"))
         source_ref(b, r.get("review_id", "?"))
         reviewed.add(frozenset((a, b)))
+        if r.get("canonical_source_id") not in {a, b}:
+            errors.append(f"{r.get('review_id', '?')}: invalid canonical source ID")
+        if r.get("resolution_status") not in {"resolved_alias", "resolved_distinct_component"}:
+            errors.append(f"{r.get('review_id', '?')}: duplicate resolution is open/invalid")
+        if r.get("identity_relation") not in {
+            "same_artifact_alias", "same_thread_analytical_alias", "distinct_component_of_thread"
+        }:
+            errors.append(f"{r.get('review_id', '?')}: invalid duplicate relationship")
     unreviewed = actual_duplicates - reviewed
     stale = reviewed - actual_duplicates
     if unreviewed:
@@ -165,7 +222,7 @@ def main() -> int:
     if stale:
         warnings.append(f"{len(stale)} duplicate-review entries no longer correspond to normalized URL duplicates")
     if actual_duplicates:
-        warnings.append(f"{len(actual_duplicates)} known duplicate-URL groups are retained for human review; no IDs are merged")
+        warnings.append(f"{len(actual_duplicates)} duplicate-URL groups have recorded identity resolutions; IDs retained")
 
     # Legacy A claims full preservation. Missing catalog pointers are a review
     # obligation, not proof that a copy does not exist elsewhere.
@@ -195,7 +252,8 @@ def main() -> int:
     print("Attractomancy catalog audit")
     for key in ("source", "edges", "pairs", "pair_edges", "procedures", "versions"):
         print(f"  {key:13s} {len(data[key]):4d}")
-    print(f"  URL duplicates {len(actual_duplicates):4d} (reviewed)")
+    print(f"  captures      {len(data['captures']):4d} (file hash checked)")
+    print(f"  URL duplicates {len(actual_duplicates):4d} (resolved)")
     for warning in warnings:
         print("WARNING:", warning)
     for error in errors:
