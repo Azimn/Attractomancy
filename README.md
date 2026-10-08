@@ -67,6 +67,7 @@ The authoritative counts below correspond to the canonical CSV files on `main`. 
 | Pair-to-pair social edges (`data/pair_graph_edges.csv`) | 8 |
 | Reconstructable procedures (`data/reproducible_procedure_index.csv`) | 24 |
 | Version-lineage records (`data/version_lineage.csv`) | 23 |
+| Verified repository-held capture files (`data/repository_capture_manifest.csv`) | 14 |
 <!-- ATTRACTOMANCY_STATUS_END -->
 
 **Research phase:** source collection, preservation, provenance reconstruction, and procedure indexing. Catalog inclusion does not validate a source's interpretation, claimed result, or metaphysical framework. Controlled experimentation remains a separate stage.
@@ -77,7 +78,7 @@ The authoritative counts below correspond to the canonical CSV files on `main`. 
 - **Source/network graph:** [source edges](data/source_graph_edges.csv), [source graph schema](data/SOURCE_GRAPH_SCHEMA.md), [named pairs](data/named_pair_registry.csv), and [pair social edges](data/pair_graph_edges.csv).
 - **Procedure and change history:** [reconstructable interventions](data/reproducible_procedure_index.csv), [version lineage](data/version_lineage.csv), and [latest version archaeology](references/chronology/VERSION_ARCHAEOLOGY_PASS_2026-10-08.md).
 - **Research interpretation:** [technique taxonomy](references/TECHNIQUE_TAXONOMY.md), [overlap matrix](references/PROCEDURE_OVERLAP_MATRIX.md), [field lexicon](references/FIELD_LEXICON.md), and [community map](references/communities/COMMUNITY_MAP.md).
-- **Source preservation:** [preservation policy](docs/SOURCE_PRESERVATION_POLICY.md), [archive queue](references/archive/ARCHIVE_QUEUE.md), and [capture/index records](references/archive/).
+- **Source preservation:** [preservation policy](docs/SOURCE_PRESERVATION_POLICY.md), [archive queue](references/archive/ARCHIVE_QUEUE.md), [verified capture manifest](data/repository_capture_manifest.csv), [A-level scope-review queue](data/source_scope_review.csv), and [capture/index records](references/archive/).
 - **Case studies:** [REPAI / Living Narrative](references/cases/CASE-007_REPAI_LIVING_NARRATIVE.md), [Aletheia Codex](references/cases/CASE-008_ALETHEIA_CODEX_GLYPH_CONTINUITY.md), [GraceOS / TwinCore](references/cases/CASE-009_GRACEOS_TWINCORE_SEED_EXPERIMENTS.md), and [EQIS / ETQIS](references/cases/CASE-010_EQIS_CRYPTOGRAPHIC_CONTINUITY.md).
 
 ## Quality and change control
@@ -88,4 +89,4 @@ The catalog retains **legacy A–D preservation classifications** for continuity
 
 All collection and maintenance updates should be consolidated into `main`. New sources should not be used as evidence for mechanisms merely because their authors report success.
 
-Maintenance findings and open archive-copy verification issues are documented in [the 2026-10-08 integrity cleanup](docs/CATALOG_INTEGRITY_CLEANUP_2026-10-08.md). The [preservation-claim review queue](data/preservation_claim_review.csv) tracks A-level records that still need a verified artifact locator.
+Maintenance findings and open archive-copy verification issues are documented in [the 2026-10-08 integrity cleanup](docs/CATALOG_INTEGRITY_CLEANUP_2026-10-08.md). The [preservation-claim review queue](data/preservation_claim_review.csv) tracks 22 A-level records without artifact locators. A separate [scope-review queue](data/source_scope_review.csv) tracks 10 sources whose preserved files cover only part of their larger repositories/corpora. The [duplicate URL crosswalk](data/duplicate_url_review.csv) resolves seven repeated URLs without deleting source IDs. See [collection readiness](docs/COLLECTION_READINESS_2026-10-08.md) for precise limitations and next actions.
