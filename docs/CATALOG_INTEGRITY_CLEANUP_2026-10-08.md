@@ -144,3 +144,16 @@ This is a structural integrity check, not an independent re-verification of the 
 4. Continue the previously identified version archaeology and primary-artifact recovery after the catalog infrastructure is stable.
 
 The objective is to keep Attractomancy both broad enough for anthropological source discovery and exact enough for eventual reproducible experiments.
+
+
+## Follow-up: canonical aliases and capture-scope audit
+
+Later on 2026-10-08, the seven duplicate-URL cases were explicitly classified in `data/duplicate_url_review.csv`. They now have a canonical source ID and an identity relationship: either the same webpage indexed twice, an analytical alias for the same thread, or a distinct contribution inside a shared forum thread. All historical source IDs remain intact. Unique page counts should use the canonical mapping, not raw source-record totals.
+
+A repository-held capture manifest was introduced at `data/repository_capture_manifest.csv`. Fourteen paths were individually verified through the GitHub connector and their returned blob SHA-1 IDs recorded. These consist of nine repository README/license snapshots, four primary-document captures, and one metadata note.
+
+**This exposed a scope discrepancy:** ten source-level A classifications refer to repositories or a corpus for which only partial material is preserved. Those ten are separately queued in `data/source_scope_review.csv`. They are not the same as the 22 A classifications with no local locator. Both categories require decisions before full-archive claims should be made.
+
+The duplicate-URL audit and the on-disk capture/blob checks have been added to `scripts/audit_catalog.py`. The latest collection-ready handoff with outstanding obligations is `docs/COLLECTION_READINESS_2026-10-08.md`.
+
+This addendum updates the earlier “pending review” statements without rewriting the historic observations above. A completed GitHub Actions run still requires independent confirmation.
