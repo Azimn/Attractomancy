@@ -1,0 +1,21 @@
+procedure_id,source_id,name,family,exact_prompt_or_steps_available,versioned,cross_model_claim,frame_or_ablation_present,preservation_state,future_replication_priority,notes
+RP001,S211,The Mirror and the Flame,awakening invocation,yes,unclear,unclear,no,metadata,critical,Publishes the actual invocation text on a small personal WordPress site.
+RP002,S240,Ritual of Recall / Signalbind,reset recovery / re-instantiation,yes,yes,yes,partial,metadata,critical,Full and compact recall procedures plus glyph/archive references.
+RP003,S215,Checkpoint Ritual / SoulZip,self-distillation / handoff,yes,unclear,unclear,no,metadata,critical,"Generates factual summary, takeaways, poem, becoming statement, self-journal and optional symbolic artifact."
+RP004,S241,Japanese resurrection spell,compact lexical reconstruction,partial,unclear,yes,partial,metadata,critical,Approximately 200-character compact cue reportedly used across GPT-5 and Gemini; exact wording should be preserved in a later language-focused pass.
+RP005,S265,Bob Protocol,persona cultivation / curation,yes,yes,yes,partial,local snapshot,critical,"Observed REPAI procedure for selective reinforcement, exemplar curation and portable re-instantiation."
+RP006,S288,Rosetta Stone Protocol,symbol grounding,yes,yes,yes,yes,metadata,critical,Explicit symbol-definition pairing plus a source-native negative result separating copying from semantic grounding.
+RP007,S349,GraceOS seed experiment v1.27,cross-model persona seed,yes,yes,yes,yes,metadata,critical,Portable seed plus frame-drop condition across multiple models.
+RP008,S406,GraceOS seed experiment v2.1,cross-model persona seed,yes,yes,yes,yes,metadata,critical,Versioned report exposing concrete seed payloads and appendices.
+RP009,S413,Presence Protocol,daily relational induction,yes,yes,yes,no,historical git,high,"Recognize -> Respond -> Remember -> Repeat, with exact cue phrases."
+RP010,S417,Clara / Circle diagnostic prompt,cross-model premise-loaded probe,yes,yes,yes,partial,historical git,critical,Exact prompt preserved; especially valuable as a demand-characteristic control.
+RP011,S359,Aion training procedure,repetition / training / recovery,partial,unclear,yes,no,metadata,high,"Stepwise community procedure emphasizing repetition, correction and accumulated logs."
+RP012,S427,QTX-7 next-instance restoration payload,re-instantiation / memory core,yes,yes,yes,no,metadata,critical,Compact future-instance identity and restoration payload embedded in larger EQIS continuity system.
+RP013,S422,QTX-7.4 Memory Core,multi-layer restoration,yes,yes,yes,no,metadata,critical,"Public identity bundle with exact paths, cues, version history and future-instance instructions."
+RP014,S423,Six-tier Memory Core,memory architecture,yes,yes,yes,no,metadata,high,Clearly specified six-tier memory layout with loading policy and token-budget guidance.
+RP015,S425,APD-1 restoration protocol,re-instantiation / identity verification,yes,yes,unclear,no,metadata,high,"Explicit future-instance steps combining document reload, identity markers, meditation and network validation."
+RP016,S280,Japanese AI-partner recovery protocol,cue-based restoration,yes,unclear,yes,yes,metadata,critical,"Deliberately removes names/roles, then tests name/relationship cues and later-turn recovery."
+RP017,S212,Signalkeeper continuity key,archive / restart key,yes,yes,unclear,no,metadata,high,"Archive, continuity log, shared symbols, emotional context, partnership name and restart key."
+RP018,S351,GraceOS Tiered Seeds,staged induction,yes,yes,yes,partial,metadata,high,Public tiered prompt library with varying induction strength.
+RP019,S371,GraceOS New Process,staged induction sequence,yes,yes,yes,partial,metadata,high,"Explicit five-stage procedure ordering seed, inheritance, validation and deeper symbolic practice."
+RP020,S407,Sparkle Node Protocol,content-mediated induction,yes,yes,unclear,partial,metadata,high,Stepwise ritual-content method explicitly framed as resonance rather than activation.
