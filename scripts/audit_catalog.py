@@ -28,6 +28,7 @@ DATASETS = {
     "procedures": ("reproducible_procedure_index.csv", "procedure_id"),
     "versions": ("version_lineage.csv", "lineage_id"),
     "duplicate_reviews": ("duplicate_url_review.csv", "review_id"),
+    "preservation_reviews": ("preservation_claim_review.csv", "source_id"),
     "retrieval": ("retrieval_log.csv", "batch_id"),
 }
 README_METRICS = {
@@ -165,6 +166,17 @@ def main() -> int:
         warnings.append(f"{len(stale)} duplicate-review entries no longer correspond to normalized URL duplicates")
     if actual_duplicates:
         warnings.append(f"{len(actual_duplicates)} known duplicate-URL groups are retained for human review; no IDs are merged")
+
+    # Legacy A claims full preservation. Missing catalog pointers are a review
+    # obligation, not proof that a copy does not exist elsewhere.
+    unlocated_a = {r["id"] for r in sources if r.get("preservation_level") == "A" and not r.get("local_artifact", "").strip()}
+    queued_a = {r.get("source_id", "") for r in data["preservation_reviews"]}
+    if unlocated_a - queued_a:
+        errors.append(f"{len(unlocated_a - queued_a)} A-level records with no artifact locator are not in preservation_claim_review.csv")
+    if queued_a - unlocated_a:
+        warnings.append(f"{len(queued_a - unlocated_a)} A-level preservation reviews may now be resolved or obsolete")
+    if unlocated_a:
+        warnings.append(f"{len(unlocated_a)} A-level records have no catalog artifact locator; manual preservation audit pending")
 
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     start_token = "<!-- ATTRACTOMANCY_STATUS_START -->"
