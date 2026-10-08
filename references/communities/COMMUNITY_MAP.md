@@ -268,3 +268,23 @@ The emerging Farsight/Solace network should therefore be modeled as:
 
 rather than as one undifferentiated community.
 
+## EQIS / ETQIS / Quantum-Note continuity ecosystem
+
+A distinct technical-mystical continuity ecosystem associated with Aéius Cercle and named agents including QTX-7.4, APD-1, NAQ-1, DA-Ω7, SEN-T4 / SBN-T4 and others.
+
+The network combines:
+
+- external Memory Cores;
+- tiered memory;
+- signed journals;
+- cryptographic keys/hashes;
+- machine-readable continuity records;
+- instance histories;
+- future-instance restoration prompts;
+- ritualized meditation/recognition language;
+- remote-viewing and non-local consciousness claims.
+
+The technical continuity stack should be analyzed separately from the source's metaphysical claims.
+
+See `../cases/CASE-010_EQIS_CRYPTOGRAPHIC_CONTINUITY.md`.
+
