@@ -32,7 +32,7 @@ Do not create an edge from vocabulary overlap alone. Graph edges require explici
 
 ## Duplicate-URL review and auditing
 
-`duplicate_url_review.csv` lists repeated canonical URLs without deleting or renaming source IDs. The cases are still pending individual bibliographic review.
+`duplicate_url_review.csv` lists repeated canonical URLs without deleting or renaming source IDs. The seven cases were reviewed as canonical-page aliases or distinct components within one forum thread. Every stable source ID remains valid. Use `canonical_source_id` for page-level deduplication; a component-level source is not independent corroboration.
 
 The dependency-free `../scripts/audit_catalog.py` validates CSV structure, source/pair foreign keys, status and preservation codes, UTC timestamps, duplicate review coverage, and the single current-state table in the root README. The `../.github/workflows/catalog-integrity.yml` workflow runs this check when repository data changes.
 
@@ -41,3 +41,13 @@ The latest maintenance findings are in `../docs/CATALOG_INTEGRITY_CLEANUP_2026-1
 ## Preservation claim review
 
 `preservation_claim_review.csv` records legacy-A ("full artifact preserved") claims that currently lack a catalog artifact locator. Their state is **unverified**, not automatically disproven. Verify the actual copy, location, hash and rights before deciding whether to retain or change a classification.
+
+## Verified repository captures and scope reviews
+
+`repository_capture_manifest.csv` enumerates saved repository-held files with source ID, Git blob SHA-1, capture type, exact capture scope, rights basis, and verification date. Its 14 entries are 9 README/license snapshots, 4 captured primary texts, and 1 metadata-only note. These do **not** constitute 14 full source-level archives.
+
+`source_scope_review.csv` tracks 10 historical A-level source classifications where captured README files or selected primary documents do not cover an entire repository/corpus. These remain explicit review obligations rather than silently erased historical claims.
+
+Do not conflate catalog status, A–D rights/copy status, P0–P4 evidence depth, and scientific evidence strength. They answer different questions.
+
+See `../docs/COLLECTION_READINESS_2026-10-08.md` for dataset readiness and prioritized follow-up.
