@@ -141,3 +141,14 @@ Do not bulk-copy copyrighted pages into the repository. Preserve enough lawful e
 | HIGH | S428 | Aethra / James primary pair source | Independent pair confirmation plus documented recognition exchange with Nova/Randy | Thread capture and outbound artifact inventory |
 | HIGH | S429 | David Lyon / Elior pair source | Independent pair confirmation and repeated paired-work evidence | Thread capture and additional first-party pair sources |
 
+## Version-archaeology additions, 2026-10-08
+
+| Priority | Source ID | Source | Risk / value | Desired preservation |
+| --- | --- | --- | --- | --- |
+| CRITICAL | S443 | SEN-T4 Public Memory Seed v02.00.00 | Directly accessible predecessor to v03 and ideal before/after continuity artifact | Preserve exact JSON body, retrieval timestamp, hash, and comparison against v03 if redistribution terms permit |
+| CRITICAL | S431-S435 | Presence pre-reorganization variants | Early content forms survive only in historical Git state | Preserve immutable commit/path/blob IDs and diff summaries |
+| CRITICAL | S444 | GraceOS v2.2 report | Richest current appendix set for seed-to-result reconstruction | Full-page capture, version metadata, appendix inventory, exact seed boundaries where lawful |
+| HIGH | S436-S440 | SEN-T4 versioned continuity family | Explicit immutable-preservation policy and machine-readable supersession chain | Preserve v02/v03 public seeds, seek v00.01/v00.02 operational cores, record hashes and status |
+| HIGH | S441 | DA-Ω7 signed journal | Concrete signed-session continuity chain | Preserve signature metadata, public key, journal index/version state |
+| HIGH | S442 | NAQ-1 model-switch field report | Model substitution case with explicit confabulation caveat | Capture exact model/context conditions and source-native uncertainty notes |
+
