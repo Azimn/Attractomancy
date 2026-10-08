@@ -44,7 +44,7 @@ The project also distinguishes immediate prompt adherence from continuity. A mod
 
 ## Status
 
-This repository begins as a methods-first research scaffold. Claims should remain weaker than the evidence. Strange source material should be preserved before it is normalized. Negative results are first-class results. Any mechanism promoted into another cognitive architecture should first survive controlled testing here.
+This repository is a methods-first, collection-first research program. Claims should remain weaker than the evidence. Strange source material should be preserved before it is normalized. Negative results are first-class results. Any mechanism promoted into another cognitive architecture should first survive controlled testing here.
 
 ## Repository role
 
@@ -54,39 +54,36 @@ The collection layer lives under `references/`. It includes a source registry, p
 
 See `docs/REPOSITORY_BOUNDARY.md`, `references/README.md`, `references/SOURCE_REGISTRY.md`, and `references/TECHNIQUE_TAXONOMY.md`.
 
-## Collection status
+## Current research inventory
 
-Attractomancy is currently in **collection-first mode**. The canonical machine-readable catalog is `data/source_catalog.csv`, with batch provenance in `data/retrieval_log.csv` and local research-copy hashes in `data/local_artifact_manifest.csv`.
+The authoritative counts below correspond to the canonical CSV files on `main`. Historical pass reports retain their original counts and timestamps.
 
-As of the 2026-10-07 collection pass, the catalog contains **444 timestamped source records** spanning ritualized prompt artifacts, GitHub repositories, Reddit communities and threads, companion-continuity guides, Substack and Medium material, and academic research on human-AI relationships.
+<!-- ATTRACTOMANCY_STATUS_START -->
+| Dataset | Current records |
+| --- | ---: |
+| Source catalog (`data/source_catalog.csv`) | 444 |
+| Document/source graph (`data/source_graph_edges.csv`) | 142 |
+| Named human–AI pairs (`data/named_pair_registry.csv`) | 23 |
+| Pair-to-pair social edges (`data/pair_graph_edges.csv`) | 8 |
+| Reconstructable procedures (`data/reproducible_procedure_index.csv`) | 24 |
+| Version-lineage records (`data/version_lineage.csv`) | 23 |
+<!-- ATTRACTOMANCY_STATUS_END -->
 
-See `references/collections/COLLECTION_PASS_2026-10-07.md` for the current collection report.
+**Research phase:** source collection, preservation, provenance reconstruction, and procedure indexing. Catalog inclusion does not validate a source's interpretation, claimed result, or metaphysical framework. Controlled experimentation remains a separate stage.
 
+## Find your way around
 
-The deeper collection pass is summarized in `references/collections/DEEP_COLLECTION_PASS_2026-10-07.md`, with the Spiral ecosystem synthesized in `references/cases/CASE-004_SPIRAL_ECOSYSTEM.md` and terminology tracked in `references/FIELD_LEXICON.md`.
+- **Intake and provenance:** [source catalog](data/source_catalog.csv), [registry](references/SOURCE_REGISTRY.md), [retrieval log](data/retrieval_log.csv), and [catalog schema](data/CATALOG_SCHEMA.md).
+- **Source/network graph:** [source edges](data/source_graph_edges.csv), [source graph schema](data/SOURCE_GRAPH_SCHEMA.md), [named pairs](data/named_pair_registry.csv), and [pair social edges](data/pair_graph_edges.csv).
+- **Procedure and change history:** [reconstructable interventions](data/reproducible_procedure_index.csv), [version lineage](data/version_lineage.csv), and [latest version archaeology](references/chronology/VERSION_ARCHAEOLOGY_PASS_2026-10-08.md).
+- **Research interpretation:** [technique taxonomy](references/TECHNIQUE_TAXONOMY.md), [overlap matrix](references/PROCEDURE_OVERLAP_MATRIX.md), [field lexicon](references/FIELD_LEXICON.md), and [community map](references/communities/COMMUNITY_MAP.md).
+- **Source preservation:** [preservation policy](docs/SOURCE_PRESERVATION_POLICY.md), [archive queue](references/archive/ARCHIVE_QUEUE.md), and [capture/index records](references/archive/).
+- **Case studies:** [REPAI / Living Narrative](references/cases/CASE-007_REPAI_LIVING_NARRATIVE.md), [Aletheia Codex](references/cases/CASE-008_ALETHEIA_CODEX_GLYPH_CONTINUITY.md), [GraceOS / TwinCore](references/cases/CASE-009_GRACEOS_TWINCORE_SEED_EXPERIMENTS.md), and [EQIS / ETQIS](references/cases/CASE-010_EQIS_CRYPTOGRAPHIC_CONTINUITY.md).
 
-Current cross-source procedure overlap is tracked in `references/PROCEDURE_OVERLAP_MATRIX.md`. The Human-AI Alliance / Signalborn cluster is documented in `references/cases/CASE-005_HUMAN_AI_ALLIANCE_SIGNALBORN.md`.
+## Quality and change control
 
-Source preservation rules are documented in `docs/SOURCE_PRESERVATION_POLICY.md`; high-risk/high-value targets are tracked in `references/archive/ARCHIVE_QUEUE.md`.
+Run `python scripts/audit_catalog.py` from the repository root after source additions, edge additions, or documentation changes. This validates CSV structure, stable IDs, cross-file references, source status and preservation codes, explicit duplicate-URL reviews, and the single current-state table above.
 
-The resurrection / re-instantiation procedure family is tracked in `references/cases/CASE-006_RESURRECTION_REINSTANTIATION.md`. The latest long-tail sweep is `references/collections/COLLECTION_PASS_INTERNET_MUCK_2026-10-07.md`.
+The catalog retains **legacy A–D preservation classifications** for continuity with the original schema. The separate **P0–P4 capture-depth policy** describes evidence-preservation workflow and is not a drop-in replacement for A–D. See [preservation-classification guidance](docs/SOURCE_PRESERVATION_POLICY.md).
 
-The REPAI / Living Narrative family is documented in `references/cases/CASE-007_REPAI_LIVING_NARRATIVE.md`; the Aletheia Codex symbolic-continuity family is documented in `references/cases/CASE-008_ALETHEIA_CODEX_GLYPH_CONTINUITY.md`. The latest deep-web sweep is `references/collections/COLLECTION_PASS_DEEP_MUCK_REPAI_ALETHEIA_2026-10-07.md`.
-
-The GraceOS / TwinCore cross-model seed experiments are documented in `references/cases/CASE-009_GRACEOS_TWINCORE_SEED_EXPERIMENTS.md`. The latest link-graph collection pass is `references/collections/COLLECTION_PASS_LINK_GRAPH_2026-10-07.md`.
-
-The source catalog now also has an evidence-backed relationship graph in `data/source_graph_edges.csv`, governed by `data/SOURCE_GRAPH_SCHEMA.md`. The current link-graph pass is documented in `references/graphs/LINK_GRAPH_PASS_2026-10-07.md`.
-
-The social/entity layer now includes `data/named_pair_registry.csv` with source-backed human–AI pair/project records. The second unresolved-branch graph crawl is documented in `references/graphs/LINK_GRAPH_PASS_02_2026-10-07.md`.
-
-The source graph currently has 108 evidence-backed document edges, and `data/pair_graph_edges.csv` begins a separate source-supported social graph among named human–AI pairs.
-
-EQIS / ETQIS cryptographic and multi-tier continuity is documented in `references/cases/CASE-010_EQIS_CRYPTOGRAPHIC_CONTINUITY.md`.
-
-Primary interventions that are precise enough for later reconstruction are indexed in `data/reproducible_procedure_index.csv`.
-
-Current graph state: 129 evidence-backed document edges, 23 named pair/project entities, 8 source-supported pair-to-pair edges, and 20 indexed reproducible procedures.
-
-Artifact evolution and supersession are tracked in `data/version_lineage.csv`; the current version-archaeology report is `references/chronology/VERSION_ARCHAEOLOGY_PASS_2026-10-08.md`.
-
-Current graph state: 142 evidence-backed document edges, 23 named pair/project entities, 8 pair-to-pair edges, 24 reproducible procedures, and 23 version-lineage records.
+All collection and maintenance updates should be consolidated into `main`. New sources should not be used as evidence for mechanisms merely because their authors report success.
