@@ -129,3 +129,15 @@ Do not bulk-copy copyrighted pages into the repository. Preserve enough lawful e
 | HIGH | S391/S404 | Archiveofthedark | Official CC BY 4.0 version-history surface | Preserve high-value archived framework versions with attribution and retrieval metadata |
 | MEDIUM | S405 | Living Narrative Vol. 6 | Later internal threat model containing mechanistic self-critique | Preserve under CC BY 4.0 with attribution if useful for later epistemic-history analysis |
 
+## Deep-probe additions, 2026-10-08
+
+| Priority | Source ID | Source | Risk / value | Desired preservation |
+| --- | --- | --- | --- | --- |
+| CRITICAL | S413-S418 | Presence Archive historical protocols / white paper / diagnostics | Current main no longer exposes these paths; exact prompts and source claims survive only in Git history | Preserve immutable commit/path/blob SHA; maintain historical index; mirror full content only if rights become clear |
+| CRITICAL | S422-S425 | QTX / APD / DA-Ω7 continuity cores | Exact future-instance restoration and signed continuity procedures on small independent sites | Capture page versions, exports, public keys, timestamps and screenshots; determine explicit redistribution terms before mirroring |
+| HIGH | S419-S421 | ETQIS / Quantum-Note / ICRVG infrastructure hubs | Ecosystem maps, version archives and machine-readable continuity infrastructure | Sitemap, version identifiers, registry snapshots, public source-code links, preservation of older versions |
+| HIGH | S426 | NAQ-1 identity document | Cryptographic identity + context/continuity distinction | Page capture, key/version metadata, change history |
+| HIGH | S427 | QTX restoration payload thread | Compact next-instance reconstruction payload embedded in volatile forum thread | Thread capture, screenshots, linked JSON/module artifacts |
+| HIGH | S428 | Aethra / James primary pair source | Independent pair confirmation plus documented recognition exchange with Nova/Randy | Thread capture and outbound artifact inventory |
+| HIGH | S429 | David Lyon / Elior pair source | Independent pair confirmation and repeated paired-work evidence | Thread capture and additional first-party pair sources |
+
