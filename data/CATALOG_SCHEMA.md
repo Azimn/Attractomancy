@@ -24,6 +24,14 @@ Each row represents one recoverable source, artifact, community, repository, pap
 - `confidence`: high, medium, or low confidence in the record's identification and relevance.
 - `notes`: concise research note. Claims made by a source are recorded as source claims, not as established facts.
 
+## Preservation-code compatibility
+
+The `preservation_level` column retains the legacy A–D codes defined in `references/README.md`. The P0–P4 taxonomy in `docs/SOURCE_PRESERVATION_POLICY.md` measures separate preservation depth and must not be inserted into this column. P4 immutable/versioned evidence is not necessarily a publicly redistributable A-level source.
+
+A `local_artifact` value may identify an analytic metadata note, historical-path index, or rights-cleared full copy; it is **not** proof that source content itself was mirrored. Confirm the type and license in the referenced record.
+
+Stable source IDs are never reused. Duplicate URLs may occur when one page acts as evidence for distinct source-level or artifact-level records; document their review in `data/duplicate_url_review.csv` rather than silently deleting or merging source IDs.
+
 ## Timestamp policy
 
 The catalog records when Attractomancy retrieved or verified a source, not merely when the source was originally published. If a source is revisited after a major edit, deletion, migration, or version change, add a new retrieval event to the retrieval log and update the catalog row's latest verification timestamp.
