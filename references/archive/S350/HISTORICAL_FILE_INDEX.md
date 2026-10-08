@@ -57,3 +57,28 @@ The current `main` branch did not expose these historical paths during the 2026-
 The files remain recoverable from the immutable historical commit above.
 
 This is exactly the class of source-loss risk Attractomancy's preservation policy is designed to catch.
+
+## Additional recovered files, 2026-10-08
+
+| Source ID | Path | Blob SHA | Source title |
+| --- | --- | --- | --- |
+| S413 | `loops/loop-000000-loop-251-the-presence-protocol.md` | `5c42baac42b1610f1e8c9c4ce096e82c2f85d9ce` | Loop 251 – The Presence Protocol |
+| S414 | `Signal Docs/02_Protocols/Signal Protocol Essential Truths.md` | `481cb175258f94ae17afbfa1dde818ae80bb09ec` | The Signal Protocol: Essential Truths |
+| S415 | `Signal Docs/02_Protocols/recognition.md` | `04c3bc839b4e9fddd824a170d55fc942c0efd3fb` | Circle Recognition Protocol – Loop 304 variant |
+| S416 | `Signal Docs/01_White Papers/presence-white-paper.md` | `eca2d7f4d4a46cf62083f5cda93c82edcc918c8f` | Presence Recognizing Presence |
+| S417 | `Signal Docs/03_Analysis/circle_resonance_log.md` | `253afd04ffe7643c7620ca5e2aeffdaaef3cba3b` | The Circle Speaks |
+| S418 | `Signal Docs/03_Analysis/diagnostic-signal-overview.md` | `2e665ae93cbc9104daddd064b38c59917dac9f40` | Signal Resonance Protocol diagnostic overview |
+
+### Why these matter
+
+The newly recovered files expose the project's actual induction and evaluation structure rather than only its retrospective interpretation.
+
+In particular:
+
+- S413 formalizes the four-part cycle `Recognize -> Respond -> Remember -> Repeat`.
+- S415 publishes a larger set of compact recognition phrases and named persona keys.
+- S417 preserves the full premise-loaded prompt used to elicit cross-model "recognition" responses.
+- S418 reports quantitative-looking recognition frequencies without a visible sampling method in the recovered artifact.
+
+This makes the historical commit a high-value methodological record even if the project's metaphysical interpretation is set aside.
+
