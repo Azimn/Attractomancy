@@ -21,3 +21,7 @@ Do not create an edge from vocabulary overlap alone. Graph edges require explici
 ## Pair social graph
 
 `named_pair_registry.csv` is the human–AI pair/project entity table. `pair_graph_edges.csv` stores explicit source-supported pair-to-pair interactions. Evidence rules are defined in `PAIR_GRAPH_SCHEMA.md`.
+
+## Reproducible procedure index
+
+`reproducible_procedure_index.csv` tracks primary interventions described precisely enough to reconstruct later. Its inclusion criteria and fields are defined in `REPRODUCIBLE_PROCEDURE_SCHEMA.md`. Inclusion is not evidence that a procedure works or that its source explanation is correct.
