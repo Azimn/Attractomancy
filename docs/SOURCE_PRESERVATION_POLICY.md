@@ -18,6 +18,19 @@ For every high-value source, preserve enough lawful research evidence that later
 6. whether a local copy exists;
 7. whether the source can still be independently retrieved.
 
+## Two independent classification systems
+
+The catalog's existing `preservation_level` field uses the **legacy A–D access/rights scale** described in `references/README.md`:
+
+- **A**: a complete research artifact is preserved and can be redistributed under known rights.
+- **B**: a lawful local research copy exists, but the public repository holds only metadata.
+- **C**: publicly accessible URL and source/archive metadata are recorded; a linked metadata file does not by itself establish a full local copy.
+- **D**: unresolved discovery lead.
+
+The **P0–P4 scale below** is a *separate capture-depth/workflow measure*. It describes the form of preserved research evidence and is not an automatic conversion from A–D: an unlicensed Git source may have P4-quality immutable version identifiers while still being cataloged as C, and a legitimately preserved unversioned file can be A without being P4.
+
+**Do not bulk-convert historical A–D catalog codes into P0–P4.** Any future machine-readable capture-depth register should use its own field or table, with explicit evidence and timestamps. This preserves the meaning of existing records.
+
 ## Preservation levels
 
 **P0 — Pointer only**
