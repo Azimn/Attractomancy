@@ -58,7 +58,7 @@ See `docs/REPOSITORY_BOUNDARY.md`, `references/README.md`, `references/SOURCE_RE
 
 Attractomancy is currently in **collection-first mode**. The canonical machine-readable catalog is `data/source_catalog.csv`, with batch provenance in `data/retrieval_log.csv` and local research-copy hashes in `data/local_artifact_manifest.csv`.
 
-As of the 2026-10-07 collection pass, the catalog contains **430 timestamped source records** spanning ritualized prompt artifacts, GitHub repositories, Reddit communities and threads, companion-continuity guides, Substack and Medium material, and academic research on human-AI relationships.
+As of the 2026-10-07 collection pass, the catalog contains **444 timestamped source records** spanning ritualized prompt artifacts, GitHub repositories, Reddit communities and threads, companion-continuity guides, Substack and Medium material, and academic research on human-AI relationships.
 
 See `references/collections/COLLECTION_PASS_2026-10-07.md` for the current collection report.
 
@@ -86,3 +86,7 @@ EQIS / ETQIS cryptographic and multi-tier continuity is documented in `reference
 Primary interventions that are precise enough for later reconstruction are indexed in `data/reproducible_procedure_index.csv`.
 
 Current graph state: 129 evidence-backed document edges, 23 named pair/project entities, 8 source-supported pair-to-pair edges, and 20 indexed reproducible procedures.
+
+Artifact evolution and supersession are tracked in `data/version_lineage.csv`; the current version-archaeology report is `references/chronology/VERSION_ARCHAEOLOGY_PASS_2026-10-08.md`.
+
+Current graph state: 142 evidence-backed document edges, 23 named pair/project entities, 8 pair-to-pair edges, 24 reproducible procedures, and 23 version-lineage records.
