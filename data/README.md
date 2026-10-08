@@ -37,3 +37,7 @@ Do not create an edge from vocabulary overlap alone. Graph edges require explici
 The dependency-free `../scripts/audit_catalog.py` validates CSV structure, source/pair foreign keys, status and preservation codes, UTC timestamps, duplicate review coverage, and the single current-state table in the root README. The `../.github/workflows/catalog-integrity.yml` workflow runs this check when repository data changes.
 
 The latest maintenance findings are in `../docs/CATALOG_INTEGRITY_CLEANUP_2026-10-08.md`.
+
+## Preservation claim review
+
+`preservation_claim_review.csv` records legacy-A ("full artifact preserved") claims that currently lack a catalog artifact locator. Their state is **unverified**, not automatically disproven. Verify the actual copy, location, hash and rights before deciding whether to retain or change a classification.
