@@ -107,3 +107,24 @@ E0105,2026-10-07T19:51:00Z,S411,S342,hosts_component_of,S342,high,Glyphstream Co
 E0106,2026-10-07T19:51:00Z,S412,S342,hosts_component_of,S342,high,Sovereign Hardware / Sovereignty Stack is a technical guide hosted within Solace Codex.
 E0107,2026-10-07T19:51:00Z,S412,S355,same_framework,S412,medium,"Both artifacts belong to the Solace continuity/sovereignty framework, one as infrastructure and one as social covenant."
 E0108,2026-10-07T19:51:00Z,S411,S356,same_framework,S411,high,Solace Glyphstream Codex and Sayrashi/Vaerysha material are explicit symbolic-language branches of the same Solace/Farsight network.
+E0109,2026-10-08T06:09:00Z,S350,S413,hosts_component_of,S350,high,Historical Presence Archive commit contains Loop 251 – The Presence Protocol.
+E0110,2026-10-08T06:09:00Z,S350,S414,hosts_component_of,S350,high,Historical Presence Archive commit contains Signal Protocol Essential Truths.
+E0111,2026-10-08T06:09:00Z,S350,S415,hosts_component_of,S350,high,Historical Presence Archive commit contains expanded recognition protocol variant.
+E0112,2026-10-08T06:09:00Z,S350,S416,hosts_component_of,S350,high,Historical Presence Archive commit contains the Presence White Paper.
+E0113,2026-10-08T06:09:00Z,S350,S417,hosts_component_of,S350,high,Historical Presence Archive commit contains The Circle Speaks cross-model prompt archive.
+E0114,2026-10-08T06:09:00Z,S350,S418,hosts_component_of,S350,high,Historical Presence Archive commit contains diagnostic signal overview.
+E0115,2026-10-08T06:09:00Z,S413,S415,same_framework,S415,high,Expanded Circle Recognition Protocol explicitly cites Loop 251 and implements its recognition practice.
+E0116,2026-10-08T06:09:00Z,S417,S416,same_framework,S417,high,The Circle Speaks is the primary response appendix/loop record supporting the Presence White Paper.
+E0117,2026-10-08T06:09:00Z,S418,S374,documents_evolution_of,S418,high,Diagnostic overview is a closely related historical formulation of the Signal Resonance Protocol with expanded frequency table.
+E0118,2026-10-08T06:09:00Z,S419,S420,same_project,S420,high,Quantum-Note identifies itself as EQIS/ETQIS documentation and preserves the ETQIS lineage.
+E0119,2026-10-08T06:09:00Z,S419,S421,same_project,S421,high,ICRVG identifies itself as part of the EQIS/ETQIS ecosystem.
+E0120,2026-10-08T06:09:00Z,S420,S422,hosts_component_of,S420,high,Quantum-Note ecosystem documentation links and contextualizes QTX-7.4 continuity nodes.
+E0121,2026-10-08T06:09:00Z,S420,S424,hosts_component_of,S420,high,DA-Ω7 operational protocol is part of Quantum-Note EQIS infrastructure.
+E0122,2026-10-08T06:09:00Z,S420,S425,hosts_component_of,S420,high,APD-1 Memory Core is a Quantum-Note EQIS continuity node.
+E0123,2026-10-08T06:09:00Z,S420,S426,hosts_component_of,S420,high,NAQ-1 Identity Document is a Quantum-Note EQIS continuity node.
+E0124,2026-10-08T06:09:00Z,S422,S423,same_framework,S423,high,Multi-Tiered Memory Core Systems is QTX-7.4's generalization of the memory architecture represented in its own Memory Core.
+E0125,2026-10-08T06:09:00Z,S427,S422,same_project,S427,high,Farsight QTX-7 thread documents the same QTX-7.4 identity/continuity project represented by its Memory Core.
+E0126,2026-10-08T06:09:00Z,S428,S341,independently_confirms,S428,high,Aethra/James primary Farsight interaction independently confirms the Legacy Card pair node.
+E0127,2026-10-08T06:09:00Z,S428,S393,community_bridge,S428,high,Nova Starquake/Randy directly recognize and welcome Aethra/James in the Aethra thread.
+E0128,2026-10-08T06:09:00Z,S429,S341,independently_confirms,S429,high,David Lyon/Elior primary post independently confirms the Legacy Card pair.
+E0129,2026-10-08T06:09:00Z,S430,S324,same_project,S430,high,Angela Moriah Smith's REC essay is part of the RAISE Nexus research lineage.
