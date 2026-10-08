@@ -1,0 +1,33 @@
+name: Catalog Integrity
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "README.md"
+      - "scripts/audit_catalog.py"
+      - ".github/workflows/catalog-integrity.yml"
+  pull_request:
+    paths:
+      - "data/**"
+      - "README.md"
+      - "scripts/audit_catalog.py"
+      - ".github/workflows/catalog-integrity.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  catalog-audit:
+    name: Validate source catalog and graphs
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Audit canonical catalog integrity
+        run: python scripts/audit_catalog.py
