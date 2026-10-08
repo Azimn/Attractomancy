@@ -4,6 +4,12 @@ This directory is the research intake and preservation layer for Attractomancy. 
 
 The archive is intentionally broader than the set of sources that will eventually support published claims. Fringe material, anecdotal reports, failed techniques, contradictory accounts, and community folklore are all admissible as research objects if they are clearly labeled.
 
+## Classification note
+
+The A–D labels below are the **canonical historical catalog classifications** and remain valid in `data/source_catalog.csv`. They describe access/redistribution and copy status. The newer P0–P4 levels in `docs/SOURCE_PRESERVATION_POLICY.md` describe research-capture depth, including version-pinned metadata, and are **not interchangeable**. A source can be cataloged C while a separate preservation record has version-pinned Git identifiers or structured research notes.
+
+Do not change a source's classification merely because a metadata note, hash, or immutable upstream URL was created. A full-copy claim requires an actual recoverable copy and a rights basis.
+
 ## Preservation levels
 
 **Level A: Full artifact preserved.** Use when the artifact is authored by the project, explicitly licensed for redistribution, public domain, or otherwise clearly redistributable.
