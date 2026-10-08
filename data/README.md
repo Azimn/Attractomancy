@@ -29,3 +29,11 @@ Do not create an edge from vocabulary overlap alone. Graph edges require explici
 ## Version lineage
 
 `version_lineage.csv` records source-supported revision and supersession relationships among historical Git artifacts, versioned reports, memory cores, and continuity files. Its fields and evidence rules are defined in `VERSION_LINEAGE_SCHEMA.md`. Earlier versions are preserved rather than silently replaced by later interpretations.
+
+## Duplicate-URL review and auditing
+
+`duplicate_url_review.csv` lists repeated canonical URLs without deleting or renaming source IDs. The cases are still pending individual bibliographic review.
+
+The dependency-free `../scripts/audit_catalog.py` validates CSV structure, source/pair foreign keys, status and preservation codes, UTC timestamps, duplicate review coverage, and the single current-state table in the root README. The `../.github/workflows/catalog-integrity.yml` workflow runs this check when repository data changes.
+
+The latest maintenance findings are in `../docs/CATALOG_INTEGRITY_CLEANUP_2026-10-08.md`.
