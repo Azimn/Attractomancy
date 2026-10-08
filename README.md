@@ -87,3 +87,5 @@ Run `python scripts/audit_catalog.py` from the repository root after source addi
 The catalog retains **legacy A–D preservation classifications** for continuity with the original schema. The separate **P0–P4 capture-depth policy** describes evidence-preservation workflow and is not a drop-in replacement for A–D. See [preservation-classification guidance](docs/SOURCE_PRESERVATION_POLICY.md).
 
 All collection and maintenance updates should be consolidated into `main`. New sources should not be used as evidence for mechanisms merely because their authors report success.
+
+Maintenance findings and open archive-copy verification issues are documented in [the 2026-10-08 integrity cleanup](docs/CATALOG_INTEGRITY_CLEANUP_2026-10-08.md). The [preservation-claim review queue](data/preservation_claim_review.csv) tracks A-level records that still need a verified artifact locator.
