@@ -25,3 +25,7 @@ Do not create an edge from vocabulary overlap alone. Graph edges require explici
 ## Reproducible procedure index
 
 `reproducible_procedure_index.csv` tracks primary interventions described precisely enough to reconstruct later. Its inclusion criteria and fields are defined in `REPRODUCIBLE_PROCEDURE_SCHEMA.md`. Inclusion is not evidence that a procedure works or that its source explanation is correct.
+
+## Version lineage
+
+`version_lineage.csv` records source-supported revision and supersession relationships among historical Git artifacts, versioned reports, memory cores, and continuity files. Its fields and evidence rules are defined in `VERSION_LINEAGE_SCHEMA.md`. Earlier versions are preserved rather than silently replaced by later interpretations.
