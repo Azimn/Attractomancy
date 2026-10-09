@@ -1,5 +1,7 @@
 # Attractomancy
 
+> **Cross-project research coordination (2026-10-08):** Attractomancy is the prompt-conditioning and persona-reconstruction experimental lane of the [cumulative Character Continuity Program](https://github.com/Azimn/Artificial-Life-Research-Journal/blob/main/programs/CHARACTER_CONTINUITY_PROGRAM_V1.md). Its source collection and information-matched interventions remain scientifically independent. Findings enter the [shared evidence register](https://github.com/Azimn/Artificial-Life-Research-Journal/blob/main/programs/CHARACTER_CONTINUITY_EVIDENCE_REGISTER_V1.md) only when executed and appropriately qualified; archive inclusion by itself is not an efficacy result. Comparisons with neural or external-memory mechanisms use the [common protocol](https://github.com/Azimn/Artificial-Life-Research-Journal/blob/main/programs/CHARACTER_CONTINUITY_COMPARISON_PROTOCOL_V1.md) when applicable.
+
 **Experimental Study of Ritualized and Symbolic Persona Conditioning in Language Models**
 
 Attractomancy is a research program for testing whether elaborate prompt practices such as ritualized initialization, symbolic framing, autobiographical narrative, semantic redundancy, recurring motifs, prohibitions, relationship lore, staged sequencing, and repeated identity cues produce more stable and recoverable persona behavior than semantically equivalent propositional instructions.
