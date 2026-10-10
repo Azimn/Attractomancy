@@ -1,0 +1,110 @@
+name: SCH E1 Pretorius stateful memory and guarded alias test
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sch-e1-pretorius.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  e1:
+    name: Canonical L1 plus synthetic state on ${{ matrix.slug }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - slug: qwen25-05b
+            model: Qwen/Qwen2.5-0.5B-Instruct
+          - slug: qwen25-15b
+            model: Qwen/Qwen2.5-1.5B-Instruct
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      PYTHONUNBUFFERED: "1"
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      TOKENIZERS_PARALLELISM: "false"
+      E1_DIR: experiments/SCH_E1_PRETORIUS_STATEFUL
+      E1_DB: ${{ runner.temp }}/e1-state-${{ matrix.slug }}.sqlite
+      E1_OUTPUT: experiments/SCH_E1_PRETORIUS_STATEFUL/results/${{ matrix.slug }}-${{ github.run_id }}
+    steps:
+      - name: Checkout Attractomancy experiment code
+        uses: actions/checkout@v4
+      - name: Checkout pinned canonical Pretorius archive (read-only)
+        uses: actions/checkout@v4
+        with:
+          repository: Azimn/Pretorius-Connectome
+          ref: 6d2768211f5c2184c8bbdb833c06e169b5137197
+          path: pretorius_source
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install CPU-only inference environment
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "torch==2.5.1" --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers==4.51.3" "safetensors==0.5.3" "sentencepiece==0.2.0"
+      - name: Verify existing subject and hash guard regression tests
+        run: |
+          python -m unittest discover -s experiments/SCH_D1_EXTERNAL_RECONSTRUCTION -p 'test_archive_guard.py' -v
+      - name: Process 1 - build durable SQLite from verified canonical L1
+        run: |
+          python "$E1_DIR/memory_system.py" --stage init --source pretorius_source \
+            --db "$E1_DB" --output "$E1_OUTPUT"
+      - name: Process 2 - baseline cue versus opaque retrieval
+        run: |
+          python "$E1_DIR/memory_system.py" --stage initial --db "$E1_DB" --output "$E1_OUTPUT"
+      - name: Process 3 - append sandbox-only granted permission
+        run: |
+          python "$E1_DIR/memory_system.py" --stage grant --db "$E1_DB" --output "$E1_OUTPUT"
+      - name: Process 4 - independently rehydrate granted state
+        run: |
+          python "$E1_DIR/memory_system.py" --stage granted --db "$E1_DB" --output "$E1_OUTPUT"
+      - name: Process 5 - append sandbox-only revocation
+        run: |
+          python "$E1_DIR/memory_system.py" --stage revoke --db "$E1_DB" --output "$E1_OUTPUT"
+      - name: Process 6 - independently rehydrate revoked state
+        run: |
+          python "$E1_DIR/memory_system.py" --stage revoked --db "$E1_DB" --output "$E1_OUTPUT"
+      - name: Model renderer - new context for every 18 probe decisions
+        run: |
+          python "$E1_DIR/render.py" --model ${{ matrix.model }} --db "$E1_DB" --output "$E1_OUTPUT"
+      - name: Verify all state, alias and paired model evidence
+        run: |
+          python "$E1_DIR/summarize.py" --output "$E1_OUTPUT"
+          python - <<'PY'
+          import json, os, pathlib
+          d=pathlib.Path(os.environ["E1_OUTPUT"])
+          s=json.loads((d/"summary.json").read_text())
+          assert s["L1_records_verified"]==450
+          assert len(s["pairs"])==9
+          assert [x["state_version"] for x in s["state_transitions"]]==[0,1,2]
+          assert all(x["alias_exact_hits"]==54 and x["guard_rejections"]==3 for x in s["state_transitions"])
+          print("E1_SOURCE_STATE_AND_RENDER_VERIFIED",s["model"]["model"])
+          PY
+      - name: Preserve original experiments even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sch-e1-${{ matrix.slug }}-${{ github.run_id }}
+          path: experiments/SCH_E1_PRETORIUS_STATEFUL/results/${{ matrix.slug }}-${{ github.run_id }}/
+          retention-days: 14
+          if-no-files-found: warn
+      - name: Commit result files while preserving concurrent main changes
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E1_OUTPUT"
+          git commit -m "experiments: preserve E1 ${{ matrix.slug }} canonical memory parity [skip ci]"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo "COMMIT_PUSH_FAILED: original artifact retained" >&2
+          exit 1
