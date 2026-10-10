@@ -39,7 +39,7 @@ class StagedCapacityTests(unittest.TestCase):
         self.assertIsNone(first_json_object('no answer'))
     def test_mock_runner_and_independent_scoring(self):
         with tempfile.TemporaryDirectory() as td:
-            d=Path(td)
+            d=Path(td)/'case_fixture'
             manifest=prepare(d,12)
             self.assertEqual(manifest['visible_examples'],96)
             self.assertFalse(any('expected' in v for v in json.loads((d/'l3_visible.json').read_text())))
