@@ -95,6 +95,8 @@ The completed [C1 results](experiments/SCH_C1_INTEGRATED_CUE_POLICIES/RESULTS.md
 
 The [E1 stateful Pretorius memory experiment](experiments/SCH_E1_PRETORIUS_STATEFUL/RESULTS.md) tests editorial cues versus neutral keys on 54 events selected from the pinned 450-event L1 archive, through three SQLite process restarts and a separate synthetic relationship state. Both Qwen renderers produced identical cue/key decisions, while a deterministic post-inference eligibility gate caught the wrong disclosures without changing the language models. The source-owned archive and production runtime were not modified.
 
+The [E2 two-memory Pretorius study](experiments/SCH_E2_MULTIMEMORY_DECISIONS/README.md) extends E1 with six new source-grounded dilemmas using two independently verified autobiography events per case, counterbalanced answer order, source completeness ablations, and matched symbolic-versus-neutral record presentation. The choices are investigator-authored interpretations, not independently validated character ground truth.
+
 ## Quality and change control
 
 Run `python scripts/audit_catalog.py` from the repository root after source additions, edge additions, or documentation changes. This validates CSV structure, stable IDs, cross-file references, source status and preservation codes, explicit duplicate-URL reviews, and the single current-state table above.
