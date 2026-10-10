@@ -1,0 +1,14 @@
+{
+  "greedy": true,
+  "guard_before_model": true,
+  "max_new_tokens": 64,
+  "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+  "model_revision": "31b70e2e869a7173562077fd711b654946d38674",
+  "python": "3.11.17",
+  "script_sha256": "d774a973a72b648a22126823e9f434846f6fc27cf394ce20cafe000f4921cf28",
+  "source_is_synthetic": true,
+  "source_script_sha256": "84f4f69b0a1f8328dfb5ae354a0e341bbe4a82af5c8020b281ba4b9780aef0e8",
+  "study": "E3-T1-Clerk",
+  "torch": "2.5.1+cpu",
+  "transformers": "4.51.3"
+}

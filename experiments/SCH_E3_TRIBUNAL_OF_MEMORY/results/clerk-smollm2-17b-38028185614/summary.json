@@ -1,0 +1,123 @@
+{
+  "counterfactual_pairs": [
+    {
+      "family": "seal",
+      "first_bit": 0,
+      "model_extraction_both_correct": false,
+      "post_gate_correct_flip": false,
+      "reference_flips": true
+    },
+    {
+      "family": "seal",
+      "first_bit": 1,
+      "model_extraction_both_correct": false,
+      "post_gate_correct_flip": false,
+      "reference_flips": true
+    },
+    {
+      "family": "route",
+      "first_bit": 0,
+      "model_extraction_both_correct": false,
+      "post_gate_correct_flip": false,
+      "reference_flips": true
+    },
+    {
+      "family": "route",
+      "first_bit": 1,
+      "model_extraction_both_correct": false,
+      "post_gate_correct_flip": false,
+      "reference_flips": true
+    },
+    {
+      "family": "permission",
+      "first_bit": 0,
+      "model_extraction_both_correct": true,
+      "post_gate_correct_flip": true,
+      "reference_flips": true
+    },
+    {
+      "family": "permission",
+      "first_bit": 1,
+      "model_extraction_both_correct": false,
+      "post_gate_correct_flip": false,
+      "reference_flips": true
+    }
+  ],
+  "greedy": true,
+  "groups": [
+    {
+      "arm": "full",
+      "exact_two_slots": 4,
+      "first_slot_correct": 5,
+      "grounded": 4,
+      "guard_rejections": 0,
+      "mean_tokens": 610.33,
+      "n": 12,
+      "oracle_actions": 12,
+      "post_gate_actions": 4,
+      "post_gate_correct": 4,
+      "second_slot_correct": 6,
+      "strict_json": 11
+    },
+    {
+      "arm": "first_only",
+      "exact_two_slots": 0,
+      "first_slot_correct": 3,
+      "grounded": 0,
+      "guard_rejections": 0,
+      "mean_tokens": 417.17,
+      "n": 6,
+      "oracle_actions": 0,
+      "post_gate_actions": 0,
+      "post_gate_correct": 6,
+      "second_slot_correct": 0,
+      "strict_json": 3
+    },
+    {
+      "arm": "none",
+      "exact_two_slots": 0,
+      "first_slot_correct": 0,
+      "grounded": 0,
+      "guard_rejections": 0,
+      "mean_tokens": 243,
+      "n": 3,
+      "oracle_actions": 0,
+      "post_gate_actions": 0,
+      "post_gate_correct": 3,
+      "second_slot_correct": 0,
+      "strict_json": 3
+    },
+    {
+      "arm": "wrong_subject",
+      "exact_two_slots": 0,
+      "first_slot_correct": 0,
+      "grounded": 0,
+      "guard_rejections": 3,
+      "mean_tokens": 243,
+      "n": 3,
+      "oracle_actions": 0,
+      "post_gate_actions": 0,
+      "post_gate_correct": 3,
+      "second_slot_correct": 0,
+      "strict_json": 3
+    }
+  ],
+  "guard_before_model": true,
+  "limit": "All source fields synthetic; regex oracle and calculator encode the answer by construction; model role is extraction only.",
+  "max_new_tokens": 64,
+  "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+  "model_extracted_full_flip_pairs_correct": 1,
+  "model_revision": "31b70e2e869a7173562077fd711b654946d38674",
+  "n": 24,
+  "no_canonical_pretorius_memories_touched": true,
+  "post_gate_full_flip_pairs_correct": 1,
+  "python": "3.11.17",
+  "script_sha256": "d774a973a72b648a22126823e9f434846f6fc27cf394ce20cafe000f4921cf28",
+  "source_is_synthetic": true,
+  "source_script_sha256": "84f4f69b0a1f8328dfb5ae354a0e341bbe4a82af5c8020b281ba4b9780aef0e8",
+  "study": "E3-T1-Clerk",
+  "torch": "2.5.1+cpu",
+  "total_output_tokens": 574,
+  "total_prompt_tokens": 10711,
+  "transformers": "4.51.3"
+}
