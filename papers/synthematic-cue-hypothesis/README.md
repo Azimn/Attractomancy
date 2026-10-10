@@ -1,6 +1,6 @@
 # Synthematic Cue Hypothesis
 
-**Status:** Working paper v0.2.0, October 9, 2026. Theoretical and methodological, with directional predictions and a cost-efficiency criterion. Not peer reviewed. No SCH experiments reported as completed.
+**Status:** Working paper v0.2.1, October 9, 2026. Theoretical and methodological, with directional predictions and a cost-efficiency criterion. Not peer reviewed. No SCH experiments reported as completed.
 
 [Read the full academic paper](PAPER.md)
 
@@ -10,7 +10,7 @@ The proposed research distinguishes symbol copying and stylistic priming from se
 
 **Directional synthesis:** Familiar zero-shot cues are predicted to influence general discourse register rather than reveal private identity. In-context arbitrary cue bindings should fail after verified context removal. Correct external records should dominate high-fidelity persona restoration after a reset. A cue is engineering-relevant only if it beats the cheapest sufficient noncue instruction on a matched quality-cost basis.
 
-**Current next experiment:** [EXP-A: zero-shot synthematic prior pilot](../../experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/README.md) uses an open-weight model on a public GitHub Actions runner, without API billing. Raw outputs are only experimental evidence once the workflow completes and its artifacts are inspected.
+**Current next experiment:** [EXP-A: zero-shot synthematic prior pilot](../../experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/README.md) uses an open-weight model on a public GitHub Actions runner, without API billing. The 30-case pilot has completed, with raw outputs, model provenance, and a [critical analysis](../../experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/PILOT_ANALYSIS.md) preserved. The familiar-cue advantage was not demonstrated under this setup; the pilot is not confirmatory.
 
 **Research position:** This is a hypothesis-generation and experimental-design contribution to Attractomancy. The documented source cases are observations and candidate procedures, not independent replications of cue efficacy. The paper is not evidence of machine consciousness, weight modification, or survival of subjective experience across instances.
 
