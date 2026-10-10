@@ -1,0 +1,67 @@
+name: DCH L4 external authority control and adversarial audit
+on:
+  push:
+    branches:
+      - research/dch-d0-pilot-20261009
+    paths:
+      - '.github/workflows/dch-l4-authority.yml'
+      - 'experiments/DCH_D0_SYNTHETIC_PILOT/l4_authority_gate.py'
+      - 'experiments/DCH_D0_SYNTHETIC_PILOT/l4_compare.py'
+      - 'experiments/DCH_D0_SYNTHETIC_PILOT/tests/test_l4_authority_gate.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  authority:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      DCH: experiments/DCH_D0_SYNTHETIC_PILOT
+      L3_FIXED: experiments/DCH_D0_SYNTHETIC_PILOT/results/qwen25-15b-l3-38028160714
+      L4_OUT: experiments/DCH_D0_SYNTHETIC_PILOT/results/l4-authority-${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run complete offline suite, including adversarial provenance checks
+        working-directory: experiments/DCH_D0_SYNTHETIC_PILOT
+        run: python -m unittest discover -s tests -v
+      - name: Produce 96-source-event deterministic control outputs
+        run: |
+          mkdir -p "$L4_OUT"
+          python "$DCH/l4_authority_gate.py"             --visible "$L3_FIXED/l3_visible.json"             --targets "$L3_FIXED/l3_EVALUATOR_ONLY.json"             --out "$L4_OUT/l4_reference_control.json"
+      - name: Compare exact overlapping 64 L3 model outputs
+        run: |
+          python "$DCH/l4_compare.py"             --gate "$L4_OUT/l4_reference_control.json"             --model "$L3_FIXED/l3_raw.json"             --out "$L4_OUT/l4_vs_l3_model.json"
+          python - <<'PY'
+          import os,json,pathlib
+          p=pathlib.Path(os.environ['L4_OUT'])
+          gate=json.loads((p/'l4_reference_control.json').read_text())
+          comparison=json.loads((p/'l4_vs_l3_model.json').read_text())
+          assert len(gate['rows'])==96
+          assert len(gate['summary'])==8
+          assert all(v['accuracy']==1 and v['provenance_exact']==1 for v in gate['summary'].values())
+          assert comparison['paired_n']==64
+          assert all(v['n']==8 for v in comparison['summary'].values())
+          assert gate['DCH_efficacy_claim']==comparison['DCH_efficacy_claim']=='NONE'
+          print('L4_REFERENCE_VALIDATED',json.dumps(comparison['summary'],sort_keys=True))
+          PY
+      - name: Preserve auditable result artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dch-l4-authority-${{ github.run_id }}
+          path: ${{ env.L4_OUT }}
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Archive run-unique engineering results in the research branch
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+users.noreply.github.com"
+          git add -f "$L4_OUT"
+          git commit -m "experiment(dch): archive L4 external authority gate control [skip ci]"
+          git fetch origin research/dch-d0-pilot-20261009
+          git rebase origin/research/dch-d0-pilot-20261009
+          git push origin HEAD:research/dch-d0-pilot-20261009
