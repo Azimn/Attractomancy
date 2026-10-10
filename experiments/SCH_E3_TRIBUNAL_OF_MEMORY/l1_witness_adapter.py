@@ -70,7 +70,7 @@ class L1WitnessIndex:
             "field_label":label.strip(),
             "value":value,
             "value_sha256":hashlib.sha256(value.encode("utf-8")).hexdigest(),
-            "byte_offsets_are_python_character_offsets":True,
+            "offset_unit":"unicode_codepoints",
             "canonical_char_start":start,
             "canonical_char_end":end,
             "canonical_content_sha256":canonical_digest,
@@ -95,4 +95,4 @@ class L1WitnessIndex:
 
     def selected_witnesses(self,event_ids):
         return [self.witness(event_id,field)
-                for event_id in event_ids for field in VISIBLE_IN_E2]
+                for event_id in event_ids for field in sorted(VISIBLE_IN_E2)]
