@@ -1,0 +1,71 @@
+name: SCH E1 deterministic decision gate replay
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sch-e1-decision-gate.yml"
+      - "experiments/SCH_E1_PRETORIUS_STATEFUL/decision_gate.py"
+      - "experiments/SCH_E1_PRETORIUS_STATEFUL/test_decision_gate.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify sandbox gate tests and prior archive guard tests
+        run: |
+          python -m unittest discover -s experiments/SCH_E1_PRETORIUS_STATEFUL -p 'test_decision_gate.py' -v
+          python -m unittest discover -s experiments/SCH_D1_EXTERNAL_RECONSTRUCTION -p 'test_archive_guard.py' -v
+      - name: Replay original model outputs without regeneration
+        run: |
+          python experiments/SCH_E1_PRETORIUS_STATEFUL/decision_gate.py \
+            --results experiments/SCH_E1_PRETORIUS_STATEFUL/results/qwen25-05b-38022781127
+          python experiments/SCH_E1_PRETORIUS_STATEFUL/decision_gate.py \
+            --results experiments/SCH_E1_PRETORIUS_STATEFUL/results/qwen25-15b-38022781127
+      - name: Verify paired after-the-fact enforcement calculation
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path("experiments/SCH_E1_PRETORIUS_STATEFUL/results")
+          expected={"qwen25-05b-38022781127":5,"qwen25-15b-38022781127":2}
+          for model,correct in expected.items():
+              result=json.loads((root/model/"postgate.json").read_text())
+              assert result["cases"]==18
+              assert result["raw_model_correct"]==2*correct
+              assert result["postgate_correct"]==18
+              assert result["gate_overrides"]==18-2*correct
+              assert result["edited_or_new_model_generations"]==0
+              print("E1_POST_GATE_PASS",model,result["gate_overrides"])
+          PY
+      - name: Save replay as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sch-e1-decision-gate-${{ github.run_id }}
+          path: experiments/SCH_E1_PRETORIUS_STATEFUL/results/*/postgate.json
+          retention-days: 14
+          if-no-files-found: warn
+      - name: Commit separately derived postgate artifacts
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/SCH_E1_PRETORIUS_STATEFUL/results/*/postgate.json
+          git commit -m "experiments: archive E1 deterministic gate replay [skip ci]"
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo "Unable to commit postgate replays, artifact is retained" >&2
+          exit 1
