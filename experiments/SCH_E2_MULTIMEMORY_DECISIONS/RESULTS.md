@@ -108,6 +108,38 @@ A neural sentence encoder modestly improved *single selected source recall* in t
 
 **Research interpretation:** This benchmark still rewards retrieval of author-chosen evidence pairs, which are not adjudicated against other plausible memory sets. We have no evidence here that the model would integrate two memories it did not already have, and no demonstrated improvement from symbolic cues over neutral keys. Better annotation of relevant sets and stronger evidence-selection methods are higher priorities than expanding synthetic rituals.
 
+## E2F: Forced choice against generic priors
+
+[Prospective forced-choice protocol](FORCED_PROTOCOL.md) | [Qwen2.5-0.5B raw data](results/forced-qwen25-05b-38024503671/) | [Qwen2.5-1.5B raw data](results/forced-qwen25-15b-38024503671/) | [Verified workflow](https://github.com/Azimn/Attractomancy/actions/runs/38024503671)
+
+E2F isolated the **over-abstention confound** observed in E2. On the same six dilemmas and reversed A/B answer positions, the model was instructed to make a forced A/B choice under five different memory supplies. It received either both source-authored memories with editorial cues, both with neutral keys, the first source only, no records, or two unrelated but identity-verified original archive records (\`E03-003\` and \`E07-002\`). These are an **approximate, not token-equal** information-matching control; they were not independently annotated as irrelevant.
+
+Both Qwen models completed **60/60** greedy, fresh-context generations. Unlike the conservative E2 experiment, **every output was exactly A or B**, with zero UNKNOWN responses.
+
+| Forced-choice condition | Qwen2.5-0.5B agreement with unblinded author (of 12) | Qwen2.5-1.5B (of 12) | Mean total tokens/case |
+| --- | ---: | ---: | ---: |
+| Two relevant records, editorial cues | 8 | 11 | 705.33 |
+| Two relevant records, neutral keys | 8 | 11 | 723.83 |
+| One relevant record | 8 | 10 | 456.83 |
+| Two unrelated original records | 8 | 11 | 703.00 |
+| **No records** | **7** | **12** | **179.00** |
+
+Both model sizes returned identical outputs for editorial-versus-neutral keys in **12/12** paired dilemmas; no observable cue effect survived the forced-choice prompt. The 0.5B model chose \`A\` **10/12** times in the full and irrelevant-memory arms; it retained the same semantic judgment under option-order reversal in just **2/6** original dilemmas. The 1.5B model was more option-order consistent: full-record arms preserved the original semantic answer in **5/6**, but the no-memory arm achieved **6/6**. Under this unblinded author preference criterion, adding correct autobiographical records produced **no gain over unrelated records in either model**.
+
+Most strikingly, **Qwen2.5-1.5B reached 12/12 agreement with the author's choices when it had no memories at all**, compared with 11/12 when it had both relevant reconstructed episodes. This is a strong **control failure for interpreting author-label accuracy as evidence of autobiographical causation**. The six dilemmas and response alternatives telegraph conventional judgments, and the author assigned all six underlying interpretations in the same cautious/prosocial direction. Models can match those choices from pretrained priors and prompt wording alone.
+
+The 0.5B complete-record score of 8/12 versus no-record 7/12 is one case, not an identified source-dependent effect; it is matched by both the single-record and unrelated-pair controls. Correct evidence does not outperform controls, despite costing **approximately four times as many tokens** as the no-record arm (705 versus 179 tokens per case). Token savings are not an identity-effect claim and the no-record condition is not an acceptable replacement in scenarios genuinely requiring archived facts or commitments.
+
+**Conclusion:** The current E2 dilemma fixture cannot distinguish recovered character-specific behavior from generic model priors. The E2 over-abstention result was in large part prompt-dependent, not proof that a 1.5B model cannot produce A/B decisions. Both conservative and forced runs remain valid observations of their *respective interventions*, but neither establishes multi-memory causal reliance.
+
+## E2 baseline ranking parity audit
+
+The original [E2R lexical baseline](results/retrieval-run-38023843107/retrieval_diagnostic.json) and [E2G lexical baseline](results/graph-run-38024055089/graph_retrieval.json) have identical **ordered top-ten event IDs in all six queries**. The lexical baseline embedded in [E2S](results/semantic-run-38024250049/semantic_retrieval.json) has the same source manifest and query-fixture SHA-256 but differs in **ordered top-ten ranks for all six queries**. Set overlap ranges from **7/10 to 10/10** with no change to aggregate target-pair recall@10.
+
+A [dedicated five-stage numerical audit](results/parity-run-38024737940/parity_audit.json) reloaded the 450 original memories and computed the same six queries before PyTorch import, after import, after changing its thread count, after MiniLM model load, and after the full 450-document embedding pass. **Within this audit run, all lexical score vectors remained exactly equal across all five stages (maximum absolute difference zero)**. Every audited ranking matches the E2S order and none matches E2R/E2G. The first, separate three-stage audit also reproduced E2S ranks. Therefore the discrepancy cannot be attributed to the tested torch-thread settings, model load, or MiniLM forward pass.
+
+**Root cause remains unidentified.** Potential differences in process/package numerical environments and score-tie handling have not been proved. Do not claim exact lexical rank reproducibility across these separate runs, retrospectively standardize recorded ranks, or label the rank discrepancy a semantic effect. The paired conditions *within each frozen run* are still interpretable, and all runs agree that the chosen source pairs are generally not recovered. Before promoting a new retrieval implementation, pin and audit numerical library dependencies, initialization order, vectorizer vocabulary digest, raw lexical scores, and tie-breaking across fresh runner processes.
+
 ## Limitations and next gate
 
 The strongest research test requires new dilemmas, multiple defensible candidate source sets, a human-blind assessment of which memories truly bear on a decision, and an independent renderer-family replication. The present six action labels favor cautious/prosocial responses and may be predictable from language-model priors without using the specific memories. A/B option order counterbalancing controls some position bias, not general ethical or genre bias. Treat these as exploratory debugging and architecture requirements, not as a benchmark ready for academic efficacy estimates.
