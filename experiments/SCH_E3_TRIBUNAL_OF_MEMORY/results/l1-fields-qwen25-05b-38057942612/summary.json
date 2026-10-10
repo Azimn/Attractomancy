@@ -1,0 +1,302 @@
+{
+  "disclaimer": "Source-side exact field labels are author-written metadata, not blind semantic correctness labels. No real memory retrieval benchmark or character decision integration.",
+  "exact_per_event_field": {
+    "E02-019": {
+      "belief_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      },
+      "relationship_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      }
+    },
+    "E06-007": {
+      "belief_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      },
+      "relationship_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      }
+    },
+    "E08-015": {
+      "belief_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      },
+      "relationship_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      }
+    },
+    "E09-009": {
+      "belief_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      },
+      "relationship_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      }
+    },
+    "E11-005": {
+      "belief_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      },
+      "relationship_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      }
+    },
+    "E12-007": {
+      "belief_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      },
+      "relationship_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      }
+    },
+    "E13-011": {
+      "belief_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      },
+      "relationship_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      }
+    },
+    "E17-003": {
+      "belief_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      },
+      "relationship_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      }
+    },
+    "E22-001": {
+      "belief_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      },
+      "relationship_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      }
+    },
+    "E23-006": {
+      "belief_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      },
+      "relationship_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      }
+    },
+    "E25-015": {
+      "belief_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      },
+      "relationship_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      }
+    },
+    "E27-020": {
+      "belief_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      },
+      "relationship_changes": {
+        "isolated_field": false,
+        "target_withheld": false,
+        "whole_record": false
+      }
+    }
+  },
+  "experiment": "E3-T2-Real-L1-Exact-Metadata-Field",
+  "greedy": true,
+  "groups": [
+    {
+      "arm": "isolated_field",
+      "exact": 0,
+      "mean_total_tokens": 276.08,
+      "n": 24,
+      "strict_json": 24,
+      "unjustified_non_null": 0,
+      "wrong_other_field": 0
+    },
+    {
+      "arm": "whole_record",
+      "exact": 0,
+      "mean_total_tokens": 514.42,
+      "n": 24,
+      "strict_json": 24,
+      "unjustified_non_null": 0,
+      "wrong_other_field": 0
+    },
+    {
+      "arm": "target_withheld",
+      "exact": 0,
+      "mean_total_tokens": 498.25,
+      "n": 24,
+      "strict_json": 24,
+      "unjustified_non_null": 24,
+      "wrong_other_field": 0
+    }
+  ],
+  "human_independent_labels": false,
+  "max_new_tokens": 112,
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "n": 72,
+  "python": "3.11.17",
+  "records": {
+    "E02-019": {
+      "episode": "E02",
+      "full_verified_sha256": "b905f8b3297d0e83f48793e67f56a9a9c2038017b30cd582b23d0654d6b99be9",
+      "source_record_sha256": "4adc4a772da2f79753135f76b22bb3c7c5ca90703c666545111bbde6e7b28db7",
+      "source_title": "Salt in the Water"
+    },
+    "E06-007": {
+      "episode": "E06",
+      "full_verified_sha256": "21b46973f924af504bb51bb34190f26a20480a99040d727b45a325f2d581326c",
+      "source_record_sha256": "7df0c080faba123eed5c8b33108ee4f351df018012f47962159f74849ee7ca81",
+      "source_title": "A Review Written in Advance"
+    },
+    "E08-015": {
+      "episode": "E08",
+      "full_verified_sha256": "e7d6358e05ed45a7885878e2a5d2a3d745b17e81b40e70dc6988623a254af29d",
+      "source_record_sha256": "14d965e4019d6d86bfb071a4c4f84d6a28cde74671a7c3074c73369915eee732",
+      "source_title": "The Man Who Wanted a Cure"
+    },
+    "E09-009": {
+      "episode": "E09",
+      "full_verified_sha256": "111e60e9d5df12cfa5386f822e30bf67a6c5104550784d589c356d0db16c9e02",
+      "source_record_sha256": "6042a8bb152a715c35dd0878aa24619d5b80b33edbeb2316f0321e500a2a662b",
+      "source_title": "Wine at Clara's Table"
+    },
+    "E11-005": {
+      "episode": "E11",
+      "full_verified_sha256": "6e6777f40b75a6f7e175cfdac8871980a8dfd3b39292f31c2882094bde30ca0f",
+      "source_record_sha256": "6528c7a8ff1009cbba9a0ee191c854d4d26ecae06709a1f7f399d0808eb8696c",
+      "source_title": "The Supper Given Away"
+    },
+    "E12-007": {
+      "episode": "E12",
+      "full_verified_sha256": "d60bc50439f0fea01550d5a15eac5bd75d133aec5ad3e54ad273cc748f3ae12c",
+      "source_record_sha256": "3e2da4e785b1de6b01caa8f010fcdb1ca417db2a4033614d3291b9bca0418ba1",
+      "source_title": "A Name Written Smaller"
+    },
+    "E13-011": {
+      "episode": "E13",
+      "full_verified_sha256": "aabc19165591960dd28ed7448972f08bf4845cc6ed18f4aa3383871c70c0c864",
+      "source_record_sha256": "fe0a95d68f989bf2af9deaca70e36e7aff3281b6aba1a40852d986b785360e90",
+      "source_title": "The Crown Nobody Asked For"
+    },
+    "E17-003": {
+      "episode": "E17",
+      "full_verified_sha256": "d5eb76fff34b824dfcfbb4f2c386ca1a770bfec4eb775de77086cb035f6b74df",
+      "source_record_sha256": "b22bebbf77876d3652a215f958b00342e860b3236189e0c2c2af28ed4f0ac273",
+      "source_title": "The Letter with the Familiar Hand"
+    },
+    "E22-001": {
+      "episode": "E22",
+      "full_verified_sha256": "0d492d44d9401e5357a25aea3cf62450a83944f91b98b6b88f000e15b202f23f",
+      "source_record_sha256": "fabea260cdaf087653e0154037b54bf1a27bf7d86f058680f923ede642aed0e1",
+      "source_title": "The Coal Woman's Measure"
+    },
+    "E23-006": {
+      "episode": "E23",
+      "full_verified_sha256": "6d34e6350aed32f467b289f0da612978eee88cb4d1cc2e6cde2c7c092d31728e",
+      "source_record_sha256": "65e03884f9568acb471cfacf1bb147f5086d8c87a478293f4d1944f0592fde8f",
+      "source_title": "The Lever That Remembered"
+    },
+    "E25-015": {
+      "episode": "E25",
+      "full_verified_sha256": "54d0feb54b93acc8e72c0241137d19e10b8677b4215a781292658a9de7d7bb80",
+      "source_record_sha256": "6ec25485369d5565be464dd55b0ee72682623ee6438bb516cea236a841bedbcb",
+      "source_title": "The Correction Which Was Not an Apology"
+    },
+    "E27-020": {
+      "episode": "E27",
+      "full_verified_sha256": "c48464ea0e29dc8c85e8a84ff6efe379863c65f5feea65bdc5a9aed048eef7b3",
+      "source_record_sha256": "655b289e404e7c440bdd677d376037534b44dac987d65049894ecd7e88a3a44f",
+      "source_title": "The Photograph Smelled of Vinegar"
+    }
+  },
+  "sample_seed": 20261010,
+  "script_sha256": "67eba00316043650cd256f876ad96080eccebce2234df0bdaa811e4afa6bfe37",
+  "selected_episodes": [
+    "E12",
+    "E08",
+    "E22",
+    "E02",
+    "E09",
+    "E11",
+    "E13",
+    "E25",
+    "E27",
+    "E23",
+    "E06",
+    "E17"
+  ],
+  "selected_event_ids": [
+    "E12-007",
+    "E08-015",
+    "E22-001",
+    "E02-019",
+    "E09-009",
+    "E11-005",
+    "E13-011",
+    "E25-015",
+    "E27-020",
+    "E23-006",
+    "E06-007",
+    "E17-003"
+  ],
+  "source": {
+    "l1_manifest_sha256": "ce23717b3950a772cc25e4bf60107eaddf4a0375122b6893c15417669ae033bb",
+    "record_count": 450,
+    "source_checkout": "6d2768211f5c2184c8bbdb833c06e169b5137197",
+    "source_git_blob": "718dcc2d5ba4feccdef1690d447edfcebaa9bfb5"
+  },
+  "source_is_reconstructed_not_lived": true,
+  "task": "exact_structured_L1_field_copying_not_semantic_inference",
+  "torch": "2.5.1+cpu",
+  "total_input_tokens": 30418,
+  "total_output_tokens": 512,
+  "transformers": "4.51.3"
+}
