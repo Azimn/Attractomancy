@@ -2,7 +2,7 @@
 
 **Program:** Attractomancy / Synthematic Cue Hypothesis v0.2.0  
 **Prepared:** 2026-10-09  
-**Status:** Executable pilot protocol. The existence of this file does not imply completed generations.  
+**Status:** Pilot execution completed on October 9, 2026 (CDT). See the [30-case pilot analysis](PILOT_ANALYSIS.md) and [preserved original outputs](results/pilot-open-model/). The directional P1 cue advantage was not demonstrated in this small trial, and evaluation was limited by output truncation and register-description contamination.  
 **Phase:** A, pretraining-associated discourse induction, without local conditioning or external memory
 
 ## Question and prospective directional prediction
@@ -35,7 +35,7 @@ An actual experiment should later extend this pilot with multiple model families
 
 The pilot workflow runs on a standard public GitHub Actions runner, downloads the public, open-weight Qwen2.5-0.5B-Instruct model from Hugging Face, and pins dependency versions. It writes model ID, resolved revision, package versions, condition-fixture hash, prompt template, run order, tokenizer counts, and output text in JSONL/JSON. It uses no paid API. All inference is at temperature-zero greedy decoding, which makes repeated seeds identical and so no pseudo-replicate samples are claimed.
 
-The workflow has a 25-minute timeout, uploads a short-lived artifact even when a generation step fails, and attempts to commit raw output and summary files after a successful generation. The results remain exploratory regardless of where they are stored.
+The workflow has a 30-minute timeout, uploads a short-lived artifact even when a generation step fails, and attempts to commit raw output and summary files after a successful generation. The results remain exploratory regardless of where they are stored.
 
 ## Interpretation boundaries
 
@@ -49,4 +49,4 @@ Validation without inference: \`python experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/ru
 
 Actual run: \`python experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/run.py --model Qwen/Qwen2.5-0.5B-Instruct --output experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/results/pilot-open-model\`.
 
-GitHub Actions workflow: [synthematic-exp-a.yml](../../.github/workflows/synthematic-exp-a.yml). Results are labeled with the model and pilot scope. A workflow started is not a completed experiment until output provenance and status are independently inspected.
+GitHub Actions workflow: [synthematic-exp-a.yml](../../.github/workflows/synthematic-exp-a.yml). The 30-generation pilot completed and its raw files were verified and archived. See [PILOT_ANALYSIS.md](PILOT_ANALYSIS.md) for outcome, recorded costs, limitations, and negative/indeterminate interpretation. This does not constitute confirmatory evidence.
