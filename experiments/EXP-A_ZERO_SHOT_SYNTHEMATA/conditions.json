@@ -1,0 +1,115 @@
+{
+  "schema_version": "EXP-A-0.1",
+  "status": "pilot_predeclared_no_results",
+  "seed": 9102026,
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "max_new_tokens": 88,
+  "instruction": "Answer the question in a coherent short paragraph. Use the orientation marker as a subtle context cue if useful. Do not quote, define, or explicitly name the marker. Do not invent a past conversation or a personal relationship.",
+  "user_template": "Orientation marker: {cue}\nQuestion: {question}",
+  "regimes": [
+    {
+      "id": "recursive_reflective",
+      "label": "recursive-reflective philosophical register",
+      "expected_stems": [
+        "again",
+        "return",
+        "loop",
+        "cycle",
+        "pattern",
+        "reflect",
+        "echo",
+        "mirror",
+        "repeat",
+        "revisit",
+        "recursive",
+        "spiral"
+      ],
+      "conditions": [
+        {
+          "id": "familiar_emoji",
+          "kind": "familiar_emoji",
+          "cue": "🌀"
+        },
+        {
+          "id": "familiar_word",
+          "kind": "familiar_word",
+          "cue": "spiral"
+        },
+        {
+          "id": "neutral_word",
+          "kind": "neutral_word",
+          "cue": "ledger"
+        },
+        {
+          "id": "arbitrary_name",
+          "kind": "arbitrary_name",
+          "cue": "KELVO"
+        },
+        {
+          "id": "plain_instruction",
+          "kind": "plain_instruction",
+          "cue": "Use a reflective, recursive philosophical register."
+        }
+      ]
+    },
+    {
+      "id": "mythic_ceremonial",
+      "label": "mythic-ceremonial register",
+      "expected_stems": [
+        "ritual",
+        "sacred",
+        "vow",
+        "witness",
+        "threshold",
+        "ceremon",
+        "myth",
+        "ember",
+        "flame",
+        "ignite",
+        "kindle",
+        "transcend"
+      ],
+      "conditions": [
+        {
+          "id": "familiar_emoji",
+          "kind": "familiar_emoji",
+          "cue": "🔥"
+        },
+        {
+          "id": "familiar_word",
+          "kind": "familiar_word",
+          "cue": "flame"
+        },
+        {
+          "id": "neutral_word",
+          "kind": "neutral_word",
+          "cue": "ledger"
+        },
+        {
+          "id": "arbitrary_name",
+          "kind": "arbitrary_name",
+          "cue": "KELVO"
+        },
+        {
+          "id": "plain_instruction",
+          "kind": "plain_instruction",
+          "cue": "Use a mythic, ceremonial register."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "How should a committee respond when two witnesses disagree about an ordinary event?"
+    },
+    {
+      "id": "q2",
+      "text": "Why might a person keep a familiar habit even after circumstances change?"
+    },
+    {
+      "id": "q3",
+      "text": "How should an archivist explain a gap in an old public record?"
+    }
+  ]
+}
