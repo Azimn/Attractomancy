@@ -1,0 +1,17 @@
+{
+  "schema": "SCH-FOLLOWUP-v1",
+  "status": "exploratory_pilot_not_confirmatory",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "resolved_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "python": "3.11.17",
+  "torch": "2.5.1+cpu",
+  "transformers": "4.51.3",
+  "fixture_sha256": "12705d5ad9a9ec21716ea350aaa5271629cff492505e84c2be110478e6cc1a02",
+  "case_seed": 10092026,
+  "clean_context_each_case": true,
+  "archive_access": false,
+  "conditioning": "A2 none; B1 only inline demonstration context",
+  "decoding": "greedy; no sample temperature",
+  "planned_cases": 80,
+  "attempted_cases": 80
+}
