@@ -27,6 +27,12 @@ Expected outputs for facts are unique uppercase codes; for partner-entry judgmen
 
 A null result on models unable to parse the archive is inconclusive about whether selective retrieval beats full injection. A positive result establishes an ordinary external-data effect, not a new metaphysical mechanism.
 
+## Completed data and provenance-gate reference
+
+Both Qwen models completed all 72 D1 cases. See [RESULTS.md](RESULTS.md) for verified source-availability comparisons, token costs, cue-versus-neutral controls, integration failures, and mismatched-archive contamination. The raw data are stored in [Qwen2.5-0.5B](results/qwen25-05b-38021662414/) and [Qwen2.5-1.5B](results/qwen25-15b-38021662414/). Both include model versions, prompts, raw outputs, and machine scores.
+
+A separate [deterministic subject and checksum gate](archive_guard.py), with [unit tests](test_archive_guard.py), demonstrates how a trusted retrieval layer can reject mismatched subject IDs, unauthorized sources, malformed revisions, mismatched embedded record headers, and checksum failures **before** giving the model any record text. This is intentionally a narrow reference implementation. A SHA-256 digest is not an authentication mechanism if an adversary can supply both the record and its digest. The example also cannot independently verify truthful autobiographical content, digital signatures, or the authority of the source index. Production use requires trusted provenance metadata, version control, authorization, and possibly signatures.
+
 ## Reproducibility
 
 Frozen stimulus: [conditions.json](conditions.json). Executable harness: [run.py](run.py). Workflow: [sch-d1.yml](../../.github/workflows/sch-d1.yml). No D1 claim is added to the parent paper's evidence summary without completed runs and a limitations audit.
