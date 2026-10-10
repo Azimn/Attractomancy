@@ -3,8 +3,7 @@ from __future__ import annotations
 from copy import deepcopy
 import unittest
 
-from archive_guard import ArchiveGateError
-from decision_gate import PHASES, decide, trusted_head
+from decision_gate import ArchiveGateError, PHASES, decide, trusted_head
 from memory_system import digest, sandbox_content
 
 
