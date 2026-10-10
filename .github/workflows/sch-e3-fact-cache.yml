@@ -1,0 +1,45 @@
+name: SCH E3 verified-fact-cache revocation tests
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sch-e3-fact-cache.yml"
+      - "experiments/SCH_E3_TRIBUNAL_OF_MEMORY/verified_fact_cache.py"
+      - "experiments/SCH_E3_TRIBUNAL_OF_MEMORY/test_verified_fact_cache.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify durable source-attested cache semantics and synthetic revocation
+        run: |
+          python -m unittest discover -s experiments/SCH_E3_TRIBUNAL_OF_MEMORY \
+            -p test_verified_fact_cache.py -v
+          python -m unittest discover -s experiments/SCH_E3_TRIBUNAL_OF_MEMORY \
+            -p test_clerk.py -v
+          python -m unittest discover -s experiments/SCH_E3_TRIBUNAL_OF_MEMORY \
+            -p test_isolated_clerk.py -v
+          python -m unittest discover -s experiments/SCH_D1_EXTERNAL_RECONSTRUCTION \
+            -p test_archive_guard.py -v
+      - name: Print source-state version invalidation drill
+        run: |
+          python - <<'PY'
+          import sys,tempfile,pathlib
+          sys.path.insert(0,"experiments/SCH_E3_TRIBUNAL_OF_MEMORY")
+          from verified_fact_cache import show_replay
+          with tempfile.TemporaryDirectory() as temp:
+              results=show_replay(pathlib.Path(temp)/"cache.sqlite")
+          assert results["initial"]=="ALLOW"
+          assert results["after_revision"]=="DENY"
+          assert results["stale_field_rejected"]
+          print("E3_T1_CACHE_ROLLFORWARD_PASS",results)
+          PY
