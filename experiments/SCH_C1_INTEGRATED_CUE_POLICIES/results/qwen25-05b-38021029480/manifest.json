@@ -1,0 +1,18 @@
+{
+  "study": "SCH-C1 integrated cue policy transfer",
+  "research_status": "exploratory_not_confirmatory",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "fixture_sha256": "8742a498634e09e7677b229e90a0936f3f46701945fa3bc86cb5c6166ab8da42",
+  "schema": "SCH-C1-v1",
+  "case_order_seed": 20261009,
+  "python": "3.11.17",
+  "torch": "2.5.1+cpu",
+  "transformers": "4.51.3",
+  "planned_cases": 72,
+  "sampling": "greedy decoding",
+  "max_new_tokens": 12,
+  "independent_chat_context_per_case": true,
+  "external_memory": false,
+  "weight_updates": false
+}
