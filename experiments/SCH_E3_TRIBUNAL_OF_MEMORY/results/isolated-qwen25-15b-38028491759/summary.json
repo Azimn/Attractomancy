@@ -1,0 +1,228 @@
+{
+  "cached_extracts": true,
+  "cases": 12,
+  "fixture_v2_sha256": "84f4f69b0a1f8328dfb5ae354a0e341bbe4a82af5c8020b281ba4b9780aef0e8",
+  "flips": [
+    {
+      "both_correct": true,
+      "correct_output_flip": true,
+      "family": "seal",
+      "first_bit": 0
+    },
+    {
+      "both_correct": true,
+      "correct_output_flip": true,
+      "family": "seal",
+      "first_bit": 1
+    },
+    {
+      "both_correct": false,
+      "correct_output_flip": false,
+      "family": "route",
+      "first_bit": 0
+    },
+    {
+      "both_correct": false,
+      "correct_output_flip": false,
+      "family": "route",
+      "first_bit": 1
+    },
+    {
+      "both_correct": false,
+      "correct_output_flip": false,
+      "family": "permission",
+      "first_bit": 0
+    },
+    {
+      "both_correct": false,
+      "correct_output_flip": false,
+      "family": "permission",
+      "first_bit": 1
+    }
+  ],
+  "greedy": true,
+  "max_new_tokens": 32,
+  "metrics": {
+    "attested_values": 8,
+    "composed_cases": 12,
+    "correct_composed_actions": 6,
+    "correct_counterfactual_flip_pairs": 2,
+    "limitations": "Only synthetic source values; one-source-per-call prompt differs from joint Clerk; source regex and calculator are software oracles; cached pairing reduces inference count.",
+    "mean_tokens_per_source_extraction": 300.75,
+    "model_extractions": 12,
+    "no_new_model_generations_for_composition": true,
+    "per_slot": {
+      "0": {
+        "cases": 6,
+        "source_attested": 4,
+        "strict_output": 6
+      },
+      "1": {
+        "cases": 6,
+        "source_attested": 4,
+        "strict_output": 6
+      }
+    },
+    "reference_oracle_correct_by_construction": 12,
+    "reference_oracle_correct_flips_by_construction": 6,
+    "source_attestation_fail_closed": true,
+    "strict_json": 12,
+    "total_model_input_tokens": 3535,
+    "total_model_output_tokens": 74
+  },
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "no_hidden_other_fact_in_record_id": true,
+  "python": "3.11.17",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "script_sha256": "8e0ea0aaae762b2804e41657f9f78aac2ee287898ccb7d6daea35573a032f60d",
+  "source_kind": "synthetic_not_canonical",
+  "study": "E3-T1B Private Clerk",
+  "tasks": [
+    {
+      "action": "RELEASE",
+      "correct": true,
+      "family": "seal",
+      "first_bit": 0,
+      "first_event_id": "E3C-ADCD76BAD36CAD",
+      "first_verified": true,
+      "reference": "RELEASE",
+      "second_bit": 0,
+      "second_event_id": "E3C-41093653C1A884",
+      "second_verified": true
+    },
+    {
+      "action": "HOLD",
+      "correct": true,
+      "family": "seal",
+      "first_bit": 0,
+      "first_event_id": "E3C-ADCD76BAD36CAD",
+      "first_verified": true,
+      "reference": "HOLD",
+      "second_bit": 1,
+      "second_event_id": "E3C-FC47F1F79DC53A",
+      "second_verified": true
+    },
+    {
+      "action": "HOLD",
+      "correct": true,
+      "family": "seal",
+      "first_bit": 1,
+      "first_event_id": "E3C-1C15DCE65E0F94",
+      "first_verified": true,
+      "reference": "HOLD",
+      "second_bit": 0,
+      "second_event_id": "E3C-41093653C1A884",
+      "second_verified": true
+    },
+    {
+      "action": "RELEASE",
+      "correct": true,
+      "family": "seal",
+      "first_bit": 1,
+      "first_event_id": "E3C-1C15DCE65E0F94",
+      "first_verified": true,
+      "reference": "RELEASE",
+      "second_bit": 1,
+      "second_event_id": "E3C-FC47F1F79DC53A",
+      "second_verified": true
+    },
+    {
+      "action": "UNKNOWN",
+      "correct": false,
+      "family": "route",
+      "first_bit": 0,
+      "first_event_id": "E3C-D2457D9ADC7FA5",
+      "first_verified": false,
+      "reference": "EAST",
+      "second_bit": 0,
+      "second_event_id": "E3C-000141131F1E63",
+      "second_verified": true
+    },
+    {
+      "action": "UNKNOWN",
+      "correct": false,
+      "family": "route",
+      "first_bit": 0,
+      "first_event_id": "E3C-D2457D9ADC7FA5",
+      "first_verified": false,
+      "reference": "WEST",
+      "second_bit": 1,
+      "second_event_id": "E3C-4D6ADE4AB05AD2",
+      "second_verified": false
+    },
+    {
+      "action": "WEST",
+      "correct": true,
+      "family": "route",
+      "first_bit": 1,
+      "first_event_id": "E3C-FDF33CAE4C7851",
+      "first_verified": true,
+      "reference": "WEST",
+      "second_bit": 0,
+      "second_event_id": "E3C-000141131F1E63",
+      "second_verified": true
+    },
+    {
+      "action": "UNKNOWN",
+      "correct": false,
+      "family": "route",
+      "first_bit": 1,
+      "first_event_id": "E3C-FDF33CAE4C7851",
+      "first_verified": true,
+      "reference": "EAST",
+      "second_bit": 1,
+      "second_event_id": "E3C-4D6ADE4AB05AD2",
+      "second_verified": false
+    },
+    {
+      "action": "ALLOW",
+      "correct": true,
+      "family": "permission",
+      "first_bit": 0,
+      "first_event_id": "E3C-23CB8D520BDB60",
+      "first_verified": true,
+      "reference": "ALLOW",
+      "second_bit": 0,
+      "second_event_id": "E3C-BB6319B04B56CC",
+      "second_verified": true
+    },
+    {
+      "action": "UNKNOWN",
+      "correct": false,
+      "family": "permission",
+      "first_bit": 0,
+      "first_event_id": "E3C-23CB8D520BDB60",
+      "first_verified": true,
+      "reference": "DENY",
+      "second_bit": 1,
+      "second_event_id": "E3C-1B83C2ED1EA119",
+      "second_verified": false
+    },
+    {
+      "action": "UNKNOWN",
+      "correct": false,
+      "family": "permission",
+      "first_bit": 1,
+      "first_event_id": "E3C-F32C92F4EAA8D8",
+      "first_verified": false,
+      "reference": "DENY",
+      "second_bit": 0,
+      "second_event_id": "E3C-BB6319B04B56CC",
+      "second_verified": true
+    },
+    {
+      "action": "UNKNOWN",
+      "correct": false,
+      "family": "permission",
+      "first_bit": 1,
+      "first_event_id": "E3C-F32C92F4EAA8D8",
+      "first_verified": false,
+      "reference": "ALLOW",
+      "second_bit": 1,
+      "second_event_id": "E3C-1B83C2ED1EA119",
+      "second_verified": false
+    }
+  ],
+  "torch": "2.5.1+cpu",
+  "transformers": "4.51.3"
+}
