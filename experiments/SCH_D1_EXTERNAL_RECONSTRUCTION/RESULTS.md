@@ -63,3 +63,8 @@ D1 separates **record access**, **record selection**, **symbolic naming**, and *
 The reported costs use actual model tokenizer input plus output counts. No inference subscription or paid API was used. Selected context is not a tested deployed retriever, and the token accounting does not cover a production memory service or persistence/write-back overhead.
 
 The raw datasets should be retained unchanged, including negative results and instruction failures. This experiment does not by itself validate any mechanism for the cross-project Character Continuity evidence register.
+
+
+## Deterministic record gate implementation
+
+The [archive guard](archive_guard.py) and [tests](test_archive_guard.py) are committed as a reference integrity boundary. [GitHub Actions run 38021996965](https://github.com/Azimn/Attractomancy/actions/runs/38021996965) completed successfully with **10/10 unit tests passing**. The gate refuses records when a requested subject does not match indexed subject metadata or the record header, the source is not in a trusted allowlist, a revision is malformed, or recorded content differs from its SHA-256 digest. A deliberately forged record with a freshly computed matching checksum is accepted, demonstrating that this is an integrity and routing check rather than authenticated provenance. Production systems still need trusted source assertions or cryptographic signatures, authorization, versioning, and auditing.
