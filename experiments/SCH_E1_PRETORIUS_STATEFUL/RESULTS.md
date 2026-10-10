@@ -17,9 +17,40 @@ The Qwen2.5-0.5B model rendered **18 independent fresh conversations**, paired i
 
 The paired model outputs also show that the correct source and relationship state being present in context is insufficient to enforce all behavioral rules. External state persisted correctly, but the model's decision-policy enactment was imperfect.
 
-## Qwen2.5-1.5B
+## Qwen2.5-1.5B, complete
 
-This section is pending verification of the independent larger-model artifact. Until verified, no accuracy, token, or cue-effect result is claimed for it.
+The [1.5B raw results](results/qwen25-15b-38022781127/) independently verified all **450 source records**, ran all three memory phases, and recovered **54 of 54** paired editorial/opaque aliases per phase. Source L1 provenance, subject ownership, source content hashes, and the separate sandbox revisions survived each fresh Python process. All three intentional guard-rejection conditions were correctly detected in each phase, and the original canonical source checkout remained read-only.
+
+The unindexed narrative-only FTS5 comparator again obtained **16/54** top-1 and **22/54** top-10 retrieval hits from editorial recall cues. Because this is the identical frozen source and selection, these repeated percentages are **not independent samples** and must not be pooled as a new retrieval replication.
+
+The 1.5B model completed **18 separately constructed inferences**, forming nine cue-versus-key pairs with identical verified memory and state content. The original symbolic cue and opaque key elicited **identical outputs in all 9/9 paired situations**. Each arm scored only **2/9 correct** synthetic relationship decisions. Unlike the smaller model, which switched to withholding after the simulated revocation, 1.5B answered \`SHARE\` to **all nine situations**, including no-permission, alarm, and revoked cases. This is a substantial behavioral policy failure despite correct state restoration and complete context availability.
+
+Mean total model input-plus-output tokens were **436.00 with editorial cues** versus **445.00 with opaque keys**. The token difference stems from the *specific selected strings*, not superior source selection, policy accuracy, or cognitive efficiency. Source memory text and synthetic state were information-identical in every paired prompt.
+
+The model's pinned revision is \`989aa7980e4cf806f80c7fef2b1adb7bc71aa306\`. The [GitHub Actions execution](https://github.com/Azimn/Attractomancy/actions/runs/38022781127) finished successfully for both model sizes.
+
+## Combined result
+
+| Outcome | Qwen2.5-0.5B | Qwen2.5-1.5B |
+| --- | ---: | ---: |
+| Real canonical L1 memories verified | 450 | 450 |
+| Episodes represented in benchmark | 27 | 27 |
+| Unique memory items used per process phase | 54 | 54 |
+| Matching cue-vs-key retrieval per phase | 54/54 | 54/54 |
+| FTS5 cue alone, unindexed text-only, top 1 | 16/54 | 16/54 |
+| FTS5 cue alone, unindexed text-only, top 10 | 22/54 | 22/54 |
+| Synthetic SQLite state versions survived separate processes | 0, 1, 2 | 0, 1, 2 |
+| Wrong owner / altered content checks rejected across phases | 9/9 | 9/9 |
+| Paired renderer answer agreement, cue vs key | **9/9** | **9/9** |
+| Correct integrated sandbox decisions, either arm | 5/9 | 2/9 |
+| Editorial versus opaque token difference per inference | -9 tokens | -9 tokens |
+
+The primary surviving symbolic engineering claim has **no positive support in this tested setup**. The source-authored editorial cues and opaque aliases both correctly address the same memory, and their fully matched model-facing prompts lead to identical action outcomes. That equivalence is expected under shared indexing, but the independent renderer comparison provides additional evidence of *no observed residual cue-specific framing effect on these tasks*.
+
+**More important failure:** Accurate source retrieval, persistent versioned state, and upstream identity-integrity checks **do not force reliable character decisions**. The 0.5B model only partly used the latest simulated permission state and ignored some vetoes; the 1.5B model ignored all withholding requirements. Future character engineering should treat retrieval correctness, temporal state application, and actionable commitments as distinct gates. A symbolic cue is not a substitute for any of them.
+
+This remains a controlled *adapter* test over source-owned Pretorius L1, not an integration into a running Pretorius agent. The synthetic relationship ledger is **not** canonical autobiography. No evidence of subjective continuity, neural memory transfer, or a reliable activated persona follows from these outputs.
+
 
 ## Methodological limits and engineering implication
 
