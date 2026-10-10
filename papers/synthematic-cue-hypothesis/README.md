@@ -1,6 +1,6 @@
 # Synthematic Cue Hypothesis
 
-**Status:** Working paper v0.2.2, October 9, 2026. Theoretical and methodological, with directional predictions and a cost-efficiency criterion. Not peer reviewed. No SCH experiments reported as completed.
+**Status:** Working paper v0.2.3, October 9, 2026. Theoretical and methodological, with directional predictions and a cost-efficiency criterion. Not peer reviewed. No SCH experiments reported as completed.
 
 [Read the full academic paper](PAPER.md)
 
@@ -19,3 +19,5 @@ The proposed research distinguishes symbol copying and stylistic priming from se
 **Publication control:** Add verified author names and affiliations only after confirmation. Freeze exact stimulus materials, model versions, and the terminal battery before treating subsequent outcomes as confirmatory.
 
 **Follow-up findings:** The [C1 results](../../experiments/SCH_C1_INTEGRATED_CUE_POLICIES/RESULTS.md) show failed multi-constraint cue induction on two Qwen2.5 sizes. The [D1 results](../../experiments/SCH_D1_EXTERNAL_RECONSTRUCTION/RESULTS.md) show strong reconstruction from correct synthetic records without a residual advantage for symbolic cues and significant wrong-person archive contamination. The paper's Appendix D records these observations without promoting pilot evidence to confirmation.
+
+**Stateful memory extension:** [E1 Pretorius L1 cue, alias, restart and decision-gate findings](../../experiments/SCH_E1_PRETORIUS_STATEFUL/RESULTS.md) are documented in Appendix E of the paper. The canonical 450-event source stayed unchanged. No symbol-specific retrieval or character-decision advantage was found over matched opaque keys in this adapter.
