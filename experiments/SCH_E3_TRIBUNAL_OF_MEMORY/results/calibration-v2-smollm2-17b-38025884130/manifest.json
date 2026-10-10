@@ -1,0 +1,16 @@
+{
+  "fresh_two_message_context_each_case": true,
+  "greedy": true,
+  "max_new_tokens": 12,
+  "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+  "model_revision": "31b70e2e869a7173562077fd711b654946d38674",
+  "python": "3.11.17",
+  "records_are_simulated_not_canonical": true,
+  "script_sha256": "84f4f69b0a1f8328dfb5ae354a0e341bbe4a82af5c8020b281ba4b9780aef0e8",
+  "seed": 20261009,
+  "status": "synthetic_causal_calibration_not_E3_blind_trial",
+  "study": "E3-C-v2",
+  "subjects_are_guard_checked_prior_to_injection": true,
+  "torch": "2.5.1+cpu",
+  "transformers": "4.51.3"
+}
