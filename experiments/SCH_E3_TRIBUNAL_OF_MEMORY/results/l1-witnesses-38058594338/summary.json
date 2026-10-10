@@ -1,0 +1,14 @@
+{
+  "correct_by_construction": 24,
+  "direct_quote_is_not_independent_semantic_review": true,
+  "model_inference_calls": 0,
+  "n_episodes": 12,
+  "n_events": 12,
+  "n_witnesses": 24,
+  "reference_method": "direct_owned_original_L1_metadata",
+  "semantic_belief_truth_claim": false,
+  "source_checkout": "6d2768211f5c2184c8bbdb833c06e169b5137197",
+  "source_manifest_sha256": "ce23717b3950a772cc25e4bf60107eaddf4a0375122b6893c15417669ae033bb",
+  "tampered_claimed_record_rejected": true,
+  "tampered_witness_rejected": true
+}
