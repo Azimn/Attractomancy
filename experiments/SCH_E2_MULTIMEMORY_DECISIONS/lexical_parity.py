@@ -25,9 +25,8 @@ def main():
     import numpy as np
     import scipy
     import sklearn
-    import torch
-    import transformers
-    from transformers import AutoTokenizer,AutoModel
+    # Critical experimental intervention: evaluate the *source-only* lexical ranker
+    # BEFORE importing PyTorch / Transformers, which prior lexical runs never imported.
     sys.path.insert(0,str(opts.source/"src"))
     from pretorius_connectome.associative import AssociativeMemory
     from pretorius_connectome.imprinting import load_v12
@@ -51,7 +50,11 @@ def main():
         stage[name]={"top10":ranklist,
                      "score_sha256":[hashlib.sha256(v.astype("<f8",copy=False).tobytes()).hexdigest() for v in vectors]}
         return vectors
-    original=run_stage("torch_imported")
+    original=run_stage("source_only_before_torch")
+    import torch
+    import transformers
+    from transformers import AutoTokenizer,AutoModel
+    after_torch=run_stage("after_torch_import")
     torch.set_num_threads(4)
     multithread=run_stage("torch_set_4_threads")
     # Loading the model changes only process runtime, not retrieval algorithm.
@@ -86,7 +89,7 @@ def main():
     diff={
         name:{"max_abs_difference":max(float(np.max(np.abs(left-right))) for left,right in zip(original,stagevec)),
               "total_queries_with_any_score_difference":sum(bool(np.any(left!=right)) for left,right in zip(original,stagevec))}
-        for name,stagevec in [("torch_set_4_threads",multithread),("after_minilm_model_load",after_model)]
+        for name,stagevec in [("after_torch_import",after_torch),("torch_set_4_threads",multithread),("after_minilm_model_load",after_model)]
     }
     result={
       "study":"E2 lexical baseline stability audit",
