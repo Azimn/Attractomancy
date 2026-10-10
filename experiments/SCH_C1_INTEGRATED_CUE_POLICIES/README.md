@@ -5,6 +5,8 @@
 **Parent paper:** [Synthematic Cue Hypothesis](../../papers/synthematic-cue-hypothesis/PAPER.md) v0.2.1  
 **Prior calibration:** [A2/B1/B0 results](../SCH_FOLLOWUP_2026_10_09/RESULTS_STATUS.md)
 
+The [results report](RESULTS.md) links directly generated outputs and documents whether models enacted the synthetic decision policies or merely favored one output class. The first model (Qwen2.5-0.5B) completed 72 cases, but neither few-shot cue mapping produced a diagnostic policy reversal; see the report for precise limitations.
+
 ## Causal target
 
 B0 demonstrated reversible arbitrary label-to-codename association in two Qwen model sizes, yet B1 did not demonstrate reliable reversal of more complex conditional policies. C1 tests the next level: can an arbitrary cue control a compact multi-constraint decision policy when the model must integrate independent conditions and a safety veto? The protocol deliberately distinguishes surface label association, characteristic choice, and cost effectiveness.
