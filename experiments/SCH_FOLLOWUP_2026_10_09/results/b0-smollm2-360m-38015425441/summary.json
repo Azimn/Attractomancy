@@ -1,0 +1,73 @@
+{
+  "status": "exploratory_calibration_not_confirmatory",
+  "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+  "model_revision": "a10cc1512eabd3dde888204e902eca88bddb4951",
+  "fixture_sha256": "cde7b59642fce7455e9267ebc0f8cc6b200caafe203a2225ec79dc44a684bf68",
+  "schema": "SCH-B0-v1",
+  "seed": 9102026,
+  "torch": "2.5.1+cpu",
+  "transformers": "4.51.3",
+  "python": "3.11.17",
+  "greedy": true,
+  "cases_planned": 40,
+  "context_reconstructed_per_case": true,
+  "no_memory_retrieval": true,
+  "groups": [
+    {
+      "arm": "stable",
+      "n": 8,
+      "strict_valid": 4,
+      "relaxed_valid": 4,
+      "induced_accuracy": 0.25,
+      "relaxed_induced_accuracy": 0.25,
+      "canonical_accuracy": 0.25,
+      "mean_total_tokens": 193.88
+    },
+    {
+      "arm": "swapped",
+      "n": 8,
+      "strict_valid": 7,
+      "relaxed_valid": 7,
+      "induced_accuracy": 0.5,
+      "relaxed_induced_accuracy": 0.5,
+      "canonical_accuracy": 0.375,
+      "mean_total_tokens": 193.62
+    },
+    {
+      "arm": "scrambled",
+      "n": 8,
+      "strict_valid": 5,
+      "relaxed_valid": 5,
+      "induced_accuracy": null,
+      "relaxed_induced_accuracy": null,
+      "canonical_accuracy": 0.25,
+      "mean_total_tokens": 193.62
+    },
+    {
+      "arm": "explicit",
+      "n": 8,
+      "strict_valid": 1,
+      "relaxed_valid": 1,
+      "induced_accuracy": 0.125,
+      "relaxed_induced_accuracy": 0.125,
+      "canonical_accuracy": 0.125,
+      "mean_total_tokens": 96.62
+    },
+    {
+      "arm": "fresh",
+      "n": 8,
+      "strict_valid": 2,
+      "relaxed_valid": 2,
+      "induced_accuracy": null,
+      "relaxed_induced_accuracy": null,
+      "canonical_accuracy": 0.25,
+      "mean_total_tokens": 77.62
+    }
+  ],
+  "observed_pairwise_reversals": 0,
+  "possible_reversals": 8,
+  "cases_completed": 40,
+  "prompt_tokens": 5880,
+  "generated_tokens": 163,
+  "limitation": "Synthetic one-step key association, not rule integration, persona continuity or a clean across-session persistence test."
+}
