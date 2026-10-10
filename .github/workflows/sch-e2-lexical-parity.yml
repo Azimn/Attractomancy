@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - ".github/workflows/sch-e2-lexical-parity.yml"
+      - "experiments/SCH_E2_MULTIMEMORY_DECISIONS/lexical_parity.py"
   workflow_dispatch:
 
 permissions:
