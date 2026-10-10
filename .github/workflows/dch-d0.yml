@@ -1,0 +1,32 @@
+name: DCH D0 offline instrumentation
+on:
+  pull_request:
+    paths:
+      - 'experiments/DCH_D0_SYNTHETIC_PILOT/**'
+      - '.github/workflows/dch-d0.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Offline unit tests
+        working-directory: experiments/DCH_D0_SYNTHETIC_PILOT
+        run: python -m unittest discover -s tests -v
+      - name: Deterministic smoke
+        working-directory: experiments/DCH_D0_SYNTHETIC_PILOT
+        run: |
+          python pilot.py --mode smoke --output results/ci-smoke
+          python yoked_controls.py --out results/ci-yoked.json
+          python model_runner.py --backend mock --model NO_MODEL --phase terminal --visible results/ci-smoke/fixture_visible.json --sealed results/ci-smoke/fixture_SEALED_for_evaluator_only.json --max-cases 1 --max-probes 2 --policies expert_auto cold --out results/ci-mock.json
+          python evaluate.py --raw results/ci-mock.json --sealed results/ci-smoke/fixture_SEALED_for_evaluator_only.json --out results/ci-mock-eval.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: dch-d0-offline-smoke
+          path: experiments/DCH_D0_SYNTHETIC_PILOT/results/

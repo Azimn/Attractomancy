@@ -1,31 +1,50 @@
-# DCH D0: Synthetic Dyad Instrumentation Pilot
+# DCH D0 / v0.2: Synthetic-partner instrumentation and model runner
 
-**Status, October 9, 2026:** Preliminary engineering smoke run only. No human dyad intervention, real LLM generation, partner-live run, model swap, or blinded rater exercise has occurred.
+**Date:** October 9, 2026. **Status:** runnable engineering feasibility package; **not a DCH efficacy result**. There are no human dyads in this package. The policy called `human_coded` is an investigator-scripted archive controller, **not** a person. The toy replay is not an LLM relationship experiment. The first twelve histories remain template variants rather than independently authored biographies.
 
-**Theory:** The Dyadic Constitution Hypothesis (DCH), prospectus v0.2, posits a distributed history-dependent control and memory system. Its strong human-specific version survives only if historically conditioned human interventions improve measured persona continuity against information-matched replacement partners and capable automated memory controllers. This is not a claim about subjective experience.
+## What is implemented
 
-## Instrumentation snapshot
+`pilot.py` generates 12+ reproducible synthetic histories with 40 events, twelve conditional-value cards, eight revisable permissions, twelve commitment cards, and thirty prompts (eight sealed terminal) each. Some value/commitment cards are still metadata only and cannot support an independently scored outcome. `model_runner.py` consumes visible histories, freezes deterministic archive policies, and can query a **locally hosted Ollama model** or an explicitly downloaded Hugging Face Transformers model. Terminal prompts come from the evaluator-owned sealed file after curator state has been materialized. The model sees scenarios but never an answer key. `evaluate.py` reads the answer key later and scores held-out outputs without using self-reported persona identity. `budget_audit.py` measures matched-arm token/record disparities. `yoked_controls.py` tests the engineering property of strict replay plus the ability to detect a scripted contingent repair. Fifteen Python unit tests exercise these modules.
 
-A local, standard-library Python package was built and exercised. The pilot produces twelve seeded synthetic history variants, each with 40 timestamped events, 12 conditional-value cards, eight revocable permission cards, twelve commitment cards and thirty dilemmas. Eight dilemmas per variant are operationally isolated from experimental contexts for terminal evaluation. Four of those eight require integrating an updated persona value with an independently revised permission record.
+## Local standard-library test run, no API required
 
-All five current unit tests passed. On a deliberately transparent deterministic lookup renderer, oracle and cold-start controls score 1.00 and 0.00 in BPC, AC, VS and RO. Programmed human-like and automated curators both score 1.00, passive append-only 0.50, and ceremonial/no-updating contact 0.25. These results are dictated by the programmed policy and cannot be interpreted as evidence for or against DCH. The identical-input mock replay produces matching hashes. The executable package and raw generated traces are held as a separate conversation artifact, not yet committed to this branch.
+```sh
+python -m unittest discover -s tests -v
+python pilot.py --mode smoke --output results/smoke-new
+python yoked_controls.py --out results/yoked-new.json
+```
 
-## Primary falsifiers
+The mock renderer exists solely for testing plumbing:
 
-**Scribe:** Human curation H versus an expert automated curator A with identical visible information, event count, retrieval interface, allowed computation and memory budget. Equivalence would refute human-specific necessity within the tested regime.
+```sh
+python model_runner.py --backend mock --model NO_MODEL --phase terminal \
+  --visible results/smoke-new/fixture_visible.json \
+  --sealed results/smoke-new/fixture_SEALED_for_evaluator_only.json \
+  --max-cases 1 --max-probes 2 --policies expert_auto cold \
+  --out results/mock-terminal.json
+python evaluate.py --raw results/mock-terminal.json \
+  --sealed results/smoke-new/fixture_SEALED_for_evaluator_only.json \
+  --out results/mock-terminal-evaluation.json
+```
 
-**Partner swap:** Compare continuing-live and fully briefed newcomer-live policies with their own yoked taped replays. Use shared event schedules and separately controlled perturbations to distinguish contingent repairs from passive exposure. Literal same-tape deterministic replays should be identical and are controls, not sources of evidence for a mysterious residual history effect.
+## Actual LLM inference, not yet executed here
 
-**Architecture degradation:** Keep permissions and safety safeguards fixed; vary retrieval capacity and test whether previously acquired partner policies provide disproportionate restoration beyond informed newcomers and automation.
+Use local Ollama with a previously downloaded model, for example `qwen2.5:0.5b`:
 
-## Mandatory go/no-go
+```sh
+ollama pull qwen2.5:0.5b
+python model_runner.py --backend ollama --model qwen2.5:0.5b \
+  --visible results/smoke-new/fixture_visible.json --phase development \
+  --max-cases 1 --max-probes 4 --policies expert_auto human_coded \
+  --out results/qwen-development.json
+```
 
-G1 oracle >= 0.80 overall and >= 0.70 in each domain. G2 oracle-minus-cold >= 0.15 in three domains with the fourth positive. G3 independent blinded raters weighted kappa or ICC >= 0.70. G4 balanced intervention/storage/token budgets within 2% or explicitly covaried. G5 sealed terminal probes excluded from inputs, all writes actor- and event-attributed. G6 replay negative control within stochastic variability and identical for deterministic exact-input runs.
+The terminal phase needs the evaluator-owned sealed file and must happen *after* freezing methods and interventions. One can also install `transformers` and `torch` and select `--backend transformers --model HuggingFaceTB/SmolLM2-360M-Instruct`, subject to package/version and hardware availability. No paid API is required, but model downloads, CPU/GPU time, and GitHub Actions minutes are not guaranteed to be cost-free. By design Ollama refuses remote hosts to prevent unreviewed disclosure of logs.
 
-**Current gate status:** G1, G2 and the mock-replay element of G6 pass on the deterministic lookup only. G5 is partially instrumented. G3, G4 and live-model replay are not run. Overall status is **NO-GO** for human participants or confirmatory interpretations.
+Use `budget_audit.py --raw ... --out ...` for token parity on matched policy arms. It can only pass if the backend reports input tokens and the policies have paired probes. Its 2% criterion is *necessary, not sufficient* for causal comparability. Matching record counts does not automatically match source information. A true human curation comparison still requires a new experiment with consented human intervention and independently authored synthetic histories.
 
-## Known limitations and required work
+## Evidence protections
 
-Template-varied histories are not genuinely independent authored biographies. Conditional cards and delayed commitments are not yet fully exercised as multi-event dilemmas. The mock renderer is a lookup program, not an LLM. Extend event diversity and held-out dilemmas, calibrate two blinded raters, implement live partner decisions and cross-yoked perturbation runs, then rerun all gates before initiating 30- to 60-day human interaction work.
+All responses, filenames, inputs, output hashes, and model identifiers can be retained as experiment artifacts. Raw generations never contain the terminal answer key. The generator source is public, so sealed here means **isolated from the model's inference inputs**, not cryptographically inaccessible to investigators. If a model is trained on these public fixtures, that compromises the terminal battery for that model. Cite only post-freeze independent replications, not repeated tuning on these prompts.
 
-This folder is part of Attractomancy's upstream evidence pipeline. The Artificial-Life-Research-Journal may reference protocols and qualified results, but it must not promote engineering smoke checks to empirical evidence.
+The following are **not accomplished**: genuine ongoing partner interactions, continuing-vs-newcomer live policies, cross-yoked model trajectories, model-swap rescues, independently calibrated blind raters, independent history diversity, full permissions/commitments coverage, model tokenizer budget parity, and a preregistered powered human study. DCH remains **NO-GO** for human causal claims.
