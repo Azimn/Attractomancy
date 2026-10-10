@@ -1,0 +1,77 @@
+name: SCH E2S MiniLM semantic and hybrid retrieval pilot
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sch-e2s-semantic.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  e2s:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      PYTHONUNBUFFERED: "1"
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: Azimn/Pretorius-Connectome
+          ref: 6d2768211f5c2184c8bbdb833c06e169b5137197
+          path: pretorius_source
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install pinned CPU and retrieval libraries
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "torch==2.5.1" --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers==4.51.3" "safetensors==0.5.3" "numpy==1.26.4" "scipy==1.14.1" "scikit-learn==1.5.2"
+      - name: Run source-pinned local MiniLM and null controls
+        run: |
+          python experiments/SCH_E2_MULTIMEMORY_DECISIONS/semantic_retrieval.py \
+            --source pretorius_source \
+            --output experiments/SCH_E2_MULTIMEMORY_DECISIONS/results/semantic-run-${{ github.run_id }}
+      - name: Verify complete study and all controls
+        run: |
+          python - <<'PY'
+          import pathlib,json
+          p=pathlib.Path("experiments/SCH_E2_MULTIMEMORY_DECISIONS/results/semantic-run-${{ github.run_id }}/semantic_retrieval.json")
+          obj=json.loads(p.read_text())
+          assert obj["document_count"]==450 and obj["dimensions"]==384
+          assert len(obj["cases"])==6 and len(obj["totals"])==5
+          assert obj["encoder_revision"] and len(obj["encoder_revision"])>=12
+          assert all(len(v["conditions"])==5 for v in obj["cases"])
+          for method,v in obj["totals"].items():
+              assert 0<=v["both_at_10"]<=6 and 0<=v["individual_at_10"]<=12
+          print("E2S_SOURCE_MODEL_AND_NULLS_VERIFIED",obj["totals"])
+          PY
+      - name: Preserve outputs whether successful or failed
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sch-e2s-minilm-${{ github.run_id }}
+          path: experiments/SCH_E2_MULTIMEMORY_DECISIONS/results/semantic-run-${{ github.run_id }}/
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Commit new run-specific results without clobbering others
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/SCH_E2_MULTIMEMORY_DECISIONS/results/semantic-run-${{ github.run_id }}
+          git commit -m "experiments: archive E2S MiniLM and fusion retrieval pilot [skip ci]"
+          for n in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo "Git push conflict: artifact retained" >&2
+          exit 1
