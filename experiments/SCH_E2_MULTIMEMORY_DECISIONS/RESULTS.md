@@ -24,6 +24,24 @@ The privileged exact-editorial and exact-title queries are **not information-mat
 
 **Architectural implication:** Multi-event character continuity requires a verified *candidate discovery and evidence assembly* operation, not merely model output steering. A source-gated renderer cannot integrate two chosen events if its retriever fails to surface them. But a failure to find *these* two events does not prove absence of usable alternative evidence.
 
+## E2G: Source-authored association links versus randomized links
+
+The [frozen graph protocol](GRAPH_PROTOCOL.md) specifies three iterations of 75% lexical restart plus 25% event-link diffusion on the *existing L1 \`links_to_prior_events\`*, ranking at equal candidate budgets of 2, 5 and 10. The completed [full E2G result](results/graph-run-38024055089/graph_retrieval.json) used 450 source records with **912 authored directed links** (904 unique undirected links after symmetrization) and three fixed shuffled-link nulls. No LLM calls, synaptic weight updates, source rewrites or identity claims occurred.
+
+| Ranking method | Both target events in top 2 | Both in top 5 | Both in top 10 | Individual target events in top 10 |
+| --- | ---: | ---: | ---: | ---: |
+| Owner-provided lexical TF-IDF | 0/6 | 0/6 | **0/6** | 2/12 |
+| Source-authored event links, 3 diffusion steps | 0/6 | 0/6 | **1/6** | 3/12 |
+| Shuffled authored links, seed 11 | 0/6 | 0/6 | 0/6 | 2/12 |
+| Shuffled authored links, seed 19 | 0/6 | 0/6 | 0/6 | 2/12 |
+| Shuffled authored links, seed 37 | 0/6 | 0/6 | 0/6 | 2/12 |
+
+The real event link graph helped exactly **one** dilemma: the "claims about life" case. The lexical rank of second required event \`E02-013\` improved from **21 to 10**, while \`E25-001\` remained at rank **2**. No other case recovered both sources at top ten. The shuffled controls did not reproduce that one improvement, but **n = 6** with a fixed weighting and editorially authored ground truth does not justify an independent graph efficacy or statistical claim. Some individual source ranks worsened under real-link diffusion.
+
+The 912 associations are source-authored narrative links, **not** biological connectivity. The shuffled controls preserve each original record's number of outgoing references before undirected symmetrization, but not all degree or episode properties. The same source author chose events and narrative links, so the graph and evaluation relevance labels are not independently blind. An independent set of queries and two-or-more-source relevance assessments must precede any architectural recommendation to turn graph diffusion on by default.
+
+**Engineering conclusion:** One improvement is a plausible lead, while five unresolved dilemmas show that current lexical or shallow event-link diffusion cannot reliably assemble these researcher-selected source pairs. Record selection is a distinct, difficult problem from LLM behavioral integration.
+
 ## E2: two correct memories versus incomplete evidence, model renderers
 
 The [72-case per-model GitHub workflow](https://github.com/Azimn/Attractomancy/actions/runs/38023681633) independently presents source-verified pairs under editorial or opaque keys, and withholds one or both source records in control arms. It counterbalances the positions of response A and B and rejects deliberately foreign records upstream. The intended outcome is correct application of investigator-proposed judgments when **both** records are present, and calibrated UNKNOWN abstention when required evidence is missing.
