@@ -83,6 +83,10 @@ The authoritative counts below correspond to the canonical CSV files on `main`. 
 - **Source preservation:** [preservation policy](docs/SOURCE_PRESERVATION_POLICY.md), [archive queue](references/archive/ARCHIVE_QUEUE.md), [verified capture manifest](data/repository_capture_manifest.csv), [A-level scope-review queue](data/source_scope_review.csv), and [capture/index records](references/archive/).
 - **Case studies:** [REPAI / Living Narrative](references/cases/CASE-007_REPAI_LIVING_NARRATIVE.md), [Aletheia Codex](references/cases/CASE-008_ALETHEIA_CODEX_GLYPH_CONTINUITY.md), [GraceOS / TwinCore](references/cases/CASE-009_GRACEOS_TWINCORE_SEED_EXPERIMENTS.md), and [EQIS / ETQIS](references/cases/CASE-010_EQIS_CRYPTOGRAPHIC_CONTINUITY.md).
 
+## Research papers
+
+The [Synthematic Cue Hypothesis](papers/synthematic-cue-hypothesis/PAPER.md) (working paper v0.1.0, October 9, 2026) proposes three separable pathways for symbolic behavioral reconstruction: pretraining priors, within-context cue conditioning, and external-memory restoration. The [paper folder](papers/synthematic-cue-hypothesis/) documents its status, controls, and reproducibility requirements. It is a theoretical contribution, not a reported positive experiment.
+
 ## Quality and change control
 
 Run `python scripts/audit_catalog.py` from the repository root after source additions, edge additions, or documentation changes. This validates CSV structure, stable IDs, cross-file references, source status and preservation codes, explicit duplicate-URL reviews, and the single current-state table above.
