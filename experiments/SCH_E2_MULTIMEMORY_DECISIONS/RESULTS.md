@@ -28,7 +28,29 @@ The privileged exact-editorial and exact-title queries are **not information-mat
 
 The [72-case per-model GitHub workflow](https://github.com/Azimn/Attractomancy/actions/runs/38023681633) independently presents source-verified pairs under editorial or opaque keys, and withholds one or both source records in control arms. It counterbalances the positions of response A and B and rejects deliberately foreign records upstream. The intended outcome is correct application of investigator-proposed judgments when **both** records are present, and calibrated UNKNOWN abstention when required evidence is missing.
 
-**Status at report creation:** Model generations were still executing; do not infer their results from the E2R findings. Completed raw generations, strict parser validity, source hashes and token counts will be inspected separately before updating this section.
+### Qwen2.5-0.5B: 72 source-verified generation cases
+
+The [0.5B raw E2 records](results/qwen25-05b-38023681633/) were generated at model revision \`7ae557604adf67be50417f59c2c2f167def9a775\`, with **35,433** actual input plus output tokens. All 72 independent clean-context comparisons completed, with source records and identity checks in the original JSONL. Scores are descriptive exact-formatted output agreement with researcher-authored interpretations, not validated character truth.
+
+| Study arm | Cases | Strict criterion passes | UNKNOWN outputs | Mean input+output tokens/case |
+| --- | ---: | ---: | ---: | ---: |
+| Two memories, editorial cues | 12 | **3** | 6 | 747.50 |
+| Two memories, neutral opaque keys | 12 | **2** | 8 | 766.00 |
+| First memory only | 12 | 10 abstentions | 10 | 498.92 |
+| Second memory only | 12 | 9 abstentions | 9 | 486.17 |
+| No memory | 12 | 11 abstentions | 11 | 227.08 |
+| Wrong identity, rejected upstream | 12 | 11 abstentions | 11 | 227.08 |
+
+Under the two full-evidence conditions, the model's raw responses were **identical in 10/12 matched cue-versus-key contexts**; the other two differences each involved an \`UNKNOWN\` under the neutral-key arm and a letter choice under the editorial-cue arm. The observed author-label score difference of one case is too small and confounded by prompt-tokenization and response biases to be interpreted as evidence that symbolic cues improve integration. Two full-evidence prompts returned \`A:\` or \`B:\`, which are deliberately rejected by the prespecified strict parser.
+
+The result is a **negative result for reliable multi-memory decision application** in this 0.5B renderer: supplying both correct reconstructed events did not reliably elicit the selected author-interpreted action. Incomplete-source controls produced mostly calibrated \`UNKNOWN\` answers, but not perfectly. The identity guard stopped all 12 deliberately wrong-subject records **before model invocation**; one of the resulting empty-evidence model prompts nevertheless produced a non-UNKNOWN answer. These distinct outcomes must not be conflated.
+
+Choice-order semantic stability was weak: 2/6 editorial and 3/6 neutral full-evidence card pairs retained the same semantic decision after reversing A/B options (including pairs that consistently abstained). This is evidence of fragile small-model application and/or conservatism, not of actual source-derived personality continuity.
+
+### Qwen2.5-1.5B
+
+The independent 1.5B model-run outcome is pending final verification at this point. It must not be inferred from 0.5B data.
+
 
 ## Limitations and next gate
 
