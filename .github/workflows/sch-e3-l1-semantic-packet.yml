@@ -1,0 +1,66 @@
+name: SCH E3 actual-L1 narrative semantic review packet
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sch-e3-l1-semantic-packet.yml"
+      - "experiments/SCH_E3_TRIBUNAL_OF_MEMORY/l1_semantic_packet.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  packet:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: Azimn/Pretorius-Connectome
+          ref: 6d2768211f5c2184c8bbdb833c06e169b5137197
+          path: pretorius_source
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Build method-masked source interpretation packet
+        run: |
+          python experiments/SCH_E3_TRIBUNAL_OF_MEMORY/l1_semantic_packet.py \
+            --source pretorius_source \
+            --output experiments/SCH_E3_TRIBUNAL_OF_MEMORY/packets/l1-semantic-calibration
+      - name: Verify no synthetic truth labels or source-ID leakage to reviewer
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          folder=pathlib.Path("experiments/SCH_E3_TRIBUNAL_OF_MEMORY/packets/l1-semantic-calibration")
+          rows=[json.loads(t) for t in (folder/"review_packet.jsonl").read_text().splitlines() if t.strip()]
+          meta=json.loads((folder/"review_manifest.json").read_text())
+          assert len(rows)==24 and meta["candidate_statements_count"]==72
+          assert meta["reviewer_votes_received"]==0
+          assert meta["source"]["record_count"]==450
+          assert len({r["packet_case_id"] for r in rows})==24
+          for row in rows:
+              assert len(row["candidate_interpretations"])==3
+              assert not row["reviewer_outcomes_ready"]
+              assert "event_id" not in json.dumps(row) and "source_sidecar" not in json.dumps(row)
+              assert all(x["reviewer_label"] is None for x in row["candidate_interpretations"])
+          print("L1_SEMANTIC_REVIEW_PACKET_VALID",len(rows))
+          PY
+      - name: Commit only the review packet and no privileged organizer mapping
+        run: |
+          dir=experiments/SCH_E3_TRIBUNAL_OF_MEMORY/packets/l1-semantic-calibration
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$dir/review_packet.jsonl" "$dir/review_manifest.json"
+          ! git diff --cached --name-only | grep -q "ORGANIZER_ONLY"
+          git commit -m "research: record unlabeled real-L1 narrative interpretation review packet [skip ci]"
+          for n in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo "Could not commit review packet" >&2
+          exit 1
