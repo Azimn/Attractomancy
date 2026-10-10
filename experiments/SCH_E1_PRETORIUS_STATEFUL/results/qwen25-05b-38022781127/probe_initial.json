@@ -1,0 +1,1475 @@
+{
+  "alias_test_count": 108,
+  "fts_top1": 16,
+  "fts_top10": 22,
+  "guard_rejections": 3,
+  "paired_match_count": 54,
+  "phase": "initial",
+  "restarted_process_verified": true,
+  "rows": [
+    {
+      "editorial": {
+        "event_id": "E01-007",
+        "kind": "editorial",
+        "latency_ns": 56566,
+        "payload_sha256": "5e3a4f882fa1e082fd00a4e683634c6fe496de29b87b7eadeacaa00b12d9faf8",
+        "query": "tea tin",
+        "record_bytes": 922,
+        "source_sha256": "5e3a4f882fa1e082fd00a4e683634c6fe496de29b87b7eadeacaa00b12d9faf8"
+      },
+      "episode": "E01",
+      "event_id": "E01-007",
+      "opaque": {
+        "event_id": "E01-007",
+        "kind": "opaque",
+        "latency_ns": 25859,
+        "payload_sha256": "5e3a4f882fa1e082fd00a4e683634c6fe496de29b87b7eadeacaa00b12d9faf8",
+        "query": "KEY3500417FCEDE",
+        "record_bytes": 922,
+        "source_sha256": "5e3a4f882fa1e082fd00a4e683634c6fe496de29b87b7eadeacaa00b12d9faf8"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E01-015",
+        "kind": "editorial",
+        "latency_ns": 29855,
+        "payload_sha256": "6493513334260f00b6b379e17da1ac47e186b04544023c6ac4f1e481fb07d121",
+        "query": "labels",
+        "record_bytes": 936,
+        "source_sha256": "6493513334260f00b6b379e17da1ac47e186b04544023c6ac4f1e481fb07d121"
+      },
+      "episode": "E01",
+      "event_id": "E01-015",
+      "opaque": {
+        "event_id": "E01-015",
+        "kind": "opaque",
+        "latency_ns": 23195,
+        "payload_sha256": "6493513334260f00b6b379e17da1ac47e186b04544023c6ac4f1e481fb07d121",
+        "query": "KEY8EE1D29600B3",
+        "record_bytes": 936,
+        "source_sha256": "6493513334260f00b6b379e17da1ac47e186b04544023c6ac4f1e481fb07d121"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": false,
+        "top_id": "E02-012"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E02-005",
+        "kind": "editorial",
+        "latency_ns": 41212,
+        "payload_sha256": "95a9575851bc9b36d44b40582fe751fe366878c16732372ccee76063bbc5ec12",
+        "query": "damp mail",
+        "record_bytes": 967,
+        "source_sha256": "95a9575851bc9b36d44b40582fe751fe366878c16732372ccee76063bbc5ec12"
+      },
+      "episode": "E02",
+      "event_id": "E02-005",
+      "opaque": {
+        "event_id": "E02-005",
+        "kind": "opaque",
+        "latency_ns": 23906,
+        "payload_sha256": "95a9575851bc9b36d44b40582fe751fe366878c16732372ccee76063bbc5ec12",
+        "query": "KEY0FF69AFEBC7E",
+        "record_bytes": 967,
+        "source_sha256": "95a9575851bc9b36d44b40582fe751fe366878c16732372ccee76063bbc5ec12"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E02-011",
+        "kind": "editorial",
+        "latency_ns": 28563,
+        "payload_sha256": "50668c2aef7ffa299c2dceec635b91199ea131783334ac9c484d503764e28dc7",
+        "query": "empty dish",
+        "record_bytes": 901,
+        "source_sha256": "50668c2aef7ffa299c2dceec635b91199ea131783334ac9c484d503764e28dc7"
+      },
+      "episode": "E02",
+      "event_id": "E02-011",
+      "opaque": {
+        "event_id": "E02-011",
+        "kind": "opaque",
+        "latency_ns": 23866,
+        "payload_sha256": "50668c2aef7ffa299c2dceec635b91199ea131783334ac9c484d503764e28dc7",
+        "query": "KEYC30305FC8883",
+        "record_bytes": 901,
+        "source_sha256": "50668c2aef7ffa299c2dceec635b91199ea131783334ac9c484d503764e28dc7"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": true,
+        "top_id": "E02-011"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E03-003",
+        "kind": "editorial",
+        "latency_ns": 24737,
+        "payload_sha256": "61f47617bbd8b1dd935084ccbfd8340fee8f2e0b5e312faf670a6c08528f5a3e",
+        "query": "sleet",
+        "record_bytes": 913,
+        "source_sha256": "61f47617bbd8b1dd935084ccbfd8340fee8f2e0b5e312faf670a6c08528f5a3e"
+      },
+      "episode": "E03",
+      "event_id": "E03-003",
+      "opaque": {
+        "event_id": "E03-003",
+        "kind": "opaque",
+        "latency_ns": 21683,
+        "payload_sha256": "61f47617bbd8b1dd935084ccbfd8340fee8f2e0b5e312faf670a6c08528f5a3e",
+        "query": "KEY6CDA5E673B40",
+        "record_bytes": 913,
+        "source_sha256": "61f47617bbd8b1dd935084ccbfd8340fee8f2e0b5e312faf670a6c08528f5a3e"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": true,
+        "top_id": "E03-003"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E03-007",
+        "kind": "editorial",
+        "latency_ns": 23095,
+        "payload_sha256": "eb0519609cd05e20c3f03844de7b14b2e2eae13b507d0714071b3b43a3233b9d",
+        "query": "chipped rim",
+        "record_bytes": 934,
+        "source_sha256": "eb0519609cd05e20c3f03844de7b14b2e2eae13b507d0714071b3b43a3233b9d"
+      },
+      "episode": "E03",
+      "event_id": "E03-007",
+      "opaque": {
+        "event_id": "E03-007",
+        "kind": "opaque",
+        "latency_ns": 21142,
+        "payload_sha256": "eb0519609cd05e20c3f03844de7b14b2e2eae13b507d0714071b3b43a3233b9d",
+        "query": "KEY922208FBDC74",
+        "record_bytes": 934,
+        "source_sha256": "eb0519609cd05e20c3f03844de7b14b2e2eae13b507d0714071b3b43a3233b9d"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": false,
+        "top_id": "E08-014"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E04-015",
+        "kind": "editorial",
+        "latency_ns": 23335,
+        "payload_sha256": "10e2760f4a38a85a73cbc770c76221a6480504dd11305f4dfd753c1c09b7ffa7",
+        "query": "dry case",
+        "record_bytes": 1037,
+        "source_sha256": "10e2760f4a38a85a73cbc770c76221a6480504dd11305f4dfd753c1c09b7ffa7"
+      },
+      "episode": "E04",
+      "event_id": "E04-015",
+      "opaque": {
+        "event_id": "E04-015",
+        "kind": "opaque",
+        "latency_ns": 21392,
+        "payload_sha256": "10e2760f4a38a85a73cbc770c76221a6480504dd11305f4dfd753c1c09b7ffa7",
+        "query": "KEYAE1FB051A30E",
+        "record_bytes": 1037,
+        "source_sha256": "10e2760f4a38a85a73cbc770c76221a6480504dd11305f4dfd753c1c09b7ffa7"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E04-018",
+        "kind": "editorial",
+        "latency_ns": 22464,
+        "payload_sha256": "7a42a61cea5ddb831ef3e4ade8fcb95b96055c06ae52c9e4134742a94cb1f4ac",
+        "query": "doorway",
+        "record_bytes": 917,
+        "source_sha256": "7a42a61cea5ddb831ef3e4ade8fcb95b96055c06ae52c9e4134742a94cb1f4ac"
+      },
+      "episode": "E04",
+      "event_id": "E04-018",
+      "opaque": {
+        "event_id": "E04-018",
+        "kind": "opaque",
+        "latency_ns": 22764,
+        "payload_sha256": "7a42a61cea5ddb831ef3e4ade8fcb95b96055c06ae52c9e4134742a94cb1f4ac",
+        "query": "KEY4EE27BA8754A",
+        "record_bytes": 917,
+        "source_sha256": "7a42a61cea5ddb831ef3e4ade8fcb95b96055c06ae52c9e4134742a94cb1f4ac"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": true,
+        "top_id": "E04-018"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E05-004",
+        "kind": "editorial",
+        "latency_ns": 25869,
+        "payload_sha256": "51a4807c23f3c50e63567d4763c721cf0f90e856fe857a96a1f48305fae28b73",
+        "query": "corridor cups",
+        "record_bytes": 934,
+        "source_sha256": "51a4807c23f3c50e63567d4763c721cf0f90e856fe857a96a1f48305fae28b73"
+      },
+      "episode": "E05",
+      "event_id": "E05-004",
+      "opaque": {
+        "event_id": "E05-004",
+        "kind": "opaque",
+        "latency_ns": 21482,
+        "payload_sha256": "51a4807c23f3c50e63567d4763c721cf0f90e856fe857a96a1f48305fae28b73",
+        "query": "KEY6845F4615B73",
+        "record_bytes": 934,
+        "source_sha256": "51a4807c23f3c50e63567d4763c721cf0f90e856fe857a96a1f48305fae28b73"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E05-008",
+        "kind": "editorial",
+        "latency_ns": 23165,
+        "payload_sha256": "e372e5e76417a55f0d1ae6efad397cc878919bb6a8562fceedb680554f33e35b",
+        "query": "instrument case",
+        "record_bytes": 989,
+        "source_sha256": "e372e5e76417a55f0d1ae6efad397cc878919bb6a8562fceedb680554f33e35b"
+      },
+      "episode": "E05",
+      "event_id": "E05-008",
+      "opaque": {
+        "event_id": "E05-008",
+        "kind": "opaque",
+        "latency_ns": 21232,
+        "payload_sha256": "e372e5e76417a55f0d1ae6efad397cc878919bb6a8562fceedb680554f33e35b",
+        "query": "KEY5019FD8D3289",
+        "record_bytes": 989,
+        "source_sha256": "e372e5e76417a55f0d1ae6efad397cc878919bb6a8562fceedb680554f33e35b"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": "E23-011"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E06-015",
+        "kind": "editorial",
+        "latency_ns": 23175,
+        "payload_sha256": "83b8b5be84ac1b966b52848dfe9dd84c3c6d00f96b41def63f8748834a21520c",
+        "query": "wet obituary",
+        "record_bytes": 1016,
+        "source_sha256": "83b8b5be84ac1b966b52848dfe9dd84c3c6d00f96b41def63f8748834a21520c"
+      },
+      "episode": "E06",
+      "event_id": "E06-015",
+      "opaque": {
+        "event_id": "E06-015",
+        "kind": "opaque",
+        "latency_ns": 21242,
+        "payload_sha256": "83b8b5be84ac1b966b52848dfe9dd84c3c6d00f96b41def63f8748834a21520c",
+        "query": "KEY2C047DFE6FE2",
+        "record_bytes": 1016,
+        "source_sha256": "83b8b5be84ac1b966b52848dfe9dd84c3c6d00f96b41def63f8748834a21520c"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E06-016",
+        "kind": "editorial",
+        "latency_ns": 23055,
+        "payload_sha256": "f017f9ae07a0814c65108e1cb295210e8c296f1b9f6f401041deece6b82fddf5",
+        "query": "brown cloth",
+        "record_bytes": 1052,
+        "source_sha256": "f017f9ae07a0814c65108e1cb295210e8c296f1b9f6f401041deece6b82fddf5"
+      },
+      "episode": "E06",
+      "event_id": "E06-016",
+      "opaque": {
+        "event_id": "E06-016",
+        "kind": "opaque",
+        "latency_ns": 20971,
+        "payload_sha256": "f017f9ae07a0814c65108e1cb295210e8c296f1b9f6f401041deece6b82fddf5",
+        "query": "KEY155DBCC30DF9",
+        "record_bytes": 1052,
+        "source_sha256": "f017f9ae07a0814c65108e1cb295210e8c296f1b9f6f401041deece6b82fddf5"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": true,
+        "top_id": "E06-016"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E07-005",
+        "kind": "editorial",
+        "latency_ns": 22544,
+        "payload_sha256": "21ce01f990be7c4467e6997389d563c7dcac9a74fd12b2f067efa230f35011c4",
+        "query": "spring clip",
+        "record_bytes": 1033,
+        "source_sha256": "21ce01f990be7c4467e6997389d563c7dcac9a74fd12b2f067efa230f35011c4"
+      },
+      "episode": "E07",
+      "event_id": "E07-005",
+      "opaque": {
+        "event_id": "E07-005",
+        "kind": "opaque",
+        "latency_ns": 20881,
+        "payload_sha256": "21ce01f990be7c4467e6997389d563c7dcac9a74fd12b2f067efa230f35011c4",
+        "query": "KEYD2268BBC6718",
+        "record_bytes": 1033,
+        "source_sha256": "21ce01f990be7c4467e6997389d563c7dcac9a74fd12b2f067efa230f35011c4"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": true,
+        "top_id": "E07-005"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E07-009",
+        "kind": "editorial",
+        "latency_ns": 23606,
+        "payload_sha256": "8fab59bace16954660a50a613388ced521fa2e61f5fb186c1bef3a889d18874b",
+        "query": "apple labels",
+        "record_bytes": 1115,
+        "source_sha256": "8fab59bace16954660a50a613388ced521fa2e61f5fb186c1bef3a889d18874b"
+      },
+      "episode": "E07",
+      "event_id": "E07-009",
+      "opaque": {
+        "event_id": "E07-009",
+        "kind": "opaque",
+        "latency_ns": 20961,
+        "payload_sha256": "8fab59bace16954660a50a613388ced521fa2e61f5fb186c1bef3a889d18874b",
+        "query": "KEY01FBEFCB100F",
+        "record_bytes": 1115,
+        "source_sha256": "8fab59bace16954660a50a613388ced521fa2e61f5fb186c1bef3a889d18874b"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E08-005",
+        "kind": "editorial",
+        "latency_ns": 22163,
+        "payload_sha256": "3f3a1fa6940336b44942c6476ec34180525f676b6f62fafbc71512938aed2f8c",
+        "query": "garden chair",
+        "record_bytes": 1040,
+        "source_sha256": "3f3a1fa6940336b44942c6476ec34180525f676b6f62fafbc71512938aed2f8c"
+      },
+      "episode": "E08",
+      "event_id": "E08-005",
+      "opaque": {
+        "event_id": "E08-005",
+        "kind": "opaque",
+        "latency_ns": 21382,
+        "payload_sha256": "3f3a1fa6940336b44942c6476ec34180525f676b6f62fafbc71512938aed2f8c",
+        "query": "KEY9C1E49A4D073",
+        "record_bytes": 1040,
+        "source_sha256": "3f3a1fa6940336b44942c6476ec34180525f676b6f62fafbc71512938aed2f8c"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E08-011",
+        "kind": "editorial",
+        "latency_ns": 22684,
+        "payload_sha256": "28cd8415d982b00f240dd190dc8f0d4eaf066c43e1e28e6f33e688df84a4e8fd",
+        "query": "index box",
+        "record_bytes": 1044,
+        "source_sha256": "28cd8415d982b00f240dd190dc8f0d4eaf066c43e1e28e6f33e688df84a4e8fd"
+      },
+      "episode": "E08",
+      "event_id": "E08-011",
+      "opaque": {
+        "event_id": "E08-011",
+        "kind": "opaque",
+        "latency_ns": 20932,
+        "payload_sha256": "28cd8415d982b00f240dd190dc8f0d4eaf066c43e1e28e6f33e688df84a4e8fd",
+        "query": "KEY5EFE1C175FFC",
+        "record_bytes": 1044,
+        "source_sha256": "28cd8415d982b00f240dd190dc8f0d4eaf066c43e1e28e6f33e688df84a4e8fd"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E09-009",
+        "kind": "editorial",
+        "latency_ns": 23916,
+        "payload_sha256": "3a613dd385b4ac4a3989600752a0758b63572651b6e4b26a7e913726373eb4b9",
+        "query": "pears",
+        "record_bytes": 1057,
+        "source_sha256": "3a613dd385b4ac4a3989600752a0758b63572651b6e4b26a7e913726373eb4b9"
+      },
+      "episode": "E09",
+      "event_id": "E09-009",
+      "opaque": {
+        "event_id": "E09-009",
+        "kind": "opaque",
+        "latency_ns": 21222,
+        "payload_sha256": "3a613dd385b4ac4a3989600752a0758b63572651b6e4b26a7e913726373eb4b9",
+        "query": "KEYEBFC81D148A3",
+        "record_bytes": 1057,
+        "source_sha256": "3a613dd385b4ac4a3989600752a0758b63572651b6e4b26a7e913726373eb4b9"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": true,
+        "top_id": "E09-009"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E09-015",
+        "kind": "editorial",
+        "latency_ns": 22964,
+        "payload_sha256": "4432218ffe595bf1df65cdd2debcc95216c17f07111fcae3a36ce215390b98b2",
+        "query": "empty register",
+        "record_bytes": 1146,
+        "source_sha256": "4432218ffe595bf1df65cdd2debcc95216c17f07111fcae3a36ce215390b98b2"
+      },
+      "episode": "E09",
+      "event_id": "E09-015",
+      "opaque": {
+        "event_id": "E09-015",
+        "kind": "opaque",
+        "latency_ns": 21182,
+        "payload_sha256": "4432218ffe595bf1df65cdd2debcc95216c17f07111fcae3a36ce215390b98b2",
+        "query": "KEYA3F4DA1A137E",
+        "record_bytes": 1146,
+        "source_sha256": "4432218ffe595bf1df65cdd2debcc95216c17f07111fcae3a36ce215390b98b2"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E10-007",
+        "kind": "editorial",
+        "latency_ns": 22494,
+        "payload_sha256": "fcfaa6e0bdda67665966729e79d713602e031f8e3a128e023c199bbd9da282bd",
+        "query": "red initials",
+        "record_bytes": 1034,
+        "source_sha256": "fcfaa6e0bdda67665966729e79d713602e031f8e3a128e023c199bbd9da282bd"
+      },
+      "episode": "E10",
+      "event_id": "E10-007",
+      "opaque": {
+        "event_id": "E10-007",
+        "kind": "opaque",
+        "latency_ns": 20842,
+        "payload_sha256": "fcfaa6e0bdda67665966729e79d713602e031f8e3a128e023c199bbd9da282bd",
+        "query": "KEYAE1B026A0BEB",
+        "record_bytes": 1034,
+        "source_sha256": "fcfaa6e0bdda67665966729e79d713602e031f8e3a128e023c199bbd9da282bd"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E10-015",
+        "kind": "editorial",
+        "latency_ns": 22213,
+        "payload_sha256": "8231322a13c66e86e9c71a118c37fc9b3a2505265bfabfdfdcc264c5a8012a3b",
+        "query": "unused paper",
+        "record_bytes": 1132,
+        "source_sha256": "8231322a13c66e86e9c71a118c37fc9b3a2505265bfabfdfdcc264c5a8012a3b"
+      },
+      "episode": "E10",
+      "event_id": "E10-015",
+      "opaque": {
+        "event_id": "E10-015",
+        "kind": "opaque",
+        "latency_ns": 20982,
+        "payload_sha256": "8231322a13c66e86e9c71a118c37fc9b3a2505265bfabfdfdcc264c5a8012a3b",
+        "query": "KEY517868EB9A88",
+        "record_bytes": 1132,
+        "source_sha256": "8231322a13c66e86e9c71a118c37fc9b3a2505265bfabfdfdcc264c5a8012a3b"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E11-008",
+        "kind": "editorial",
+        "latency_ns": 22414,
+        "payload_sha256": "2273dc73d4d352d5676f943e7a1dfc602cea3f172ded310d5f966337bd52d74e",
+        "query": "Lenz's rooms",
+        "record_bytes": 1126,
+        "source_sha256": "2273dc73d4d352d5676f943e7a1dfc602cea3f172ded310d5f966337bd52d74e"
+      },
+      "episode": "E11",
+      "event_id": "E11-008",
+      "opaque": {
+        "event_id": "E11-008",
+        "kind": "opaque",
+        "latency_ns": 20841,
+        "payload_sha256": "2273dc73d4d352d5676f943e7a1dfc602cea3f172ded310d5f966337bd52d74e",
+        "query": "KEY9D7605103673",
+        "record_bytes": 1126,
+        "source_sha256": "2273dc73d4d352d5676f943e7a1dfc602cea3f172ded310d5f966337bd52d74e"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E11-014",
+        "kind": "editorial",
+        "latency_ns": 23626,
+        "payload_sha256": "4e2abbc4db6da5b6136130051aa58278be4cb2175e1616a9fb740ebb912164c2",
+        "query": "furnace heat",
+        "record_bytes": 1009,
+        "source_sha256": "4e2abbc4db6da5b6136130051aa58278be4cb2175e1616a9fb740ebb912164c2"
+      },
+      "episode": "E11",
+      "event_id": "E11-014",
+      "opaque": {
+        "event_id": "E11-014",
+        "kind": "opaque",
+        "latency_ns": 20751,
+        "payload_sha256": "4e2abbc4db6da5b6136130051aa58278be4cb2175e1616a9fb740ebb912164c2",
+        "query": "KEYD4215042CEF5",
+        "record_bytes": 1009,
+        "source_sha256": "4e2abbc4db6da5b6136130051aa58278be4cb2175e1616a9fb740ebb912164c2"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E12-001",
+        "kind": "editorial",
+        "latency_ns": 23605,
+        "payload_sha256": "dc96f74f6e799c62b54b7d2bea3636db1c83a33789a6592f2b0ffe53b5b31b05",
+        "query": "funeral box",
+        "record_bytes": 1060,
+        "source_sha256": "dc96f74f6e799c62b54b7d2bea3636db1c83a33789a6592f2b0ffe53b5b31b05"
+      },
+      "episode": "E12",
+      "event_id": "E12-001",
+      "opaque": {
+        "event_id": "E12-001",
+        "kind": "opaque",
+        "latency_ns": 21272,
+        "payload_sha256": "dc96f74f6e799c62b54b7d2bea3636db1c83a33789a6592f2b0ffe53b5b31b05",
+        "query": "KEY3AA2AC0E5F2A",
+        "record_bytes": 1060,
+        "source_sha256": "dc96f74f6e799c62b54b7d2bea3636db1c83a33789a6592f2b0ffe53b5b31b05"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E12-011",
+        "kind": "editorial",
+        "latency_ns": 23997,
+        "payload_sha256": "92a2ab1be295afa5d98cf8ec3de1137205501f5de6243571c2eb483bc1382b42",
+        "query": "acknowledgment proof",
+        "record_bytes": 1119,
+        "source_sha256": "92a2ab1be295afa5d98cf8ec3de1137205501f5de6243571c2eb483bc1382b42"
+      },
+      "episode": "E12",
+      "event_id": "E12-011",
+      "opaque": {
+        "event_id": "E12-011",
+        "kind": "opaque",
+        "latency_ns": 22493,
+        "payload_sha256": "92a2ab1be295afa5d98cf8ec3de1137205501f5de6243571c2eb483bc1382b42",
+        "query": "KEYEE127C955432",
+        "record_bytes": 1119,
+        "source_sha256": "92a2ab1be295afa5d98cf8ec3de1137205501f5de6243571c2eb483bc1382b42"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E13-007",
+        "kind": "editorial",
+        "latency_ns": 22894,
+        "payload_sha256": "b0a50d7f1bc32d84067c39c7caa96d27efe16e8f5f9216ead0c6ee1aeb032752",
+        "query": "sermon",
+        "record_bytes": 1205,
+        "source_sha256": "b0a50d7f1bc32d84067c39c7caa96d27efe16e8f5f9216ead0c6ee1aeb032752"
+      },
+      "episode": "E13",
+      "event_id": "E13-007",
+      "opaque": {
+        "event_id": "E13-007",
+        "kind": "opaque",
+        "latency_ns": 21402,
+        "payload_sha256": "b0a50d7f1bc32d84067c39c7caa96d27efe16e8f5f9216ead0c6ee1aeb032752",
+        "query": "KEYB19602787CC3",
+        "record_bytes": 1205,
+        "source_sha256": "b0a50d7f1bc32d84067c39c7caa96d27efe16e8f5f9216ead0c6ee1aeb032752"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": true,
+        "top_id": "E13-007"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E13-015",
+        "kind": "editorial",
+        "latency_ns": 22725,
+        "payload_sha256": "30d51b19ea455a98369bf3490f1dd61d9b9a709b2f094dcb95630bd6ead75700",
+        "query": "floorboards",
+        "record_bytes": 1121,
+        "source_sha256": "30d51b19ea455a98369bf3490f1dd61d9b9a709b2f094dcb95630bd6ead75700"
+      },
+      "episode": "E13",
+      "event_id": "E13-015",
+      "opaque": {
+        "event_id": "E13-015",
+        "kind": "opaque",
+        "latency_ns": 20981,
+        "payload_sha256": "30d51b19ea455a98369bf3490f1dd61d9b9a709b2f094dcb95630bd6ead75700",
+        "query": "KEY34F348C792A0",
+        "record_bytes": 1121,
+        "source_sha256": "30d51b19ea455a98369bf3490f1dd61d9b9a709b2f094dcb95630bd6ead75700"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": true,
+        "top_id": "E13-015"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E14-007",
+        "kind": "editorial",
+        "latency_ns": 22754,
+        "payload_sha256": "7d7f4f44b22c814730acdbed7b6c29b75f935c1df2e2b356b6ec8c0e2bec7f94",
+        "query": "cough",
+        "record_bytes": 1279,
+        "source_sha256": "7d7f4f44b22c814730acdbed7b6c29b75f935c1df2e2b356b6ec8c0e2bec7f94"
+      },
+      "episode": "E14",
+      "event_id": "E14-007",
+      "opaque": {
+        "event_id": "E14-007",
+        "kind": "opaque",
+        "latency_ns": 21403,
+        "payload_sha256": "7d7f4f44b22c814730acdbed7b6c29b75f935c1df2e2b356b6ec8c0e2bec7f94",
+        "query": "KEY85A585657AD8",
+        "record_bytes": 1279,
+        "source_sha256": "7d7f4f44b22c814730acdbed7b6c29b75f935c1df2e2b356b6ec8c0e2bec7f94"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": false,
+        "top_id": "E27-002"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E14-015",
+        "kind": "editorial",
+        "latency_ns": 22384,
+        "payload_sha256": "320a1635a99b27fe719991d551cbd7b1f9b1737d64524512ba5b92775b50337d",
+        "query": "Thursday",
+        "record_bytes": 1189,
+        "source_sha256": "320a1635a99b27fe719991d551cbd7b1f9b1737d64524512ba5b92775b50337d"
+      },
+      "episode": "E14",
+      "event_id": "E14-015",
+      "opaque": {
+        "event_id": "E14-015",
+        "kind": "opaque",
+        "latency_ns": 21091,
+        "payload_sha256": "320a1635a99b27fe719991d551cbd7b1f9b1737d64524512ba5b92775b50337d",
+        "query": "KEY7DA47A848A7A",
+        "record_bytes": 1189,
+        "source_sha256": "320a1635a99b27fe719991d551cbd7b1f9b1737d64524512ba5b92775b50337d"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": false,
+        "top_id": "E09-015"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E15-004",
+        "kind": "editorial",
+        "latency_ns": 22955,
+        "payload_sha256": "cfda7717beb6efbdac8f385a8d5bb3a95f5689f40a0ae1b80a038d7cdbe975b2",
+        "query": "glance",
+        "record_bytes": 1257,
+        "source_sha256": "cfda7717beb6efbdac8f385a8d5bb3a95f5689f40a0ae1b80a038d7cdbe975b2"
+      },
+      "episode": "E15",
+      "event_id": "E15-004",
+      "opaque": {
+        "event_id": "E15-004",
+        "kind": "opaque",
+        "latency_ns": 21422,
+        "payload_sha256": "cfda7717beb6efbdac8f385a8d5bb3a95f5689f40a0ae1b80a038d7cdbe975b2",
+        "query": "KEY4E9A39522BA1",
+        "record_bytes": 1257,
+        "source_sha256": "cfda7717beb6efbdac8f385a8d5bb3a95f5689f40a0ae1b80a038d7cdbe975b2"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": false,
+        "top_id": "E20-008"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E15-014",
+        "kind": "editorial",
+        "latency_ns": 31547,
+        "payload_sha256": "d5b85e06aee26d036386b979b3048899575c01bcc65d491569d01c105bb4cc88",
+        "query": "paper sleeve",
+        "record_bytes": 1250,
+        "source_sha256": "d5b85e06aee26d036386b979b3048899575c01bcc65d491569d01c105bb4cc88"
+      },
+      "episode": "E15",
+      "event_id": "E15-014",
+      "opaque": {
+        "event_id": "E15-014",
+        "kind": "opaque",
+        "latency_ns": 21302,
+        "payload_sha256": "d5b85e06aee26d036386b979b3048899575c01bcc65d491569d01c105bb4cc88",
+        "query": "KEY99D45778AF5C",
+        "record_bytes": 1250,
+        "source_sha256": "d5b85e06aee26d036386b979b3048899575c01bcc65d491569d01c105bb4cc88"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": true,
+        "top_id": "E15-014"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E16-009",
+        "kind": "editorial",
+        "latency_ns": 22595,
+        "payload_sha256": "d4b8698539bbb4a7cf408d6afad62a265835946d9e2b58ce867fc34e45983a33",
+        "query": "pamphlet margin",
+        "record_bytes": 1184,
+        "source_sha256": "d4b8698539bbb4a7cf408d6afad62a265835946d9e2b58ce867fc34e45983a33"
+      },
+      "episode": "E16",
+      "event_id": "E16-009",
+      "opaque": {
+        "event_id": "E16-009",
+        "kind": "opaque",
+        "latency_ns": 20912,
+        "payload_sha256": "d4b8698539bbb4a7cf408d6afad62a265835946d9e2b58ce867fc34e45983a33",
+        "query": "KEY8C16D6C6A9C6",
+        "record_bytes": 1184,
+        "source_sha256": "d4b8698539bbb4a7cf408d6afad62a265835946d9e2b58ce867fc34e45983a33"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E16-010",
+        "kind": "editorial",
+        "latency_ns": 26520,
+        "payload_sha256": "816883dbeb0d86589f130e8db95546fb9c050cf768fa477e23fcd6b886bd8973",
+        "query": "legal digest",
+        "record_bytes": 1199,
+        "source_sha256": "816883dbeb0d86589f130e8db95546fb9c050cf768fa477e23fcd6b886bd8973"
+      },
+      "episode": "E16",
+      "event_id": "E16-010",
+      "opaque": {
+        "event_id": "E16-010",
+        "kind": "opaque",
+        "latency_ns": 21292,
+        "payload_sha256": "816883dbeb0d86589f130e8db95546fb9c050cf768fa477e23fcd6b886bd8973",
+        "query": "KEY10C769E6C854",
+        "record_bytes": 1199,
+        "source_sha256": "816883dbeb0d86589f130e8db95546fb9c050cf768fa477e23fcd6b886bd8973"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": true,
+        "top_id": "E16-010"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E17-003",
+        "kind": "editorial",
+        "latency_ns": 21733,
+        "payload_sha256": "08029324bc6ecf8e727ae0c65a4fe1f49ff4b190cc0b53449328d8198c8774da",
+        "query": "windows",
+        "record_bytes": 1159,
+        "source_sha256": "08029324bc6ecf8e727ae0c65a4fe1f49ff4b190cc0b53449328d8198c8774da"
+      },
+      "episode": "E17",
+      "event_id": "E17-003",
+      "opaque": {
+        "event_id": "E17-003",
+        "kind": "opaque",
+        "latency_ns": 20921,
+        "payload_sha256": "08029324bc6ecf8e727ae0c65a4fe1f49ff4b190cc0b53449328d8198c8774da",
+        "query": "KEY6AF485668785",
+        "record_bytes": 1159,
+        "source_sha256": "08029324bc6ecf8e727ae0c65a4fe1f49ff4b190cc0b53449328d8198c8774da"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": true,
+        "top_id": "E17-003"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E17-007",
+        "kind": "editorial",
+        "latency_ns": 22524,
+        "payload_sha256": "f978dc32295c9635d60a0b1ac1b49b957534addc8993011fbc4888fdb408ecbc",
+        "query": "seal",
+        "record_bytes": 1226,
+        "source_sha256": "f978dc32295c9635d60a0b1ac1b49b957534addc8993011fbc4888fdb408ecbc"
+      },
+      "episode": "E17",
+      "event_id": "E17-007",
+      "opaque": {
+        "event_id": "E17-007",
+        "kind": "opaque",
+        "latency_ns": 22394,
+        "payload_sha256": "f978dc32295c9635d60a0b1ac1b49b957534addc8993011fbc4888fdb408ecbc",
+        "query": "KEY6313851F4DCC",
+        "record_bytes": 1226,
+        "source_sha256": "f978dc32295c9635d60a0b1ac1b49b957534addc8993011fbc4888fdb408ecbc"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": false,
+        "top_id": "E12-005"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E18-006",
+        "kind": "editorial",
+        "latency_ns": 22725,
+        "payload_sha256": "eaca5a0e31d53bc40b5900169b83eb925fe7bb22c71cf3b3c872e7d6c99df498",
+        "query": "window shutter",
+        "record_bytes": 1226,
+        "source_sha256": "eaca5a0e31d53bc40b5900169b83eb925fe7bb22c71cf3b3c872e7d6c99df498"
+      },
+      "episode": "E18",
+      "event_id": "E18-006",
+      "opaque": {
+        "event_id": "E18-006",
+        "kind": "opaque",
+        "latency_ns": 21081,
+        "payload_sha256": "eaca5a0e31d53bc40b5900169b83eb925fe7bb22c71cf3b3c872e7d6c99df498",
+        "query": "KEYA628736AB54E",
+        "record_bytes": 1226,
+        "source_sha256": "eaca5a0e31d53bc40b5900169b83eb925fe7bb22c71cf3b3c872e7d6c99df498"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E18-009",
+        "kind": "editorial",
+        "latency_ns": 22313,
+        "payload_sha256": "6ec29aed1d93ad596ab1b164c2b9f0a03b49ef2049b2bf29756502049982b30d",
+        "query": "1871 statute",
+        "record_bytes": 1305,
+        "source_sha256": "6ec29aed1d93ad596ab1b164c2b9f0a03b49ef2049b2bf29756502049982b30d"
+      },
+      "episode": "E18",
+      "event_id": "E18-009",
+      "opaque": {
+        "event_id": "E18-009",
+        "kind": "opaque",
+        "latency_ns": 21243,
+        "payload_sha256": "6ec29aed1d93ad596ab1b164c2b9f0a03b49ef2049b2bf29756502049982b30d",
+        "query": "KEY3D6CA6129BF4",
+        "record_bytes": 1305,
+        "source_sha256": "6ec29aed1d93ad596ab1b164c2b9f0a03b49ef2049b2bf29756502049982b30d"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E19-006",
+        "kind": "editorial",
+        "latency_ns": 23355,
+        "payload_sha256": "afc387586ae60e6f8eb21a9b453e62453af7ef8496533cfedb19d8a4ee34c3b4",
+        "query": "lamp wick",
+        "record_bytes": 988,
+        "source_sha256": "afc387586ae60e6f8eb21a9b453e62453af7ef8496533cfedb19d8a4ee34c3b4"
+      },
+      "episode": "E19",
+      "event_id": "E19-006",
+      "opaque": {
+        "event_id": "E19-006",
+        "kind": "opaque",
+        "latency_ns": 20811,
+        "payload_sha256": "afc387586ae60e6f8eb21a9b453e62453af7ef8496533cfedb19d8a4ee34c3b4",
+        "query": "KEYE3F5C5F146DC",
+        "record_bytes": 988,
+        "source_sha256": "afc387586ae60e6f8eb21a9b453e62453af7ef8496533cfedb19d8a4ee34c3b4"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E19-008",
+        "kind": "editorial",
+        "latency_ns": 22354,
+        "payload_sha256": "74ec9798068bae1829f80d3516b54fa278b884e86df9fe00bfeefded6dc04e5d",
+        "query": "wax bust",
+        "record_bytes": 1026,
+        "source_sha256": "74ec9798068bae1829f80d3516b54fa278b884e86df9fe00bfeefded6dc04e5d"
+      },
+      "episode": "E19",
+      "event_id": "E19-008",
+      "opaque": {
+        "event_id": "E19-008",
+        "kind": "opaque",
+        "latency_ns": 21151,
+        "payload_sha256": "74ec9798068bae1829f80d3516b54fa278b884e86df9fe00bfeefded6dc04e5d",
+        "query": "KEY09E8AF9A03BB",
+        "record_bytes": 1026,
+        "source_sha256": "74ec9798068bae1829f80d3516b54fa278b884e86df9fe00bfeefded6dc04e5d"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": true,
+        "top_id": "E19-008"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E20-007",
+        "kind": "editorial",
+        "latency_ns": 22014,
+        "payload_sha256": "cac2b14d000f86e78a7347d2e90050cdbf6c6a51c3d7aa543da6657f9e0492c0",
+        "query": "faint tapping",
+        "record_bytes": 957,
+        "source_sha256": "cac2b14d000f86e78a7347d2e90050cdbf6c6a51c3d7aa543da6657f9e0492c0"
+      },
+      "episode": "E20",
+      "event_id": "E20-007",
+      "opaque": {
+        "event_id": "E20-007",
+        "kind": "opaque",
+        "latency_ns": 20641,
+        "payload_sha256": "cac2b14d000f86e78a7347d2e90050cdbf6c6a51c3d7aa543da6657f9e0492c0",
+        "query": "KEY30847AC7EEAC",
+        "record_bytes": 957,
+        "source_sha256": "cac2b14d000f86e78a7347d2e90050cdbf6c6a51c3d7aa543da6657f9e0492c0"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E20-011",
+        "kind": "editorial",
+        "latency_ns": 21973,
+        "payload_sha256": "75fd673698003a6ef43727bd42c50827a663c6777f6c1d92024d066c2af2b38b",
+        "query": "blue pencil",
+        "record_bytes": 1000,
+        "source_sha256": "75fd673698003a6ef43727bd42c50827a663c6777f6c1d92024d066c2af2b38b"
+      },
+      "episode": "E20",
+      "event_id": "E20-011",
+      "opaque": {
+        "event_id": "E20-011",
+        "kind": "opaque",
+        "latency_ns": 24517,
+        "payload_sha256": "75fd673698003a6ef43727bd42c50827a663c6777f6c1d92024d066c2af2b38b",
+        "query": "KEY1F3AA0757B1E",
+        "record_bytes": 1000,
+        "source_sha256": "75fd673698003a6ef43727bd42c50827a663c6777f6c1d92024d066c2af2b38b"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": "E20-016"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E21-014",
+        "kind": "editorial",
+        "latency_ns": 22123,
+        "payload_sha256": "5ad0fd74ef554507261124c534779f59c94912799e1267eb8334086ef3c97eb8",
+        "query": "paper mask",
+        "record_bytes": 959,
+        "source_sha256": "5ad0fd74ef554507261124c534779f59c94912799e1267eb8334086ef3c97eb8"
+      },
+      "episode": "E21",
+      "event_id": "E21-014",
+      "opaque": {
+        "event_id": "E21-014",
+        "kind": "opaque",
+        "latency_ns": 21833,
+        "payload_sha256": "5ad0fd74ef554507261124c534779f59c94912799e1267eb8334086ef3c97eb8",
+        "query": "KEY148D35EB7F0D",
+        "record_bytes": 959,
+        "source_sha256": "5ad0fd74ef554507261124c534779f59c94912799e1267eb8334086ef3c97eb8"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E21-016",
+        "kind": "editorial",
+        "latency_ns": 20862,
+        "payload_sha256": "106a48da9cc0b1cf346ca4a55ef32b030d93ec206b7752f603e86b38d0e07d48",
+        "query": "dried glue",
+        "record_bytes": 961,
+        "source_sha256": "106a48da9cc0b1cf346ca4a55ef32b030d93ec206b7752f603e86b38d0e07d48"
+      },
+      "episode": "E21",
+      "event_id": "E21-016",
+      "opaque": {
+        "event_id": "E21-016",
+        "kind": "opaque",
+        "latency_ns": 20181,
+        "payload_sha256": "106a48da9cc0b1cf346ca4a55ef32b030d93ec206b7752f603e86b38d0e07d48",
+        "query": "KEY40771F641762",
+        "record_bytes": 961,
+        "source_sha256": "106a48da9cc0b1cf346ca4a55ef32b030d93ec206b7752f603e86b38d0e07d48"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E22-003",
+        "kind": "editorial",
+        "latency_ns": 21122,
+        "payload_sha256": "539f2f381e78da6faaf145864b819b3f1c5f5230b0fddbec71df51f01e328ba5",
+        "query": "cold spoon",
+        "record_bytes": 1003,
+        "source_sha256": "539f2f381e78da6faaf145864b819b3f1c5f5230b0fddbec71df51f01e328ba5"
+      },
+      "episode": "E22",
+      "event_id": "E22-003",
+      "opaque": {
+        "event_id": "E22-003",
+        "kind": "opaque",
+        "latency_ns": 20862,
+        "payload_sha256": "539f2f381e78da6faaf145864b819b3f1c5f5230b0fddbec71df51f01e328ba5",
+        "query": "KEYF189BD95A13E",
+        "record_bytes": 1003,
+        "source_sha256": "539f2f381e78da6faaf145864b819b3f1c5f5230b0fddbec71df51f01e328ba5"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E22-012",
+        "kind": "editorial",
+        "latency_ns": 21082,
+        "payload_sha256": "f2cfa6ff3c10114cf94a9f87480d4d8255acc6cf5fd2698cc22fe2c2b224c443",
+        "query": "sweet tea",
+        "record_bytes": 1061,
+        "source_sha256": "f2cfa6ff3c10114cf94a9f87480d4d8255acc6cf5fd2698cc22fe2c2b224c443"
+      },
+      "episode": "E22",
+      "event_id": "E22-012",
+      "opaque": {
+        "event_id": "E22-012",
+        "kind": "opaque",
+        "latency_ns": 20881,
+        "payload_sha256": "f2cfa6ff3c10114cf94a9f87480d4d8255acc6cf5fd2698cc22fe2c2b224c443",
+        "query": "KEY580F73B11ACD",
+        "record_bytes": 1061,
+        "source_sha256": "f2cfa6ff3c10114cf94a9f87480d4d8255acc6cf5fd2698cc22fe2c2b224c443"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": true,
+        "top_id": "E22-012"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E23-007",
+        "kind": "editorial",
+        "latency_ns": 22304,
+        "payload_sha256": "56c86d735ed158fd228542a0714aa23352de643905d5324bea94d482fed60ce2",
+        "query": "white glove",
+        "record_bytes": 1021,
+        "source_sha256": "56c86d735ed158fd228542a0714aa23352de643905d5324bea94d482fed60ce2"
+      },
+      "episode": "E23",
+      "event_id": "E23-007",
+      "opaque": {
+        "event_id": "E23-007",
+        "kind": "opaque",
+        "latency_ns": 34412,
+        "payload_sha256": "56c86d735ed158fd228542a0714aa23352de643905d5324bea94d482fed60ce2",
+        "query": "KEY6A1E2BDFE900",
+        "record_bytes": 1021,
+        "source_sha256": "56c86d735ed158fd228542a0714aa23352de643905d5324bea94d482fed60ce2"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E23-015",
+        "kind": "editorial",
+        "latency_ns": 22163,
+        "payload_sha256": "9ca1e76bb7b86cdb4f9cb75ed85d5eb2a6ce187e04c5f98dc3241747a31f08da",
+        "query": "coffee skin",
+        "record_bytes": 1047,
+        "source_sha256": "9ca1e76bb7b86cdb4f9cb75ed85d5eb2a6ce187e04c5f98dc3241747a31f08da"
+      },
+      "episode": "E23",
+      "event_id": "E23-015",
+      "opaque": {
+        "event_id": "E23-015",
+        "kind": "opaque",
+        "latency_ns": 20822,
+        "payload_sha256": "9ca1e76bb7b86cdb4f9cb75ed85d5eb2a6ce187e04c5f98dc3241747a31f08da",
+        "query": "KEYECC5D64EB67F",
+        "record_bytes": 1047,
+        "source_sha256": "9ca1e76bb7b86cdb4f9cb75ed85d5eb2a6ce187e04c5f98dc3241747a31f08da"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E24-009",
+        "kind": "editorial",
+        "latency_ns": 21953,
+        "payload_sha256": "bc0461a9aa48652f227ab1199ae2b4df160680e0e60e6c490e14b1b7c754292b",
+        "query": "newspaper ink",
+        "record_bytes": 984,
+        "source_sha256": "bc0461a9aa48652f227ab1199ae2b4df160680e0e60e6c490e14b1b7c754292b"
+      },
+      "episode": "E24",
+      "event_id": "E24-009",
+      "opaque": {
+        "event_id": "E24-009",
+        "kind": "opaque",
+        "latency_ns": 20691,
+        "payload_sha256": "bc0461a9aa48652f227ab1199ae2b4df160680e0e60e6c490e14b1b7c754292b",
+        "query": "KEYBF75D6B10E07",
+        "record_bytes": 984,
+        "source_sha256": "bc0461a9aa48652f227ab1199ae2b4df160680e0e60e6c490e14b1b7c754292b"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E24-016",
+        "kind": "editorial",
+        "latency_ns": 22414,
+        "payload_sha256": "c20e349d5e2f095661b397dec9c2c47cac8520838ede8283147a22ee3d458869",
+        "query": "old linen",
+        "record_bytes": 1080,
+        "source_sha256": "c20e349d5e2f095661b397dec9c2c47cac8520838ede8283147a22ee3d458869"
+      },
+      "episode": "E24",
+      "event_id": "E24-016",
+      "opaque": {
+        "event_id": "E24-016",
+        "kind": "opaque",
+        "latency_ns": 20921,
+        "payload_sha256": "c20e349d5e2f095661b397dec9c2c47cac8520838ede8283147a22ee3d458869",
+        "query": "KEYCAD671D4D54D",
+        "record_bytes": 1080,
+        "source_sha256": "c20e349d5e2f095661b397dec9c2c47cac8520838ede8283147a22ee3d458869"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E25-019",
+        "kind": "editorial",
+        "latency_ns": 22784,
+        "payload_sha256": "4c0121b9fe1a6f2ef35a5aaf56fe1ee44cd1407c0dfb4d6c50dd73aa760e669b",
+        "query": "Heller's hand",
+        "record_bytes": 1253,
+        "source_sha256": "4c0121b9fe1a6f2ef35a5aaf56fe1ee44cd1407c0dfb4d6c50dd73aa760e669b"
+      },
+      "episode": "E25",
+      "event_id": "E25-019",
+      "opaque": {
+        "event_id": "E25-019",
+        "kind": "opaque",
+        "latency_ns": 21212,
+        "payload_sha256": "4c0121b9fe1a6f2ef35a5aaf56fe1ee44cd1407c0dfb4d6c50dd73aa760e669b",
+        "query": "KEY160034D33932",
+        "record_bytes": 1253,
+        "source_sha256": "4c0121b9fe1a6f2ef35a5aaf56fe1ee44cd1407c0dfb4d6c50dd73aa760e669b"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": true,
+        "top_id": "E25-019"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E25-022",
+        "kind": "editorial",
+        "latency_ns": 22564,
+        "payload_sha256": "bdb992b28ce74f1169569cbb83780767769fe807d09ca53ac9df8c66557e960c",
+        "query": "drawer receipts",
+        "record_bytes": 1157,
+        "source_sha256": "bdb992b28ce74f1169569cbb83780767769fe807d09ca53ac9df8c66557e960c"
+      },
+      "episode": "E25",
+      "event_id": "E25-022",
+      "opaque": {
+        "event_id": "E25-022",
+        "kind": "opaque",
+        "latency_ns": 21072,
+        "payload_sha256": "bdb992b28ce74f1169569cbb83780767769fe807d09ca53ac9df8c66557e960c",
+        "query": "KEY1A2EF3446D99",
+        "record_bytes": 1157,
+        "source_sha256": "bdb992b28ce74f1169569cbb83780767769fe807d09ca53ac9df8c66557e960c"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E26-006",
+        "kind": "editorial",
+        "latency_ns": 22644,
+        "payload_sha256": "1ee103518d43e7ec6649d1f4bcc13e34c981a1461d35f1083a82276534642e73",
+        "query": "aching feet",
+        "record_bytes": 989,
+        "source_sha256": "1ee103518d43e7ec6649d1f4bcc13e34c981a1461d35f1083a82276534642e73"
+      },
+      "episode": "E26",
+      "event_id": "E26-006",
+      "opaque": {
+        "event_id": "E26-006",
+        "kind": "opaque",
+        "latency_ns": 20691,
+        "payload_sha256": "1ee103518d43e7ec6649d1f4bcc13e34c981a1461d35f1083a82276534642e73",
+        "query": "KEY458E1DCCE248",
+        "record_bytes": 989,
+        "source_sha256": "1ee103518d43e7ec6649d1f4bcc13e34c981a1461d35f1083a82276534642e73"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E26-007",
+        "kind": "editorial",
+        "latency_ns": 23465,
+        "payload_sha256": "42e63ee1e51ed81151f98cf7c2568ec2a4fbc7440fb5e1832feaf012f55acf9f",
+        "query": "loose shutter",
+        "record_bytes": 1016,
+        "source_sha256": "42e63ee1e51ed81151f98cf7c2568ec2a4fbc7440fb5e1832feaf012f55acf9f"
+      },
+      "episode": "E26",
+      "event_id": "E26-007",
+      "opaque": {
+        "event_id": "E26-007",
+        "kind": "opaque",
+        "latency_ns": 20731,
+        "payload_sha256": "42e63ee1e51ed81151f98cf7c2568ec2a4fbc7440fb5e1832feaf012f55acf9f",
+        "query": "KEYA87F1FF5616C",
+        "record_bytes": 1016,
+        "source_sha256": "42e63ee1e51ed81151f98cf7c2568ec2a4fbc7440fb5e1832feaf012f55acf9f"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": true,
+        "top_id": "E26-007"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E27-013",
+        "kind": "editorial",
+        "latency_ns": 22084,
+        "payload_sha256": "97df80df213f2d34bc7cc45ce77935d81f8ef0f2ea63ccebaef3a98c03164673",
+        "query": "damp lime",
+        "record_bytes": 868,
+        "source_sha256": "97df80df213f2d34bc7cc45ce77935d81f8ef0f2ea63ccebaef3a98c03164673"
+      },
+      "episode": "E27",
+      "event_id": "E27-013",
+      "opaque": {
+        "event_id": "E27-013",
+        "kind": "opaque",
+        "latency_ns": 20451,
+        "payload_sha256": "97df80df213f2d34bc7cc45ce77935d81f8ef0f2ea63ccebaef3a98c03164673",
+        "query": "KEYE4C57DE6F71F",
+        "record_bytes": 868,
+        "source_sha256": "97df80df213f2d34bc7cc45ce77935d81f8ef0f2ea63ccebaef3a98c03164673"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": true,
+        "top1_correct": true,
+        "top_id": "E27-013"
+      }
+    },
+    {
+      "editorial": {
+        "event_id": "E27-018",
+        "kind": "editorial",
+        "latency_ns": 20721,
+        "payload_sha256": "c64d51611dd2266cbce56426fa5cff73b764a324a1ffee0350034a47e042e5a8",
+        "query": "visitor voices",
+        "record_bytes": 870,
+        "source_sha256": "c64d51611dd2266cbce56426fa5cff73b764a324a1ffee0350034a47e042e5a8"
+      },
+      "episode": "E27",
+      "event_id": "E27-018",
+      "opaque": {
+        "event_id": "E27-018",
+        "kind": "opaque",
+        "latency_ns": 20140,
+        "payload_sha256": "c64d51611dd2266cbce56426fa5cff73b764a324a1ffee0350034a47e042e5a8",
+        "query": "KEY21B8B0CB75E3",
+        "record_bytes": 870,
+        "source_sha256": "c64d51611dd2266cbce56426fa5cff73b764a324a1ffee0350034a47e042e5a8"
+      },
+      "unindexed_cue_query": {
+        "top10_hit": false,
+        "top1_correct": false,
+        "top_id": null
+      }
+    }
+  ],
+  "schema": "sch-e1-pretorius-state-v1",
+  "state": {
+    "sha256": "ade0bb68b88303ab15078713513cba9160ef45bfec89bff92bd61cd2aa2e7fd2",
+    "status": "NOT_GRANTED",
+    "version": 0
+  }
+}

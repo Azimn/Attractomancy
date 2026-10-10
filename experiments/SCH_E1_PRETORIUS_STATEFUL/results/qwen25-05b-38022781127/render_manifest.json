@@ -1,0 +1,14 @@
+{
+  "canonical_archive_is_source_pinned": true,
+  "cases_completed": 18,
+  "continuation_in_fresh_context_per_query": true,
+  "greedy": true,
+  "input_tokens": 7893,
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "output_tokens": 48,
+  "python": "3.11.17",
+  "relationship_state_is_simulated_not_canonical": true,
+  "torch": "2.5.1+cpu",
+  "transformers": "4.51.3"
+}

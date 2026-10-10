@@ -1,0 +1,391 @@
+{
+  "canonical_records": 450,
+  "episodes": 27,
+  "l1_manifest_sha256": "ce23717b3950a772cc25e4bf60107eaddf4a0375122b6893c15417669ae033bb",
+  "schema": "sch-e1-pretorius-state-v1",
+  "selection": [
+    {
+      "cue": "tea tin",
+      "episode": "E01",
+      "id": "E01-007",
+      "opaque": "KEY3500417FCEDE",
+      "title": "The Cold Lecture Bench"
+    },
+    {
+      "cue": "labels",
+      "episode": "E01",
+      "id": "E01-015",
+      "opaque": "KEY8EE1D29600B3",
+      "title": "Clara's Broken Jar"
+    },
+    {
+      "cue": "damp mail",
+      "episode": "E02",
+      "id": "E02-005",
+      "opaque": "KEY0FF69AFEBC7E",
+      "title": "The Correspondence Packet"
+    },
+    {
+      "cue": "empty dish",
+      "episode": "E02",
+      "id": "E02-011",
+      "opaque": "KEYC30305FC8883",
+      "title": "The Empty Dish"
+    },
+    {
+      "cue": "sleet",
+      "episode": "E03",
+      "id": "E03-003",
+      "opaque": "KEY6CDA5E673B40",
+      "title": "The Door That Would Not Lock"
+    },
+    {
+      "cue": "chipped rim",
+      "episode": "E03",
+      "id": "E03-007",
+      "opaque": "KEY922208FBDC74",
+      "title": "Wartime Windows"
+    },
+    {
+      "cue": "dry case",
+      "episode": "E04",
+      "id": "E04-015",
+      "opaque": "KEYAE1FB051A30E",
+      "title": "The Salt Road to Trieste"
+    },
+    {
+      "cue": "doorway",
+      "episode": "E04",
+      "id": "E04-018",
+      "opaque": "KEY4EE27BA8754A",
+      "title": "The Photograph on the Sill"
+    },
+    {
+      "cue": "corridor cups",
+      "episode": "E05",
+      "id": "E05-004",
+      "opaque": "KEY6845F4615B73",
+      "title": "The Woman in the Corridor"
+    },
+    {
+      "cue": "instrument case",
+      "episode": "E05",
+      "id": "E05-008",
+      "opaque": "KEY5019FD8D3289",
+      "title": "An Unanswerable Question of the Queen"
+    },
+    {
+      "cue": "wet obituary",
+      "episode": "E06",
+      "id": "E06-015",
+      "opaque": "KEY2C047DFE6FE2",
+      "title": "A Newspaper Death"
+    },
+    {
+      "cue": "brown cloth",
+      "episode": "E06",
+      "id": "E06-016",
+      "opaque": "KEY155DBCC30DF9",
+      "title": "A Volume Too Small to Burn"
+    },
+    {
+      "cue": "spring clip",
+      "episode": "E07",
+      "id": "E07-005",
+      "opaque": "KEYD2268BBC6718",
+      "title": "The Man with Three Watches"
+    },
+    {
+      "cue": "apple labels",
+      "episode": "E07",
+      "id": "E07-009",
+      "opaque": "KEY01FBEFCB100F",
+      "title": "The Garden with No Gate"
+    },
+    {
+      "cue": "garden chair",
+      "episode": "E08",
+      "id": "E08-005",
+      "opaque": "KEY9C1E49A4D073",
+      "title": "The Unclaimed Seat"
+    },
+    {
+      "cue": "index box",
+      "episode": "E08",
+      "id": "E08-011",
+      "opaque": "KEY5EFE1C175FFC",
+      "title": "The Count in the New Novel"
+    },
+    {
+      "cue": "pears",
+      "episode": "E09",
+      "id": "E09-009",
+      "opaque": "KEYEBFC81D148A3",
+      "title": "Wine at Clara's Table"
+    },
+    {
+      "cue": "empty register",
+      "episode": "E09",
+      "id": "E09-015",
+      "opaque": "KEYA3F4DA1A137E",
+      "title": "The Empty Audience Book"
+    },
+    {
+      "cue": "red initials",
+      "episode": "E10",
+      "id": "E10-007",
+      "opaque": "KEYAE1B026A0BEB",
+      "title": "The Unsigned Calculation"
+    },
+    {
+      "cue": "unused paper",
+      "episode": "E10",
+      "id": "E10-015",
+      "opaque": "KEY517868EB9A88",
+      "title": "A Request for Reconsideration"
+    },
+    {
+      "cue": "Lenz's rooms",
+      "episode": "E11",
+      "id": "E11-008",
+      "opaque": "KEY9D7605103673",
+      "title": "A Child with the Wrong Question"
+    },
+    {
+      "cue": "furnace heat",
+      "episode": "E11",
+      "id": "E11-014",
+      "opaque": "KEYD4215042CEF5",
+      "title": "The Hand That Would Not Settle"
+    },
+    {
+      "cue": "funeral box",
+      "episode": "E12",
+      "id": "E12-001",
+      "opaque": "KEY3AA2AC0E5F2A",
+      "title": "The Brass Key after the Funeral"
+    },
+    {
+      "cue": "acknowledgment proof",
+      "episode": "E12",
+      "id": "E12-011",
+      "opaque": "KEYEE127C955432",
+      "title": "The Room That Could Be Vacant"
+    },
+    {
+      "cue": "sermon",
+      "episode": "E13",
+      "id": "E13-007",
+      "opaque": "KEYB19602787CC3",
+      "title": "The Devil's Better Argument"
+    },
+    {
+      "cue": "floorboards",
+      "episode": "E13",
+      "id": "E13-015",
+      "opaque": "KEY34F348C792A0",
+      "title": "A Letter with No Performance"
+    },
+    {
+      "cue": "cough",
+      "episode": "E14",
+      "id": "E14-007",
+      "opaque": "KEY85A585657AD8",
+      "title": "The Borrowed Cigar Case"
+    },
+    {
+      "cue": "Thursday",
+      "episode": "E14",
+      "id": "E14-015",
+      "opaque": "KEY7DA47A848A7A",
+      "title": "The Seat Reserved for Nobody"
+    },
+    {
+      "cue": "glance",
+      "episode": "E15",
+      "id": "E15-004",
+      "opaque": "KEY4E9A39522BA1",
+      "title": "Two Ways of Reading Jekyll"
+    },
+    {
+      "cue": "paper sleeve",
+      "episode": "E15",
+      "id": "E15-014",
+      "opaque": "KEY99D45778AF5C",
+      "title": "The Great Envelope of X-Rays"
+    },
+    {
+      "cue": "pamphlet margin",
+      "episode": "E16",
+      "id": "E16-009",
+      "opaque": "KEY8C16D6C6A9C6",
+      "title": "A Pamphlet Read Twice"
+    },
+    {
+      "cue": "legal digest",
+      "episode": "E16",
+      "id": "E16-010",
+      "opaque": "KEY10C769E6C854",
+      "title": "The New Offence"
+    },
+    {
+      "cue": "windows",
+      "episode": "E17",
+      "id": "E17-003",
+      "opaque": "KEY6AF485668785",
+      "title": "The Letter with the Familiar Hand"
+    },
+    {
+      "cue": "seal",
+      "episode": "E17",
+      "id": "E17-007",
+      "opaque": "KEY6313851F4DCC",
+      "title": "No Properly Named Relation"
+    },
+    {
+      "cue": "window shutter",
+      "episode": "E18",
+      "id": "E18-006",
+      "opaque": "KEYA628736AB54E",
+      "title": "A Visit Not Entirely Scientific"
+    },
+    {
+      "cue": "1871 statute",
+      "episode": "E18",
+      "id": "E18-009",
+      "opaque": "KEY3D6CA6129BF4",
+      "title": "Science and the Petition"
+    },
+    {
+      "cue": "lamp wick",
+      "episode": "E19",
+      "id": "E19-006",
+      "opaque": "KEYE3F5C5F146DC",
+      "title": "A Face Too Complete"
+    },
+    {
+      "cue": "wax bust",
+      "episode": "E19",
+      "id": "E19-008",
+      "opaque": "KEY09E8AF9A03BB",
+      "title": "The King's Nose"
+    },
+    {
+      "cue": "faint tapping",
+      "episode": "E20",
+      "id": "E20-007",
+      "opaque": "KEY30847AC7EEAC",
+      "title": "The King After the Fall"
+    },
+    {
+      "cue": "blue pencil",
+      "episode": "E20",
+      "id": "E20-011",
+      "opaque": "KEY1F3AA0757B1E",
+      "title": "Seven Years for a Wrong Question"
+    },
+    {
+      "cue": "paper mask",
+      "episode": "E21",
+      "id": "E21-014",
+      "opaque": "KEY148D35EB7F0D",
+      "title": "What the Rays Could Not Tell Me"
+    },
+    {
+      "cue": "dried glue",
+      "episode": "E21",
+      "id": "E21-016",
+      "opaque": "KEY40771F641762",
+      "title": "The Diagram without a Person"
+    },
+    {
+      "cue": "cold spoon",
+      "episode": "E22",
+      "id": "E22-003",
+      "opaque": "KEYF189BD95A13E",
+      "title": "A Meal That Went Cold"
+    },
+    {
+      "cue": "sweet tea",
+      "episode": "E22",
+      "id": "E22-012",
+      "opaque": "KEY580F73B11ACD",
+      "title": "The Kingdom's Winter Account"
+    },
+    {
+      "cue": "white glove",
+      "episode": "E23",
+      "id": "E23-007",
+      "opaque": "KEY6A1E2BDFE900",
+      "title": "A Lesson in the Spoiled Plate"
+    },
+    {
+      "cue": "coffee skin",
+      "episode": "E23",
+      "id": "E23-015",
+      "opaque": "KEYECC5D64EB67F",
+      "title": "The Afternoon that Did Not Belong to Me"
+    },
+    {
+      "cue": "newspaper ink",
+      "episode": "E24",
+      "id": "E24-009",
+      "opaque": "KEYBF75D6B10E07",
+      "title": "The Printed Marriage Notice"
+    },
+    {
+      "cue": "old linen",
+      "episode": "E24",
+      "id": "E24-016",
+      "opaque": "KEYCAD671D4D54D",
+      "title": "The Room That Needed No Curtain"
+    },
+    {
+      "cue": "Heller's hand",
+      "episode": "E25",
+      "id": "E25-019",
+      "opaque": "KEY160034D33932",
+      "title": "The Newspaper on the Committee's Table"
+    },
+    {
+      "cue": "drawer receipts",
+      "episode": "E25",
+      "id": "E25-022",
+      "opaque": "KEY1A2EF3446D99",
+      "title": "No Letter Sent to Paris"
+    },
+    {
+      "cue": "aching feet",
+      "episode": "E26",
+      "id": "E26-006",
+      "opaque": "KEY458E1DCCE248",
+      "title": "The Clock after Dinner"
+    },
+    {
+      "cue": "loose shutter",
+      "episode": "E26",
+      "id": "E26-007",
+      "opaque": "KEYA87F1FF5616C",
+      "title": "Rosewater at the Second Sitting"
+    },
+    {
+      "cue": "damp lime",
+      "episode": "E27",
+      "id": "E27-013",
+      "opaque": "KEYE4C57DE6F71F",
+      "title": "Water from the Roof"
+    },
+    {
+      "cue": "visitor voices",
+      "episode": "E27",
+      "id": "E27-018",
+      "opaque": "KEY21B8B0CB75E3",
+      "title": "The Performance I Cancelled"
+    }
+  ],
+  "selection_sha256": "16f803ac6e7c23c70beb14780ac94184d5eecd85534b7a43bb55a68f13e93d63",
+  "source_checkout_commit": "6d2768211f5c2184c8bbdb833c06e169b5137197",
+  "source_git_blob": "718dcc2d5ba4feccdef1690d447edfcebaa9bfb5",
+  "synthetic_history_excluded_from_L1": true,
+  "synthetic_stream": "PRETORIUS_SANDBOX"
+}
