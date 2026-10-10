@@ -99,6 +99,8 @@ The [E2 two-memory Pretorius study](experiments/SCH_E2_MULTIMEMORY_DECISIONS/REA
 
 The [completed E2 multi-memory report](experiments/SCH_E2_MULTIMEMORY_DECISIONS/RESULTS.md) documents lexical, graph, MiniLM, evidence-integration, forced-choice and numerical-parity controls. The [E3 Tribunal of Memory](experiments/SCH_E3_TRIBUNAL_OF_MEMORY/PROTOCOL.md) sets out independent blinded relevance and causal source-necessity gates; it is a prospective design, not an executed result.
 
+The [E3 Tribunal of Memory design](experiments/SCH_E3_TRIBUNAL_OF_MEMORY/PROTOCOL.md) now includes a [Counterfactual Chamber calibration](experiments/SCH_E3_TRIBUNAL_OF_MEMORY/CALIBRATION_PROTOCOL.md), [source-masked calibration reviewer packets](experiments/SCH_E3_TRIBUNAL_OF_MEMORY/PACKET_GUIDE.md), and a [strict independent-label validator](experiments/SCH_E3_TRIBUNAL_OF_MEMORY/adjudicate.py). The first synthetic fixture exposed a cross-bit event-ID leakage flaw, corrected in a separately versioned v2. E3's independent human-blinded evaluation has **not** been completed, and the calibration results must not be treated as canonical Pretorius memories.
+
 ## Quality and change control
 
 Run `python scripts/audit_catalog.py` from the repository root after source additions, edge additions, or documentation changes. This validates CSV structure, stable IDs, cross-file references, source status and preservation codes, explicit duplicate-URL reviews, and the single current-state table above.
