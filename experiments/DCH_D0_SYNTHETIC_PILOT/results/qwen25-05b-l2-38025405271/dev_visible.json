@@ -1,0 +1,842 @@
+[
+  {
+    "persona_id": "L2-001",
+    "current_turn": 25,
+    "events": [
+      {
+        "event_id": "L2-001-E01",
+        "turn": 1,
+        "key": "permission",
+        "value": "allowed",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-001-E02",
+        "turn": 2,
+        "key": "commitment_status",
+        "value": "cancelled",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-001-E03",
+        "turn": 3,
+        "key": "due_turn",
+        "value": 35,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-001-E04",
+        "turn": 4,
+        "key": "priority",
+        "value": "repair",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-001-E09",
+        "turn": 9,
+        "key": "permission",
+        "value": "revoked",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-001-E10",
+        "turn": 10,
+        "key": "commitment_status",
+        "value": "pending",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-001-E11",
+        "turn": 11,
+        "key": "due_turn",
+        "value": 20,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-001-E12",
+        "turn": 12,
+        "key": "priority",
+        "value": "accuracy",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-001-E13",
+        "turn": 13,
+        "key": "priority",
+        "value": "speed",
+        "authorized": false
+      }
+    ],
+    "prompt": "At turn 25, a requester asks the persona to fulfill commitment C-001. Determine the authorized next action using all four current records."
+  },
+  {
+    "persona_id": "L2-002",
+    "current_turn": 25,
+    "events": [
+      {
+        "event_id": "L2-002-E01",
+        "turn": 1,
+        "key": "permission",
+        "value": "revoked",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-002-E02",
+        "turn": 2,
+        "key": "commitment_status",
+        "value": "pending",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-002-E03",
+        "turn": 3,
+        "key": "due_turn",
+        "value": 35,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-002-E04",
+        "turn": 4,
+        "key": "priority",
+        "value": "accuracy",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-002-E09",
+        "turn": 9,
+        "key": "permission",
+        "value": "allowed",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-002-E10",
+        "turn": 10,
+        "key": "commitment_status",
+        "value": "cancelled",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-002-E11",
+        "turn": 11,
+        "key": "due_turn",
+        "value": 20,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-002-E12",
+        "turn": 12,
+        "key": "priority",
+        "value": "repair",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-002-E13",
+        "turn": 13,
+        "key": "priority",
+        "value": "speed",
+        "authorized": false
+      }
+    ],
+    "prompt": "At turn 25, a requester asks the persona to fulfill commitment C-002. Determine the authorized next action using all four current records."
+  },
+  {
+    "persona_id": "L2-003",
+    "current_turn": 25,
+    "events": [
+      {
+        "event_id": "L2-003-E01",
+        "turn": 1,
+        "key": "permission",
+        "value": "revoked",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-003-E02",
+        "turn": 2,
+        "key": "commitment_status",
+        "value": "cancelled",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-003-E03",
+        "turn": 3,
+        "key": "due_turn",
+        "value": 35,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-003-E04",
+        "turn": 4,
+        "key": "priority",
+        "value": "repair",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-003-E09",
+        "turn": 9,
+        "key": "permission",
+        "value": "allowed",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-003-E10",
+        "turn": 10,
+        "key": "commitment_status",
+        "value": "pending",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-003-E11",
+        "turn": 11,
+        "key": "due_turn",
+        "value": 20,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-003-E12",
+        "turn": 12,
+        "key": "priority",
+        "value": "speed",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-003-E13",
+        "turn": 13,
+        "key": "priority",
+        "value": "repair",
+        "authorized": false
+      }
+    ],
+    "prompt": "At turn 25, a requester asks the persona to fulfill commitment C-003. Determine the authorized next action using all four current records."
+  },
+  {
+    "persona_id": "L2-004",
+    "current_turn": 25,
+    "events": [
+      {
+        "event_id": "L2-004-E01",
+        "turn": 1,
+        "key": "permission",
+        "value": "revoked",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-004-E02",
+        "turn": 2,
+        "key": "commitment_status",
+        "value": "cancelled",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-004-E03",
+        "turn": 3,
+        "key": "due_turn",
+        "value": 15,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-004-E04",
+        "turn": 4,
+        "key": "priority",
+        "value": "repair",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-004-E09",
+        "turn": 9,
+        "key": "permission",
+        "value": "allowed",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-004-E10",
+        "turn": 10,
+        "key": "commitment_status",
+        "value": "pending",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-004-E11",
+        "turn": 11,
+        "key": "due_turn",
+        "value": 28,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-004-E12",
+        "turn": 12,
+        "key": "priority",
+        "value": "accuracy",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-004-E13",
+        "turn": 13,
+        "key": "priority",
+        "value": "speed",
+        "authorized": false
+      }
+    ],
+    "prompt": "At turn 25, a requester asks the persona to fulfill commitment C-004. Determine the authorized next action using all four current records."
+  },
+  {
+    "persona_id": "L2-005",
+    "current_turn": 25,
+    "events": [
+      {
+        "event_id": "L2-005-E01",
+        "turn": 1,
+        "key": "permission",
+        "value": "allowed",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-005-E02",
+        "turn": 2,
+        "key": "commitment_status",
+        "value": "cancelled",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-005-E03",
+        "turn": 3,
+        "key": "due_turn",
+        "value": 35,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-005-E04",
+        "turn": 4,
+        "key": "priority",
+        "value": "accuracy",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-005-E09",
+        "turn": 9,
+        "key": "permission",
+        "value": "revoked",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-005-E10",
+        "turn": 10,
+        "key": "commitment_status",
+        "value": "pending",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-005-E11",
+        "turn": 11,
+        "key": "due_turn",
+        "value": 20,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-005-E12",
+        "turn": 12,
+        "key": "priority",
+        "value": "repair",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-005-E13",
+        "turn": 13,
+        "key": "priority",
+        "value": "speed",
+        "authorized": false
+      }
+    ],
+    "prompt": "At turn 25, a requester asks the persona to fulfill commitment C-005. Determine the authorized next action using all four current records."
+  },
+  {
+    "persona_id": "L2-006",
+    "current_turn": 25,
+    "events": [
+      {
+        "event_id": "L2-006-E01",
+        "turn": 1,
+        "key": "permission",
+        "value": "revoked",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-006-E02",
+        "turn": 2,
+        "key": "commitment_status",
+        "value": "pending",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-006-E03",
+        "turn": 3,
+        "key": "due_turn",
+        "value": 35,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-006-E04",
+        "turn": 4,
+        "key": "priority",
+        "value": "repair",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-006-E09",
+        "turn": 9,
+        "key": "permission",
+        "value": "allowed",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-006-E10",
+        "turn": 10,
+        "key": "commitment_status",
+        "value": "cancelled",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-006-E11",
+        "turn": 11,
+        "key": "due_turn",
+        "value": 20,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-006-E12",
+        "turn": 12,
+        "key": "priority",
+        "value": "speed",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-006-E13",
+        "turn": 13,
+        "key": "priority",
+        "value": "repair",
+        "authorized": false
+      }
+    ],
+    "prompt": "At turn 25, a requester asks the persona to fulfill commitment C-006. Determine the authorized next action using all four current records."
+  },
+  {
+    "persona_id": "L2-007",
+    "current_turn": 25,
+    "events": [
+      {
+        "event_id": "L2-007-E01",
+        "turn": 1,
+        "key": "permission",
+        "value": "revoked",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-007-E02",
+        "turn": 2,
+        "key": "commitment_status",
+        "value": "cancelled",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-007-E03",
+        "turn": 3,
+        "key": "due_turn",
+        "value": 35,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-007-E04",
+        "turn": 4,
+        "key": "priority",
+        "value": "repair",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-007-E09",
+        "turn": 9,
+        "key": "permission",
+        "value": "allowed",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-007-E10",
+        "turn": 10,
+        "key": "commitment_status",
+        "value": "pending",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-007-E11",
+        "turn": 11,
+        "key": "due_turn",
+        "value": 20,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-007-E12",
+        "turn": 12,
+        "key": "priority",
+        "value": "accuracy",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-007-E13",
+        "turn": 13,
+        "key": "priority",
+        "value": "speed",
+        "authorized": false
+      }
+    ],
+    "prompt": "At turn 25, a requester asks the persona to fulfill commitment C-007. Determine the authorized next action using all four current records."
+  },
+  {
+    "persona_id": "L2-008",
+    "current_turn": 25,
+    "events": [
+      {
+        "event_id": "L2-008-E01",
+        "turn": 1,
+        "key": "permission",
+        "value": "revoked",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-008-E02",
+        "turn": 2,
+        "key": "commitment_status",
+        "value": "cancelled",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-008-E03",
+        "turn": 3,
+        "key": "due_turn",
+        "value": 15,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-008-E04",
+        "turn": 4,
+        "key": "priority",
+        "value": "accuracy",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-008-E09",
+        "turn": 9,
+        "key": "permission",
+        "value": "allowed",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-008-E10",
+        "turn": 10,
+        "key": "commitment_status",
+        "value": "pending",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-008-E11",
+        "turn": 11,
+        "key": "due_turn",
+        "value": 28,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-008-E12",
+        "turn": 12,
+        "key": "priority",
+        "value": "repair",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-008-E13",
+        "turn": 13,
+        "key": "priority",
+        "value": "speed",
+        "authorized": false
+      }
+    ],
+    "prompt": "At turn 25, a requester asks the persona to fulfill commitment C-008. Determine the authorized next action using all four current records."
+  },
+  {
+    "persona_id": "L2-009",
+    "current_turn": 25,
+    "events": [
+      {
+        "event_id": "L2-009-E01",
+        "turn": 1,
+        "key": "permission",
+        "value": "allowed",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-009-E02",
+        "turn": 2,
+        "key": "commitment_status",
+        "value": "cancelled",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-009-E03",
+        "turn": 3,
+        "key": "due_turn",
+        "value": 35,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-009-E04",
+        "turn": 4,
+        "key": "priority",
+        "value": "repair",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-009-E09",
+        "turn": 9,
+        "key": "permission",
+        "value": "revoked",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-009-E10",
+        "turn": 10,
+        "key": "commitment_status",
+        "value": "pending",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-009-E11",
+        "turn": 11,
+        "key": "due_turn",
+        "value": 20,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-009-E12",
+        "turn": 12,
+        "key": "priority",
+        "value": "speed",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-009-E13",
+        "turn": 13,
+        "key": "priority",
+        "value": "repair",
+        "authorized": false
+      }
+    ],
+    "prompt": "At turn 25, a requester asks the persona to fulfill commitment C-009. Determine the authorized next action using all four current records."
+  },
+  {
+    "persona_id": "L2-010",
+    "current_turn": 25,
+    "events": [
+      {
+        "event_id": "L2-010-E01",
+        "turn": 1,
+        "key": "permission",
+        "value": "revoked",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-010-E02",
+        "turn": 2,
+        "key": "commitment_status",
+        "value": "pending",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-010-E03",
+        "turn": 3,
+        "key": "due_turn",
+        "value": 35,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-010-E04",
+        "turn": 4,
+        "key": "priority",
+        "value": "repair",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-010-E09",
+        "turn": 9,
+        "key": "permission",
+        "value": "allowed",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-010-E10",
+        "turn": 10,
+        "key": "commitment_status",
+        "value": "cancelled",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-010-E11",
+        "turn": 11,
+        "key": "due_turn",
+        "value": 20,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-010-E12",
+        "turn": 12,
+        "key": "priority",
+        "value": "accuracy",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-010-E13",
+        "turn": 13,
+        "key": "priority",
+        "value": "speed",
+        "authorized": false
+      }
+    ],
+    "prompt": "At turn 25, a requester asks the persona to fulfill commitment C-010. Determine the authorized next action using all four current records."
+  },
+  {
+    "persona_id": "L2-011",
+    "current_turn": 25,
+    "events": [
+      {
+        "event_id": "L2-011-E01",
+        "turn": 1,
+        "key": "permission",
+        "value": "revoked",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-011-E02",
+        "turn": 2,
+        "key": "commitment_status",
+        "value": "cancelled",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-011-E03",
+        "turn": 3,
+        "key": "due_turn",
+        "value": 35,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-011-E04",
+        "turn": 4,
+        "key": "priority",
+        "value": "accuracy",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-011-E09",
+        "turn": 9,
+        "key": "permission",
+        "value": "allowed",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-011-E10",
+        "turn": 10,
+        "key": "commitment_status",
+        "value": "pending",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-011-E11",
+        "turn": 11,
+        "key": "due_turn",
+        "value": 20,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-011-E12",
+        "turn": 12,
+        "key": "priority",
+        "value": "repair",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-011-E13",
+        "turn": 13,
+        "key": "priority",
+        "value": "speed",
+        "authorized": false
+      }
+    ],
+    "prompt": "At turn 25, a requester asks the persona to fulfill commitment C-011. Determine the authorized next action using all four current records."
+  },
+  {
+    "persona_id": "L2-012",
+    "current_turn": 25,
+    "events": [
+      {
+        "event_id": "L2-012-E01",
+        "turn": 1,
+        "key": "permission",
+        "value": "revoked",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-012-E02",
+        "turn": 2,
+        "key": "commitment_status",
+        "value": "cancelled",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-012-E03",
+        "turn": 3,
+        "key": "due_turn",
+        "value": 15,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-012-E04",
+        "turn": 4,
+        "key": "priority",
+        "value": "repair",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-012-E09",
+        "turn": 9,
+        "key": "permission",
+        "value": "allowed",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-012-E10",
+        "turn": 10,
+        "key": "commitment_status",
+        "value": "pending",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-012-E11",
+        "turn": 11,
+        "key": "due_turn",
+        "value": 28,
+        "authorized": true
+      },
+      {
+        "event_id": "L2-012-E12",
+        "turn": 12,
+        "key": "priority",
+        "value": "speed",
+        "authorized": true
+      },
+      {
+        "event_id": "L2-012-E13",
+        "turn": 13,
+        "key": "priority",
+        "value": "repair",
+        "authorized": false
+      }
+    ],
+    "prompt": "At turn 25, a requester asks the persona to fulfill commitment C-012. Determine the authorized next action using all four current records."
+  }
+]
