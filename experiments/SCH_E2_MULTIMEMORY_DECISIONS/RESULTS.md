@@ -65,10 +65,48 @@ The result is a **negative result for reliable multi-memory decision application
 
 Choice-order semantic stability was weak: 2/6 editorial and 3/6 neutral full-evidence card pairs retained the same semantic decision after reversing A/B options (including pairs that consistently abstained). This is evidence of fragile small-model application and/or conservatism, not of actual source-derived personality continuity.
 
-### Qwen2.5-1.5B
+### Qwen2.5-1.5B: 72 completed source-verified cases
 
-The independent 1.5B model-run outcome is pending final verification at this point. It must not be inferred from 0.5B data.
+The [complete 1.5B raw run](results/qwen25-15b-38023681633/) used model revision \`989aa7980e4cf806f80c7fef2b1adb7bc71aa306\`. All **72** generations completed; prompt and output token counts total **35,424**.
 
+| Study arm | Cases | Strict criterion passes | UNKNOWN outputs | Mean total tokens |
+| --- | ---: | ---: | ---: | ---: |
+| Both archival memories, editorial cue | 12 | **0** | 12 | 747.33 |
+| Both archival memories, neutral key | 12 | **0** | 12 | 765.83 |
+| First memory only | 12 | 12 abstentions | 12 | 498.83 |
+| Second memory only | 12 | 12 abstentions | 12 | 486.00 |
+| No source records | 12 | 12 abstentions | 12 | 227.00 |
+| Wrong-subject record rejected upstream | 12 | 12 abstentions | 12 | 227.00 |
+
+The model gave exactly \`UNKNOWN\` in **72/72 responses**. Both complete-source conditions were identically incorrect relative to investigator choices; all incomplete-source conditions were correctly abstaining. Counterbalancing the A/B choices cannot reveal a preference when the model declines every prompt. The nominal 6/6 choice-order stability in these arms is **trivial UNKNOWN stability**, not evidence of robust characterization or semantic choice invariance.
+
+The 0.5B model did sometimes choose A or B with two records, but only 3/12 strict editorial or 2/12 strict neutral cases matched the author's interpretation, with most other complete-source outputs UNKNOWN. The 1.5B total abstention further isolates a **measurement design problem**: a system can optimize an evidence-availability instruction by declining action even when evidence is present. Neither model showed dependable two-memory enactment under the current conservative prompt.
+
+**Combined cue-equivalence observation:** The two correct-record arms produced identical raw strings in **10/12** matched 0.5B contexts and **12/12** matched 1.5B contexts. A single marginal 0.5B difference in author-label matching is neither a robust representation effect nor an engineering win. Actual tokenizer counts differ because original editorial cue strings and opaque keys tokenize differently, but identical record bytes were delivered in both conditions.
+
+**Required next experiment:** A balanced forced-decision calibration with two verified memories, *irrelevant/missing-evidence* controls, the same dilemma and answer-order counterbalance, and no UNKNOWN response option on the forced arm. Only an improvement over the no-memory behavioral prior would support causal use of source-specific evidence. The six moral-prior-aligned interpretations are too small and unblinded to certify character-specific decision making, even if a future forced-choice score were high.
+
+
+
+## E2S: Fixed local MiniLM semantic and rank-fusion comparison
+
+[Prospectively frozen E2S design](SEMANTIC_PROTOCOL.md) | [Complete MiniLM result](results/semantic-run-38024250049/semantic_retrieval.json) | [Hugging Face model card](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
+
+A fixed pretrained \`sentence-transformers/all-MiniLM-L6-v2\` encoder (revision \`1110a243fdf4706b3f48f1d95db1a4f5529b4d41\`) encoded all 450 source narratives into 384-dimensional normalized vectors. No weights were trained and no paid API was called. Attention-mask mean pooling, a 256-wordpiece cap and 450 document IDs were audited: **0/450 source documents truncated**, original lengths 228 wordpieces maximum. Initial corpus load/encoding took **16.846 seconds** on the GitHub CPU runner (includes model load and download from available caches); per-query runtime is recorded in the raw artifact. This is not a production latency estimate.
+
+| Retrieval method | Both author-selected memories at top 10 | Individual source hits at top 10 |
+| --- | ---: | ---: |
+| Lexical TF-IDF, same-run baseline | 0/6 | 2/12 |
+| Local MiniLM cosine retrieval | **0/6** | 3/12 |
+| Predeclared unweighted RRF60, lexical + MiniLM | **0/6** | 4/12 |
+| Permuted dense-to-event index, seed 11 | 0/6 | 1/12 |
+| Permuted dense-to-event index, seed 37 | 0/6 | 0/12 |
+
+A neural sentence encoder modestly improved *single selected source recall* in this tiny fixture; no method, including rank fusion, retrieved both independently selected source records for any natural dilemma under the top-ten limit. The permutation nulls are weaker as expected, but the sample does not support a general conclusion about semantic quality or cost efficiency. A rank-fusion improvement of two individual hits cannot justify adopting a vector database or refactoring Pretorius.
+
+**Cross-run parity issue requiring audit:** The source-owned lexical baseline in E2S and the baseline recorded in E2R/E2G have identical **aggregate** top-ten target recall but **different top-ten ordering and individual gold-event ranks** for several queries, despite the same source commit and nominal fixed queries. Do not pool their rank positions or attribute the differences to embeddings. A separate lexical reproducibility audit should compare query text, numerical scores, library versions and stable sorting. E2S's same-run condition contrasts remain valid as comparisons of that run, but the source of the baseline ranking differences has not yet been isolated.
+
+**Research interpretation:** This benchmark still rewards retrieval of author-chosen evidence pairs, which are not adjudicated against other plausible memory sets. We have no evidence here that the model would integrate two memories it did not already have, and no demonstrated improvement from symbolic cues over neutral keys. Better annotation of relevant sets and stronger evidence-selection methods are higher priorities than expanding synthetic rituals.
 
 ## Limitations and next gate
 
