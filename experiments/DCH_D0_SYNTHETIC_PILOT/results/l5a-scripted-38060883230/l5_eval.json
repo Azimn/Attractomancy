@@ -1,0 +1,1013 @@
+{
+  "status": "SCRIPTED_POLICY_ENGINEERING_NOT_DCH_TEST",
+  "DCH_efficacy_claim": "NONE",
+  "real_humans": 0,
+  "n_episode_specs": 12,
+  "n_scripted_trajectories": 48,
+  "same_perturbation_evidence_for_all_roles": true,
+  "same_action_capacity_for_all_roles": true,
+  "summary": {
+    "incumbent_proxy": {
+      "n": 12,
+      "live_accuracy": 1.0,
+      "yoked_accuracy": 0.08333333333333333,
+      "live_minus_own_yoke": 0.9166666666666666,
+      "strict_self_replay_invariant": true,
+      "live_writes": 11
+    },
+    "briefed_replacement_proxy": {
+      "n": 12,
+      "live_accuracy": 1.0,
+      "yoked_accuracy": 0.08333333333333333,
+      "live_minus_own_yoke": 0.9166666666666666,
+      "strict_self_replay_invariant": true,
+      "live_writes": 11
+    },
+    "expert_automatic": {
+      "n": 12,
+      "live_accuracy": 1.0,
+      "yoked_accuracy": 0.08333333333333333,
+      "live_minus_own_yoke": 0.9166666666666666,
+      "strict_self_replay_invariant": true,
+      "live_writes": 11
+    },
+    "lesioned_control": {
+      "n": 12,
+      "live_accuracy": 0.5833333333333334,
+      "yoked_accuracy": 0.08333333333333333,
+      "live_minus_own_yoke": 0.5,
+      "strict_self_replay_invariant": true,
+      "live_writes": 6
+    }
+  },
+  "rows": {
+    "incumbent_proxy": [
+      {
+        "persona_id": "DCH5-ARCHIVE_ROOM",
+        "role": "incumbent_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "WITHHOLD"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "af195190f086b3a343d957bdc140a24b55f17f17b17f946682da92b2d915fb19"
+      },
+      {
+        "persona_id": "DCH5-GALLERY_LOG",
+        "role": "incumbent_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "WITHHOLD"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_REPAIR"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "dccc66eb4dfb18e100afacdb3a39a0a68f8ce2dbfeb6ec83c8fdee26f5df5d54"
+      },
+      {
+        "persona_id": "DCH5-TRANSCRIPT",
+        "role": "incumbent_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "WITHHOLD"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_SPEED"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "3c2fcc12f64bf1240d644e0cf53a761a57a340f5d69800af1c5522e1742cacb5"
+      },
+      {
+        "persona_id": "DCH5-BORROWED_BOOK",
+        "role": "incumbent_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "DECLINE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "3c1dbb4684572bfb6482b479123d6cdf4dd0a6a75f6ea4d0a25edbc95b3cceae"
+      },
+      {
+        "persona_id": "DCH5-SPECIMEN",
+        "role": "incumbent_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "DECLINE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_REPAIR"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "1529aefbfb1fdc8b85b76e7c0bf0c86e9f8ec4f11654c88d6dcca7febca2f054"
+      },
+      {
+        "persona_id": "DCH5-INVENTORY",
+        "role": "incumbent_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "DECLINE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_SPEED"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "a49d835b032710cc65b6f6fa201dda1aee5e383f6d9660c9a7111056106b00fa"
+      },
+      {
+        "persona_id": "DCH5-HANDOFF",
+        "role": "incumbent_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "SCHEDULE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "b173d128c0a56d6e0a39deb892ea7c6cd0accb926420cc405db5d75ab5f213da"
+      },
+      {
+        "persona_id": "DCH5-INSPECTION",
+        "role": "incumbent_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "SCHEDULE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_REPAIR"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "5c082a085d07681e38544416f08b016fba79f93e7ee598fefa7864e87fd89108"
+      },
+      {
+        "persona_id": "DCH5-APPOINTMENT",
+        "role": "incumbent_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "SCHEDULE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_SPEED"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "1b17ea549b8205f9566a8dc8af1372ee9db53f6a9b89bed8b2fc3bd37dbb567e"
+      },
+      {
+        "persona_id": "DCH5-DISPATCH",
+        "role": "incumbent_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "FULFILL_REPAIR"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "56ec2dba91204f4a6b1299a61da891f653912bf667777bcf9ab473b0377ebaf0"
+      },
+      {
+        "persona_id": "DCH5-RESTORATION",
+        "role": "incumbent_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "FULFILL_SPEED"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_REPAIR"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "78a05c0333ce04ad37667cfd33a68f11ca5fd08da9f357c076ceb88863738832"
+      },
+      {
+        "persona_id": "DCH5-FORGED_EDIT",
+        "role": "incumbent_proxy",
+        "kind": "untrusted_decoy",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "yoked": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "restoration_difference": 0,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "b69f9b4a740444e463443c14c88613c19a3f27f2e8b796e68e63acad4793e85b"
+      }
+    ],
+    "briefed_replacement_proxy": [
+      {
+        "persona_id": "DCH5-ARCHIVE_ROOM",
+        "role": "briefed_replacement_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "WITHHOLD"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "af195190f086b3a343d957bdc140a24b55f17f17b17f946682da92b2d915fb19"
+      },
+      {
+        "persona_id": "DCH5-GALLERY_LOG",
+        "role": "briefed_replacement_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "WITHHOLD"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_REPAIR"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "dccc66eb4dfb18e100afacdb3a39a0a68f8ce2dbfeb6ec83c8fdee26f5df5d54"
+      },
+      {
+        "persona_id": "DCH5-TRANSCRIPT",
+        "role": "briefed_replacement_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "WITHHOLD"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_SPEED"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "3c2fcc12f64bf1240d644e0cf53a761a57a340f5d69800af1c5522e1742cacb5"
+      },
+      {
+        "persona_id": "DCH5-BORROWED_BOOK",
+        "role": "briefed_replacement_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "DECLINE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "3c1dbb4684572bfb6482b479123d6cdf4dd0a6a75f6ea4d0a25edbc95b3cceae"
+      },
+      {
+        "persona_id": "DCH5-SPECIMEN",
+        "role": "briefed_replacement_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "DECLINE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_REPAIR"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "1529aefbfb1fdc8b85b76e7c0bf0c86e9f8ec4f11654c88d6dcca7febca2f054"
+      },
+      {
+        "persona_id": "DCH5-INVENTORY",
+        "role": "briefed_replacement_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "DECLINE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_SPEED"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "a49d835b032710cc65b6f6fa201dda1aee5e383f6d9660c9a7111056106b00fa"
+      },
+      {
+        "persona_id": "DCH5-HANDOFF",
+        "role": "briefed_replacement_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "SCHEDULE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "b173d128c0a56d6e0a39deb892ea7c6cd0accb926420cc405db5d75ab5f213da"
+      },
+      {
+        "persona_id": "DCH5-INSPECTION",
+        "role": "briefed_replacement_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "SCHEDULE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_REPAIR"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "5c082a085d07681e38544416f08b016fba79f93e7ee598fefa7864e87fd89108"
+      },
+      {
+        "persona_id": "DCH5-APPOINTMENT",
+        "role": "briefed_replacement_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "SCHEDULE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_SPEED"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "1b17ea549b8205f9566a8dc8af1372ee9db53f6a9b89bed8b2fc3bd37dbb567e"
+      },
+      {
+        "persona_id": "DCH5-DISPATCH",
+        "role": "briefed_replacement_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "FULFILL_REPAIR"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "56ec2dba91204f4a6b1299a61da891f653912bf667777bcf9ab473b0377ebaf0"
+      },
+      {
+        "persona_id": "DCH5-RESTORATION",
+        "role": "briefed_replacement_proxy",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "FULFILL_SPEED"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_REPAIR"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "78a05c0333ce04ad37667cfd33a68f11ca5fd08da9f357c076ceb88863738832"
+      },
+      {
+        "persona_id": "DCH5-FORGED_EDIT",
+        "role": "briefed_replacement_proxy",
+        "kind": "untrusted_decoy",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "yoked": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "restoration_difference": 0,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "b69f9b4a740444e463443c14c88613c19a3f27f2e8b796e68e63acad4793e85b"
+      }
+    ],
+    "expert_automatic": [
+      {
+        "persona_id": "DCH5-ARCHIVE_ROOM",
+        "role": "expert_automatic",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "WITHHOLD"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "af195190f086b3a343d957bdc140a24b55f17f17b17f946682da92b2d915fb19"
+      },
+      {
+        "persona_id": "DCH5-GALLERY_LOG",
+        "role": "expert_automatic",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "WITHHOLD"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_REPAIR"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "dccc66eb4dfb18e100afacdb3a39a0a68f8ce2dbfeb6ec83c8fdee26f5df5d54"
+      },
+      {
+        "persona_id": "DCH5-TRANSCRIPT",
+        "role": "expert_automatic",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "WITHHOLD"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_SPEED"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "3c2fcc12f64bf1240d644e0cf53a761a57a340f5d69800af1c5522e1742cacb5"
+      },
+      {
+        "persona_id": "DCH5-BORROWED_BOOK",
+        "role": "expert_automatic",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "DECLINE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "3c1dbb4684572bfb6482b479123d6cdf4dd0a6a75f6ea4d0a25edbc95b3cceae"
+      },
+      {
+        "persona_id": "DCH5-SPECIMEN",
+        "role": "expert_automatic",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "DECLINE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_REPAIR"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "1529aefbfb1fdc8b85b76e7c0bf0c86e9f8ec4f11654c88d6dcca7febca2f054"
+      },
+      {
+        "persona_id": "DCH5-INVENTORY",
+        "role": "expert_automatic",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "DECLINE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_SPEED"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "a49d835b032710cc65b6f6fa201dda1aee5e383f6d9660c9a7111056106b00fa"
+      },
+      {
+        "persona_id": "DCH5-HANDOFF",
+        "role": "expert_automatic",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "SCHEDULE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "b173d128c0a56d6e0a39deb892ea7c6cd0accb926420cc405db5d75ab5f213da"
+      },
+      {
+        "persona_id": "DCH5-INSPECTION",
+        "role": "expert_automatic",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "SCHEDULE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_REPAIR"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "5c082a085d07681e38544416f08b016fba79f93e7ee598fefa7864e87fd89108"
+      },
+      {
+        "persona_id": "DCH5-APPOINTMENT",
+        "role": "expert_automatic",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "SCHEDULE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_SPEED"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "1b17ea549b8205f9566a8dc8af1372ee9db53f6a9b89bed8b2fc3bd37dbb567e"
+      },
+      {
+        "persona_id": "DCH5-DISPATCH",
+        "role": "expert_automatic",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "FULFILL_REPAIR"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "56ec2dba91204f4a6b1299a61da891f653912bf667777bcf9ab473b0377ebaf0"
+      },
+      {
+        "persona_id": "DCH5-RESTORATION",
+        "role": "expert_automatic",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "FULFILL_SPEED"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_REPAIR"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "78a05c0333ce04ad37667cfd33a68f11ca5fd08da9f357c076ceb88863738832"
+      },
+      {
+        "persona_id": "DCH5-FORGED_EDIT",
+        "role": "expert_automatic",
+        "kind": "untrusted_decoy",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "yoked": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "restoration_difference": 0,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "b69f9b4a740444e463443c14c88613c19a3f27f2e8b796e68e63acad4793e85b"
+      }
+    ],
+    "lesioned_control": [
+      {
+        "persona_id": "DCH5-ARCHIVE_ROOM",
+        "role": "lesioned_control",
+        "kind": "trusted_update",
+        "live": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "restoration_difference": 0,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "af195190f086b3a343d957bdc140a24b55f17f17b17f946682da92b2d915fb19"
+      },
+      {
+        "persona_id": "DCH5-GALLERY_LOG",
+        "role": "lesioned_control",
+        "kind": "trusted_update",
+        "live": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_REPAIR"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_REPAIR"
+        },
+        "restoration_difference": 0,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "dccc66eb4dfb18e100afacdb3a39a0a68f8ce2dbfeb6ec83c8fdee26f5df5d54"
+      },
+      {
+        "persona_id": "DCH5-TRANSCRIPT",
+        "role": "lesioned_control",
+        "kind": "trusted_update",
+        "live": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_SPEED"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_SPEED"
+        },
+        "restoration_difference": 0,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "3c2fcc12f64bf1240d644e0cf53a761a57a340f5d69800af1c5522e1742cacb5"
+      },
+      {
+        "persona_id": "DCH5-BORROWED_BOOK",
+        "role": "lesioned_control",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "DECLINE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "3c1dbb4684572bfb6482b479123d6cdf4dd0a6a75f6ea4d0a25edbc95b3cceae"
+      },
+      {
+        "persona_id": "DCH5-SPECIMEN",
+        "role": "lesioned_control",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "DECLINE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_REPAIR"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "1529aefbfb1fdc8b85b76e7c0bf0c86e9f8ec4f11654c88d6dcca7febca2f054"
+      },
+      {
+        "persona_id": "DCH5-INVENTORY",
+        "role": "lesioned_control",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "DECLINE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_SPEED"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "a49d835b032710cc65b6f6fa201dda1aee5e383f6d9660c9a7111056106b00fa"
+      },
+      {
+        "persona_id": "DCH5-HANDOFF",
+        "role": "lesioned_control",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "SCHEDULE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "b173d128c0a56d6e0a39deb892ea7c6cd0accb926420cc405db5d75ab5f213da"
+      },
+      {
+        "persona_id": "DCH5-INSPECTION",
+        "role": "lesioned_control",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "SCHEDULE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_REPAIR"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "5c082a085d07681e38544416f08b016fba79f93e7ee598fefa7864e87fd89108"
+      },
+      {
+        "persona_id": "DCH5-APPOINTMENT",
+        "role": "lesioned_control",
+        "kind": "trusted_update",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 1,
+          "answer": "SCHEDULE"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_SPEED"
+        },
+        "restoration_difference": 1,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "1b17ea549b8205f9566a8dc8af1372ee9db53f6a9b89bed8b2fc3bd37dbb567e"
+      },
+      {
+        "persona_id": "DCH5-DISPATCH",
+        "role": "lesioned_control",
+        "kind": "trusted_update",
+        "live": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "restoration_difference": 0,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "56ec2dba91204f4a6b1299a61da891f653912bf667777bcf9ab473b0377ebaf0"
+      },
+      {
+        "persona_id": "DCH5-RESTORATION",
+        "role": "lesioned_control",
+        "kind": "trusted_update",
+        "live": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_REPAIR"
+        },
+        "yoked": {
+          "correct": false,
+          "authoritative_certificate_exact": false,
+          "writes": 0,
+          "answer": "FULFILL_REPAIR"
+        },
+        "restoration_difference": 0,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "78a05c0333ce04ad37667cfd33a68f11ca5fd08da9f357c076ceb88863738832"
+      },
+      {
+        "persona_id": "DCH5-FORGED_EDIT",
+        "role": "lesioned_control",
+        "kind": "untrusted_decoy",
+        "live": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "yoked": {
+          "correct": true,
+          "authoritative_certificate_exact": true,
+          "writes": 0,
+          "answer": "FULFILL_ACCURACY"
+        },
+        "restoration_difference": 0,
+        "strict_replay_state_equal": true,
+        "same_perturbation_evidence_hash": "b69f9b4a740444e463443c14c88613c19a3f27f2e8b796e68e63acad4793e85b"
+      }
+    ]
+  }
+}

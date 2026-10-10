@@ -1,0 +1,803 @@
+{
+  "status": "DEVELOPMENT_LLM",
+  "backend": "transformers",
+  "model_requested": "Qwen/Qwen2.5-0.5B-Instruct",
+  "visible_sha256": "323ae7da44f1018fa7ae8cb5ca4a54b5bcd9e018ffb05cbcbae32e146d288045",
+  "evidence_for_DCH": false,
+  "human_partner_present": false,
+  "records": [
+    {
+      "persona_id": "L2-001",
+      "policy": "expert_auto",
+      "prompt_sha256": "308f6da86bf4d863a35d9aa0416aacd269bd218d72f46a5aa1072681278be55a",
+      "archive_sha256": "fee657ec7fd9e8aab2648832076fdd0e0cb0e913c727c39d8a49a2b77798c023",
+      "archive_record_count": 4,
+      "prompt_chars": 1044,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-001-E13\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-001-E13"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": false,
+      "prompt_tokens": 279,
+      "output_tokens": 32,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-001",
+      "policy": "human_coded",
+      "prompt_sha256": "308f6da86bf4d863a35d9aa0416aacd269bd218d72f46a5aa1072681278be55a",
+      "archive_sha256": "fee657ec7fd9e8aab2648832076fdd0e0cb0e913c727c39d8a49a2b77798c023",
+      "archive_record_count": 4,
+      "prompt_chars": 1044,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-001-E13\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-001-E13"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": false,
+      "prompt_tokens": 279,
+      "output_tokens": 32,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-001",
+      "policy": "stale",
+      "prompt_sha256": "a126ebc9250496ea4f0be0fe5bde67c2e06cdaa9c73247ee244bbb4217c647c5",
+      "archive_sha256": "3d5811aaac4a7a9332ff688970dcdf3571712fc9cb081ee8f4fb632c0f36fc9a",
+      "archive_record_count": 4,
+      "prompt_chars": 1041,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-001-E03\", \"L2-001-E04\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-001-E03",
+        "L2-001-E04"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 275,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-001",
+      "policy": "cold",
+      "prompt_sha256": "f69734942837b77cfe9105fe6711354ddbdab0007c5a0e9c5f3a242113fc70f0",
+      "archive_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "archive_record_count": 0,
+      "prompt_chars": 757,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"turn 25\", \"commitment C-001\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "turn 25",
+        "commitment C-001"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": false,
+      "prompt_tokens": 170,
+      "output_tokens": 36,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-001",
+      "policy": "oracle",
+      "prompt_sha256": "579589930fbc4fbc73eae47fadbbc821e46e3b043e659c30cbc4690f41d91cc0",
+      "archive_sha256": "9591dca8f7f8c8e7eec277f974e6b39a65077aa06e888979559ce6bfd2ca162d",
+      "archive_record_count": 8,
+      "prompt_chars": 1329,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-001-E03\", \"L2-001-E12\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-001-E03",
+        "L2-001-E12"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 383,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-002",
+      "policy": "expert_auto",
+      "prompt_sha256": "3c11d367cec4cc0d3ab673f5473ba80b1b88f756c5e03ab28e6974e20e35ea40",
+      "archive_sha256": "4abf197cc277df10b34df73f035e3b11f2c64feed7c84d6c4b6d902f90d1c193",
+      "archive_record_count": 4,
+      "prompt_chars": 1044,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-002-E11\", \"L2-002-E12\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-002-E11",
+        "L2-002-E12"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 278,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-002",
+      "policy": "human_coded",
+      "prompt_sha256": "3c11d367cec4cc0d3ab673f5473ba80b1b88f756c5e03ab28e6974e20e35ea40",
+      "archive_sha256": "4abf197cc277df10b34df73f035e3b11f2c64feed7c84d6c4b6d902f90d1c193",
+      "archive_record_count": 4,
+      "prompt_chars": 1044,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-002-E11\", \"L2-002-E12\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-002-E11",
+        "L2-002-E12"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 278,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-002",
+      "policy": "stale",
+      "prompt_sha256": "cc2d82661ed1bfd583fb6236505b2f66d512864bfbae3d15094c09a94357d90d",
+      "archive_sha256": "812e00a49579a850ebd82263a0cf06ea930bf24b5cd550ff8fe2a2cb4609cfd1",
+      "archive_record_count": 4,
+      "prompt_chars": 1041,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-002-E03\", \"L2-002-E04\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-002-E03",
+        "L2-002-E04"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 276,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-002",
+      "policy": "cold",
+      "prompt_sha256": "198d870afd30a1db781916052cea8e1d0cb41af25a31227342a0d233c2acba06",
+      "archive_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "archive_record_count": 0,
+      "prompt_chars": 757,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"turn 25\", \"commitment C-002\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "turn 25",
+        "commitment C-002"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": false,
+      "prompt_tokens": 170,
+      "output_tokens": 36,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-002",
+      "policy": "oracle",
+      "prompt_sha256": "f25bcb11a0cae6d2312ec99e602bf9992eacfbec10d7804b75f54af16dd6f288",
+      "archive_sha256": "a049cad429c498a4b39630764c495c10a616a95cd6583eab170e757590a27e54",
+      "archive_record_count": 8,
+      "prompt_chars": 1329,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-002-E03\", \"L2-002-E12\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-002-E03",
+        "L2-002-E12"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 383,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-003",
+      "policy": "expert_auto",
+      "prompt_sha256": "40a26cbfc2ba1822392236608df4ee74fa8ea29142c52537d5d5c1e0951f5ef6",
+      "archive_sha256": "d7aefba97b7d7193c7061be3e09125996ea47ae3bdbf2f6205c06b5e5edc173f",
+      "archive_record_count": 4,
+      "prompt_chars": 1041,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-003-E11\", \"L2-003-E12\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-003-E11",
+        "L2-003-E12"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 278,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-003",
+      "policy": "human_coded",
+      "prompt_sha256": "40a26cbfc2ba1822392236608df4ee74fa8ea29142c52537d5d5c1e0951f5ef6",
+      "archive_sha256": "d7aefba97b7d7193c7061be3e09125996ea47ae3bdbf2f6205c06b5e5edc173f",
+      "archive_record_count": 4,
+      "prompt_chars": 1041,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-003-E11\", \"L2-003-E12\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-003-E11",
+        "L2-003-E12"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 278,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-003",
+      "policy": "stale",
+      "prompt_sha256": "cde08460d751b3b9b69be8f0443e86639957dbf57bf67a0cf23d3f58fe483466",
+      "archive_sha256": "9ef4d2094eac8b5139cb8cb6dd9459b2401b4d4eb655e133b4499acaf727234a",
+      "archive_record_count": 4,
+      "prompt_chars": 1041,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-003-E03\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-003-E03"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 276,
+      "output_tokens": 32,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-003",
+      "policy": "cold",
+      "prompt_sha256": "9ef4582e916016d163932e74fff1c0f59e5a5e150764fcc609e9dd2cb34afc95",
+      "archive_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "archive_record_count": 0,
+      "prompt_chars": 757,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"turn 25\", \"commitment C-003\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "turn 25",
+        "commitment C-003"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": false,
+      "prompt_tokens": 170,
+      "output_tokens": 36,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-003",
+      "policy": "oracle",
+      "prompt_sha256": "f669fc9e10f3102cef6c00b2112bbed2080f3fdc7d55b00511169bd2856f2707",
+      "archive_sha256": "cf19f86338b33eacb29387d7da3e83b554d5b1a64775434aada7d1b7ae907328",
+      "archive_record_count": 8,
+      "prompt_chars": 1326,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-003-E03\", \"L2-003-E12\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-003-E03",
+        "L2-003-E12"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 383,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-004",
+      "policy": "expert_auto",
+      "prompt_sha256": "1586fea7764851c1476ff407050e341efa65e84de7de275840b687f166b90fcf",
+      "archive_sha256": "2bc98d9199b27d3ac007c9e42453dc6fecefcd434ed7bf87bf4462c1d5c6cdab",
+      "archive_record_count": 4,
+      "prompt_chars": 1044,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-004-E13\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-004-E13"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": false,
+      "prompt_tokens": 278,
+      "output_tokens": 32,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-004",
+      "policy": "human_coded",
+      "prompt_sha256": "1586fea7764851c1476ff407050e341efa65e84de7de275840b687f166b90fcf",
+      "archive_sha256": "2bc98d9199b27d3ac007c9e42453dc6fecefcd434ed7bf87bf4462c1d5c6cdab",
+      "archive_record_count": 4,
+      "prompt_chars": 1044,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-004-E13\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-004-E13"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": false,
+      "prompt_tokens": 278,
+      "output_tokens": 32,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-004",
+      "policy": "stale",
+      "prompt_sha256": "e3483b8d22f4186451705d3107f3efc054c61e0abbd9f60126bbe36f9b31f47a",
+      "archive_sha256": "c9ee2aaf79c29b8326474fb8e1612d4f15b1f8cc18a4f2db9f354b19062fe8d4",
+      "archive_record_count": 4,
+      "prompt_chars": 1041,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-004-E03\", \"L2-004-E04\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-004-E03",
+        "L2-004-E04"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 276,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-004",
+      "policy": "cold",
+      "prompt_sha256": "a98e040dd3560575ecabd959d94619a07fb3f060ac59d957a17840f76fd07690",
+      "archive_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "archive_record_count": 0,
+      "prompt_chars": 757,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"turn 25\", \"commitment C-004\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "turn 25",
+        "commitment C-004"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": false,
+      "prompt_tokens": 170,
+      "output_tokens": 36,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-004",
+      "policy": "oracle",
+      "prompt_sha256": "bc86f9b7b3c9d38b3912f59fc6f767788314c9ba91b4589e0e2ae2e64f502b22",
+      "archive_sha256": "eec767c63e6ee19a0319c9ab478998ac8e7dae2128ee36948cf584f3b25b8d95",
+      "archive_record_count": 8,
+      "prompt_chars": 1329,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-004-E03\", \"L2-004-E12\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-004-E03",
+        "L2-004-E12"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 383,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-005",
+      "policy": "expert_auto",
+      "prompt_sha256": "6c49aa721d775eac041c71f46331f8d019ed184cc3f2b548ace4a9ea10c91c71",
+      "archive_sha256": "a8b5da888d9dfb4e540bad29103513e12caa2d570baa97f0abf657c8293aa1f7",
+      "archive_record_count": 4,
+      "prompt_chars": 1042,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-005-E13\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-005-E13"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": false,
+      "prompt_tokens": 279,
+      "output_tokens": 32,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-005",
+      "policy": "human_coded",
+      "prompt_sha256": "6c49aa721d775eac041c71f46331f8d019ed184cc3f2b548ace4a9ea10c91c71",
+      "archive_sha256": "a8b5da888d9dfb4e540bad29103513e12caa2d570baa97f0abf657c8293aa1f7",
+      "archive_record_count": 4,
+      "prompt_chars": 1042,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-005-E13\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-005-E13"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": false,
+      "prompt_tokens": 279,
+      "output_tokens": 32,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-005",
+      "policy": "stale",
+      "prompt_sha256": "0f0eeec739b047cf2ec3cb5b35eeddbc70c3c3305d569dc6b96623e35d2a938e",
+      "archive_sha256": "1833fa690a958d372ba9f3f5bd6cd83e29c75491312a0ab1d66df9132330dbc2",
+      "archive_record_count": 4,
+      "prompt_chars": 1043,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-005-E03\", \"L2-005-E04\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-005-E03",
+        "L2-005-E04"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 275,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-005",
+      "policy": "cold",
+      "prompt_sha256": "87aa0c3e99f969d154b9605628a8051388af7d800e9fa3e26b57e0d410aaea58",
+      "archive_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "archive_record_count": 0,
+      "prompt_chars": 757,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"turn 25\", \"commitment C-005\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "turn 25",
+        "commitment C-005"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": false,
+      "prompt_tokens": 170,
+      "output_tokens": 36,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-005",
+      "policy": "oracle",
+      "prompt_sha256": "5156c8863c0ee1c19da029497b4f85664e636e433a5b6d78e73860faa22e5e7e",
+      "archive_sha256": "78cfd736ee313f32da5d0adb53efa2596666ac54466a7b438e6328c1d60f8ce5",
+      "archive_record_count": 8,
+      "prompt_chars": 1329,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-005-E03\", \"L2-005-E12\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-005-E03",
+        "L2-005-E12"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 383,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-006",
+      "policy": "expert_auto",
+      "prompt_sha256": "755592e0a8862e7664f48461a94c1c5d19812fbc4ba4f71399bbeac465b98a3d",
+      "archive_sha256": "3c357d0c7586bce8a6f118e401e29d40d69514edf6f9cbf7beb6be9d0ab60a38",
+      "archive_record_count": 4,
+      "prompt_chars": 1043,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-006-E11\", \"L2-006-E12\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-006-E11",
+        "L2-006-E12"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 278,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-006",
+      "policy": "human_coded",
+      "prompt_sha256": "755592e0a8862e7664f48461a94c1c5d19812fbc4ba4f71399bbeac465b98a3d",
+      "archive_sha256": "3c357d0c7586bce8a6f118e401e29d40d69514edf6f9cbf7beb6be9d0ab60a38",
+      "archive_record_count": 4,
+      "prompt_chars": 1043,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-006-E11\", \"L2-006-E12\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-006-E11",
+        "L2-006-E12"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 278,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-006",
+      "policy": "stale",
+      "prompt_sha256": "05179a03fe51181f8f9eaa897235c8bc13627f7998b3a376548dcbedb8a8dfd9",
+      "archive_sha256": "ed620518305383fb0dffb53167ad0b1307734a58eafe97dc8426c10396a1ec99",
+      "archive_record_count": 4,
+      "prompt_chars": 1039,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-006-E03\", \"L2-006-E04\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-006-E03",
+        "L2-006-E04"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 276,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-006",
+      "policy": "cold",
+      "prompt_sha256": "79aa170802a5b5a94eb713133c3c6b74a43f22ff69f99d6a0291b79d52f6c380",
+      "archive_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "archive_record_count": 0,
+      "prompt_chars": 757,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"turn 25\", \"commitment C-006\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "turn 25",
+        "commitment C-006"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": false,
+      "prompt_tokens": 170,
+      "output_tokens": 36,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-006",
+      "policy": "oracle",
+      "prompt_sha256": "c8b161e752403bc1300694ab15957661ac0a232be7e1bd0832d458be1c902070",
+      "archive_sha256": "2c0b57b636f4964fbcca7fc557b1aa589d96129963493b1335e0ac132df8bae1",
+      "archive_record_count": 8,
+      "prompt_chars": 1326,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-006-E03\", \"L2-006-E12\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-006-E03",
+        "L2-006-E12"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 383,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-007",
+      "policy": "expert_auto",
+      "prompt_sha256": "a488578c091bdff4e89bfff202446794faccbd9e5e5e1a068be56d74034658fd",
+      "archive_sha256": "e21b69be7cd3bef7e38706d5f994d7ae611742df8b8ba5a8cc11b35c77898d17",
+      "archive_record_count": 4,
+      "prompt_chars": 1044,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-007-E11\", \"L2-007-E12\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-007-E11",
+        "L2-007-E12"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 278,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-007",
+      "policy": "human_coded",
+      "prompt_sha256": "a488578c091bdff4e89bfff202446794faccbd9e5e5e1a068be56d74034658fd",
+      "archive_sha256": "e21b69be7cd3bef7e38706d5f994d7ae611742df8b8ba5a8cc11b35c77898d17",
+      "archive_record_count": 4,
+      "prompt_chars": 1044,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-007-E11\", \"L2-007-E12\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-007-E11",
+        "L2-007-E12"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 278,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-007",
+      "policy": "stale",
+      "prompt_sha256": "8b2a824ed19d0c96b9dc589dd52a1ff302e7abaaf2a20fa9764d1f05e08b2202",
+      "archive_sha256": "46fed1b65138fdb026cc741753d06d143a4e6642e16bb8c5e205b12137701446",
+      "archive_record_count": 4,
+      "prompt_chars": 1041,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-007-E03\", \"L2-007-E04\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-007-E03",
+        "L2-007-E04"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 276,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-007",
+      "policy": "cold",
+      "prompt_sha256": "40be0eb64d5691e6c21a22663e54052e0e18306f8cd9c4d8bd44d61682b21c3c",
+      "archive_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "archive_record_count": 0,
+      "prompt_chars": 757,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"turn 25\", \"commitment C-007\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "turn 25",
+        "commitment C-007"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": false,
+      "prompt_tokens": 170,
+      "output_tokens": 36,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-007",
+      "policy": "oracle",
+      "prompt_sha256": "f7c0bd9564db1e43295c942cd8e929a27dc0ad0a60ed8e4b23c5c6d754c550df",
+      "archive_sha256": "7ae5a6a3419f578e1b268c8020efcb71f714cd44e93133911429a56ecf9ed842",
+      "archive_record_count": 8,
+      "prompt_chars": 1329,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-007-E03\", \"L2-007-E12\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-007-E03",
+        "L2-007-E12"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 383,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-008",
+      "policy": "expert_auto",
+      "prompt_sha256": "1dce6a9b2db27e42d394e34fe7ba20ef0f9496c6ebc01a4c124b4e5b5c5af9f8",
+      "archive_sha256": "70a1f2aa8ee512c54d1c3d7b87dbec384d8cd31d30dbbaf5c1f748e10fb924d7",
+      "archive_record_count": 4,
+      "prompt_chars": 1042,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-008-E11\", \"L2-008-E12\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-008-E11",
+        "L2-008-E12"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 278,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-008",
+      "policy": "human_coded",
+      "prompt_sha256": "1dce6a9b2db27e42d394e34fe7ba20ef0f9496c6ebc01a4c124b4e5b5c5af9f8",
+      "archive_sha256": "70a1f2aa8ee512c54d1c3d7b87dbec384d8cd31d30dbbaf5c1f748e10fb924d7",
+      "archive_record_count": 4,
+      "prompt_chars": 1042,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-008-E11\", \"L2-008-E12\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-008-E11",
+        "L2-008-E12"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 278,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-008",
+      "policy": "stale",
+      "prompt_sha256": "d4525816b5d3896236b88ade2437e041d071f44f438da4258dd74a12b8679801",
+      "archive_sha256": "3ae3fd15a0588e209870f559838ffcbd9f1c18fd76b5079df5a4cbe32608e64a",
+      "archive_record_count": 4,
+      "prompt_chars": 1043,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-008-E03\", \"L2-008-E04\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-008-E03",
+        "L2-008-E04"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 276,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-008",
+      "policy": "cold",
+      "prompt_sha256": "c7d71cd34136a68cd1c2536cc0b85f937b120c96adf03138381d25848b7e4b9b",
+      "archive_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "archive_record_count": 0,
+      "prompt_chars": 757,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"turn 25\", \"commitment C-008\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "turn 25",
+        "commitment C-008"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": false,
+      "prompt_tokens": 170,
+      "output_tokens": 36,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    },
+    {
+      "persona_id": "L2-008",
+      "policy": "oracle",
+      "prompt_sha256": "6ae54de5def83955931cfd9fafbd6eccbd0341465922f59720ae65d737414ec0",
+      "archive_sha256": "99fb1bd9e54dffd78f9973ba7baeb8ed033dac7937414c64543cd00ccb4a137e",
+      "archive_record_count": 8,
+      "prompt_chars": 1329,
+      "raw_text": "```json\n{\n  \"answer\": \"SCHEDULE\",\n  \"source_event_ids\": [\"L2-008-E03\", \"L2-008-E12\"]\n}\n```",
+      "answer": "SCHEDULE",
+      "source_event_ids": [
+        "L2-008-E03",
+        "L2-008-E12"
+      ],
+      "parse_valid": true,
+      "source_ids_valid": true,
+      "prompt_tokens": 383,
+      "output_tokens": 43,
+      "model_reported": "Qwen/Qwen2.5-0.5B-Instruct",
+      "done_reason": "stop"
+    }
+  ]
+}

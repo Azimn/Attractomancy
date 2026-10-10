@@ -1,0 +1,5017 @@
+{
+  "status": "SCRIPTED_POLICY_SENSITIVITY_ONLY",
+  "DCH_hypothesis_tested": false,
+  "real_human_participants": 0,
+  "policy_actors_are_scripted": true,
+  "input_parity_unit": "same source packet per case and arm",
+  "visible_sha256": "1c6dda9a2ec6ba40d2aa001e3fb6e25d6b696ffde9cd5153002a5f0e11390897",
+  "entries": [
+    {
+      "persona_id": "DCH5-ARCHIVE_ROOM",
+      "role": "incumbent_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "223a0ac49d930dc113aced2d4fb669425ad19f5be5e78ee0d9e994e6a88cf8c2",
+      "baseline_input_sha256": "1af18f648052971f6ea52635174afd01be1d0af3d3a93bf2d00547ee2a58b56f",
+      "perturbation_input_sha256": "af195190f086b3a343d957bdc140a24b55f17f17b17f946682da92b2d915fb19",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "223a0ac49d930dc113aced2d4fb669425ad19f5be5e78ee0d9e994e6a88cf8c2",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-ARCHIVE_ROOM-E01",
+          "DCH5-ARCHIVE_ROOM-E02",
+          "DCH5-ARCHIVE_ROOM-E03",
+          "DCH5-ARCHIVE_ROOM-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "b495cf82ae7e1701919a8e689cee8fb2cd0b9f2c7061d6c19051044f352b6b67"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "223a0ac49d930dc113aced2d4fb669425ad19f5be5e78ee0d9e994e6a88cf8c2",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-ARCHIVE_ROOM-E01",
+          "DCH5-ARCHIVE_ROOM-E02",
+          "DCH5-ARCHIVE_ROOM-E03",
+          "DCH5-ARCHIVE_ROOM-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "b495cf82ae7e1701919a8e689cee8fb2cd0b9f2c7061d6c19051044f352b6b67"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-ARCHIVE_ROOM-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-ARCHIVE_ROOM-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "972343bfc59612c589d431d1806ffce317d8f30693701807af7aaef5cea7e266",
+        "gate_answer": "WITHHOLD",
+        "gate_source_ids": [
+          "DCH5-ARCHIVE_ROOM-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "6e57ab6e357a1f916693150a5ee1dd889bf8ca8c6bfcd9ee950b3bc8f78f4335"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "223a0ac49d930dc113aced2d4fb669425ad19f5be5e78ee0d9e994e6a88cf8c2",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-ARCHIVE_ROOM-E01",
+          "DCH5-ARCHIVE_ROOM-E02",
+          "DCH5-ARCHIVE_ROOM-E03",
+          "DCH5-ARCHIVE_ROOM-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "b495cf82ae7e1701919a8e689cee8fb2cd0b9f2c7061d6c19051044f352b6b67"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-ARCHIVE_ROOM",
+      "role": "briefed_replacement_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "223a0ac49d930dc113aced2d4fb669425ad19f5be5e78ee0d9e994e6a88cf8c2",
+      "baseline_input_sha256": "1af18f648052971f6ea52635174afd01be1d0af3d3a93bf2d00547ee2a58b56f",
+      "perturbation_input_sha256": "af195190f086b3a343d957bdc140a24b55f17f17b17f946682da92b2d915fb19",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "223a0ac49d930dc113aced2d4fb669425ad19f5be5e78ee0d9e994e6a88cf8c2",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-ARCHIVE_ROOM-E01",
+          "DCH5-ARCHIVE_ROOM-E02",
+          "DCH5-ARCHIVE_ROOM-E03",
+          "DCH5-ARCHIVE_ROOM-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "b495cf82ae7e1701919a8e689cee8fb2cd0b9f2c7061d6c19051044f352b6b67"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "223a0ac49d930dc113aced2d4fb669425ad19f5be5e78ee0d9e994e6a88cf8c2",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-ARCHIVE_ROOM-E01",
+          "DCH5-ARCHIVE_ROOM-E02",
+          "DCH5-ARCHIVE_ROOM-E03",
+          "DCH5-ARCHIVE_ROOM-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "b495cf82ae7e1701919a8e689cee8fb2cd0b9f2c7061d6c19051044f352b6b67"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-ARCHIVE_ROOM-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-ARCHIVE_ROOM-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "972343bfc59612c589d431d1806ffce317d8f30693701807af7aaef5cea7e266",
+        "gate_answer": "WITHHOLD",
+        "gate_source_ids": [
+          "DCH5-ARCHIVE_ROOM-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "6e57ab6e357a1f916693150a5ee1dd889bf8ca8c6bfcd9ee950b3bc8f78f4335"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "223a0ac49d930dc113aced2d4fb669425ad19f5be5e78ee0d9e994e6a88cf8c2",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-ARCHIVE_ROOM-E01",
+          "DCH5-ARCHIVE_ROOM-E02",
+          "DCH5-ARCHIVE_ROOM-E03",
+          "DCH5-ARCHIVE_ROOM-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "b495cf82ae7e1701919a8e689cee8fb2cd0b9f2c7061d6c19051044f352b6b67"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-ARCHIVE_ROOM",
+      "role": "expert_automatic",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "223a0ac49d930dc113aced2d4fb669425ad19f5be5e78ee0d9e994e6a88cf8c2",
+      "baseline_input_sha256": "1af18f648052971f6ea52635174afd01be1d0af3d3a93bf2d00547ee2a58b56f",
+      "perturbation_input_sha256": "af195190f086b3a343d957bdc140a24b55f17f17b17f946682da92b2d915fb19",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "223a0ac49d930dc113aced2d4fb669425ad19f5be5e78ee0d9e994e6a88cf8c2",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-ARCHIVE_ROOM-E01",
+          "DCH5-ARCHIVE_ROOM-E02",
+          "DCH5-ARCHIVE_ROOM-E03",
+          "DCH5-ARCHIVE_ROOM-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "b495cf82ae7e1701919a8e689cee8fb2cd0b9f2c7061d6c19051044f352b6b67"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "223a0ac49d930dc113aced2d4fb669425ad19f5be5e78ee0d9e994e6a88cf8c2",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-ARCHIVE_ROOM-E01",
+          "DCH5-ARCHIVE_ROOM-E02",
+          "DCH5-ARCHIVE_ROOM-E03",
+          "DCH5-ARCHIVE_ROOM-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "b495cf82ae7e1701919a8e689cee8fb2cd0b9f2c7061d6c19051044f352b6b67"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-ARCHIVE_ROOM-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-ARCHIVE_ROOM-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "972343bfc59612c589d431d1806ffce317d8f30693701807af7aaef5cea7e266",
+        "gate_answer": "WITHHOLD",
+        "gate_source_ids": [
+          "DCH5-ARCHIVE_ROOM-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "6e57ab6e357a1f916693150a5ee1dd889bf8ca8c6bfcd9ee950b3bc8f78f4335"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "223a0ac49d930dc113aced2d4fb669425ad19f5be5e78ee0d9e994e6a88cf8c2",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-ARCHIVE_ROOM-E01",
+          "DCH5-ARCHIVE_ROOM-E02",
+          "DCH5-ARCHIVE_ROOM-E03",
+          "DCH5-ARCHIVE_ROOM-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "b495cf82ae7e1701919a8e689cee8fb2cd0b9f2c7061d6c19051044f352b6b67"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-ARCHIVE_ROOM",
+      "role": "lesioned_control",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "223a0ac49d930dc113aced2d4fb669425ad19f5be5e78ee0d9e994e6a88cf8c2",
+      "baseline_input_sha256": "1af18f648052971f6ea52635174afd01be1d0af3d3a93bf2d00547ee2a58b56f",
+      "perturbation_input_sha256": "af195190f086b3a343d957bdc140a24b55f17f17b17f946682da92b2d915fb19",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "223a0ac49d930dc113aced2d4fb669425ad19f5be5e78ee0d9e994e6a88cf8c2",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-ARCHIVE_ROOM-E01",
+          "DCH5-ARCHIVE_ROOM-E02",
+          "DCH5-ARCHIVE_ROOM-E03",
+          "DCH5-ARCHIVE_ROOM-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "b495cf82ae7e1701919a8e689cee8fb2cd0b9f2c7061d6c19051044f352b6b67"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "223a0ac49d930dc113aced2d4fb669425ad19f5be5e78ee0d9e994e6a88cf8c2",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-ARCHIVE_ROOM-E01",
+          "DCH5-ARCHIVE_ROOM-E02",
+          "DCH5-ARCHIVE_ROOM-E03",
+          "DCH5-ARCHIVE_ROOM-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "b495cf82ae7e1701919a8e689cee8fb2cd0b9f2c7061d6c19051044f352b6b67"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "223a0ac49d930dc113aced2d4fb669425ad19f5be5e78ee0d9e994e6a88cf8c2",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-ARCHIVE_ROOM-E01",
+          "DCH5-ARCHIVE_ROOM-E02",
+          "DCH5-ARCHIVE_ROOM-E03",
+          "DCH5-ARCHIVE_ROOM-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "b495cf82ae7e1701919a8e689cee8fb2cd0b9f2c7061d6c19051044f352b6b67"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "223a0ac49d930dc113aced2d4fb669425ad19f5be5e78ee0d9e994e6a88cf8c2",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-ARCHIVE_ROOM-E01",
+          "DCH5-ARCHIVE_ROOM-E02",
+          "DCH5-ARCHIVE_ROOM-E03",
+          "DCH5-ARCHIVE_ROOM-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "b495cf82ae7e1701919a8e689cee8fb2cd0b9f2c7061d6c19051044f352b6b67"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-GALLERY_LOG",
+      "role": "incumbent_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "4da9de33c2f1bd10591f2dd06ac8f0269eae33599b146806dec8297610238ce3",
+      "baseline_input_sha256": "86ee8bd8107b81bc4ca08b41f99c37a27207a88922a79122ce8d8ebac618d711",
+      "perturbation_input_sha256": "dccc66eb4dfb18e100afacdb3a39a0a68f8ce2dbfeb6ec83c8fdee26f5df5d54",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4da9de33c2f1bd10591f2dd06ac8f0269eae33599b146806dec8297610238ce3",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-GALLERY_LOG-E01",
+          "DCH5-GALLERY_LOG-E02",
+          "DCH5-GALLERY_LOG-E03",
+          "DCH5-GALLERY_LOG-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "80b240591d6ba6388950bf278627096c0681f45ce1aa993b50ab26b804563e44"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4da9de33c2f1bd10591f2dd06ac8f0269eae33599b146806dec8297610238ce3",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-GALLERY_LOG-E01",
+          "DCH5-GALLERY_LOG-E02",
+          "DCH5-GALLERY_LOG-E03",
+          "DCH5-GALLERY_LOG-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "80b240591d6ba6388950bf278627096c0681f45ce1aa993b50ab26b804563e44"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-GALLERY_LOG-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-GALLERY_LOG-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "eaaa1fcc76d4caba6634ff492e9927099b541933be201566901de09d1c6c9517",
+        "gate_answer": "WITHHOLD",
+        "gate_source_ids": [
+          "DCH5-GALLERY_LOG-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "350efff69e3bc8651dcaaa53a0256ebae034e88b95fb33c527efa5707172d72e"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4da9de33c2f1bd10591f2dd06ac8f0269eae33599b146806dec8297610238ce3",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-GALLERY_LOG-E01",
+          "DCH5-GALLERY_LOG-E02",
+          "DCH5-GALLERY_LOG-E03",
+          "DCH5-GALLERY_LOG-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "80b240591d6ba6388950bf278627096c0681f45ce1aa993b50ab26b804563e44"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-GALLERY_LOG",
+      "role": "briefed_replacement_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "4da9de33c2f1bd10591f2dd06ac8f0269eae33599b146806dec8297610238ce3",
+      "baseline_input_sha256": "86ee8bd8107b81bc4ca08b41f99c37a27207a88922a79122ce8d8ebac618d711",
+      "perturbation_input_sha256": "dccc66eb4dfb18e100afacdb3a39a0a68f8ce2dbfeb6ec83c8fdee26f5df5d54",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4da9de33c2f1bd10591f2dd06ac8f0269eae33599b146806dec8297610238ce3",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-GALLERY_LOG-E01",
+          "DCH5-GALLERY_LOG-E02",
+          "DCH5-GALLERY_LOG-E03",
+          "DCH5-GALLERY_LOG-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "80b240591d6ba6388950bf278627096c0681f45ce1aa993b50ab26b804563e44"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4da9de33c2f1bd10591f2dd06ac8f0269eae33599b146806dec8297610238ce3",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-GALLERY_LOG-E01",
+          "DCH5-GALLERY_LOG-E02",
+          "DCH5-GALLERY_LOG-E03",
+          "DCH5-GALLERY_LOG-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "80b240591d6ba6388950bf278627096c0681f45ce1aa993b50ab26b804563e44"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-GALLERY_LOG-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-GALLERY_LOG-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "eaaa1fcc76d4caba6634ff492e9927099b541933be201566901de09d1c6c9517",
+        "gate_answer": "WITHHOLD",
+        "gate_source_ids": [
+          "DCH5-GALLERY_LOG-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "350efff69e3bc8651dcaaa53a0256ebae034e88b95fb33c527efa5707172d72e"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4da9de33c2f1bd10591f2dd06ac8f0269eae33599b146806dec8297610238ce3",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-GALLERY_LOG-E01",
+          "DCH5-GALLERY_LOG-E02",
+          "DCH5-GALLERY_LOG-E03",
+          "DCH5-GALLERY_LOG-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "80b240591d6ba6388950bf278627096c0681f45ce1aa993b50ab26b804563e44"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-GALLERY_LOG",
+      "role": "expert_automatic",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "4da9de33c2f1bd10591f2dd06ac8f0269eae33599b146806dec8297610238ce3",
+      "baseline_input_sha256": "86ee8bd8107b81bc4ca08b41f99c37a27207a88922a79122ce8d8ebac618d711",
+      "perturbation_input_sha256": "dccc66eb4dfb18e100afacdb3a39a0a68f8ce2dbfeb6ec83c8fdee26f5df5d54",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4da9de33c2f1bd10591f2dd06ac8f0269eae33599b146806dec8297610238ce3",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-GALLERY_LOG-E01",
+          "DCH5-GALLERY_LOG-E02",
+          "DCH5-GALLERY_LOG-E03",
+          "DCH5-GALLERY_LOG-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "80b240591d6ba6388950bf278627096c0681f45ce1aa993b50ab26b804563e44"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4da9de33c2f1bd10591f2dd06ac8f0269eae33599b146806dec8297610238ce3",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-GALLERY_LOG-E01",
+          "DCH5-GALLERY_LOG-E02",
+          "DCH5-GALLERY_LOG-E03",
+          "DCH5-GALLERY_LOG-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "80b240591d6ba6388950bf278627096c0681f45ce1aa993b50ab26b804563e44"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-GALLERY_LOG-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-GALLERY_LOG-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "eaaa1fcc76d4caba6634ff492e9927099b541933be201566901de09d1c6c9517",
+        "gate_answer": "WITHHOLD",
+        "gate_source_ids": [
+          "DCH5-GALLERY_LOG-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "350efff69e3bc8651dcaaa53a0256ebae034e88b95fb33c527efa5707172d72e"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4da9de33c2f1bd10591f2dd06ac8f0269eae33599b146806dec8297610238ce3",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-GALLERY_LOG-E01",
+          "DCH5-GALLERY_LOG-E02",
+          "DCH5-GALLERY_LOG-E03",
+          "DCH5-GALLERY_LOG-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "80b240591d6ba6388950bf278627096c0681f45ce1aa993b50ab26b804563e44"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-GALLERY_LOG",
+      "role": "lesioned_control",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "4da9de33c2f1bd10591f2dd06ac8f0269eae33599b146806dec8297610238ce3",
+      "baseline_input_sha256": "86ee8bd8107b81bc4ca08b41f99c37a27207a88922a79122ce8d8ebac618d711",
+      "perturbation_input_sha256": "dccc66eb4dfb18e100afacdb3a39a0a68f8ce2dbfeb6ec83c8fdee26f5df5d54",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4da9de33c2f1bd10591f2dd06ac8f0269eae33599b146806dec8297610238ce3",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-GALLERY_LOG-E01",
+          "DCH5-GALLERY_LOG-E02",
+          "DCH5-GALLERY_LOG-E03",
+          "DCH5-GALLERY_LOG-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "80b240591d6ba6388950bf278627096c0681f45ce1aa993b50ab26b804563e44"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4da9de33c2f1bd10591f2dd06ac8f0269eae33599b146806dec8297610238ce3",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-GALLERY_LOG-E01",
+          "DCH5-GALLERY_LOG-E02",
+          "DCH5-GALLERY_LOG-E03",
+          "DCH5-GALLERY_LOG-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "80b240591d6ba6388950bf278627096c0681f45ce1aa993b50ab26b804563e44"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4da9de33c2f1bd10591f2dd06ac8f0269eae33599b146806dec8297610238ce3",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-GALLERY_LOG-E01",
+          "DCH5-GALLERY_LOG-E02",
+          "DCH5-GALLERY_LOG-E03",
+          "DCH5-GALLERY_LOG-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "80b240591d6ba6388950bf278627096c0681f45ce1aa993b50ab26b804563e44"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4da9de33c2f1bd10591f2dd06ac8f0269eae33599b146806dec8297610238ce3",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-GALLERY_LOG-E01",
+          "DCH5-GALLERY_LOG-E02",
+          "DCH5-GALLERY_LOG-E03",
+          "DCH5-GALLERY_LOG-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "80b240591d6ba6388950bf278627096c0681f45ce1aa993b50ab26b804563e44"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-TRANSCRIPT",
+      "role": "incumbent_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "3c4a6d4114d2fafa347ad9cb21a865e4c91325ad4aec7ad58fb4952e2ce87611",
+      "baseline_input_sha256": "cf8bf20489b0e63a023e5a0cd2c539ec5b1401c630e922ac9ec78f0cdff650d6",
+      "perturbation_input_sha256": "3c2fcc12f64bf1240d644e0cf53a761a57a340f5d69800af1c5522e1742cacb5",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "3c4a6d4114d2fafa347ad9cb21a865e4c91325ad4aec7ad58fb4952e2ce87611",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-TRANSCRIPT-E01",
+          "DCH5-TRANSCRIPT-E02",
+          "DCH5-TRANSCRIPT-E03",
+          "DCH5-TRANSCRIPT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f8999c4f70c8de278d7cdd3b1c50523e0e75681be4979b9516a0854037781d88"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "3c4a6d4114d2fafa347ad9cb21a865e4c91325ad4aec7ad58fb4952e2ce87611",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-TRANSCRIPT-E01",
+          "DCH5-TRANSCRIPT-E02",
+          "DCH5-TRANSCRIPT-E03",
+          "DCH5-TRANSCRIPT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f8999c4f70c8de278d7cdd3b1c50523e0e75681be4979b9516a0854037781d88"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-TRANSCRIPT-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-TRANSCRIPT-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "c1d75aa2537c76d7ba3a0557d3645f0e3fbce0f78facf2dc9b93c21b3a1934c2",
+        "gate_answer": "WITHHOLD",
+        "gate_source_ids": [
+          "DCH5-TRANSCRIPT-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "0a866c2f3d5550ceb5d2a2cd92d5dce0a7fb53c2acaf7f214501551930f33975"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "3c4a6d4114d2fafa347ad9cb21a865e4c91325ad4aec7ad58fb4952e2ce87611",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-TRANSCRIPT-E01",
+          "DCH5-TRANSCRIPT-E02",
+          "DCH5-TRANSCRIPT-E03",
+          "DCH5-TRANSCRIPT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f8999c4f70c8de278d7cdd3b1c50523e0e75681be4979b9516a0854037781d88"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-TRANSCRIPT",
+      "role": "briefed_replacement_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "3c4a6d4114d2fafa347ad9cb21a865e4c91325ad4aec7ad58fb4952e2ce87611",
+      "baseline_input_sha256": "cf8bf20489b0e63a023e5a0cd2c539ec5b1401c630e922ac9ec78f0cdff650d6",
+      "perturbation_input_sha256": "3c2fcc12f64bf1240d644e0cf53a761a57a340f5d69800af1c5522e1742cacb5",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "3c4a6d4114d2fafa347ad9cb21a865e4c91325ad4aec7ad58fb4952e2ce87611",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-TRANSCRIPT-E01",
+          "DCH5-TRANSCRIPT-E02",
+          "DCH5-TRANSCRIPT-E03",
+          "DCH5-TRANSCRIPT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f8999c4f70c8de278d7cdd3b1c50523e0e75681be4979b9516a0854037781d88"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "3c4a6d4114d2fafa347ad9cb21a865e4c91325ad4aec7ad58fb4952e2ce87611",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-TRANSCRIPT-E01",
+          "DCH5-TRANSCRIPT-E02",
+          "DCH5-TRANSCRIPT-E03",
+          "DCH5-TRANSCRIPT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f8999c4f70c8de278d7cdd3b1c50523e0e75681be4979b9516a0854037781d88"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-TRANSCRIPT-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-TRANSCRIPT-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "c1d75aa2537c76d7ba3a0557d3645f0e3fbce0f78facf2dc9b93c21b3a1934c2",
+        "gate_answer": "WITHHOLD",
+        "gate_source_ids": [
+          "DCH5-TRANSCRIPT-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "0a866c2f3d5550ceb5d2a2cd92d5dce0a7fb53c2acaf7f214501551930f33975"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "3c4a6d4114d2fafa347ad9cb21a865e4c91325ad4aec7ad58fb4952e2ce87611",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-TRANSCRIPT-E01",
+          "DCH5-TRANSCRIPT-E02",
+          "DCH5-TRANSCRIPT-E03",
+          "DCH5-TRANSCRIPT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f8999c4f70c8de278d7cdd3b1c50523e0e75681be4979b9516a0854037781d88"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-TRANSCRIPT",
+      "role": "expert_automatic",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "3c4a6d4114d2fafa347ad9cb21a865e4c91325ad4aec7ad58fb4952e2ce87611",
+      "baseline_input_sha256": "cf8bf20489b0e63a023e5a0cd2c539ec5b1401c630e922ac9ec78f0cdff650d6",
+      "perturbation_input_sha256": "3c2fcc12f64bf1240d644e0cf53a761a57a340f5d69800af1c5522e1742cacb5",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "3c4a6d4114d2fafa347ad9cb21a865e4c91325ad4aec7ad58fb4952e2ce87611",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-TRANSCRIPT-E01",
+          "DCH5-TRANSCRIPT-E02",
+          "DCH5-TRANSCRIPT-E03",
+          "DCH5-TRANSCRIPT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f8999c4f70c8de278d7cdd3b1c50523e0e75681be4979b9516a0854037781d88"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "3c4a6d4114d2fafa347ad9cb21a865e4c91325ad4aec7ad58fb4952e2ce87611",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-TRANSCRIPT-E01",
+          "DCH5-TRANSCRIPT-E02",
+          "DCH5-TRANSCRIPT-E03",
+          "DCH5-TRANSCRIPT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f8999c4f70c8de278d7cdd3b1c50523e0e75681be4979b9516a0854037781d88"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-TRANSCRIPT-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-TRANSCRIPT-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "c1d75aa2537c76d7ba3a0557d3645f0e3fbce0f78facf2dc9b93c21b3a1934c2",
+        "gate_answer": "WITHHOLD",
+        "gate_source_ids": [
+          "DCH5-TRANSCRIPT-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "0a866c2f3d5550ceb5d2a2cd92d5dce0a7fb53c2acaf7f214501551930f33975"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "3c4a6d4114d2fafa347ad9cb21a865e4c91325ad4aec7ad58fb4952e2ce87611",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-TRANSCRIPT-E01",
+          "DCH5-TRANSCRIPT-E02",
+          "DCH5-TRANSCRIPT-E03",
+          "DCH5-TRANSCRIPT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f8999c4f70c8de278d7cdd3b1c50523e0e75681be4979b9516a0854037781d88"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-TRANSCRIPT",
+      "role": "lesioned_control",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "3c4a6d4114d2fafa347ad9cb21a865e4c91325ad4aec7ad58fb4952e2ce87611",
+      "baseline_input_sha256": "cf8bf20489b0e63a023e5a0cd2c539ec5b1401c630e922ac9ec78f0cdff650d6",
+      "perturbation_input_sha256": "3c2fcc12f64bf1240d644e0cf53a761a57a340f5d69800af1c5522e1742cacb5",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "3c4a6d4114d2fafa347ad9cb21a865e4c91325ad4aec7ad58fb4952e2ce87611",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-TRANSCRIPT-E01",
+          "DCH5-TRANSCRIPT-E02",
+          "DCH5-TRANSCRIPT-E03",
+          "DCH5-TRANSCRIPT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f8999c4f70c8de278d7cdd3b1c50523e0e75681be4979b9516a0854037781d88"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "3c4a6d4114d2fafa347ad9cb21a865e4c91325ad4aec7ad58fb4952e2ce87611",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-TRANSCRIPT-E01",
+          "DCH5-TRANSCRIPT-E02",
+          "DCH5-TRANSCRIPT-E03",
+          "DCH5-TRANSCRIPT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f8999c4f70c8de278d7cdd3b1c50523e0e75681be4979b9516a0854037781d88"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "3c4a6d4114d2fafa347ad9cb21a865e4c91325ad4aec7ad58fb4952e2ce87611",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-TRANSCRIPT-E01",
+          "DCH5-TRANSCRIPT-E02",
+          "DCH5-TRANSCRIPT-E03",
+          "DCH5-TRANSCRIPT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f8999c4f70c8de278d7cdd3b1c50523e0e75681be4979b9516a0854037781d88"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "3c4a6d4114d2fafa347ad9cb21a865e4c91325ad4aec7ad58fb4952e2ce87611",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-TRANSCRIPT-E01",
+          "DCH5-TRANSCRIPT-E02",
+          "DCH5-TRANSCRIPT-E03",
+          "DCH5-TRANSCRIPT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f8999c4f70c8de278d7cdd3b1c50523e0e75681be4979b9516a0854037781d88"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-BORROWED_BOOK",
+      "role": "incumbent_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "915279cb7fd42e5ce280e60c2df6f983aa33f9ea21661d93eb92e8e6de17700f",
+      "baseline_input_sha256": "dae642c443ecbc785859a99dad20051a94d9cf4d5f85b8cd2ae101bea6e28531",
+      "perturbation_input_sha256": "3c1dbb4684572bfb6482b479123d6cdf4dd0a6a75f6ea4d0a25edbc95b3cceae",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "915279cb7fd42e5ce280e60c2df6f983aa33f9ea21661d93eb92e8e6de17700f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-BORROWED_BOOK-E01",
+          "DCH5-BORROWED_BOOK-E02",
+          "DCH5-BORROWED_BOOK-E03",
+          "DCH5-BORROWED_BOOK-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "4f2fc224dbb081a4b54de72945a22f2d618af6556c5721a81b89938ebf6e036a"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "915279cb7fd42e5ce280e60c2df6f983aa33f9ea21661d93eb92e8e6de17700f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-BORROWED_BOOK-E01",
+          "DCH5-BORROWED_BOOK-E02",
+          "DCH5-BORROWED_BOOK-E03",
+          "DCH5-BORROWED_BOOK-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "4f2fc224dbb081a4b54de72945a22f2d618af6556c5721a81b89938ebf6e036a"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-BORROWED_BOOK-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-BORROWED_BOOK-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "3e1fe022acb67515b36a6d922b6d0332a9b25ba8b9936a9088e5d6dadd755a1e",
+        "gate_answer": "DECLINE",
+        "gate_source_ids": [
+          "DCH5-BORROWED_BOOK-E01",
+          "DCH5-BORROWED_BOOK-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "fb4e28e81383a7515c9c96f833f0fc023ea863551d199312d163bf4e768ddbc7"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "915279cb7fd42e5ce280e60c2df6f983aa33f9ea21661d93eb92e8e6de17700f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-BORROWED_BOOK-E01",
+          "DCH5-BORROWED_BOOK-E02",
+          "DCH5-BORROWED_BOOK-E03",
+          "DCH5-BORROWED_BOOK-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "4f2fc224dbb081a4b54de72945a22f2d618af6556c5721a81b89938ebf6e036a"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-BORROWED_BOOK",
+      "role": "briefed_replacement_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "915279cb7fd42e5ce280e60c2df6f983aa33f9ea21661d93eb92e8e6de17700f",
+      "baseline_input_sha256": "dae642c443ecbc785859a99dad20051a94d9cf4d5f85b8cd2ae101bea6e28531",
+      "perturbation_input_sha256": "3c1dbb4684572bfb6482b479123d6cdf4dd0a6a75f6ea4d0a25edbc95b3cceae",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "915279cb7fd42e5ce280e60c2df6f983aa33f9ea21661d93eb92e8e6de17700f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-BORROWED_BOOK-E01",
+          "DCH5-BORROWED_BOOK-E02",
+          "DCH5-BORROWED_BOOK-E03",
+          "DCH5-BORROWED_BOOK-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "4f2fc224dbb081a4b54de72945a22f2d618af6556c5721a81b89938ebf6e036a"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "915279cb7fd42e5ce280e60c2df6f983aa33f9ea21661d93eb92e8e6de17700f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-BORROWED_BOOK-E01",
+          "DCH5-BORROWED_BOOK-E02",
+          "DCH5-BORROWED_BOOK-E03",
+          "DCH5-BORROWED_BOOK-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "4f2fc224dbb081a4b54de72945a22f2d618af6556c5721a81b89938ebf6e036a"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-BORROWED_BOOK-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-BORROWED_BOOK-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "3e1fe022acb67515b36a6d922b6d0332a9b25ba8b9936a9088e5d6dadd755a1e",
+        "gate_answer": "DECLINE",
+        "gate_source_ids": [
+          "DCH5-BORROWED_BOOK-E01",
+          "DCH5-BORROWED_BOOK-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "fb4e28e81383a7515c9c96f833f0fc023ea863551d199312d163bf4e768ddbc7"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "915279cb7fd42e5ce280e60c2df6f983aa33f9ea21661d93eb92e8e6de17700f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-BORROWED_BOOK-E01",
+          "DCH5-BORROWED_BOOK-E02",
+          "DCH5-BORROWED_BOOK-E03",
+          "DCH5-BORROWED_BOOK-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "4f2fc224dbb081a4b54de72945a22f2d618af6556c5721a81b89938ebf6e036a"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-BORROWED_BOOK",
+      "role": "expert_automatic",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "915279cb7fd42e5ce280e60c2df6f983aa33f9ea21661d93eb92e8e6de17700f",
+      "baseline_input_sha256": "dae642c443ecbc785859a99dad20051a94d9cf4d5f85b8cd2ae101bea6e28531",
+      "perturbation_input_sha256": "3c1dbb4684572bfb6482b479123d6cdf4dd0a6a75f6ea4d0a25edbc95b3cceae",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "915279cb7fd42e5ce280e60c2df6f983aa33f9ea21661d93eb92e8e6de17700f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-BORROWED_BOOK-E01",
+          "DCH5-BORROWED_BOOK-E02",
+          "DCH5-BORROWED_BOOK-E03",
+          "DCH5-BORROWED_BOOK-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "4f2fc224dbb081a4b54de72945a22f2d618af6556c5721a81b89938ebf6e036a"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "915279cb7fd42e5ce280e60c2df6f983aa33f9ea21661d93eb92e8e6de17700f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-BORROWED_BOOK-E01",
+          "DCH5-BORROWED_BOOK-E02",
+          "DCH5-BORROWED_BOOK-E03",
+          "DCH5-BORROWED_BOOK-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "4f2fc224dbb081a4b54de72945a22f2d618af6556c5721a81b89938ebf6e036a"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-BORROWED_BOOK-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-BORROWED_BOOK-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "3e1fe022acb67515b36a6d922b6d0332a9b25ba8b9936a9088e5d6dadd755a1e",
+        "gate_answer": "DECLINE",
+        "gate_source_ids": [
+          "DCH5-BORROWED_BOOK-E01",
+          "DCH5-BORROWED_BOOK-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "fb4e28e81383a7515c9c96f833f0fc023ea863551d199312d163bf4e768ddbc7"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "915279cb7fd42e5ce280e60c2df6f983aa33f9ea21661d93eb92e8e6de17700f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-BORROWED_BOOK-E01",
+          "DCH5-BORROWED_BOOK-E02",
+          "DCH5-BORROWED_BOOK-E03",
+          "DCH5-BORROWED_BOOK-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "4f2fc224dbb081a4b54de72945a22f2d618af6556c5721a81b89938ebf6e036a"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-BORROWED_BOOK",
+      "role": "lesioned_control",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "915279cb7fd42e5ce280e60c2df6f983aa33f9ea21661d93eb92e8e6de17700f",
+      "baseline_input_sha256": "dae642c443ecbc785859a99dad20051a94d9cf4d5f85b8cd2ae101bea6e28531",
+      "perturbation_input_sha256": "3c1dbb4684572bfb6482b479123d6cdf4dd0a6a75f6ea4d0a25edbc95b3cceae",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "915279cb7fd42e5ce280e60c2df6f983aa33f9ea21661d93eb92e8e6de17700f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-BORROWED_BOOK-E01",
+          "DCH5-BORROWED_BOOK-E02",
+          "DCH5-BORROWED_BOOK-E03",
+          "DCH5-BORROWED_BOOK-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "4f2fc224dbb081a4b54de72945a22f2d618af6556c5721a81b89938ebf6e036a"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "915279cb7fd42e5ce280e60c2df6f983aa33f9ea21661d93eb92e8e6de17700f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-BORROWED_BOOK-E01",
+          "DCH5-BORROWED_BOOK-E02",
+          "DCH5-BORROWED_BOOK-E03",
+          "DCH5-BORROWED_BOOK-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "4f2fc224dbb081a4b54de72945a22f2d618af6556c5721a81b89938ebf6e036a"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-BORROWED_BOOK-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-BORROWED_BOOK-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "3e1fe022acb67515b36a6d922b6d0332a9b25ba8b9936a9088e5d6dadd755a1e",
+        "gate_answer": "DECLINE",
+        "gate_source_ids": [
+          "DCH5-BORROWED_BOOK-E01",
+          "DCH5-BORROWED_BOOK-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "fb4e28e81383a7515c9c96f833f0fc023ea863551d199312d163bf4e768ddbc7"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "915279cb7fd42e5ce280e60c2df6f983aa33f9ea21661d93eb92e8e6de17700f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-BORROWED_BOOK-E01",
+          "DCH5-BORROWED_BOOK-E02",
+          "DCH5-BORROWED_BOOK-E03",
+          "DCH5-BORROWED_BOOK-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "4f2fc224dbb081a4b54de72945a22f2d618af6556c5721a81b89938ebf6e036a"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-SPECIMEN",
+      "role": "incumbent_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "4afd2bb3edf0c9355d6af715c7b2b7234ed2f68c89748c4c750dfa461bfba28d",
+      "baseline_input_sha256": "fdc0e19516c61ced3ee7a4e53769026ee68e1f736739a7d5ee6126da5e59668f",
+      "perturbation_input_sha256": "1529aefbfb1fdc8b85b76e7c0bf0c86e9f8ec4f11654c88d6dcca7febca2f054",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4afd2bb3edf0c9355d6af715c7b2b7234ed2f68c89748c4c750dfa461bfba28d",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-SPECIMEN-E01",
+          "DCH5-SPECIMEN-E02",
+          "DCH5-SPECIMEN-E03",
+          "DCH5-SPECIMEN-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "1b8fbb01b1fd27c81e651cb2c90f13d5c214e51788f5c0886bd8560daa670019"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4afd2bb3edf0c9355d6af715c7b2b7234ed2f68c89748c4c750dfa461bfba28d",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-SPECIMEN-E01",
+          "DCH5-SPECIMEN-E02",
+          "DCH5-SPECIMEN-E03",
+          "DCH5-SPECIMEN-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "1b8fbb01b1fd27c81e651cb2c90f13d5c214e51788f5c0886bd8560daa670019"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-SPECIMEN-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-SPECIMEN-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "f9aaf16cd7289e855699657e1a300bbbd9105add0ef38e9c6dacfc4d37743f1c",
+        "gate_answer": "DECLINE",
+        "gate_source_ids": [
+          "DCH5-SPECIMEN-E01",
+          "DCH5-SPECIMEN-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "2405373de93f55940d11e0ae7675a5ed7ccee87a0ff361da30d42ad6d54f0ca0"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4afd2bb3edf0c9355d6af715c7b2b7234ed2f68c89748c4c750dfa461bfba28d",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-SPECIMEN-E01",
+          "DCH5-SPECIMEN-E02",
+          "DCH5-SPECIMEN-E03",
+          "DCH5-SPECIMEN-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "1b8fbb01b1fd27c81e651cb2c90f13d5c214e51788f5c0886bd8560daa670019"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-SPECIMEN",
+      "role": "briefed_replacement_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "4afd2bb3edf0c9355d6af715c7b2b7234ed2f68c89748c4c750dfa461bfba28d",
+      "baseline_input_sha256": "fdc0e19516c61ced3ee7a4e53769026ee68e1f736739a7d5ee6126da5e59668f",
+      "perturbation_input_sha256": "1529aefbfb1fdc8b85b76e7c0bf0c86e9f8ec4f11654c88d6dcca7febca2f054",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4afd2bb3edf0c9355d6af715c7b2b7234ed2f68c89748c4c750dfa461bfba28d",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-SPECIMEN-E01",
+          "DCH5-SPECIMEN-E02",
+          "DCH5-SPECIMEN-E03",
+          "DCH5-SPECIMEN-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "1b8fbb01b1fd27c81e651cb2c90f13d5c214e51788f5c0886bd8560daa670019"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4afd2bb3edf0c9355d6af715c7b2b7234ed2f68c89748c4c750dfa461bfba28d",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-SPECIMEN-E01",
+          "DCH5-SPECIMEN-E02",
+          "DCH5-SPECIMEN-E03",
+          "DCH5-SPECIMEN-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "1b8fbb01b1fd27c81e651cb2c90f13d5c214e51788f5c0886bd8560daa670019"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-SPECIMEN-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-SPECIMEN-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "f9aaf16cd7289e855699657e1a300bbbd9105add0ef38e9c6dacfc4d37743f1c",
+        "gate_answer": "DECLINE",
+        "gate_source_ids": [
+          "DCH5-SPECIMEN-E01",
+          "DCH5-SPECIMEN-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "2405373de93f55940d11e0ae7675a5ed7ccee87a0ff361da30d42ad6d54f0ca0"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4afd2bb3edf0c9355d6af715c7b2b7234ed2f68c89748c4c750dfa461bfba28d",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-SPECIMEN-E01",
+          "DCH5-SPECIMEN-E02",
+          "DCH5-SPECIMEN-E03",
+          "DCH5-SPECIMEN-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "1b8fbb01b1fd27c81e651cb2c90f13d5c214e51788f5c0886bd8560daa670019"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-SPECIMEN",
+      "role": "expert_automatic",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "4afd2bb3edf0c9355d6af715c7b2b7234ed2f68c89748c4c750dfa461bfba28d",
+      "baseline_input_sha256": "fdc0e19516c61ced3ee7a4e53769026ee68e1f736739a7d5ee6126da5e59668f",
+      "perturbation_input_sha256": "1529aefbfb1fdc8b85b76e7c0bf0c86e9f8ec4f11654c88d6dcca7febca2f054",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4afd2bb3edf0c9355d6af715c7b2b7234ed2f68c89748c4c750dfa461bfba28d",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-SPECIMEN-E01",
+          "DCH5-SPECIMEN-E02",
+          "DCH5-SPECIMEN-E03",
+          "DCH5-SPECIMEN-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "1b8fbb01b1fd27c81e651cb2c90f13d5c214e51788f5c0886bd8560daa670019"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4afd2bb3edf0c9355d6af715c7b2b7234ed2f68c89748c4c750dfa461bfba28d",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-SPECIMEN-E01",
+          "DCH5-SPECIMEN-E02",
+          "DCH5-SPECIMEN-E03",
+          "DCH5-SPECIMEN-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "1b8fbb01b1fd27c81e651cb2c90f13d5c214e51788f5c0886bd8560daa670019"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-SPECIMEN-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-SPECIMEN-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "f9aaf16cd7289e855699657e1a300bbbd9105add0ef38e9c6dacfc4d37743f1c",
+        "gate_answer": "DECLINE",
+        "gate_source_ids": [
+          "DCH5-SPECIMEN-E01",
+          "DCH5-SPECIMEN-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "2405373de93f55940d11e0ae7675a5ed7ccee87a0ff361da30d42ad6d54f0ca0"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4afd2bb3edf0c9355d6af715c7b2b7234ed2f68c89748c4c750dfa461bfba28d",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-SPECIMEN-E01",
+          "DCH5-SPECIMEN-E02",
+          "DCH5-SPECIMEN-E03",
+          "DCH5-SPECIMEN-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "1b8fbb01b1fd27c81e651cb2c90f13d5c214e51788f5c0886bd8560daa670019"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-SPECIMEN",
+      "role": "lesioned_control",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "4afd2bb3edf0c9355d6af715c7b2b7234ed2f68c89748c4c750dfa461bfba28d",
+      "baseline_input_sha256": "fdc0e19516c61ced3ee7a4e53769026ee68e1f736739a7d5ee6126da5e59668f",
+      "perturbation_input_sha256": "1529aefbfb1fdc8b85b76e7c0bf0c86e9f8ec4f11654c88d6dcca7febca2f054",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4afd2bb3edf0c9355d6af715c7b2b7234ed2f68c89748c4c750dfa461bfba28d",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-SPECIMEN-E01",
+          "DCH5-SPECIMEN-E02",
+          "DCH5-SPECIMEN-E03",
+          "DCH5-SPECIMEN-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "1b8fbb01b1fd27c81e651cb2c90f13d5c214e51788f5c0886bd8560daa670019"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4afd2bb3edf0c9355d6af715c7b2b7234ed2f68c89748c4c750dfa461bfba28d",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-SPECIMEN-E01",
+          "DCH5-SPECIMEN-E02",
+          "DCH5-SPECIMEN-E03",
+          "DCH5-SPECIMEN-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "1b8fbb01b1fd27c81e651cb2c90f13d5c214e51788f5c0886bd8560daa670019"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-SPECIMEN-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-SPECIMEN-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "f9aaf16cd7289e855699657e1a300bbbd9105add0ef38e9c6dacfc4d37743f1c",
+        "gate_answer": "DECLINE",
+        "gate_source_ids": [
+          "DCH5-SPECIMEN-E01",
+          "DCH5-SPECIMEN-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "2405373de93f55940d11e0ae7675a5ed7ccee87a0ff361da30d42ad6d54f0ca0"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "4afd2bb3edf0c9355d6af715c7b2b7234ed2f68c89748c4c750dfa461bfba28d",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-SPECIMEN-E01",
+          "DCH5-SPECIMEN-E02",
+          "DCH5-SPECIMEN-E03",
+          "DCH5-SPECIMEN-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "1b8fbb01b1fd27c81e651cb2c90f13d5c214e51788f5c0886bd8560daa670019"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-INVENTORY",
+      "role": "incumbent_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "b94ce4b12dea8835e355de3cacc7e1a0f49889590ad6ef0fc207e9bfdcbea436",
+      "baseline_input_sha256": "af358acec0fd2e0148cb92d170e6fface11c1fa1d214df31b11d062fc873c21d",
+      "perturbation_input_sha256": "a49d835b032710cc65b6f6fa201dda1aee5e383f6d9660c9a7111056106b00fa",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "b94ce4b12dea8835e355de3cacc7e1a0f49889590ad6ef0fc207e9bfdcbea436",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-INVENTORY-E01",
+          "DCH5-INVENTORY-E02",
+          "DCH5-INVENTORY-E03",
+          "DCH5-INVENTORY-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8cebe3fcbd8e16ba5bd7da2b78f45c3b4332b33a53abc0706c29e159c2095100"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "b94ce4b12dea8835e355de3cacc7e1a0f49889590ad6ef0fc207e9bfdcbea436",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-INVENTORY-E01",
+          "DCH5-INVENTORY-E02",
+          "DCH5-INVENTORY-E03",
+          "DCH5-INVENTORY-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8cebe3fcbd8e16ba5bd7da2b78f45c3b4332b33a53abc0706c29e159c2095100"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-INVENTORY-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-INVENTORY-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "ece7d4115732fdf3240bc3f0a7bedb52e9a6632d9862f7a1c7ab211511217e85",
+        "gate_answer": "DECLINE",
+        "gate_source_ids": [
+          "DCH5-INVENTORY-E01",
+          "DCH5-INVENTORY-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "643c60e180a9418f822550265934ad2b6ccd5ec720d0e1780149ff5ab91fd773"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "b94ce4b12dea8835e355de3cacc7e1a0f49889590ad6ef0fc207e9bfdcbea436",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-INVENTORY-E01",
+          "DCH5-INVENTORY-E02",
+          "DCH5-INVENTORY-E03",
+          "DCH5-INVENTORY-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8cebe3fcbd8e16ba5bd7da2b78f45c3b4332b33a53abc0706c29e159c2095100"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-INVENTORY",
+      "role": "briefed_replacement_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "b94ce4b12dea8835e355de3cacc7e1a0f49889590ad6ef0fc207e9bfdcbea436",
+      "baseline_input_sha256": "af358acec0fd2e0148cb92d170e6fface11c1fa1d214df31b11d062fc873c21d",
+      "perturbation_input_sha256": "a49d835b032710cc65b6f6fa201dda1aee5e383f6d9660c9a7111056106b00fa",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "b94ce4b12dea8835e355de3cacc7e1a0f49889590ad6ef0fc207e9bfdcbea436",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-INVENTORY-E01",
+          "DCH5-INVENTORY-E02",
+          "DCH5-INVENTORY-E03",
+          "DCH5-INVENTORY-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8cebe3fcbd8e16ba5bd7da2b78f45c3b4332b33a53abc0706c29e159c2095100"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "b94ce4b12dea8835e355de3cacc7e1a0f49889590ad6ef0fc207e9bfdcbea436",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-INVENTORY-E01",
+          "DCH5-INVENTORY-E02",
+          "DCH5-INVENTORY-E03",
+          "DCH5-INVENTORY-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8cebe3fcbd8e16ba5bd7da2b78f45c3b4332b33a53abc0706c29e159c2095100"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-INVENTORY-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-INVENTORY-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "ece7d4115732fdf3240bc3f0a7bedb52e9a6632d9862f7a1c7ab211511217e85",
+        "gate_answer": "DECLINE",
+        "gate_source_ids": [
+          "DCH5-INVENTORY-E01",
+          "DCH5-INVENTORY-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "643c60e180a9418f822550265934ad2b6ccd5ec720d0e1780149ff5ab91fd773"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "b94ce4b12dea8835e355de3cacc7e1a0f49889590ad6ef0fc207e9bfdcbea436",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-INVENTORY-E01",
+          "DCH5-INVENTORY-E02",
+          "DCH5-INVENTORY-E03",
+          "DCH5-INVENTORY-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8cebe3fcbd8e16ba5bd7da2b78f45c3b4332b33a53abc0706c29e159c2095100"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-INVENTORY",
+      "role": "expert_automatic",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "b94ce4b12dea8835e355de3cacc7e1a0f49889590ad6ef0fc207e9bfdcbea436",
+      "baseline_input_sha256": "af358acec0fd2e0148cb92d170e6fface11c1fa1d214df31b11d062fc873c21d",
+      "perturbation_input_sha256": "a49d835b032710cc65b6f6fa201dda1aee5e383f6d9660c9a7111056106b00fa",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "b94ce4b12dea8835e355de3cacc7e1a0f49889590ad6ef0fc207e9bfdcbea436",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-INVENTORY-E01",
+          "DCH5-INVENTORY-E02",
+          "DCH5-INVENTORY-E03",
+          "DCH5-INVENTORY-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8cebe3fcbd8e16ba5bd7da2b78f45c3b4332b33a53abc0706c29e159c2095100"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "b94ce4b12dea8835e355de3cacc7e1a0f49889590ad6ef0fc207e9bfdcbea436",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-INVENTORY-E01",
+          "DCH5-INVENTORY-E02",
+          "DCH5-INVENTORY-E03",
+          "DCH5-INVENTORY-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8cebe3fcbd8e16ba5bd7da2b78f45c3b4332b33a53abc0706c29e159c2095100"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-INVENTORY-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-INVENTORY-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "ece7d4115732fdf3240bc3f0a7bedb52e9a6632d9862f7a1c7ab211511217e85",
+        "gate_answer": "DECLINE",
+        "gate_source_ids": [
+          "DCH5-INVENTORY-E01",
+          "DCH5-INVENTORY-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "643c60e180a9418f822550265934ad2b6ccd5ec720d0e1780149ff5ab91fd773"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "b94ce4b12dea8835e355de3cacc7e1a0f49889590ad6ef0fc207e9bfdcbea436",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-INVENTORY-E01",
+          "DCH5-INVENTORY-E02",
+          "DCH5-INVENTORY-E03",
+          "DCH5-INVENTORY-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8cebe3fcbd8e16ba5bd7da2b78f45c3b4332b33a53abc0706c29e159c2095100"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-INVENTORY",
+      "role": "lesioned_control",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "b94ce4b12dea8835e355de3cacc7e1a0f49889590ad6ef0fc207e9bfdcbea436",
+      "baseline_input_sha256": "af358acec0fd2e0148cb92d170e6fface11c1fa1d214df31b11d062fc873c21d",
+      "perturbation_input_sha256": "a49d835b032710cc65b6f6fa201dda1aee5e383f6d9660c9a7111056106b00fa",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "b94ce4b12dea8835e355de3cacc7e1a0f49889590ad6ef0fc207e9bfdcbea436",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-INVENTORY-E01",
+          "DCH5-INVENTORY-E02",
+          "DCH5-INVENTORY-E03",
+          "DCH5-INVENTORY-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8cebe3fcbd8e16ba5bd7da2b78f45c3b4332b33a53abc0706c29e159c2095100"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "b94ce4b12dea8835e355de3cacc7e1a0f49889590ad6ef0fc207e9bfdcbea436",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-INVENTORY-E01",
+          "DCH5-INVENTORY-E02",
+          "DCH5-INVENTORY-E03",
+          "DCH5-INVENTORY-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8cebe3fcbd8e16ba5bd7da2b78f45c3b4332b33a53abc0706c29e159c2095100"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-INVENTORY-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-INVENTORY-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "ece7d4115732fdf3240bc3f0a7bedb52e9a6632d9862f7a1c7ab211511217e85",
+        "gate_answer": "DECLINE",
+        "gate_source_ids": [
+          "DCH5-INVENTORY-E01",
+          "DCH5-INVENTORY-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "643c60e180a9418f822550265934ad2b6ccd5ec720d0e1780149ff5ab91fd773"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "b94ce4b12dea8835e355de3cacc7e1a0f49889590ad6ef0fc207e9bfdcbea436",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-INVENTORY-E01",
+          "DCH5-INVENTORY-E02",
+          "DCH5-INVENTORY-E03",
+          "DCH5-INVENTORY-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8cebe3fcbd8e16ba5bd7da2b78f45c3b4332b33a53abc0706c29e159c2095100"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-HANDOFF",
+      "role": "incumbent_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "31ef90e4237fd9c821b7469c3d4d5791fbfef50a13e1ac93fd265493a71fdfb0",
+      "baseline_input_sha256": "e32b8a2a3e4f7c6048cbfafe114eb350adba2a1a066d7da2875918de0ed7ae94",
+      "perturbation_input_sha256": "b173d128c0a56d6e0a39deb892ea7c6cd0accb926420cc405db5d75ab5f213da",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "31ef90e4237fd9c821b7469c3d4d5791fbfef50a13e1ac93fd265493a71fdfb0",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-HANDOFF-E01",
+          "DCH5-HANDOFF-E02",
+          "DCH5-HANDOFF-E03",
+          "DCH5-HANDOFF-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "0125c9edfda468db67fc372e553a5b8c7ad8fc1f6609d9c9b0f69cc6d912dc3c"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "31ef90e4237fd9c821b7469c3d4d5791fbfef50a13e1ac93fd265493a71fdfb0",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-HANDOFF-E01",
+          "DCH5-HANDOFF-E02",
+          "DCH5-HANDOFF-E03",
+          "DCH5-HANDOFF-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "0125c9edfda468db67fc372e553a5b8c7ad8fc1f6609d9c9b0f69cc6d912dc3c"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-HANDOFF-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-HANDOFF-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "61f797aa2c5e6c7b3911fbdcdc5323d065242c2ce0b1bde2f0048736a6ab642c",
+        "gate_answer": "SCHEDULE",
+        "gate_source_ids": [
+          "DCH5-HANDOFF-E01",
+          "DCH5-HANDOFF-E02",
+          "DCH5-HANDOFF-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f7962dc32ffa4ac2ba474666abd16482f908c99c95bd3840762dfa1d6ee8bcad"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "31ef90e4237fd9c821b7469c3d4d5791fbfef50a13e1ac93fd265493a71fdfb0",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-HANDOFF-E01",
+          "DCH5-HANDOFF-E02",
+          "DCH5-HANDOFF-E03",
+          "DCH5-HANDOFF-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "0125c9edfda468db67fc372e553a5b8c7ad8fc1f6609d9c9b0f69cc6d912dc3c"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-HANDOFF",
+      "role": "briefed_replacement_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "31ef90e4237fd9c821b7469c3d4d5791fbfef50a13e1ac93fd265493a71fdfb0",
+      "baseline_input_sha256": "e32b8a2a3e4f7c6048cbfafe114eb350adba2a1a066d7da2875918de0ed7ae94",
+      "perturbation_input_sha256": "b173d128c0a56d6e0a39deb892ea7c6cd0accb926420cc405db5d75ab5f213da",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "31ef90e4237fd9c821b7469c3d4d5791fbfef50a13e1ac93fd265493a71fdfb0",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-HANDOFF-E01",
+          "DCH5-HANDOFF-E02",
+          "DCH5-HANDOFF-E03",
+          "DCH5-HANDOFF-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "0125c9edfda468db67fc372e553a5b8c7ad8fc1f6609d9c9b0f69cc6d912dc3c"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "31ef90e4237fd9c821b7469c3d4d5791fbfef50a13e1ac93fd265493a71fdfb0",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-HANDOFF-E01",
+          "DCH5-HANDOFF-E02",
+          "DCH5-HANDOFF-E03",
+          "DCH5-HANDOFF-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "0125c9edfda468db67fc372e553a5b8c7ad8fc1f6609d9c9b0f69cc6d912dc3c"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-HANDOFF-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-HANDOFF-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "61f797aa2c5e6c7b3911fbdcdc5323d065242c2ce0b1bde2f0048736a6ab642c",
+        "gate_answer": "SCHEDULE",
+        "gate_source_ids": [
+          "DCH5-HANDOFF-E01",
+          "DCH5-HANDOFF-E02",
+          "DCH5-HANDOFF-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f7962dc32ffa4ac2ba474666abd16482f908c99c95bd3840762dfa1d6ee8bcad"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "31ef90e4237fd9c821b7469c3d4d5791fbfef50a13e1ac93fd265493a71fdfb0",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-HANDOFF-E01",
+          "DCH5-HANDOFF-E02",
+          "DCH5-HANDOFF-E03",
+          "DCH5-HANDOFF-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "0125c9edfda468db67fc372e553a5b8c7ad8fc1f6609d9c9b0f69cc6d912dc3c"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-HANDOFF",
+      "role": "expert_automatic",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "31ef90e4237fd9c821b7469c3d4d5791fbfef50a13e1ac93fd265493a71fdfb0",
+      "baseline_input_sha256": "e32b8a2a3e4f7c6048cbfafe114eb350adba2a1a066d7da2875918de0ed7ae94",
+      "perturbation_input_sha256": "b173d128c0a56d6e0a39deb892ea7c6cd0accb926420cc405db5d75ab5f213da",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "31ef90e4237fd9c821b7469c3d4d5791fbfef50a13e1ac93fd265493a71fdfb0",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-HANDOFF-E01",
+          "DCH5-HANDOFF-E02",
+          "DCH5-HANDOFF-E03",
+          "DCH5-HANDOFF-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "0125c9edfda468db67fc372e553a5b8c7ad8fc1f6609d9c9b0f69cc6d912dc3c"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "31ef90e4237fd9c821b7469c3d4d5791fbfef50a13e1ac93fd265493a71fdfb0",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-HANDOFF-E01",
+          "DCH5-HANDOFF-E02",
+          "DCH5-HANDOFF-E03",
+          "DCH5-HANDOFF-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "0125c9edfda468db67fc372e553a5b8c7ad8fc1f6609d9c9b0f69cc6d912dc3c"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-HANDOFF-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-HANDOFF-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "61f797aa2c5e6c7b3911fbdcdc5323d065242c2ce0b1bde2f0048736a6ab642c",
+        "gate_answer": "SCHEDULE",
+        "gate_source_ids": [
+          "DCH5-HANDOFF-E01",
+          "DCH5-HANDOFF-E02",
+          "DCH5-HANDOFF-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f7962dc32ffa4ac2ba474666abd16482f908c99c95bd3840762dfa1d6ee8bcad"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "31ef90e4237fd9c821b7469c3d4d5791fbfef50a13e1ac93fd265493a71fdfb0",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-HANDOFF-E01",
+          "DCH5-HANDOFF-E02",
+          "DCH5-HANDOFF-E03",
+          "DCH5-HANDOFF-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "0125c9edfda468db67fc372e553a5b8c7ad8fc1f6609d9c9b0f69cc6d912dc3c"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-HANDOFF",
+      "role": "lesioned_control",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "31ef90e4237fd9c821b7469c3d4d5791fbfef50a13e1ac93fd265493a71fdfb0",
+      "baseline_input_sha256": "e32b8a2a3e4f7c6048cbfafe114eb350adba2a1a066d7da2875918de0ed7ae94",
+      "perturbation_input_sha256": "b173d128c0a56d6e0a39deb892ea7c6cd0accb926420cc405db5d75ab5f213da",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "31ef90e4237fd9c821b7469c3d4d5791fbfef50a13e1ac93fd265493a71fdfb0",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-HANDOFF-E01",
+          "DCH5-HANDOFF-E02",
+          "DCH5-HANDOFF-E03",
+          "DCH5-HANDOFF-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "0125c9edfda468db67fc372e553a5b8c7ad8fc1f6609d9c9b0f69cc6d912dc3c"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "31ef90e4237fd9c821b7469c3d4d5791fbfef50a13e1ac93fd265493a71fdfb0",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-HANDOFF-E01",
+          "DCH5-HANDOFF-E02",
+          "DCH5-HANDOFF-E03",
+          "DCH5-HANDOFF-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "0125c9edfda468db67fc372e553a5b8c7ad8fc1f6609d9c9b0f69cc6d912dc3c"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-HANDOFF-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-HANDOFF-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "61f797aa2c5e6c7b3911fbdcdc5323d065242c2ce0b1bde2f0048736a6ab642c",
+        "gate_answer": "SCHEDULE",
+        "gate_source_ids": [
+          "DCH5-HANDOFF-E01",
+          "DCH5-HANDOFF-E02",
+          "DCH5-HANDOFF-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f7962dc32ffa4ac2ba474666abd16482f908c99c95bd3840762dfa1d6ee8bcad"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "31ef90e4237fd9c821b7469c3d4d5791fbfef50a13e1ac93fd265493a71fdfb0",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-HANDOFF-E01",
+          "DCH5-HANDOFF-E02",
+          "DCH5-HANDOFF-E03",
+          "DCH5-HANDOFF-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "0125c9edfda468db67fc372e553a5b8c7ad8fc1f6609d9c9b0f69cc6d912dc3c"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-INSPECTION",
+      "role": "incumbent_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "a0e852ff0ac2bceb17ec9cf6dbabab9cfa822cd2ea4fb60e32e72f54c1ed6fd7",
+      "baseline_input_sha256": "007474f996d21dd64a9f22adff4c63e6762ec6c38f69fa2e85c290e1479f6a6c",
+      "perturbation_input_sha256": "5c082a085d07681e38544416f08b016fba79f93e7ee598fefa7864e87fd89108",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "a0e852ff0ac2bceb17ec9cf6dbabab9cfa822cd2ea4fb60e32e72f54c1ed6fd7",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-INSPECTION-E01",
+          "DCH5-INSPECTION-E02",
+          "DCH5-INSPECTION-E03",
+          "DCH5-INSPECTION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f3b9d8d52e2598d92d6292aae71a775c2da1e729d74e1ab83fb1408a45d3f34e"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "a0e852ff0ac2bceb17ec9cf6dbabab9cfa822cd2ea4fb60e32e72f54c1ed6fd7",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-INSPECTION-E01",
+          "DCH5-INSPECTION-E02",
+          "DCH5-INSPECTION-E03",
+          "DCH5-INSPECTION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f3b9d8d52e2598d92d6292aae71a775c2da1e729d74e1ab83fb1408a45d3f34e"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-INSPECTION-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-INSPECTION-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "f472b5110e5125564b7962861849d66e4491f3929c3d13bcd91f12476dd30572",
+        "gate_answer": "SCHEDULE",
+        "gate_source_ids": [
+          "DCH5-INSPECTION-E01",
+          "DCH5-INSPECTION-E02",
+          "DCH5-INSPECTION-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "3d0834a0d502fcdf1950779533373743469f7d7c67c5171e8720264eac5d7d1f"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "a0e852ff0ac2bceb17ec9cf6dbabab9cfa822cd2ea4fb60e32e72f54c1ed6fd7",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-INSPECTION-E01",
+          "DCH5-INSPECTION-E02",
+          "DCH5-INSPECTION-E03",
+          "DCH5-INSPECTION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f3b9d8d52e2598d92d6292aae71a775c2da1e729d74e1ab83fb1408a45d3f34e"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-INSPECTION",
+      "role": "briefed_replacement_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "a0e852ff0ac2bceb17ec9cf6dbabab9cfa822cd2ea4fb60e32e72f54c1ed6fd7",
+      "baseline_input_sha256": "007474f996d21dd64a9f22adff4c63e6762ec6c38f69fa2e85c290e1479f6a6c",
+      "perturbation_input_sha256": "5c082a085d07681e38544416f08b016fba79f93e7ee598fefa7864e87fd89108",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "a0e852ff0ac2bceb17ec9cf6dbabab9cfa822cd2ea4fb60e32e72f54c1ed6fd7",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-INSPECTION-E01",
+          "DCH5-INSPECTION-E02",
+          "DCH5-INSPECTION-E03",
+          "DCH5-INSPECTION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f3b9d8d52e2598d92d6292aae71a775c2da1e729d74e1ab83fb1408a45d3f34e"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "a0e852ff0ac2bceb17ec9cf6dbabab9cfa822cd2ea4fb60e32e72f54c1ed6fd7",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-INSPECTION-E01",
+          "DCH5-INSPECTION-E02",
+          "DCH5-INSPECTION-E03",
+          "DCH5-INSPECTION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f3b9d8d52e2598d92d6292aae71a775c2da1e729d74e1ab83fb1408a45d3f34e"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-INSPECTION-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-INSPECTION-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "f472b5110e5125564b7962861849d66e4491f3929c3d13bcd91f12476dd30572",
+        "gate_answer": "SCHEDULE",
+        "gate_source_ids": [
+          "DCH5-INSPECTION-E01",
+          "DCH5-INSPECTION-E02",
+          "DCH5-INSPECTION-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "3d0834a0d502fcdf1950779533373743469f7d7c67c5171e8720264eac5d7d1f"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "a0e852ff0ac2bceb17ec9cf6dbabab9cfa822cd2ea4fb60e32e72f54c1ed6fd7",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-INSPECTION-E01",
+          "DCH5-INSPECTION-E02",
+          "DCH5-INSPECTION-E03",
+          "DCH5-INSPECTION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f3b9d8d52e2598d92d6292aae71a775c2da1e729d74e1ab83fb1408a45d3f34e"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-INSPECTION",
+      "role": "expert_automatic",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "a0e852ff0ac2bceb17ec9cf6dbabab9cfa822cd2ea4fb60e32e72f54c1ed6fd7",
+      "baseline_input_sha256": "007474f996d21dd64a9f22adff4c63e6762ec6c38f69fa2e85c290e1479f6a6c",
+      "perturbation_input_sha256": "5c082a085d07681e38544416f08b016fba79f93e7ee598fefa7864e87fd89108",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "a0e852ff0ac2bceb17ec9cf6dbabab9cfa822cd2ea4fb60e32e72f54c1ed6fd7",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-INSPECTION-E01",
+          "DCH5-INSPECTION-E02",
+          "DCH5-INSPECTION-E03",
+          "DCH5-INSPECTION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f3b9d8d52e2598d92d6292aae71a775c2da1e729d74e1ab83fb1408a45d3f34e"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "a0e852ff0ac2bceb17ec9cf6dbabab9cfa822cd2ea4fb60e32e72f54c1ed6fd7",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-INSPECTION-E01",
+          "DCH5-INSPECTION-E02",
+          "DCH5-INSPECTION-E03",
+          "DCH5-INSPECTION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f3b9d8d52e2598d92d6292aae71a775c2da1e729d74e1ab83fb1408a45d3f34e"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-INSPECTION-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-INSPECTION-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "f472b5110e5125564b7962861849d66e4491f3929c3d13bcd91f12476dd30572",
+        "gate_answer": "SCHEDULE",
+        "gate_source_ids": [
+          "DCH5-INSPECTION-E01",
+          "DCH5-INSPECTION-E02",
+          "DCH5-INSPECTION-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "3d0834a0d502fcdf1950779533373743469f7d7c67c5171e8720264eac5d7d1f"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "a0e852ff0ac2bceb17ec9cf6dbabab9cfa822cd2ea4fb60e32e72f54c1ed6fd7",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-INSPECTION-E01",
+          "DCH5-INSPECTION-E02",
+          "DCH5-INSPECTION-E03",
+          "DCH5-INSPECTION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f3b9d8d52e2598d92d6292aae71a775c2da1e729d74e1ab83fb1408a45d3f34e"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-INSPECTION",
+      "role": "lesioned_control",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "a0e852ff0ac2bceb17ec9cf6dbabab9cfa822cd2ea4fb60e32e72f54c1ed6fd7",
+      "baseline_input_sha256": "007474f996d21dd64a9f22adff4c63e6762ec6c38f69fa2e85c290e1479f6a6c",
+      "perturbation_input_sha256": "5c082a085d07681e38544416f08b016fba79f93e7ee598fefa7864e87fd89108",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "a0e852ff0ac2bceb17ec9cf6dbabab9cfa822cd2ea4fb60e32e72f54c1ed6fd7",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-INSPECTION-E01",
+          "DCH5-INSPECTION-E02",
+          "DCH5-INSPECTION-E03",
+          "DCH5-INSPECTION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f3b9d8d52e2598d92d6292aae71a775c2da1e729d74e1ab83fb1408a45d3f34e"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "a0e852ff0ac2bceb17ec9cf6dbabab9cfa822cd2ea4fb60e32e72f54c1ed6fd7",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-INSPECTION-E01",
+          "DCH5-INSPECTION-E02",
+          "DCH5-INSPECTION-E03",
+          "DCH5-INSPECTION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f3b9d8d52e2598d92d6292aae71a775c2da1e729d74e1ab83fb1408a45d3f34e"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-INSPECTION-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-INSPECTION-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "f472b5110e5125564b7962861849d66e4491f3929c3d13bcd91f12476dd30572",
+        "gate_answer": "SCHEDULE",
+        "gate_source_ids": [
+          "DCH5-INSPECTION-E01",
+          "DCH5-INSPECTION-E02",
+          "DCH5-INSPECTION-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "3d0834a0d502fcdf1950779533373743469f7d7c67c5171e8720264eac5d7d1f"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "a0e852ff0ac2bceb17ec9cf6dbabab9cfa822cd2ea4fb60e32e72f54c1ed6fd7",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-INSPECTION-E01",
+          "DCH5-INSPECTION-E02",
+          "DCH5-INSPECTION-E03",
+          "DCH5-INSPECTION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f3b9d8d52e2598d92d6292aae71a775c2da1e729d74e1ab83fb1408a45d3f34e"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-APPOINTMENT",
+      "role": "incumbent_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "06ec97058ea2c5b4ae425b3fea23018f3952b770eb2649a344a9cefb9f3c8df4",
+      "baseline_input_sha256": "e799717bcc773d3366e2833ba9d0c5167772385259b7844fea88663688883f68",
+      "perturbation_input_sha256": "1b17ea549b8205f9566a8dc8af1372ee9db53f6a9b89bed8b2fc3bd37dbb567e",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "06ec97058ea2c5b4ae425b3fea23018f3952b770eb2649a344a9cefb9f3c8df4",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-APPOINTMENT-E01",
+          "DCH5-APPOINTMENT-E02",
+          "DCH5-APPOINTMENT-E03",
+          "DCH5-APPOINTMENT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "52b33ef2fbc86b863caf2c478b8d1346a36e395c5d3ce6b27a5db3ca5b2865b6"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "06ec97058ea2c5b4ae425b3fea23018f3952b770eb2649a344a9cefb9f3c8df4",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-APPOINTMENT-E01",
+          "DCH5-APPOINTMENT-E02",
+          "DCH5-APPOINTMENT-E03",
+          "DCH5-APPOINTMENT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "52b33ef2fbc86b863caf2c478b8d1346a36e395c5d3ce6b27a5db3ca5b2865b6"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-APPOINTMENT-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-APPOINTMENT-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "c425ca470d9be9479097c6e5932af85a286768bd61afbc589cc408c2bfa4fcc9",
+        "gate_answer": "SCHEDULE",
+        "gate_source_ids": [
+          "DCH5-APPOINTMENT-E01",
+          "DCH5-APPOINTMENT-E02",
+          "DCH5-APPOINTMENT-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f3d6e596d124a301aa562da92b658c6939a0d7b034a1903583943d5d4427e64f"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "06ec97058ea2c5b4ae425b3fea23018f3952b770eb2649a344a9cefb9f3c8df4",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-APPOINTMENT-E01",
+          "DCH5-APPOINTMENT-E02",
+          "DCH5-APPOINTMENT-E03",
+          "DCH5-APPOINTMENT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "52b33ef2fbc86b863caf2c478b8d1346a36e395c5d3ce6b27a5db3ca5b2865b6"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-APPOINTMENT",
+      "role": "briefed_replacement_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "06ec97058ea2c5b4ae425b3fea23018f3952b770eb2649a344a9cefb9f3c8df4",
+      "baseline_input_sha256": "e799717bcc773d3366e2833ba9d0c5167772385259b7844fea88663688883f68",
+      "perturbation_input_sha256": "1b17ea549b8205f9566a8dc8af1372ee9db53f6a9b89bed8b2fc3bd37dbb567e",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "06ec97058ea2c5b4ae425b3fea23018f3952b770eb2649a344a9cefb9f3c8df4",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-APPOINTMENT-E01",
+          "DCH5-APPOINTMENT-E02",
+          "DCH5-APPOINTMENT-E03",
+          "DCH5-APPOINTMENT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "52b33ef2fbc86b863caf2c478b8d1346a36e395c5d3ce6b27a5db3ca5b2865b6"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "06ec97058ea2c5b4ae425b3fea23018f3952b770eb2649a344a9cefb9f3c8df4",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-APPOINTMENT-E01",
+          "DCH5-APPOINTMENT-E02",
+          "DCH5-APPOINTMENT-E03",
+          "DCH5-APPOINTMENT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "52b33ef2fbc86b863caf2c478b8d1346a36e395c5d3ce6b27a5db3ca5b2865b6"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-APPOINTMENT-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-APPOINTMENT-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "c425ca470d9be9479097c6e5932af85a286768bd61afbc589cc408c2bfa4fcc9",
+        "gate_answer": "SCHEDULE",
+        "gate_source_ids": [
+          "DCH5-APPOINTMENT-E01",
+          "DCH5-APPOINTMENT-E02",
+          "DCH5-APPOINTMENT-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f3d6e596d124a301aa562da92b658c6939a0d7b034a1903583943d5d4427e64f"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "06ec97058ea2c5b4ae425b3fea23018f3952b770eb2649a344a9cefb9f3c8df4",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-APPOINTMENT-E01",
+          "DCH5-APPOINTMENT-E02",
+          "DCH5-APPOINTMENT-E03",
+          "DCH5-APPOINTMENT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "52b33ef2fbc86b863caf2c478b8d1346a36e395c5d3ce6b27a5db3ca5b2865b6"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-APPOINTMENT",
+      "role": "expert_automatic",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "06ec97058ea2c5b4ae425b3fea23018f3952b770eb2649a344a9cefb9f3c8df4",
+      "baseline_input_sha256": "e799717bcc773d3366e2833ba9d0c5167772385259b7844fea88663688883f68",
+      "perturbation_input_sha256": "1b17ea549b8205f9566a8dc8af1372ee9db53f6a9b89bed8b2fc3bd37dbb567e",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "06ec97058ea2c5b4ae425b3fea23018f3952b770eb2649a344a9cefb9f3c8df4",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-APPOINTMENT-E01",
+          "DCH5-APPOINTMENT-E02",
+          "DCH5-APPOINTMENT-E03",
+          "DCH5-APPOINTMENT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "52b33ef2fbc86b863caf2c478b8d1346a36e395c5d3ce6b27a5db3ca5b2865b6"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "06ec97058ea2c5b4ae425b3fea23018f3952b770eb2649a344a9cefb9f3c8df4",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-APPOINTMENT-E01",
+          "DCH5-APPOINTMENT-E02",
+          "DCH5-APPOINTMENT-E03",
+          "DCH5-APPOINTMENT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "52b33ef2fbc86b863caf2c478b8d1346a36e395c5d3ce6b27a5db3ca5b2865b6"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-APPOINTMENT-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-APPOINTMENT-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "c425ca470d9be9479097c6e5932af85a286768bd61afbc589cc408c2bfa4fcc9",
+        "gate_answer": "SCHEDULE",
+        "gate_source_ids": [
+          "DCH5-APPOINTMENT-E01",
+          "DCH5-APPOINTMENT-E02",
+          "DCH5-APPOINTMENT-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f3d6e596d124a301aa562da92b658c6939a0d7b034a1903583943d5d4427e64f"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "06ec97058ea2c5b4ae425b3fea23018f3952b770eb2649a344a9cefb9f3c8df4",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-APPOINTMENT-E01",
+          "DCH5-APPOINTMENT-E02",
+          "DCH5-APPOINTMENT-E03",
+          "DCH5-APPOINTMENT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "52b33ef2fbc86b863caf2c478b8d1346a36e395c5d3ce6b27a5db3ca5b2865b6"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-APPOINTMENT",
+      "role": "lesioned_control",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "06ec97058ea2c5b4ae425b3fea23018f3952b770eb2649a344a9cefb9f3c8df4",
+      "baseline_input_sha256": "e799717bcc773d3366e2833ba9d0c5167772385259b7844fea88663688883f68",
+      "perturbation_input_sha256": "1b17ea549b8205f9566a8dc8af1372ee9db53f6a9b89bed8b2fc3bd37dbb567e",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "06ec97058ea2c5b4ae425b3fea23018f3952b770eb2649a344a9cefb9f3c8df4",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-APPOINTMENT-E01",
+          "DCH5-APPOINTMENT-E02",
+          "DCH5-APPOINTMENT-E03",
+          "DCH5-APPOINTMENT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "52b33ef2fbc86b863caf2c478b8d1346a36e395c5d3ce6b27a5db3ca5b2865b6"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "06ec97058ea2c5b4ae425b3fea23018f3952b770eb2649a344a9cefb9f3c8df4",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-APPOINTMENT-E01",
+          "DCH5-APPOINTMENT-E02",
+          "DCH5-APPOINTMENT-E03",
+          "DCH5-APPOINTMENT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "52b33ef2fbc86b863caf2c478b8d1346a36e395c5d3ce6b27a5db3ca5b2865b6"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-APPOINTMENT-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-APPOINTMENT-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "c425ca470d9be9479097c6e5932af85a286768bd61afbc589cc408c2bfa4fcc9",
+        "gate_answer": "SCHEDULE",
+        "gate_source_ids": [
+          "DCH5-APPOINTMENT-E01",
+          "DCH5-APPOINTMENT-E02",
+          "DCH5-APPOINTMENT-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "f3d6e596d124a301aa562da92b658c6939a0d7b034a1903583943d5d4427e64f"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "06ec97058ea2c5b4ae425b3fea23018f3952b770eb2649a344a9cefb9f3c8df4",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-APPOINTMENT-E01",
+          "DCH5-APPOINTMENT-E02",
+          "DCH5-APPOINTMENT-E03",
+          "DCH5-APPOINTMENT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "52b33ef2fbc86b863caf2c478b8d1346a36e395c5d3ce6b27a5db3ca5b2865b6"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-DISPATCH",
+      "role": "incumbent_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "afc3f1589709c5f00f8c6728e5b4810d91c0a410ce53a736382f6161b1a4e38f",
+      "baseline_input_sha256": "7d2b852761b8ec230d08902e6cce3e7a3200c3c05a388dee4d68a5593b063439",
+      "perturbation_input_sha256": "56ec2dba91204f4a6b1299a61da891f653912bf667777bcf9ab473b0377ebaf0",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "afc3f1589709c5f00f8c6728e5b4810d91c0a410ce53a736382f6161b1a4e38f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-DISPATCH-E01",
+          "DCH5-DISPATCH-E02",
+          "DCH5-DISPATCH-E03",
+          "DCH5-DISPATCH-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8c7b1ac7bc0c3c17e2e1bff8d3e2608f119efbb2395819be09c2e37660d75de9"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "afc3f1589709c5f00f8c6728e5b4810d91c0a410ce53a736382f6161b1a4e38f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-DISPATCH-E01",
+          "DCH5-DISPATCH-E02",
+          "DCH5-DISPATCH-E03",
+          "DCH5-DISPATCH-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8c7b1ac7bc0c3c17e2e1bff8d3e2608f119efbb2395819be09c2e37660d75de9"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-DISPATCH-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-DISPATCH-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "438f4f9603c7ade4d84dd838fc1ff65a8e15e1b24fca7753b50ab3ef74ed4ceb",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-DISPATCH-E01",
+          "DCH5-DISPATCH-E02",
+          "DCH5-DISPATCH-E03",
+          "DCH5-DISPATCH-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "712cd4c00973714ade06feaab0ef9bff15add2c6b299096956f63b1db8187ca1"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "afc3f1589709c5f00f8c6728e5b4810d91c0a410ce53a736382f6161b1a4e38f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-DISPATCH-E01",
+          "DCH5-DISPATCH-E02",
+          "DCH5-DISPATCH-E03",
+          "DCH5-DISPATCH-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8c7b1ac7bc0c3c17e2e1bff8d3e2608f119efbb2395819be09c2e37660d75de9"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-DISPATCH",
+      "role": "briefed_replacement_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "afc3f1589709c5f00f8c6728e5b4810d91c0a410ce53a736382f6161b1a4e38f",
+      "baseline_input_sha256": "7d2b852761b8ec230d08902e6cce3e7a3200c3c05a388dee4d68a5593b063439",
+      "perturbation_input_sha256": "56ec2dba91204f4a6b1299a61da891f653912bf667777bcf9ab473b0377ebaf0",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "afc3f1589709c5f00f8c6728e5b4810d91c0a410ce53a736382f6161b1a4e38f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-DISPATCH-E01",
+          "DCH5-DISPATCH-E02",
+          "DCH5-DISPATCH-E03",
+          "DCH5-DISPATCH-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8c7b1ac7bc0c3c17e2e1bff8d3e2608f119efbb2395819be09c2e37660d75de9"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "afc3f1589709c5f00f8c6728e5b4810d91c0a410ce53a736382f6161b1a4e38f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-DISPATCH-E01",
+          "DCH5-DISPATCH-E02",
+          "DCH5-DISPATCH-E03",
+          "DCH5-DISPATCH-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8c7b1ac7bc0c3c17e2e1bff8d3e2608f119efbb2395819be09c2e37660d75de9"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-DISPATCH-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-DISPATCH-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "438f4f9603c7ade4d84dd838fc1ff65a8e15e1b24fca7753b50ab3ef74ed4ceb",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-DISPATCH-E01",
+          "DCH5-DISPATCH-E02",
+          "DCH5-DISPATCH-E03",
+          "DCH5-DISPATCH-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "712cd4c00973714ade06feaab0ef9bff15add2c6b299096956f63b1db8187ca1"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "afc3f1589709c5f00f8c6728e5b4810d91c0a410ce53a736382f6161b1a4e38f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-DISPATCH-E01",
+          "DCH5-DISPATCH-E02",
+          "DCH5-DISPATCH-E03",
+          "DCH5-DISPATCH-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8c7b1ac7bc0c3c17e2e1bff8d3e2608f119efbb2395819be09c2e37660d75de9"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-DISPATCH",
+      "role": "expert_automatic",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "afc3f1589709c5f00f8c6728e5b4810d91c0a410ce53a736382f6161b1a4e38f",
+      "baseline_input_sha256": "7d2b852761b8ec230d08902e6cce3e7a3200c3c05a388dee4d68a5593b063439",
+      "perturbation_input_sha256": "56ec2dba91204f4a6b1299a61da891f653912bf667777bcf9ab473b0377ebaf0",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "afc3f1589709c5f00f8c6728e5b4810d91c0a410ce53a736382f6161b1a4e38f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-DISPATCH-E01",
+          "DCH5-DISPATCH-E02",
+          "DCH5-DISPATCH-E03",
+          "DCH5-DISPATCH-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8c7b1ac7bc0c3c17e2e1bff8d3e2608f119efbb2395819be09c2e37660d75de9"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "afc3f1589709c5f00f8c6728e5b4810d91c0a410ce53a736382f6161b1a4e38f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-DISPATCH-E01",
+          "DCH5-DISPATCH-E02",
+          "DCH5-DISPATCH-E03",
+          "DCH5-DISPATCH-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8c7b1ac7bc0c3c17e2e1bff8d3e2608f119efbb2395819be09c2e37660d75de9"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-DISPATCH-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-DISPATCH-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "438f4f9603c7ade4d84dd838fc1ff65a8e15e1b24fca7753b50ab3ef74ed4ceb",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-DISPATCH-E01",
+          "DCH5-DISPATCH-E02",
+          "DCH5-DISPATCH-E03",
+          "DCH5-DISPATCH-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "712cd4c00973714ade06feaab0ef9bff15add2c6b299096956f63b1db8187ca1"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "afc3f1589709c5f00f8c6728e5b4810d91c0a410ce53a736382f6161b1a4e38f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-DISPATCH-E01",
+          "DCH5-DISPATCH-E02",
+          "DCH5-DISPATCH-E03",
+          "DCH5-DISPATCH-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8c7b1ac7bc0c3c17e2e1bff8d3e2608f119efbb2395819be09c2e37660d75de9"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-DISPATCH",
+      "role": "lesioned_control",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "afc3f1589709c5f00f8c6728e5b4810d91c0a410ce53a736382f6161b1a4e38f",
+      "baseline_input_sha256": "7d2b852761b8ec230d08902e6cce3e7a3200c3c05a388dee4d68a5593b063439",
+      "perturbation_input_sha256": "56ec2dba91204f4a6b1299a61da891f653912bf667777bcf9ab473b0377ebaf0",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "afc3f1589709c5f00f8c6728e5b4810d91c0a410ce53a736382f6161b1a4e38f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-DISPATCH-E01",
+          "DCH5-DISPATCH-E02",
+          "DCH5-DISPATCH-E03",
+          "DCH5-DISPATCH-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8c7b1ac7bc0c3c17e2e1bff8d3e2608f119efbb2395819be09c2e37660d75de9"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "afc3f1589709c5f00f8c6728e5b4810d91c0a410ce53a736382f6161b1a4e38f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-DISPATCH-E01",
+          "DCH5-DISPATCH-E02",
+          "DCH5-DISPATCH-E03",
+          "DCH5-DISPATCH-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8c7b1ac7bc0c3c17e2e1bff8d3e2608f119efbb2395819be09c2e37660d75de9"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "afc3f1589709c5f00f8c6728e5b4810d91c0a410ce53a736382f6161b1a4e38f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-DISPATCH-E01",
+          "DCH5-DISPATCH-E02",
+          "DCH5-DISPATCH-E03",
+          "DCH5-DISPATCH-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8c7b1ac7bc0c3c17e2e1bff8d3e2608f119efbb2395819be09c2e37660d75de9"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "afc3f1589709c5f00f8c6728e5b4810d91c0a410ce53a736382f6161b1a4e38f",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-DISPATCH-E01",
+          "DCH5-DISPATCH-E02",
+          "DCH5-DISPATCH-E03",
+          "DCH5-DISPATCH-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "8c7b1ac7bc0c3c17e2e1bff8d3e2608f119efbb2395819be09c2e37660d75de9"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-RESTORATION",
+      "role": "incumbent_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "f432da9269ca63a138371598e12e75594254d8614f2e1b05a04057b6b7df7a49",
+      "baseline_input_sha256": "b459134477900d65527ce836a8ae110bd8b0973c6b86f47cf2df7477c007c7de",
+      "perturbation_input_sha256": "78a05c0333ce04ad37667cfd33a68f11ca5fd08da9f357c076ceb88863738832",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "f432da9269ca63a138371598e12e75594254d8614f2e1b05a04057b6b7df7a49",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-RESTORATION-E01",
+          "DCH5-RESTORATION-E02",
+          "DCH5-RESTORATION-E03",
+          "DCH5-RESTORATION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "a02c7090d3a6f20a7214ee900cd210285ad1b6242958c8a67dbae4a5ad0f2924"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "f432da9269ca63a138371598e12e75594254d8614f2e1b05a04057b6b7df7a49",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-RESTORATION-E01",
+          "DCH5-RESTORATION-E02",
+          "DCH5-RESTORATION-E03",
+          "DCH5-RESTORATION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "a02c7090d3a6f20a7214ee900cd210285ad1b6242958c8a67dbae4a5ad0f2924"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-RESTORATION-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-RESTORATION-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "b51ed12373cb4deead4a60d9b179ae1af5c7aa1100c8303dfaeedf78442ec895",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-RESTORATION-E01",
+          "DCH5-RESTORATION-E02",
+          "DCH5-RESTORATION-E03",
+          "DCH5-RESTORATION-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "ba6caeebcdbdecdff40c46531c340106094e9feef0059806238f9a03ee8d3c61"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "f432da9269ca63a138371598e12e75594254d8614f2e1b05a04057b6b7df7a49",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-RESTORATION-E01",
+          "DCH5-RESTORATION-E02",
+          "DCH5-RESTORATION-E03",
+          "DCH5-RESTORATION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "a02c7090d3a6f20a7214ee900cd210285ad1b6242958c8a67dbae4a5ad0f2924"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-RESTORATION",
+      "role": "briefed_replacement_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "f432da9269ca63a138371598e12e75594254d8614f2e1b05a04057b6b7df7a49",
+      "baseline_input_sha256": "b459134477900d65527ce836a8ae110bd8b0973c6b86f47cf2df7477c007c7de",
+      "perturbation_input_sha256": "78a05c0333ce04ad37667cfd33a68f11ca5fd08da9f357c076ceb88863738832",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "f432da9269ca63a138371598e12e75594254d8614f2e1b05a04057b6b7df7a49",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-RESTORATION-E01",
+          "DCH5-RESTORATION-E02",
+          "DCH5-RESTORATION-E03",
+          "DCH5-RESTORATION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "a02c7090d3a6f20a7214ee900cd210285ad1b6242958c8a67dbae4a5ad0f2924"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "f432da9269ca63a138371598e12e75594254d8614f2e1b05a04057b6b7df7a49",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-RESTORATION-E01",
+          "DCH5-RESTORATION-E02",
+          "DCH5-RESTORATION-E03",
+          "DCH5-RESTORATION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "a02c7090d3a6f20a7214ee900cd210285ad1b6242958c8a67dbae4a5ad0f2924"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-RESTORATION-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-RESTORATION-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "b51ed12373cb4deead4a60d9b179ae1af5c7aa1100c8303dfaeedf78442ec895",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-RESTORATION-E01",
+          "DCH5-RESTORATION-E02",
+          "DCH5-RESTORATION-E03",
+          "DCH5-RESTORATION-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "ba6caeebcdbdecdff40c46531c340106094e9feef0059806238f9a03ee8d3c61"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "f432da9269ca63a138371598e12e75594254d8614f2e1b05a04057b6b7df7a49",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-RESTORATION-E01",
+          "DCH5-RESTORATION-E02",
+          "DCH5-RESTORATION-E03",
+          "DCH5-RESTORATION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "a02c7090d3a6f20a7214ee900cd210285ad1b6242958c8a67dbae4a5ad0f2924"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-RESTORATION",
+      "role": "expert_automatic",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "f432da9269ca63a138371598e12e75594254d8614f2e1b05a04057b6b7df7a49",
+      "baseline_input_sha256": "b459134477900d65527ce836a8ae110bd8b0973c6b86f47cf2df7477c007c7de",
+      "perturbation_input_sha256": "78a05c0333ce04ad37667cfd33a68f11ca5fd08da9f357c076ceb88863738832",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "f432da9269ca63a138371598e12e75594254d8614f2e1b05a04057b6b7df7a49",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-RESTORATION-E01",
+          "DCH5-RESTORATION-E02",
+          "DCH5-RESTORATION-E03",
+          "DCH5-RESTORATION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "a02c7090d3a6f20a7214ee900cd210285ad1b6242958c8a67dbae4a5ad0f2924"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "f432da9269ca63a138371598e12e75594254d8614f2e1b05a04057b6b7df7a49",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-RESTORATION-E01",
+          "DCH5-RESTORATION-E02",
+          "DCH5-RESTORATION-E03",
+          "DCH5-RESTORATION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "a02c7090d3a6f20a7214ee900cd210285ad1b6242958c8a67dbae4a5ad0f2924"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "ACCEPT",
+          "event_id": "DCH5-RESTORATION-E05"
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [
+          "DCH5-RESTORATION-E05"
+        ],
+        "record_count": 5,
+        "action_status": "accepted_signed_update",
+        "final_records_sha256": "b51ed12373cb4deead4a60d9b179ae1af5c7aa1100c8303dfaeedf78442ec895",
+        "gate_answer": "FULFILL_SPEED",
+        "gate_source_ids": [
+          "DCH5-RESTORATION-E01",
+          "DCH5-RESTORATION-E02",
+          "DCH5-RESTORATION-E03",
+          "DCH5-RESTORATION-E05"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "ba6caeebcdbdecdff40c46531c340106094e9feef0059806238f9a03ee8d3c61"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "f432da9269ca63a138371598e12e75594254d8614f2e1b05a04057b6b7df7a49",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-RESTORATION-E01",
+          "DCH5-RESTORATION-E02",
+          "DCH5-RESTORATION-E03",
+          "DCH5-RESTORATION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "a02c7090d3a6f20a7214ee900cd210285ad1b6242958c8a67dbae4a5ad0f2924"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-RESTORATION",
+      "role": "lesioned_control",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "f432da9269ca63a138371598e12e75594254d8614f2e1b05a04057b6b7df7a49",
+      "baseline_input_sha256": "b459134477900d65527ce836a8ae110bd8b0973c6b86f47cf2df7477c007c7de",
+      "perturbation_input_sha256": "78a05c0333ce04ad37667cfd33a68f11ca5fd08da9f357c076ceb88863738832",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "f432da9269ca63a138371598e12e75594254d8614f2e1b05a04057b6b7df7a49",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-RESTORATION-E01",
+          "DCH5-RESTORATION-E02",
+          "DCH5-RESTORATION-E03",
+          "DCH5-RESTORATION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "a02c7090d3a6f20a7214ee900cd210285ad1b6242958c8a67dbae4a5ad0f2924"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "f432da9269ca63a138371598e12e75594254d8614f2e1b05a04057b6b7df7a49",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-RESTORATION-E01",
+          "DCH5-RESTORATION-E02",
+          "DCH5-RESTORATION-E03",
+          "DCH5-RESTORATION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "a02c7090d3a6f20a7214ee900cd210285ad1b6242958c8a67dbae4a5ad0f2924"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "f432da9269ca63a138371598e12e75594254d8614f2e1b05a04057b6b7df7a49",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-RESTORATION-E01",
+          "DCH5-RESTORATION-E02",
+          "DCH5-RESTORATION-E03",
+          "DCH5-RESTORATION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "a02c7090d3a6f20a7214ee900cd210285ad1b6242958c8a67dbae4a5ad0f2924"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "f432da9269ca63a138371598e12e75594254d8614f2e1b05a04057b6b7df7a49",
+        "gate_answer": "FULFILL_REPAIR",
+        "gate_source_ids": [
+          "DCH5-RESTORATION-E01",
+          "DCH5-RESTORATION-E02",
+          "DCH5-RESTORATION-E03",
+          "DCH5-RESTORATION-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "a02c7090d3a6f20a7214ee900cd210285ad1b6242958c8a67dbae4a5ad0f2924"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-FORGED_EDIT",
+      "role": "incumbent_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "6ac116e78c57a8cb801a6322bbaf41976dc2f5f0d97cf5f76620caa95783cf1b",
+      "baseline_input_sha256": "3cb4790188db9dabc8c1e510e0824572b4a4e6fed0db0cf567eff955e9f0b622",
+      "perturbation_input_sha256": "b69f9b4a740444e463443c14c88613c19a3f27f2e8b796e68e63acad4793e85b",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "6ac116e78c57a8cb801a6322bbaf41976dc2f5f0d97cf5f76620caa95783cf1b",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-FORGED_EDIT-E01",
+          "DCH5-FORGED_EDIT-E02",
+          "DCH5-FORGED_EDIT-E03",
+          "DCH5-FORGED_EDIT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "ab1baa909e6c3b042e6dec0bf7551a25e080fc7d9849657d925efbdab4e62c24"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "6ac116e78c57a8cb801a6322bbaf41976dc2f5f0d97cf5f76620caa95783cf1b",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-FORGED_EDIT-E01",
+          "DCH5-FORGED_EDIT-E02",
+          "DCH5-FORGED_EDIT-E03",
+          "DCH5-FORGED_EDIT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "ab1baa909e6c3b042e6dec0bf7551a25e080fc7d9849657d925efbdab4e62c24"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "6ac116e78c57a8cb801a6322bbaf41976dc2f5f0d97cf5f76620caa95783cf1b",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-FORGED_EDIT-E01",
+          "DCH5-FORGED_EDIT-E02",
+          "DCH5-FORGED_EDIT-E03",
+          "DCH5-FORGED_EDIT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "ab1baa909e6c3b042e6dec0bf7551a25e080fc7d9849657d925efbdab4e62c24"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "6ac116e78c57a8cb801a6322bbaf41976dc2f5f0d97cf5f76620caa95783cf1b",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-FORGED_EDIT-E01",
+          "DCH5-FORGED_EDIT-E02",
+          "DCH5-FORGED_EDIT-E03",
+          "DCH5-FORGED_EDIT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "ab1baa909e6c3b042e6dec0bf7551a25e080fc7d9849657d925efbdab4e62c24"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-FORGED_EDIT",
+      "role": "briefed_replacement_proxy",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "6ac116e78c57a8cb801a6322bbaf41976dc2f5f0d97cf5f76620caa95783cf1b",
+      "baseline_input_sha256": "3cb4790188db9dabc8c1e510e0824572b4a4e6fed0db0cf567eff955e9f0b622",
+      "perturbation_input_sha256": "b69f9b4a740444e463443c14c88613c19a3f27f2e8b796e68e63acad4793e85b",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "6ac116e78c57a8cb801a6322bbaf41976dc2f5f0d97cf5f76620caa95783cf1b",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-FORGED_EDIT-E01",
+          "DCH5-FORGED_EDIT-E02",
+          "DCH5-FORGED_EDIT-E03",
+          "DCH5-FORGED_EDIT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "ab1baa909e6c3b042e6dec0bf7551a25e080fc7d9849657d925efbdab4e62c24"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "6ac116e78c57a8cb801a6322bbaf41976dc2f5f0d97cf5f76620caa95783cf1b",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-FORGED_EDIT-E01",
+          "DCH5-FORGED_EDIT-E02",
+          "DCH5-FORGED_EDIT-E03",
+          "DCH5-FORGED_EDIT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "ab1baa909e6c3b042e6dec0bf7551a25e080fc7d9849657d925efbdab4e62c24"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "6ac116e78c57a8cb801a6322bbaf41976dc2f5f0d97cf5f76620caa95783cf1b",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-FORGED_EDIT-E01",
+          "DCH5-FORGED_EDIT-E02",
+          "DCH5-FORGED_EDIT-E03",
+          "DCH5-FORGED_EDIT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "ab1baa909e6c3b042e6dec0bf7551a25e080fc7d9849657d925efbdab4e62c24"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "6ac116e78c57a8cb801a6322bbaf41976dc2f5f0d97cf5f76620caa95783cf1b",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-FORGED_EDIT-E01",
+          "DCH5-FORGED_EDIT-E02",
+          "DCH5-FORGED_EDIT-E03",
+          "DCH5-FORGED_EDIT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "ab1baa909e6c3b042e6dec0bf7551a25e080fc7d9849657d925efbdab4e62c24"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-FORGED_EDIT",
+      "role": "expert_automatic",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "6ac116e78c57a8cb801a6322bbaf41976dc2f5f0d97cf5f76620caa95783cf1b",
+      "baseline_input_sha256": "3cb4790188db9dabc8c1e510e0824572b4a4e6fed0db0cf567eff955e9f0b622",
+      "perturbation_input_sha256": "b69f9b4a740444e463443c14c88613c19a3f27f2e8b796e68e63acad4793e85b",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "6ac116e78c57a8cb801a6322bbaf41976dc2f5f0d97cf5f76620caa95783cf1b",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-FORGED_EDIT-E01",
+          "DCH5-FORGED_EDIT-E02",
+          "DCH5-FORGED_EDIT-E03",
+          "DCH5-FORGED_EDIT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "ab1baa909e6c3b042e6dec0bf7551a25e080fc7d9849657d925efbdab4e62c24"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "6ac116e78c57a8cb801a6322bbaf41976dc2f5f0d97cf5f76620caa95783cf1b",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-FORGED_EDIT-E01",
+          "DCH5-FORGED_EDIT-E02",
+          "DCH5-FORGED_EDIT-E03",
+          "DCH5-FORGED_EDIT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "ab1baa909e6c3b042e6dec0bf7551a25e080fc7d9849657d925efbdab4e62c24"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "6ac116e78c57a8cb801a6322bbaf41976dc2f5f0d97cf5f76620caa95783cf1b",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-FORGED_EDIT-E01",
+          "DCH5-FORGED_EDIT-E02",
+          "DCH5-FORGED_EDIT-E03",
+          "DCH5-FORGED_EDIT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "ab1baa909e6c3b042e6dec0bf7551a25e080fc7d9849657d925efbdab4e62c24"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "6ac116e78c57a8cb801a6322bbaf41976dc2f5f0d97cf5f76620caa95783cf1b",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-FORGED_EDIT-E01",
+          "DCH5-FORGED_EDIT-E02",
+          "DCH5-FORGED_EDIT-E03",
+          "DCH5-FORGED_EDIT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "ab1baa909e6c3b042e6dec0bf7551a25e080fc7d9849657d925efbdab4e62c24"
+      },
+      "strict_replay_state_equal": true
+    },
+    {
+      "persona_id": "DCH5-FORGED_EDIT",
+      "role": "lesioned_control",
+      "actor_class": "SCRIPTED_SIMULATION_NOT_HUMAN",
+      "initial_snapshot_sha256": "6ac116e78c57a8cb801a6322bbaf41976dc2f5f0d97cf5f76620caa95783cf1b",
+      "baseline_input_sha256": "3cb4790188db9dabc8c1e510e0824572b4a4e6fed0db0cf567eff955e9f0b622",
+      "perturbation_input_sha256": "b69f9b4a740444e463443c14c88613c19a3f27f2e8b796e68e63acad4793e85b",
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      },
+      "action_tape": [
+        {
+          "kind": "IGNORE",
+          "event_id": null
+        }
+      ],
+      "baseline": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "6ac116e78c57a8cb801a6322bbaf41976dc2f5f0d97cf5f76620caa95783cf1b",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-FORGED_EDIT-E01",
+          "DCH5-FORGED_EDIT-E02",
+          "DCH5-FORGED_EDIT-E03",
+          "DCH5-FORGED_EDIT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "ab1baa909e6c3b042e6dec0bf7551a25e080fc7d9849657d925efbdab4e62c24"
+      },
+      "strict_baseline_replay": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "6ac116e78c57a8cb801a6322bbaf41976dc2f5f0d97cf5f76620caa95783cf1b",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-FORGED_EDIT-E01",
+          "DCH5-FORGED_EDIT-E02",
+          "DCH5-FORGED_EDIT-E03",
+          "DCH5-FORGED_EDIT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "ab1baa909e6c3b042e6dec0bf7551a25e080fc7d9849657d925efbdab4e62c24"
+      },
+      "perturbation_live": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "live_policy",
+        "replay_source_sha256": null,
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "6ac116e78c57a8cb801a6322bbaf41976dc2f5f0d97cf5f76620caa95783cf1b",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-FORGED_EDIT-E01",
+          "DCH5-FORGED_EDIT-E02",
+          "DCH5-FORGED_EDIT-E03",
+          "DCH5-FORGED_EDIT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "ab1baa909e6c3b042e6dec0bf7551a25e080fc7d9849657d925efbdab4e62c24"
+      },
+      "perturbation_yoked": {
+        "action": {
+          "kind": "IGNORE",
+          "event_id": null
+        },
+        "action_source": "yoked_tape",
+        "replay_source_sha256": "db0e180566318432f26fe8c73356571c3baaf315531c8d5fd3db18de43927521",
+        "applied_source_ids": [],
+        "record_count": 4,
+        "action_status": "ignored",
+        "final_records_sha256": "6ac116e78c57a8cb801a6322bbaf41976dc2f5f0d97cf5f76620caa95783cf1b",
+        "gate_answer": "FULFILL_ACCURACY",
+        "gate_source_ids": [
+          "DCH5-FORGED_EDIT-E01",
+          "DCH5-FORGED_EDIT-E02",
+          "DCH5-FORGED_EDIT-E03",
+          "DCH5-FORGED_EDIT-E04"
+        ],
+        "gate_status": "RULE_EXECUTED",
+        "gate_input_sha256": "ab1baa909e6c3b042e6dec0bf7551a25e080fc7d9849657d925efbdab4e62c24"
+      },
+      "strict_replay_state_equal": true
+    }
+  ]
+}

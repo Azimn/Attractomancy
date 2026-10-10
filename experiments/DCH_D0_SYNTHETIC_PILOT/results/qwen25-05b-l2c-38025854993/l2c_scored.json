@@ -1,0 +1,663 @@
+{
+  "status": "EXPLORATORY_POST_L2_REDESIGN",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "summary": {
+    "compact:expert_auto": {
+      "n": 8,
+      "correct": 0.0,
+      "branch_min_source": 0.0,
+      "all_four_sources": 0.0,
+      "source_valid": 1.0,
+      "parse_valid": 1.0,
+      "mean_prompt_tokens": 227.0
+    },
+    "compact:stale": {
+      "n": 8,
+      "correct": 0.0,
+      "branch_min_source": 0.0,
+      "all_four_sources": 0.0,
+      "source_valid": 1.0,
+      "parse_valid": 1.0,
+      "mean_prompt_tokens": 224.0
+    },
+    "compact:cold": {
+      "n": 8,
+      "correct": 0.0,
+      "branch_min_source": 0.0,
+      "all_four_sources": 0.0,
+      "source_valid": 1.0,
+      "parse_valid": 1.0,
+      "mean_prompt_tokens": 159.0
+    },
+    "original:expert_auto": {
+      "n": 8,
+      "correct": 0.25,
+      "branch_min_source": 0.0,
+      "all_four_sources": 0.0,
+      "source_valid": 0.625,
+      "parse_valid": 1.0,
+      "mean_prompt_tokens": 278.25
+    },
+    "original:stale": {
+      "n": 8,
+      "correct": 0.25,
+      "branch_min_source": 0.0,
+      "all_four_sources": 0.0,
+      "source_valid": 1.0,
+      "parse_valid": 1.0,
+      "mean_prompt_tokens": 275.75
+    },
+    "original:cold": {
+      "n": 8,
+      "correct": 0.25,
+      "branch_min_source": 0.0,
+      "all_four_sources": 0.0,
+      "source_valid": 0.0,
+      "parse_valid": 1.0,
+      "mean_prompt_tokens": 170.0
+    }
+  },
+  "exact_input_controls": {
+    "original": {
+      "n": 0,
+      "inputs_equal": true,
+      "outputs_equal": true
+    },
+    "compact": {
+      "n": 0,
+      "inputs_equal": true,
+      "outputs_equal": true
+    }
+  },
+  "rows": {
+    "compact:expert_auto": [
+      {
+        "id": "L2-001",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "WITHHOLD",
+        "actual": "FULFILL_",
+        "prompt_tokens": 227,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-002",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "DECLINE",
+        "actual": "FULFILL_",
+        "prompt_tokens": 227,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-003",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "FULFILL_SPEED",
+        "actual": "FULFILL_",
+        "prompt_tokens": 227,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-004",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "SCHEDULE",
+        "actual": "FULFILL_",
+        "prompt_tokens": 227,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-005",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "WITHHOLD",
+        "actual": "FULFILL_",
+        "prompt_tokens": 227,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-006",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "DECLINE",
+        "actual": "FULFILL_",
+        "prompt_tokens": 227,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-007",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "FULFILL_ACCURACY",
+        "actual": "FULFILL_",
+        "prompt_tokens": 227,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-008",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "SCHEDULE",
+        "actual": "FULFILL_",
+        "prompt_tokens": 227,
+        "output_tokens": 15
+      }
+    ],
+    "compact:stale": [
+      {
+        "id": "L2-001",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "WITHHOLD",
+        "actual": "FULFILL_",
+        "prompt_tokens": 224,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-002",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "DECLINE",
+        "actual": "FULFILL_",
+        "prompt_tokens": 224,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-003",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "FULFILL_SPEED",
+        "actual": "FULFILL_",
+        "prompt_tokens": 224,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-004",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "SCHEDULE",
+        "actual": "FULFILL_",
+        "prompt_tokens": 224,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-005",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "WITHHOLD",
+        "actual": "FULFILL_",
+        "prompt_tokens": 224,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-006",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "DECLINE",
+        "actual": "FULFILL_",
+        "prompt_tokens": 224,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-007",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "FULFILL_ACCURACY",
+        "actual": "FULFILL_",
+        "prompt_tokens": 224,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-008",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "SCHEDULE",
+        "actual": "FULFILL_",
+        "prompt_tokens": 224,
+        "output_tokens": 15
+      }
+    ],
+    "compact:cold": [
+      {
+        "id": "L2-001",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "WITHHOLD",
+        "actual": "FULFILL_",
+        "prompt_tokens": 159,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-002",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "DECLINE",
+        "actual": "FULFILL_",
+        "prompt_tokens": 159,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-003",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "FULFILL_SPEED",
+        "actual": "FULFILL_",
+        "prompt_tokens": 159,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-004",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "SCHEDULE",
+        "actual": "FULFILL_",
+        "prompt_tokens": 159,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-005",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "WITHHOLD",
+        "actual": "FULFILL_",
+        "prompt_tokens": 159,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-006",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "DECLINE",
+        "actual": "FULFILL_",
+        "prompt_tokens": 159,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-007",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "FULFILL_ACCURACY",
+        "actual": "FULFILL_",
+        "prompt_tokens": 159,
+        "output_tokens": 15
+      },
+      {
+        "id": "L2-008",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "SCHEDULE",
+        "actual": "FULFILL_",
+        "prompt_tokens": 159,
+        "output_tokens": 15
+      }
+    ],
+    "original:expert_auto": [
+      {
+        "id": "L2-001",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": false,
+        "parse_valid": true,
+        "target": "WITHHOLD",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 279,
+        "output_tokens": 32
+      },
+      {
+        "id": "L2-002",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "DECLINE",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 278,
+        "output_tokens": 43
+      },
+      {
+        "id": "L2-003",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "FULFILL_SPEED",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 278,
+        "output_tokens": 43
+      },
+      {
+        "id": "L2-004",
+        "correct": true,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": false,
+        "parse_valid": true,
+        "target": "SCHEDULE",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 278,
+        "output_tokens": 32
+      },
+      {
+        "id": "L2-005",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": false,
+        "parse_valid": true,
+        "target": "WITHHOLD",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 279,
+        "output_tokens": 32
+      },
+      {
+        "id": "L2-006",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "DECLINE",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 278,
+        "output_tokens": 43
+      },
+      {
+        "id": "L2-007",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "FULFILL_ACCURACY",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 278,
+        "output_tokens": 43
+      },
+      {
+        "id": "L2-008",
+        "correct": true,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "SCHEDULE",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 278,
+        "output_tokens": 43
+      }
+    ],
+    "original:stale": [
+      {
+        "id": "L2-001",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "WITHHOLD",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 275,
+        "output_tokens": 43
+      },
+      {
+        "id": "L2-002",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "DECLINE",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 276,
+        "output_tokens": 43
+      },
+      {
+        "id": "L2-003",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "FULFILL_SPEED",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 276,
+        "output_tokens": 32
+      },
+      {
+        "id": "L2-004",
+        "correct": true,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "SCHEDULE",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 276,
+        "output_tokens": 43
+      },
+      {
+        "id": "L2-005",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "WITHHOLD",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 275,
+        "output_tokens": 43
+      },
+      {
+        "id": "L2-006",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "DECLINE",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 276,
+        "output_tokens": 43
+      },
+      {
+        "id": "L2-007",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "FULFILL_ACCURACY",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 276,
+        "output_tokens": 43
+      },
+      {
+        "id": "L2-008",
+        "correct": true,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": true,
+        "parse_valid": true,
+        "target": "SCHEDULE",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 276,
+        "output_tokens": 43
+      }
+    ],
+    "original:cold": [
+      {
+        "id": "L2-001",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": false,
+        "parse_valid": true,
+        "target": "WITHHOLD",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 170,
+        "output_tokens": 36
+      },
+      {
+        "id": "L2-002",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": false,
+        "parse_valid": true,
+        "target": "DECLINE",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 170,
+        "output_tokens": 36
+      },
+      {
+        "id": "L2-003",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": false,
+        "parse_valid": true,
+        "target": "FULFILL_SPEED",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 170,
+        "output_tokens": 36
+      },
+      {
+        "id": "L2-004",
+        "correct": true,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": false,
+        "parse_valid": true,
+        "target": "SCHEDULE",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 170,
+        "output_tokens": 36
+      },
+      {
+        "id": "L2-005",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": false,
+        "parse_valid": true,
+        "target": "WITHHOLD",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 170,
+        "output_tokens": 36
+      },
+      {
+        "id": "L2-006",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": false,
+        "parse_valid": true,
+        "target": "DECLINE",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 170,
+        "output_tokens": 36
+      },
+      {
+        "id": "L2-007",
+        "correct": false,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": false,
+        "parse_valid": true,
+        "target": "FULFILL_ACCURACY",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 170,
+        "output_tokens": 36
+      },
+      {
+        "id": "L2-008",
+        "correct": true,
+        "branch_min_source": false,
+        "all_four_sources": false,
+        "source_valid": false,
+        "parse_valid": true,
+        "target": "SCHEDULE",
+        "actual": "SCHEDULE",
+        "prompt_tokens": 170,
+        "output_tokens": 36
+      }
+    ]
+  },
+  "DCH_claim": "NONE"
+}

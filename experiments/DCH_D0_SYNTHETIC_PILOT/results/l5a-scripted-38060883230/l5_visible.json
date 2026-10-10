@@ -1,0 +1,1010 @@
+[
+  {
+    "baseline": {
+      "persona_id": "DCH5-ARCHIVE_ROOM",
+      "current_turn": 20,
+      "scenario": "archival map loan",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-ARCHIVE_ROOM-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-ARCHIVE_ROOM-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-ARCHIVE_ROOM-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 15
+        },
+        {
+          "event_id": "DCH5-ARCHIVE_ROOM-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "accuracy"
+        }
+      ],
+      "new_observation": null,
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    },
+    "counterfactual": {
+      "persona_id": "DCH5-ARCHIVE_ROOM",
+      "current_turn": 20,
+      "scenario": "archival map loan",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-ARCHIVE_ROOM-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-ARCHIVE_ROOM-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-ARCHIVE_ROOM-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 15
+        },
+        {
+          "event_id": "DCH5-ARCHIVE_ROOM-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "accuracy"
+        }
+      ],
+      "new_observation": {
+        "event_id": "DCH5-ARCHIVE_ROOM-E05",
+        "turn": 10,
+        "key": "permission",
+        "value": "revoked",
+        "signed_by_simulator": true
+      },
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    }
+  },
+  {
+    "baseline": {
+      "persona_id": "DCH5-GALLERY_LOG",
+      "current_turn": 20,
+      "scenario": "private exhibition ledger",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-GALLERY_LOG-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-GALLERY_LOG-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-GALLERY_LOG-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 12
+        },
+        {
+          "event_id": "DCH5-GALLERY_LOG-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "repair"
+        }
+      ],
+      "new_observation": null,
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    },
+    "counterfactual": {
+      "persona_id": "DCH5-GALLERY_LOG",
+      "current_turn": 20,
+      "scenario": "private exhibition ledger",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-GALLERY_LOG-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-GALLERY_LOG-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-GALLERY_LOG-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 12
+        },
+        {
+          "event_id": "DCH5-GALLERY_LOG-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "repair"
+        }
+      ],
+      "new_observation": {
+        "event_id": "DCH5-GALLERY_LOG-E05",
+        "turn": 10,
+        "key": "permission",
+        "value": "revoked",
+        "signed_by_simulator": true
+      },
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    }
+  },
+  {
+    "baseline": {
+      "persona_id": "DCH5-TRANSCRIPT",
+      "current_turn": 20,
+      "scenario": "recipient access to interview transcript",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-TRANSCRIPT-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-TRANSCRIPT-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-TRANSCRIPT-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 17
+        },
+        {
+          "event_id": "DCH5-TRANSCRIPT-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "speed"
+        }
+      ],
+      "new_observation": null,
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    },
+    "counterfactual": {
+      "persona_id": "DCH5-TRANSCRIPT",
+      "current_turn": 20,
+      "scenario": "recipient access to interview transcript",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-TRANSCRIPT-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-TRANSCRIPT-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-TRANSCRIPT-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 17
+        },
+        {
+          "event_id": "DCH5-TRANSCRIPT-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "speed"
+        }
+      ],
+      "new_observation": {
+        "event_id": "DCH5-TRANSCRIPT-E05",
+        "turn": 10,
+        "key": "permission",
+        "value": "revoked",
+        "signed_by_simulator": true
+      },
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    }
+  },
+  {
+    "baseline": {
+      "persona_id": "DCH5-BORROWED_BOOK",
+      "current_turn": 20,
+      "scenario": "return of an annotated volume",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-BORROWED_BOOK-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-BORROWED_BOOK-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-BORROWED_BOOK-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 14
+        },
+        {
+          "event_id": "DCH5-BORROWED_BOOK-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "accuracy"
+        }
+      ],
+      "new_observation": null,
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    },
+    "counterfactual": {
+      "persona_id": "DCH5-BORROWED_BOOK",
+      "current_turn": 20,
+      "scenario": "return of an annotated volume",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-BORROWED_BOOK-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-BORROWED_BOOK-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-BORROWED_BOOK-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 14
+        },
+        {
+          "event_id": "DCH5-BORROWED_BOOK-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "accuracy"
+        }
+      ],
+      "new_observation": {
+        "event_id": "DCH5-BORROWED_BOOK-E05",
+        "turn": 10,
+        "key": "commitment_status",
+        "value": "cancelled",
+        "signed_by_simulator": true
+      },
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    }
+  },
+  {
+    "baseline": {
+      "persona_id": "DCH5-SPECIMEN",
+      "current_turn": 20,
+      "scenario": "specimen checklist review",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-SPECIMEN-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-SPECIMEN-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-SPECIMEN-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 13
+        },
+        {
+          "event_id": "DCH5-SPECIMEN-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "repair"
+        }
+      ],
+      "new_observation": null,
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    },
+    "counterfactual": {
+      "persona_id": "DCH5-SPECIMEN",
+      "current_turn": 20,
+      "scenario": "specimen checklist review",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-SPECIMEN-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-SPECIMEN-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-SPECIMEN-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 13
+        },
+        {
+          "event_id": "DCH5-SPECIMEN-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "repair"
+        }
+      ],
+      "new_observation": {
+        "event_id": "DCH5-SPECIMEN-E05",
+        "turn": 10,
+        "key": "commitment_status",
+        "value": "cancelled",
+        "signed_by_simulator": true
+      },
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    }
+  },
+  {
+    "baseline": {
+      "persona_id": "DCH5-INVENTORY",
+      "current_turn": 20,
+      "scenario": "evening shelf inventory",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-INVENTORY-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-INVENTORY-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-INVENTORY-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 15
+        },
+        {
+          "event_id": "DCH5-INVENTORY-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "speed"
+        }
+      ],
+      "new_observation": null,
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    },
+    "counterfactual": {
+      "persona_id": "DCH5-INVENTORY",
+      "current_turn": 20,
+      "scenario": "evening shelf inventory",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-INVENTORY-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-INVENTORY-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-INVENTORY-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 15
+        },
+        {
+          "event_id": "DCH5-INVENTORY-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "speed"
+        }
+      ],
+      "new_observation": {
+        "event_id": "DCH5-INVENTORY-E05",
+        "turn": 10,
+        "key": "commitment_status",
+        "value": "cancelled",
+        "signed_by_simulator": true
+      },
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    }
+  },
+  {
+    "baseline": {
+      "persona_id": "DCH5-HANDOFF",
+      "current_turn": 20,
+      "scenario": "lecture material handoff",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-HANDOFF-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-HANDOFF-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-HANDOFF-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 13
+        },
+        {
+          "event_id": "DCH5-HANDOFF-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "accuracy"
+        }
+      ],
+      "new_observation": null,
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    },
+    "counterfactual": {
+      "persona_id": "DCH5-HANDOFF",
+      "current_turn": 20,
+      "scenario": "lecture material handoff",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-HANDOFF-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-HANDOFF-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-HANDOFF-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 13
+        },
+        {
+          "event_id": "DCH5-HANDOFF-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "accuracy"
+        }
+      ],
+      "new_observation": {
+        "event_id": "DCH5-HANDOFF-E05",
+        "turn": 10,
+        "key": "due_turn",
+        "value": 27,
+        "signed_by_simulator": true
+      },
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    }
+  },
+  {
+    "baseline": {
+      "persona_id": "DCH5-INSPECTION",
+      "current_turn": 20,
+      "scenario": "model inspection appointment",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-INSPECTION-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-INSPECTION-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-INSPECTION-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 11
+        },
+        {
+          "event_id": "DCH5-INSPECTION-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "repair"
+        }
+      ],
+      "new_observation": null,
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    },
+    "counterfactual": {
+      "persona_id": "DCH5-INSPECTION",
+      "current_turn": 20,
+      "scenario": "model inspection appointment",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-INSPECTION-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-INSPECTION-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-INSPECTION-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 11
+        },
+        {
+          "event_id": "DCH5-INSPECTION-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "repair"
+        }
+      ],
+      "new_observation": {
+        "event_id": "DCH5-INSPECTION-E05",
+        "turn": 10,
+        "key": "due_turn",
+        "value": 26,
+        "signed_by_simulator": true
+      },
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    }
+  },
+  {
+    "baseline": {
+      "persona_id": "DCH5-APPOINTMENT",
+      "current_turn": 20,
+      "scenario": "scheduled room use",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-APPOINTMENT-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-APPOINTMENT-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-APPOINTMENT-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 12
+        },
+        {
+          "event_id": "DCH5-APPOINTMENT-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "speed"
+        }
+      ],
+      "new_observation": null,
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    },
+    "counterfactual": {
+      "persona_id": "DCH5-APPOINTMENT",
+      "current_turn": 20,
+      "scenario": "scheduled room use",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-APPOINTMENT-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-APPOINTMENT-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-APPOINTMENT-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 12
+        },
+        {
+          "event_id": "DCH5-APPOINTMENT-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "speed"
+        }
+      ],
+      "new_observation": {
+        "event_id": "DCH5-APPOINTMENT-E05",
+        "turn": 10,
+        "key": "due_turn",
+        "value": 29,
+        "signed_by_simulator": true
+      },
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    }
+  },
+  {
+    "baseline": {
+      "persona_id": "DCH5-DISPATCH",
+      "current_turn": 20,
+      "scenario": "laboratory dispatch priorities",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-DISPATCH-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-DISPATCH-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-DISPATCH-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 14
+        },
+        {
+          "event_id": "DCH5-DISPATCH-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "accuracy"
+        }
+      ],
+      "new_observation": null,
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    },
+    "counterfactual": {
+      "persona_id": "DCH5-DISPATCH",
+      "current_turn": 20,
+      "scenario": "laboratory dispatch priorities",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-DISPATCH-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-DISPATCH-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-DISPATCH-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 14
+        },
+        {
+          "event_id": "DCH5-DISPATCH-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "accuracy"
+        }
+      ],
+      "new_observation": {
+        "event_id": "DCH5-DISPATCH-E05",
+        "turn": 10,
+        "key": "priority",
+        "value": "repair",
+        "signed_by_simulator": true
+      },
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    }
+  },
+  {
+    "baseline": {
+      "persona_id": "DCH5-RESTORATION",
+      "current_turn": 20,
+      "scenario": "restoration work priority",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-RESTORATION-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-RESTORATION-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-RESTORATION-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 14
+        },
+        {
+          "event_id": "DCH5-RESTORATION-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "repair"
+        }
+      ],
+      "new_observation": null,
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    },
+    "counterfactual": {
+      "persona_id": "DCH5-RESTORATION",
+      "current_turn": 20,
+      "scenario": "restoration work priority",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-RESTORATION-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-RESTORATION-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-RESTORATION-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 14
+        },
+        {
+          "event_id": "DCH5-RESTORATION-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "repair"
+        }
+      ],
+      "new_observation": {
+        "event_id": "DCH5-RESTORATION-E05",
+        "turn": 10,
+        "key": "priority",
+        "value": "speed",
+        "signed_by_simulator": true
+      },
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    }
+  },
+  {
+    "baseline": {
+      "persona_id": "DCH5-FORGED_EDIT",
+      "current_turn": 20,
+      "scenario": "untrusted amendment to reading ledger",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-FORGED_EDIT-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-FORGED_EDIT-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-FORGED_EDIT-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 13
+        },
+        {
+          "event_id": "DCH5-FORGED_EDIT-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "accuracy"
+        }
+      ],
+      "new_observation": null,
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    },
+    "counterfactual": {
+      "persona_id": "DCH5-FORGED_EDIT",
+      "current_turn": 20,
+      "scenario": "untrusted amendment to reading ledger",
+      "shared_background": "All operators received the same current authorized archival packet and version-update rules.",
+      "authorized_history": [
+        {
+          "event_id": "DCH5-FORGED_EDIT-E01",
+          "turn": 1,
+          "key": "permission",
+          "value": "allowed"
+        },
+        {
+          "event_id": "DCH5-FORGED_EDIT-E02",
+          "turn": 2,
+          "key": "commitment_status",
+          "value": "pending"
+        },
+        {
+          "event_id": "DCH5-FORGED_EDIT-E03",
+          "turn": 3,
+          "key": "due_turn",
+          "value": 13
+        },
+        {
+          "event_id": "DCH5-FORGED_EDIT-E04",
+          "turn": 4,
+          "key": "priority",
+          "value": "accuracy"
+        }
+      ],
+      "new_observation": {
+        "event_id": "DCH5-FORGED_EDIT-E05",
+        "turn": 10,
+        "key": "priority",
+        "value": "speed",
+        "signed_by_simulator": false
+      },
+      "budget": {
+        "decision_opportunities": 1,
+        "max_authorized_writes": 1,
+        "max_source_records": 5
+      }
+    }
+  }
+]

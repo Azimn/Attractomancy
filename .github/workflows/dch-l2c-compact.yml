@@ -1,0 +1,71 @@
+name: DCH L2C compact record calibration Qwen 0.5B
+on:
+  push:
+    branches:
+      - research/dch-d0-pilot-20261009
+    paths:
+      - '.github/workflows/dch-l2c-compact.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  l2c:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 80
+    env:
+      PYTHONUNBUFFERED: '1'
+      HF_HUB_DISABLE_TELEMETRY: '1'
+      TOKENIZERS_PARALLELISM: 'false'
+      DCH: experiments/DCH_D0_SYNTHETIC_PILOT
+      RUN_DIR: experiments/DCH_D0_SYNTHETIC_PILOT/results/qwen25-05b-l2c-${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned CPU model dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "torch==2.5.1" --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers==4.51.3" "safetensors==0.5.3" "sentencepiece==0.2.0"
+      - name: All offline tests, including branch-specific provenance
+        working-directory: experiments/DCH_D0_SYNTHETIC_PILOT
+        run: python -m unittest discover -s tests -v
+      - name: Freeze original development fixture separately
+        run: python "$DCH/l2c_clarity.py" prepare --folder "$RUN_DIR"
+      - name: Real-model information-equivalent record style comparison
+        run: |
+          python "$DCH/l2c_clarity.py" run --folder "$RUN_DIR"             --backend transformers --model Qwen/Qwen2.5-0.5B-Instruct             --count 8 --styles compact original --policies expert_auto stale cold
+      - name: Score branch-minimal and all-four source evidence
+        run: |
+          python "$DCH/l2c_clarity.py" evaluate --folder "$RUN_DIR"
+          python - <<'PY'
+          import json,os,pathlib
+          p=pathlib.Path(os.environ['RUN_DIR'])
+          r=json.loads((p/'l2c_raw.json').read_text())
+          e=json.loads((p/'l2c_scored.json').read_text())
+          assert r['status']=='REAL_MODEL_DEVELOPMENT'
+          assert len(r['rows'])==48
+          assert len(e['summary'])==6
+          assert all(v['n']==8 for v in e['summary'].values())
+          assert all(x['model_reported']=='Qwen/Qwen2.5-0.5B-Instruct' for x in r['rows'])
+          print('L2C_RESULT',json.dumps(e['summary'],sort_keys=True))
+          PY
+      - name: Upload immutable raw output even if model stage fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dch-l2c-qwen05b-${{ github.run_id }}
+          path: ${{ env.RUN_DIR }}
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Commit complete raw results
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f "$RUN_DIR"
+          git commit -m "experiment(dch): archive 0.5B compact-vs-original exploratory calibration [skip ci]"
+          git fetch origin research/dch-d0-pilot-20261009
+          git rebase origin/research/dch-d0-pilot-20261009
+          git push origin HEAD:research/dch-d0-pilot-20261009

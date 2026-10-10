@@ -1,0 +1,72 @@
+name: DCH L5a scripted curator replay instrumentation
+on:
+  push:
+    branches:
+      - research/dch-d0-pilot-20261009
+    paths:
+      - '.github/workflows/dch-l5a-policy.yml'
+      - 'experiments/DCH_D0_SYNTHETIC_PILOT/l5_policy_pilot.py'
+      - 'experiments/DCH_D0_SYNTHETIC_PILOT/tests/test_l5_policy_pilot.py'
+      - 'experiments/DCH_D0_SYNTHETIC_PILOT/l4_authority_gate.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+jobs:
+  l5a:
+    name: Information-parity / own-tape replay sensitivity
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      PYTHONUNBUFFERED: '1'
+      DCH: experiments/DCH_D0_SYNTHETIC_PILOT
+      OUT: experiments/DCH_D0_SYNTHETIC_PILOT/results/l5a-scripted-${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Unit suite against actual L4 authority gate
+        working-directory: experiments/DCH_D0_SYNTHETIC_PILOT
+        run: python -m unittest discover -s tests -v
+      - name: Freeze visible situations and evaluator-only labels
+        run: python "$DCH/l5_policy_pilot.py" prepare --dir "$OUT"
+      - name: Run exactly one live and one own-yoked replay per actor and episode
+        run: python "$DCH/l5_policy_pilot.py" run --dir "$OUT"
+      - name: Score independent label comparison and parity invariants
+        run: |
+          python "$DCH/l5_policy_pilot.py" score --dir "$OUT"
+          python - <<'PY'
+          import json,os,pathlib
+          folder=pathlib.Path(os.environ['OUT'])
+          r=json.loads((folder/'l5_raw.json').read_text())
+          s=json.loads((folder/'l5_eval.json').read_text())
+          assert r['DCH_hypothesis_tested'] is False
+          assert r['real_human_participants']==s['real_humans']==0
+          assert s['n_episode_specs']==12 and s['n_scripted_trajectories']==48
+          assert s['same_perturbation_evidence_for_all_roles'] is True
+          assert s['same_action_capacity_for_all_roles'] is True
+          assert all(v['strict_self_replay_invariant'] for v in s['summary'].values())
+          assert all(v['live_accuracy']==1 for k,v in s['summary'].items() if k!='lesioned_control')
+          assert s['summary']['lesioned_control']['live_accuracy']<1
+          assert all(x['actor_class']=='SCRIPTED_SIMULATION_NOT_HUMAN' for x in r['entries'])
+          print('DCH_L5A_SCRIPTED_PILOT',json.dumps(s['summary'],sort_keys=True))
+          PY
+      - name: Preserve full raw packets and results even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dch-l5a-scripted-${{ github.run_id }}
+          path: ${{ env.OUT }}
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Commit run-unique synthetic results to research branch
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f "$OUT"
+          git commit -m "experiment(dch): archive L5a scripted curator replay sensitivity [skip ci]"
+          git fetch origin research/dch-d0-pilot-20261009
+          git rebase origin/research/dch-d0-pilot-20261009
+          git push origin HEAD:research/dch-d0-pilot-20261009

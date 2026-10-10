@@ -1,0 +1,79 @@
+name: DCH L2 real model development calibration
+on:
+  push:
+    branches:
+      - research/dch-d0-pilot-20261009
+    paths:
+      - '.github/workflows/dch-l2-model.yml'
+      - 'experiments/DCH_D0_SYNTHETIC_PILOT/integration_v2.py'
+      - 'experiments/DCH_D0_SYNTHETIC_PILOT/tests/test_integration_v2.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  l2-model:
+    name: Real Qwen 0.5B, four-record development tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    env:
+      PYTHONUNBUFFERED: '1'
+      HF_HUB_DISABLE_TELEMETRY: '1'
+      TOKENIZERS_PARALLELISM: 'false'
+      DCH: experiments/DCH_D0_SYNTHETIC_PILOT
+      RUN_DIR: experiments/DCH_D0_SYNTHETIC_PILOT/results/qwen25-05b-l2-${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned CPU model dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "torch==2.5.1" --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers==4.51.3" "safetensors==0.5.3" "sentencepiece==0.2.0"
+      - name: Test fixture separation, match and controls
+        working-directory: experiments/DCH_D0_SYNTHETIC_PILOT
+        run: python -m unittest discover -s tests -v
+      - name: Generate evaluator-isolated development fixtures
+        run: python "$DCH/integration_v2.py" prepare --folder "$RUN_DIR" --count 12
+      - name: Real model forward passes on 8 balanced trajectories
+        run: |
+          python "$DCH/integration_v2.py" run --folder "$RUN_DIR" \
+            --backend transformers --model Qwen/Qwen2.5-0.5B-Instruct \
+            --max-cases 8 --policies expert_auto human_coded stale cold oracle
+      - name: Score results using isolated ground truth
+        run: |
+          python "$DCH/integration_v2.py" evaluate --folder "$RUN_DIR"
+          python - <<'PY'
+          import os,json,pathlib
+          p=pathlib.Path(os.environ['RUN_DIR'])
+          r=json.loads((p/'dev_raw.json').read_text())
+          e=json.loads((p/'dev_eval.json').read_text())
+          assert r['status']=='DEVELOPMENT_LLM'
+          assert len(r['records'])==40
+          assert e['matched_expert_human_n']==8
+          assert e['matched_inputs_identical'], 'identical curator inputs must match'
+          assert e['matched_outputs_identical'], 'deterministic identical-input replay diverged'
+          assert all(x['model_reported']=='Qwen/Qwen2.5-0.5B-Instruct' for x in r['records'])
+          print('DCH_L2_REAL_MODEL_GENERATIONS=40',e['policy_summary'])
+          PY
+      - name: Preserve raw partial output or failure metadata
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dch-l2-qwen25-05b-${{ github.run_id }}
+          path: ${{ env.RUN_DIR }}
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Commit successful immutable raw model results to research branch
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f "$RUN_DIR"
+          git commit -m "experiment(dch): archive Qwen real-model L2 development trial [skip ci]"
+          git fetch origin research/dch-d0-pilot-20261009
+          git rebase origin/research/dch-d0-pilot-20261009
+          git push origin HEAD:research/dch-d0-pilot-20261009
