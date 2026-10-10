@@ -1,0 +1,16 @@
+# E3 annotation packets: how to avoid turning author-selected evidence into "ground truth"
+
+**Current stage:** Reproducible annotation infrastructure, **zero** independent judgments collected. E3 blinded trial remains unexecuted.
+
+[Packet builder](blinded_packet.py) reads the original checksum-verified Pretorius-Connectome L1 export and uses the existing lexical and editorial link reranker to propose ten candidates per method plus ten deterministic random comparison records, with overlap deduplicated. Each reviewer case is shuffled and contains source passages, opaque \`candidate_id\`, and no source event ID, ranking score, retrieval method, original E2 gold label, or model output.
+
+The [automatically generated calibration packet](packets/e2-calibration/reviewer_packet.jsonl), when available, uses the six **previously source-informed E2 questions**. It is suitable only for checking presentation, labeling and adjudication workflows. It is explicitly **not blind independent E3 material**; the prompts were constructed after examining source memories and cannot be rehabilitated by masking event IDs. The calibration output keeps zero labeled examples and no claimed annotator agreement.
+
+For the real E3 sample, author at least 36 *new* dilemma statements before consulting the source event list. In a JSONL file supply only \`case_id\`, \`question\`, and \`status: "independently_authored"\`; do not include \`gold\`, \`expected\`, \`record_ids\` or source titles. The packet builder refuses fewer than 36, duplicate IDs, or submissions with privileged source labels. Once the source candidate pool is built, independently recruit at least three reviewers, give them only the reviewer packet, and record their candidate-level relevance and multi-record sufficiency judgments in the prescribed [blank template](packets/e2-calibration/blank_adjudication_template.json).
+
+**Coordinator procedure:** Keep the \`organizer_only_mapping.json\` generated locally in a separate restricted location and avoid disclosing it until the source-judgment stage is frozen. The GitHub CI workflow intentionally neither uploads nor commits this mapping. The public source records and a known deterministic packet seed mean the masking is *procedural*, not cryptographic; independent raters must agree not to reverse-lookup the original corpus or inspect model outcomes. A protocol auditor should document conflicts of interest, agreement, adjudication disagreements, and exclusion reasons.
+
+Only after independent labels are frozen may a scorer join candidate IDs back to canonical event IDs and evaluate top-k sufficient-set coverage. **Multiple alternative sufficient evidence sets must be accepted**, and no event set should be deemed irrelevant merely because E2's researcher did not pick it. E3 should be blocked at this gate until the independent judgments exist. No automatic LLM-generated annotation should be represented as an independent human blinded review.
+
+Reproduction for the calibration packet: 
+\`python blinded_packet.py --source pretorius_source --calibration-only --output packets/e2-calibration\`. The generated output is public, synthetic/fictional archival source material only. The principal E3 creation workflow should be run by an annotation coordinator in a separate process after new queries are frozen.
