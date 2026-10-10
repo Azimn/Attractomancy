@@ -1,0 +1,26 @@
+{
+  "allowed_judgments": [
+    "supported_by_narrative",
+    "contradicted_by_narrative",
+    "underdetermined_by_narrative",
+    "not_about_this_event"
+  ],
+  "candidate_source_identity_redacted": true,
+  "candidate_statements_count": 72,
+  "caveat": "Sidecar descriptions and within-episode decoys can each be supported, contradictory or ambiguous; raters must evaluate all independently and may disagree.",
+  "independently_authored_e3_cases": false,
+  "narrative_source_event_ids_redacted": true,
+  "public_corpus_is_recoverable_so_blinding_is_procedural_not_cryptographic": true,
+  "review_packet_count": 24,
+  "reviewer_votes_received": 0,
+  "reviewers_required": 3,
+  "source": {
+    "l1_manifest_sha256": "ce23717b3950a772cc25e4bf60107eaddf4a0375122b6893c15417669ae033bb",
+    "record_count": 450,
+    "source_checkout": "6d2768211f5c2184c8bbdb833c06e169b5137197",
+    "source_git_blob": "718dcc2d5ba4feccdef1690d447edfcebaa9bfb5"
+  },
+  "source_authored_sidecar_is_not_human_relevance_ground_truth": true,
+  "source_sample_seed": 20261010,
+  "status": "unreviewed_source_semantics_packet_not_e3_blind_confirmation"
+}
