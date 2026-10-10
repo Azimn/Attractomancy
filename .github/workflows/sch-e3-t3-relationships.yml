@@ -1,0 +1,69 @@
+name: SCH E3 T3 real L1 relationship continuity packet
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sch-e3-t3-relationships.yml"
+      - "experiments/SCH_E3_TRIBUNAL_OF_MEMORY/l1_relationship_pairs.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  packet:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: Azimn/Pretorius-Connectome
+          ref: 6d2768211f5c2184c8bbdb833c06e169b5137197
+          path: pretorius_source
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Build 24 unlabeled chronologically ordered relationship pairs
+        run: |
+          python experiments/SCH_E3_TRIBUNAL_OF_MEMORY/l1_relationship_pairs.py \
+            --source pretorius_source \
+            --output experiments/SCH_E3_TRIBUNAL_OF_MEMORY/packets/l1-relationship-t3
+      - name: Check reviewer masking, counts and current source fingerprint
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          folder=pathlib.Path("experiments/SCH_E3_TRIBUNAL_OF_MEMORY/packets/l1-relationship-t3")
+          rows=[json.loads(s) for s in (folder/"reviewer_pairs.jsonl").read_text().splitlines() if s.strip()]
+          m=json.loads((folder/"review_manifest.json").read_text())
+          assert len(rows)==24==m["pair_count"]
+          assert len(set(r["relationship_counterparty"] for r in rows))==8
+          assert len({r["pair_id"] for r in rows})==24
+          assert m["reviewer_submissions"]==0
+          assert m["source"]["record_count"]==450
+          assert m["not_main_blind_e3"]
+          for row in rows:
+            assert not row["annotated"]
+            assert not any(v is not None for v in row["candidate_relation_flags"].values())
+            assert "event_id" not in json.dumps(row).lower()
+            assert "relationship_changes" not in json.dumps(row)
+            assert len(row["earlier_excerpt"])>100 and len(row["later_excerpt"])>100
+          print("E3_T3_UNLABELED_PAIR_VALID",len(rows))
+          PY
+      - name: Commit reviewer-facing material only
+        run: |
+          folder=experiments/SCH_E3_TRIBUNAL_OF_MEMORY/packets/l1-relationship-t3
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$folder/reviewer_pairs.jsonl" "$folder/review_manifest.json"
+          ! git diff --cached --name-only | grep -q "ORGANIZER_ONLY"
+          git commit -m "research: archive unlabeled chronological L1 relationship review packet [skip ci]"
+          for n in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo "Review packet push failed" >&2
+          exit 1
