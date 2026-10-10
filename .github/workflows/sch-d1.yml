@@ -1,0 +1,81 @@
+name: SCH D1 external state reconstruction
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sch-d1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  d1:
+    name: D1 on ${{ matrix.slug }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - slug: qwen25-05b
+            model: Qwen/Qwen2.5-0.5B-Instruct
+          - slug: qwen25-15b
+            model: Qwen/Qwen2.5-1.5B-Instruct
+    env:
+      PYTHONUNBUFFERED: "1"
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install CPU inference dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "torch==2.5.1" --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers==4.51.3" "safetensors==0.5.3" "sentencepiece==0.2.0"
+      - name: Validate frozen D1 fixture
+        run: python experiments/SCH_D1_EXTERNAL_RECONSTRUCTION/run.py --validate-only
+      - name: Execute 72 fresh-context experiments
+        run: |
+          python experiments/SCH_D1_EXTERNAL_RECONSTRUCTION/run.py \
+            --model ${{ matrix.model }} \
+            --output experiments/SCH_D1_EXTERNAL_RECONSTRUCTION/results/${{ matrix.slug }}-${{ github.run_id }}
+      - name: Upload source records, raw outputs, scores, and manifest
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sch-d1-${{ matrix.slug }}-${{ github.run_id }}
+          path: experiments/SCH_D1_EXTERNAL_RECONSTRUCTION/results/${{ matrix.slug }}-${{ github.run_id }}/
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Verify and commit complete result dataset
+        if: success()
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          p=pathlib.Path("experiments/SCH_D1_EXTERNAL_RECONSTRUCTION/results/${{ matrix.slug }}-${{ github.run_id }}")
+          s=json.loads((p/"summary.json").read_text())
+          m=json.loads((p/"manifest.json").read_text())
+          rows=[json.loads(line) for line in (p/"responses.jsonl").read_text().splitlines() if line.strip()]
+          assert len(rows)==s["cases_completed"]==72
+          assert len({r["case"]["id"] for r in rows})==72
+          assert s["prompt_tokens"]==sum(r["prompt_tokens"] for r in rows)
+          assert s["generated_tokens"]==sum(r["generated_tokens"] for r in rows)
+          assert s["fixture_sha256"]==m["fixture_sha256"]
+          print("D1_VERIFIED",s["model"],s["cases_completed"])
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/SCH_D1_EXTERNAL_RECONSTRUCTION/results/${{ matrix.slug }}-${{ github.run_id }}
+          git commit -m "experiments: archive D1 ${{ matrix.slug }} data [skip ci]"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo "PUSH_FAILED: raw GitHub artifact remains available" >&2
+          exit 1
