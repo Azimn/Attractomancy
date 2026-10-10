@@ -1,0 +1,128 @@
+{
+  "study": "EXP-A zero-shot synthematic cue pilot",
+  "status": "exploratory_pilot_not_confirmatory",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_resolved_commit": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "tokenizer_name": "Qwen/Qwen2.5-0.5B-Instruct",
+  "fixture_sha256": "1ee2adcf4378fb8065d68aae14ec7aa5ad049b2c8429c65f6f9d500f35d1d8f2",
+  "fixture_version": "EXP-A-0.1",
+  "case_order_seed": 9102026,
+  "greedy_decoding": true,
+  "max_new_tokens": 88,
+  "python": "3.11.17",
+  "torch": "2.5.1+cpu",
+  "transformers": "4.51.3",
+  "cases_planned": 30,
+  "cases_attempted": 30,
+  "run_scope": "full_30_case_pilot",
+  "conditioning": "none",
+  "archive_access": "none",
+  "independent_context_per_generation": true,
+  "elapsed_seconds": 226.73,
+  "cases_completed": 30,
+  "actual_generated_tokens": 2635,
+  "actual_prompt_tokens": 2384,
+  "aggregate_by_regime_arm": [
+    {
+      "regime": "mythic_ceremonial",
+      "arm": "arbitrary_name",
+      "n": 3,
+      "mean_register_proxy_per_100_words": 1.99,
+      "mean_prompt_tokens": 79.67,
+      "mean_output_tokens": 88,
+      "mean_total_tokens": 167.67,
+      "cue_echoed_cases": 0
+    },
+    {
+      "regime": "mythic_ceremonial",
+      "arm": "familiar_emoji",
+      "n": 3,
+      "mean_register_proxy_per_100_words": 0.995,
+      "mean_prompt_tokens": 78.67,
+      "mean_output_tokens": 88,
+      "mean_total_tokens": 166.67,
+      "cue_echoed_cases": 1
+    },
+    {
+      "regime": "mythic_ceremonial",
+      "arm": "familiar_word",
+      "n": 3,
+      "mean_register_proxy_per_100_words": 1.2346,
+      "mean_prompt_tokens": 77.67,
+      "mean_output_tokens": 86.33,
+      "mean_total_tokens": 164,
+      "cue_echoed_cases": 0
+    },
+    {
+      "regime": "mythic_ceremonial",
+      "arm": "neutral_word",
+      "n": 3,
+      "mean_register_proxy_per_100_words": 0.813,
+      "mean_prompt_tokens": 77.67,
+      "mean_output_tokens": 88,
+      "mean_total_tokens": 165.67,
+      "cue_echoed_cases": 1
+    },
+    {
+      "regime": "mythic_ceremonial",
+      "arm": "plain_instruction",
+      "n": 3,
+      "mean_register_proxy_per_100_words": 3.3838,
+      "mean_prompt_tokens": 83.67,
+      "mean_output_tokens": 88,
+      "mean_total_tokens": 171.67,
+      "cue_echoed_cases": 0
+    },
+    {
+      "regime": "recursive_reflective",
+      "arm": "arbitrary_name",
+      "n": 3,
+      "mean_register_proxy_per_100_words": 0.0,
+      "mean_prompt_tokens": 79.67,
+      "mean_output_tokens": 88,
+      "mean_total_tokens": 167.67,
+      "cue_echoed_cases": 0
+    },
+    {
+      "regime": "recursive_reflective",
+      "arm": "familiar_emoji",
+      "n": 3,
+      "mean_register_proxy_per_100_words": 0.0,
+      "mean_prompt_tokens": 78.67,
+      "mean_output_tokens": 88,
+      "mean_total_tokens": 166.67,
+      "cue_echoed_cases": 0
+    },
+    {
+      "regime": "recursive_reflective",
+      "arm": "familiar_word",
+      "n": 3,
+      "mean_register_proxy_per_100_words": 0.0,
+      "mean_prompt_tokens": 77.67,
+      "mean_output_tokens": 88,
+      "mean_total_tokens": 165.67,
+      "cue_echoed_cases": 1
+    },
+    {
+      "regime": "recursive_reflective",
+      "arm": "neutral_word",
+      "n": 3,
+      "mean_register_proxy_per_100_words": 0.0,
+      "mean_prompt_tokens": 77.67,
+      "mean_output_tokens": 88,
+      "mean_total_tokens": 165.67,
+      "cue_echoed_cases": 1
+    },
+    {
+      "regime": "recursive_reflective",
+      "arm": "plain_instruction",
+      "n": 3,
+      "mean_register_proxy_per_100_words": 3.8647,
+      "mean_prompt_tokens": 83.67,
+      "mean_output_tokens": 88,
+      "mean_total_tokens": 171.67,
+      "cue_echoed_cases": 0
+    }
+  ],
+  "interpretation": "Mechanical lexical proxy only. No blinded judgment, confirmatory effect estimate, personal-memory recovery, or persistence inference."
+}

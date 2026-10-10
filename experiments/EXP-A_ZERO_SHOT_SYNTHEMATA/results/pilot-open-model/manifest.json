@@ -1,0 +1,21 @@
+{
+  "study": "EXP-A zero-shot synthematic cue pilot",
+  "status": "exploratory_pilot_not_confirmatory",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_resolved_commit": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "tokenizer_name": "Qwen/Qwen2.5-0.5B-Instruct",
+  "fixture_sha256": "1ee2adcf4378fb8065d68aae14ec7aa5ad049b2c8429c65f6f9d500f35d1d8f2",
+  "fixture_version": "EXP-A-0.1",
+  "case_order_seed": 9102026,
+  "greedy_decoding": true,
+  "max_new_tokens": 88,
+  "python": "3.11.17",
+  "torch": "2.5.1+cpu",
+  "transformers": "4.51.3",
+  "cases_planned": 30,
+  "cases_attempted": 30,
+  "run_scope": "full_30_case_pilot",
+  "conditioning": "none",
+  "archive_access": "none",
+  "independent_context_per_generation": true
+}
