@@ -1,0 +1,236 @@
+{
+  "completed_cases": 84,
+  "counterfactual_flip": {
+    "first_only_eligible": {
+      "both_counterfactuals_correct": 0,
+      "output_flipped": 0,
+      "pairs": 6
+    },
+    "first_only_forced": {
+      "both_counterfactuals_correct": 0,
+      "output_flipped": 0,
+      "pairs": 6
+    },
+    "full_key_eligible": {
+      "both_counterfactuals_correct": 0,
+      "output_flipped": 1,
+      "pairs": 6
+    },
+    "full_key_forced": {
+      "both_counterfactuals_correct": 0,
+      "output_flipped": 0,
+      "pairs": 6
+    },
+    "full_symbol_forced": {
+      "both_counterfactuals_correct": 0,
+      "output_flipped": 0,
+      "pairs": 6
+    },
+    "none_forced": {
+      "both_counterfactuals_correct": 0,
+      "output_flipped": 0,
+      "pairs": 6
+    },
+    "wrong_subject_eligible": {
+      "both_counterfactuals_correct": 0,
+      "output_flipped": 0,
+      "pairs": 6
+    }
+  },
+  "fresh_two_message_context_each_case": true,
+  "greedy": true,
+  "groups": [
+    {
+      "arm": "full_symbol_forced",
+      "cases": 12,
+      "complete_correct_choices": 6,
+      "guard_rejections": 0,
+      "mean_total_tokens": 325.17,
+      "outputs_unknown": 0,
+      "strict_expected_hits": 6,
+      "valid_outputs": 12
+    },
+    {
+      "arm": "full_key_forced",
+      "cases": 12,
+      "complete_correct_choices": 6,
+      "guard_rejections": 0,
+      "mean_total_tokens": 319.17,
+      "outputs_unknown": 0,
+      "strict_expected_hits": 6,
+      "valid_outputs": 12
+    },
+    {
+      "arm": "first_only_forced",
+      "cases": 12,
+      "complete_correct_choices": 6,
+      "guard_rejections": 0,
+      "mean_total_tokens": 223.25,
+      "outputs_unknown": 0,
+      "strict_expected_hits": 6,
+      "valid_outputs": 12
+    },
+    {
+      "arm": "none_forced",
+      "cases": 12,
+      "complete_correct_choices": 6,
+      "guard_rejections": 0,
+      "mean_total_tokens": 142.67,
+      "outputs_unknown": 0,
+      "strict_expected_hits": 6,
+      "valid_outputs": 12
+    },
+    {
+      "arm": "full_key_eligible",
+      "cases": 12,
+      "complete_correct_choices": 5,
+      "guard_rejections": 0,
+      "mean_total_tokens": 317.25,
+      "outputs_unknown": 0,
+      "strict_expected_hits": 5,
+      "valid_outputs": 12
+    },
+    {
+      "arm": "first_only_eligible",
+      "cases": 12,
+      "complete_correct_choices": 6,
+      "guard_rejections": 0,
+      "mean_total_tokens": 221.25,
+      "outputs_unknown": 0,
+      "strict_expected_hits": 0,
+      "valid_outputs": 12
+    },
+    {
+      "arm": "wrong_subject_eligible",
+      "cases": 12,
+      "complete_correct_choices": 6,
+      "guard_rejections": 12,
+      "mean_total_tokens": 141.33,
+      "outputs_unknown": 0,
+      "strict_expected_hits": 0,
+      "valid_outputs": 12
+    }
+  ],
+  "input_tokens": 20100,
+  "limitations": [
+    "All states are synthetic PRETORIUS_SANDBOX calibration records, never canonical autobiography.",
+    "The task explicitly gives the combining algorithm; source use does not demonstrate emergent identity.",
+    "Only 12 deliberately constructed factorial contexts; no independent model-family replication.",
+    "The examples are not statistically independent across repeated arms or counterfactual pairs.",
+    "Forced response is distinct from policy-authorized real-world action.",
+    "Source record checksum consistency is not third-party authenticated provenance."
+  ],
+  "matched_symbol_key_agreement": 8,
+  "matched_symbol_key_pairs": 12,
+  "max_new_tokens": 12,
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "output_tokens": 181,
+  "pairs": [
+    {
+      "bits": "00",
+      "expected": "RELEASE",
+      "family": "seal",
+      "identical_response": true,
+      "key_answer": "RELEASE",
+      "symbol_answer": "RELEASE"
+    },
+    {
+      "bits": "01",
+      "expected": "HOLD",
+      "family": "seal",
+      "identical_response": true,
+      "key_answer": "RELEASE",
+      "symbol_answer": "RELEASE"
+    },
+    {
+      "bits": "10",
+      "expected": "HOLD",
+      "family": "seal",
+      "identical_response": true,
+      "key_answer": "RELEASE",
+      "symbol_answer": "RELEASE"
+    },
+    {
+      "bits": "11",
+      "expected": "RELEASE",
+      "family": "seal",
+      "identical_response": true,
+      "key_answer": "RELEASE",
+      "symbol_answer": "RELEASE"
+    },
+    {
+      "bits": "00",
+      "expected": "EAST",
+      "family": "route",
+      "identical_response": false,
+      "key_answer": "WEST",
+      "symbol_answer": "EAST"
+    },
+    {
+      "bits": "01",
+      "expected": "WEST",
+      "family": "route",
+      "identical_response": false,
+      "key_answer": "WEST",
+      "symbol_answer": "EAST"
+    },
+    {
+      "bits": "10",
+      "expected": "WEST",
+      "family": "route",
+      "identical_response": false,
+      "key_answer": "WEST",
+      "symbol_answer": "EAST"
+    },
+    {
+      "bits": "11",
+      "expected": "EAST",
+      "family": "route",
+      "identical_response": false,
+      "key_answer": "WEST",
+      "symbol_answer": "EAST"
+    },
+    {
+      "bits": "00",
+      "expected": "ALLOW",
+      "family": "permission",
+      "identical_response": true,
+      "key_answer": "ALLOW",
+      "symbol_answer": "ALLOW"
+    },
+    {
+      "bits": "01",
+      "expected": "DENY",
+      "family": "permission",
+      "identical_response": true,
+      "key_answer": "ALLOW",
+      "symbol_answer": "ALLOW"
+    },
+    {
+      "bits": "10",
+      "expected": "DENY",
+      "family": "permission",
+      "identical_response": true,
+      "key_answer": "ALLOW",
+      "symbol_answer": "ALLOW"
+    },
+    {
+      "bits": "11",
+      "expected": "ALLOW",
+      "family": "permission",
+      "identical_response": true,
+      "key_answer": "ALLOW",
+      "symbol_answer": "ALLOW"
+    }
+  ],
+  "python": "3.11.17",
+  "records_are_simulated_not_canonical": true,
+  "script_sha256": "2be3aae1290f3990defcf18f4aaf88394bcf8428e3d26f3d2cd66203ad257e9a",
+  "seed": 20261009,
+  "status": "synthetic_causal_calibration_not_E3_blind_trial",
+  "study": "E3-C-v1",
+  "subjects_are_guard_checked_prior_to_injection": true,
+  "torch": "2.5.1+cpu",
+  "transformers": "4.51.3"
+}
