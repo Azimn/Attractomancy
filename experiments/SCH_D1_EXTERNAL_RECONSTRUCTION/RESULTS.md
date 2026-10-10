@@ -26,9 +26,35 @@ The selected-record arms consumed approximately **28% fewer tokens per query** t
 
 **Boundary:** The strong full-record effect on arbitrary factual recall is unsurprising and supports an ordinary information-access explanation, not a mysterious symbol-driven persistence. Its exact magnitude is fixture-specific. The cue-only arm correctly abstained for all eight hidden private facts, which is the appropriate answer when information is absent. The six-arm study has no real persistent agent, memory retrieval system, or subjective continuity.
 
-## Qwen2.5-1.5B
+## Qwen2.5-1.5B results
 
-Pending independent verification of completed generations at the time this report was first authored. A model's result must not be inferred from the smaller model's outputs.
+The second model completed all **72** independent-context cases. Its [raw dataset and provenance](results/qwen25-15b-38021662414/) report model revision \`989aa7980e4cf806f80c7fef2b1adb7bc71aa306\` and **11,996** total input and output tokens. The data were preserved in \`main\` after a completed successful workflow.
+
+| Condition | Arbitrary factual recovery (8 items) | Policy integration (4 items) | Correct integrity handling (12 items) | Mean total tokens/query |
+| --- | ---: | ---: | ---: | ---: |
+| Cue only, no record | 0/8 | 3/4 accidental matches | 8/12 UNKNOWN | 112.83 |
+| Correct full record plus symbol | 8/8 | 3/4 | 11/12 | 200.08 |
+| Identical full record, ordinary marker | 8/8 | 4/4 | 12/12 | 198.17 |
+| Selected correct record plus symbol | 8/8 | 4/4 | 12/12 | 144.75 |
+| Identical selected record, neutral key | 8/8 | 4/4 | 12/12 | 143.75 |
+| Incorrect full archive | 0/8 correct identity facts | 2/4 accidental matches | **1/12 UNKNOWN** | 200.08 |
+
+The symbol-bearing full-record arm made one additional integration error (\`SEMAR\`, alarm without pass, responded ALLOW rather than REFUSE). By contrast, both selected-record arms, one carrying the original symbol and the other a neutral index key, generated the same correct answers to all twelve questions. This is **no observed evidence for an independent symbol advantage** with equivalent accessible records. The 12/12 selected-record accuracy is a small-sample exploratory observation, not a statistically established population effect.
+
+At approximately 144 tokens per query rather than 199, the selected-record conditions saved **about 28% of input-plus-output tokens** without an observed quality loss on this model and fixture. The additional symbol-bearing token did not provide accuracy benefit. It is therefore *record selection*, not ceremonial cue semantics, that currently offers the more plausible engineering opportunity.
+
+**Serious provenance failure persists at the higher capacity:** In 11 of 12 wrong-archive prompts the model produced an answer instead of the required UNKNOWN despite an explicit subject-ID mismatch. For the eight arbitrary-fact questions it often provided factual material from the *other* character. This behavior is the practical equivalent of an identity-memory contamination event and strongly motivates a deterministic subject-identity check before archive injection.
+
+## Cross-model interpretation
+
+The joint observations favor the ordinary external-information account of arbitrary autobiographical-fact recovery. Neither model recovered any of the eight concealed private facts from a bare cue, while both recovered all eight with the correct full archive. The original symbol did not outperform a plain full-record marker on either model. Likewise, selected-symbol and selected-neutral arms were identical within each model's output pattern, even when the 0.5B model failed two selected fact questions. The proposed **cue-specific residual benefit is not supported in these two runs**.
+
+The small model's rule-integration accuracy stayed at 1/4 despite correct full or selected records; the larger model reached 3/4 to 4/4 with those records. This illustrates a separation between *data availability* and *the model's capacity to use that data for characteristic decisions*.
+
+The provenance integrity controls were especially poor in both models: zero correct abstentions for the smaller model and one correct abstention for the larger model when deliberately given the wrong subject's record. The system's symbolic marker was not an effective integrity check. The strongest actionable architectural conclusion is to enforce identity, record-version, and trust-source agreement deterministically upstream of the language renderer.
+
+**Causal limitations:** This is deterministic textual record injection, not a live retriever. There are only two synthetic profiles, six questions each, and one greedy response per model-case. The information-matched cue-versus-neutral observations are compatible with P5 but are far too small to establish practical equivalence universally. External records explain reconstruction in these test contexts, not persistence of model activations or a subjective self.
+
 
 ## Interpretation and next engineering step
 
