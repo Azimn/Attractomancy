@@ -1,0 +1,28 @@
+name: SCH D1 archive identity gate tests
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sch-d1-archive-gate.yml"
+      - "experiments/SCH_D1_EXTERNAL_RECONSTRUCTION/archive_guard.py"
+      - "experiments/SCH_D1_EXTERNAL_RECONSTRUCTION/test_archive_guard.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run archive provenance-gate unit tests
+        run: |
+          python -m unittest discover \
+            -s experiments/SCH_D1_EXTERNAL_RECONSTRUCTION \
+            -p 'test_archive_guard.py' \
+            -v
