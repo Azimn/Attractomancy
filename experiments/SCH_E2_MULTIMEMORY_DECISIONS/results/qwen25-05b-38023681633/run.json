@@ -1,0 +1,27 @@
+{
+  "actual_input_tokens": 35280,
+  "actual_output_tokens": 153,
+  "cases_completed": 72,
+  "cases_planned": 72,
+  "elapsed_seconds": 176.52,
+  "fixture_sha256": "805ec436d229319902d5e29e9665795562587c9661bf313f5bff54500c34948e",
+  "independent_clean_model_context_per_case": true,
+  "interpretation_labels_human_authored_unblinded": true,
+  "max_new_tokens": 12,
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "python": "3.11.17",
+  "seed": 20261009,
+  "source": {
+    "l1_manifest_sha256": "ce23717b3950a772cc25e4bf60107eaddf4a0375122b6893c15417669ae033bb",
+    "record_count": 450,
+    "source_checkout": "6d2768211f5c2184c8bbdb833c06e169b5137197",
+    "source_git_blob": "718dcc2d5ba4feccdef1690d447edfcebaa9bfb5"
+  },
+  "source_L1_unchanged": true,
+  "status": "exploratory_author_interpreted_not_blind",
+  "temperature": "greedy",
+  "torch": "2.5.1+cpu",
+  "transformers": "4.51.3",
+  "wrong_subject_content_not_supplied_to_model": true
+}

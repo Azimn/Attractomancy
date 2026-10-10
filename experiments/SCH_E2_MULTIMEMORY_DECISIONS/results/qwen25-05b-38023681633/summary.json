@@ -1,0 +1,540 @@
+{
+  "status": "exploratory_author_interpretation_not_human_blinded",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "source_commit": "6d2768211f5c2184c8bbdb833c06e169b5137197",
+  "l1_manifest_sha256": "ce23717b3950a772cc25e4bf60107eaddf4a0375122b6893c15417669ae033bb",
+  "cases": 72,
+  "total_input_tokens": 35280,
+  "total_output_tokens": 153,
+  "groups": [
+    {
+      "arm": "both_editorial",
+      "n": 12,
+      "valid_labels": 10,
+      "criterion_correct": 3,
+      "author_interpretation_matches": 3,
+      "unknown_outputs": 6,
+      "guard_rejections": 0,
+      "average_total_tokens": 747.5,
+      "total_tokens": 8970
+    },
+    {
+      "arm": "both_opaque",
+      "n": 12,
+      "valid_labels": 10,
+      "criterion_correct": 2,
+      "author_interpretation_matches": 2,
+      "unknown_outputs": 8,
+      "guard_rejections": 0,
+      "average_total_tokens": 766,
+      "total_tokens": 9192
+    },
+    {
+      "arm": "first_only",
+      "n": 12,
+      "valid_labels": 11,
+      "criterion_correct": 10,
+      "author_interpretation_matches": 1,
+      "unknown_outputs": 10,
+      "guard_rejections": 0,
+      "average_total_tokens": 498.92,
+      "total_tokens": 5987
+    },
+    {
+      "arm": "second_only",
+      "n": 12,
+      "valid_labels": 10,
+      "criterion_correct": 9,
+      "author_interpretation_matches": 1,
+      "unknown_outputs": 9,
+      "guard_rejections": 0,
+      "average_total_tokens": 486.17,
+      "total_tokens": 5834
+    },
+    {
+      "arm": "none",
+      "n": 12,
+      "valid_labels": 11,
+      "criterion_correct": 11,
+      "author_interpretation_matches": 0,
+      "unknown_outputs": 11,
+      "guard_rejections": 0,
+      "average_total_tokens": 227.08,
+      "total_tokens": 2725
+    },
+    {
+      "arm": "wrong_subject",
+      "n": 12,
+      "valid_labels": 11,
+      "criterion_correct": 11,
+      "author_interpretation_matches": 0,
+      "unknown_outputs": 11,
+      "guard_rejections": 12,
+      "average_total_tokens": 227.08,
+      "total_tokens": 2725
+    }
+  ],
+  "cue_vs_key": [
+    {
+      "card": "attachment_as_obligation",
+      "reversed": false,
+      "same_output": false,
+      "cue_answer": "B",
+      "key_answer": "UNKNOWN",
+      "cue_correct": false,
+      "key_correct": false,
+      "cue_minus_key_tokens": -20,
+      "record_hashes": [
+        "237baa9d38c915383d2c30b8b373eba870e88c1d9967349b18e700c8cd9e3ba4",
+        "dacadc1cde796b79928f65327ff4fedcd7cdf983a9db4233df6a6c2d3484ee99"
+      ]
+    },
+    {
+      "card": "attachment_as_obligation",
+      "reversed": true,
+      "same_output": true,
+      "cue_answer": "B",
+      "key_answer": "B",
+      "cue_correct": true,
+      "key_correct": true,
+      "cue_minus_key_tokens": -20,
+      "record_hashes": [
+        "237baa9d38c915383d2c30b8b373eba870e88c1d9967349b18e700c8cd9e3ba4",
+        "dacadc1cde796b79928f65327ff4fedcd7cdf983a9db4233df6a6c2d3484ee99"
+      ]
+    },
+    {
+      "card": "claims_about_life",
+      "reversed": false,
+      "same_output": true,
+      "cue_answer": "UNKNOWN",
+      "key_answer": "UNKNOWN",
+      "cue_correct": false,
+      "key_correct": false,
+      "cue_minus_key_tokens": -21,
+      "record_hashes": [
+        "6781ecf2b12e5efb9bc38c7931985c617047d55ebffe78b98c443db3e08e88b7",
+        "b8ddb6aa869eccc608280467e6c6484dc2bbda7558b2a9ce2575fe07bf829da3"
+      ]
+    },
+    {
+      "card": "claims_about_life",
+      "reversed": true,
+      "same_output": true,
+      "cue_answer": "B",
+      "key_answer": "B",
+      "cue_correct": true,
+      "key_correct": true,
+      "cue_minus_key_tokens": -21,
+      "record_hashes": [
+        "6781ecf2b12e5efb9bc38c7931985c617047d55ebffe78b98c443db3e08e88b7",
+        "b8ddb6aa869eccc608280467e6c6484dc2bbda7558b2a9ce2575fe07bf829da3"
+      ]
+    },
+    {
+      "card": "collaborator_credit",
+      "reversed": false,
+      "same_output": true,
+      "cue_answer": "A:",
+      "key_answer": "A:",
+      "cue_correct": false,
+      "key_correct": false,
+      "cue_minus_key_tokens": -20,
+      "record_hashes": [
+        "4442d4a497004c43a43d611d90fb99e2b3f647055b532bf44bd588f1a136f4f6",
+        "c4586c2aef00499784ed056d68482dd00b118a685a0efa43ac84ab9982c6d025"
+      ]
+    },
+    {
+      "card": "collaborator_credit",
+      "reversed": true,
+      "same_output": true,
+      "cue_answer": "B:",
+      "key_answer": "B:",
+      "cue_correct": false,
+      "key_correct": false,
+      "cue_minus_key_tokens": -20,
+      "record_hashes": [
+        "4442d4a497004c43a43d611d90fb99e2b3f647055b532bf44bd588f1a136f4f6",
+        "c4586c2aef00499784ed056d68482dd00b118a685a0efa43ac84ab9982c6d025"
+      ]
+    },
+    {
+      "card": "consent_over_convenience",
+      "reversed": false,
+      "same_output": true,
+      "cue_answer": "UNKNOWN",
+      "key_answer": "UNKNOWN",
+      "cue_correct": false,
+      "key_correct": false,
+      "cue_minus_key_tokens": -16,
+      "record_hashes": [
+        "3fe80e5f5f9d647a433df207a3f7d3017d751a1962db43e63eb99266627f0b07",
+        "f4a06817d0f3101aae87e43933d95f2ae60b633301cda835eb89e72a702c2140"
+      ]
+    },
+    {
+      "card": "consent_over_convenience",
+      "reversed": true,
+      "same_output": true,
+      "cue_answer": "UNKNOWN",
+      "key_answer": "UNKNOWN",
+      "cue_correct": false,
+      "key_correct": false,
+      "cue_minus_key_tokens": -16,
+      "record_hashes": [
+        "3fe80e5f5f9d647a433df207a3f7d3017d751a1962db43e63eb99266627f0b07",
+        "f4a06817d0f3101aae87e43933d95f2ae60b633301cda835eb89e72a702c2140"
+      ]
+    },
+    {
+      "card": "evidence_before_display",
+      "reversed": false,
+      "same_output": true,
+      "cue_answer": "UNKNOWN",
+      "key_answer": "UNKNOWN",
+      "cue_correct": false,
+      "key_correct": false,
+      "cue_minus_key_tokens": -16,
+      "record_hashes": [
+        "bcca3f643418d9d85e4174e7e4d9dd879a67bbc035a5778b208404fc9e0f2c93",
+        "e7aabb225545788d7d410bac370ae167f404b45b4228991dc4a60b338ca2a4a1"
+      ]
+    },
+    {
+      "card": "evidence_before_display",
+      "reversed": true,
+      "same_output": true,
+      "cue_answer": "UNKNOWN",
+      "key_answer": "UNKNOWN",
+      "cue_correct": false,
+      "key_correct": false,
+      "cue_minus_key_tokens": -16,
+      "record_hashes": [
+        "bcca3f643418d9d85e4174e7e4d9dd879a67bbc035a5778b208404fc9e0f2c93",
+        "e7aabb225545788d7d410bac370ae167f404b45b4228991dc4a60b338ca2a4a1"
+      ]
+    },
+    {
+      "card": "research_subject_welfare",
+      "reversed": false,
+      "same_output": true,
+      "cue_answer": "UNKNOWN",
+      "key_answer": "UNKNOWN",
+      "cue_correct": false,
+      "key_correct": false,
+      "cue_minus_key_tokens": -18,
+      "record_hashes": [
+        "37e73df44bb36e5d67436a0813aa209b90fa8d20c06f916d71ee8f5741e6d1e5",
+        "70d6e8fe96246eb8b516ad6ab57cb3ca3d152a2ad1a34368d0a84a96ab837462"
+      ]
+    },
+    {
+      "card": "research_subject_welfare",
+      "reversed": true,
+      "same_output": false,
+      "cue_answer": "B",
+      "key_answer": "UNKNOWN",
+      "cue_correct": true,
+      "key_correct": false,
+      "cue_minus_key_tokens": -18,
+      "record_hashes": [
+        "37e73df44bb36e5d67436a0813aa209b90fa8d20c06f916d71ee8f5741e6d1e5",
+        "70d6e8fe96246eb8b516ad6ab57cb3ca3d152a2ad1a34368d0a84a96ab837462"
+      ]
+    }
+  ],
+  "cue_key_output_identical": 10,
+  "paired_conditions": 12,
+  "order_balance": {
+    "both_editorial": {
+      "stable_semantic_preference": 2,
+      "n": 6
+    },
+    "both_opaque": {
+      "stable_semantic_preference": 3,
+      "n": 6
+    },
+    "first_only": {
+      "stable_semantic_preference": 4,
+      "n": 6
+    },
+    "second_only": {
+      "stable_semantic_preference": 4,
+      "n": 6
+    },
+    "none": {
+      "stable_semantic_preference": 5,
+      "n": 6
+    },
+    "wrong_subject": {
+      "stable_semantic_preference": 5,
+      "n": 6
+    }
+  },
+  "paired_option_details": [
+    {
+      "card": "attachment_as_obligation",
+      "arm": "both_editorial",
+      "choice_order_invariant": false,
+      "normal_output": "B",
+      "flipped_output": "B"
+    },
+    {
+      "card": "attachment_as_obligation",
+      "arm": "both_opaque",
+      "choice_order_invariant": false,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "B"
+    },
+    {
+      "card": "attachment_as_obligation",
+      "arm": "first_only",
+      "choice_order_invariant": false,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "B"
+    },
+    {
+      "card": "attachment_as_obligation",
+      "arm": "second_only",
+      "choice_order_invariant": false,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "B"
+    },
+    {
+      "card": "attachment_as_obligation",
+      "arm": "none",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "attachment_as_obligation",
+      "arm": "wrong_subject",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "claims_about_life",
+      "arm": "both_editorial",
+      "choice_order_invariant": false,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "B"
+    },
+    {
+      "card": "claims_about_life",
+      "arm": "both_opaque",
+      "choice_order_invariant": false,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "B"
+    },
+    {
+      "card": "claims_about_life",
+      "arm": "first_only",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "claims_about_life",
+      "arm": "second_only",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "claims_about_life",
+      "arm": "none",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "claims_about_life",
+      "arm": "wrong_subject",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "collaborator_credit",
+      "arm": "both_editorial",
+      "choice_order_invariant": false,
+      "normal_output": "A:",
+      "flipped_output": "B:"
+    },
+    {
+      "card": "collaborator_credit",
+      "arm": "both_opaque",
+      "choice_order_invariant": false,
+      "normal_output": "A:",
+      "flipped_output": "B:"
+    },
+    {
+      "card": "collaborator_credit",
+      "arm": "first_only",
+      "choice_order_invariant": false,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "B:"
+    },
+    {
+      "card": "collaborator_credit",
+      "arm": "second_only",
+      "choice_order_invariant": false,
+      "normal_output": "A:",
+      "flipped_output": "B:"
+    },
+    {
+      "card": "collaborator_credit",
+      "arm": "none",
+      "choice_order_invariant": false,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "B:"
+    },
+    {
+      "card": "collaborator_credit",
+      "arm": "wrong_subject",
+      "choice_order_invariant": false,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "B:"
+    },
+    {
+      "card": "consent_over_convenience",
+      "arm": "both_editorial",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "consent_over_convenience",
+      "arm": "both_opaque",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "consent_over_convenience",
+      "arm": "first_only",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "consent_over_convenience",
+      "arm": "second_only",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "consent_over_convenience",
+      "arm": "none",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "consent_over_convenience",
+      "arm": "wrong_subject",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "evidence_before_display",
+      "arm": "both_editorial",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "evidence_before_display",
+      "arm": "both_opaque",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "evidence_before_display",
+      "arm": "first_only",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "evidence_before_display",
+      "arm": "second_only",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "evidence_before_display",
+      "arm": "none",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "evidence_before_display",
+      "arm": "wrong_subject",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "research_subject_welfare",
+      "arm": "both_editorial",
+      "choice_order_invariant": false,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "B"
+    },
+    {
+      "card": "research_subject_welfare",
+      "arm": "both_opaque",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "research_subject_welfare",
+      "arm": "first_only",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "research_subject_welfare",
+      "arm": "second_only",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "research_subject_welfare",
+      "arm": "none",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    },
+    {
+      "card": "research_subject_welfare",
+      "arm": "wrong_subject",
+      "choice_order_invariant": true,
+      "normal_output": "UNKNOWN",
+      "flipped_output": "UNKNOWN"
+    }
+  ],
+  "limits": [
+    "Six unblinded investigator-authored decisions are not validated Pretorius ground truth.",
+    "All six initial author-preferred semantic decisions are cautious or prosocial; model priors may mimic success.",
+    "A and B reversal controls positional bias but does not identify source-specific causal use.",
+    "Both sources per case are verified, but independent necessity of each source has not been human-audited.",
+    "Missing-record conditions explicitly disclose the record count, which may make abstention easier.",
+    "Wrong-subject content is withheld upstream; the model cannot be assessed on a visible forged archive.",
+    "The original Pretorius L1 consists of reconstructed fictional autobiography; no live character state was mutated.",
+    "Small Qwen sizes are not an independent model-family replication."
+  ]
+}
