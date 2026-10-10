@@ -2,7 +2,7 @@
 
 **Research program:** Attractomancy, Experimental Study of Ritualized and Symbolic Persona Conditioning in Language Models  
 **Manuscript type:** Theoretical and methodological hypothesis paper  
-**Version:** 0.2.1, October 9, 2026  
+**Version:** 0.2.2, October 9, 2026  
 **Status:** Working hypothesis paper; not peer reviewed; no confirmatory results reported. An exploratory Experiment A pilot is separately archived.  
 **Authorship and institutional affiliation:** To be supplied and approved by the repository maintainers before external submission
 
@@ -360,3 +360,18 @@ No new source IDs, efficacy ratings, or graph edges are claimed by this manuscri
 Before beginning a confirmatory run, archive a machine-readable manifest containing: the canonical synthetic fixture version and checksum; cue tokens and Unicode normalization; tokenizer outputs by model; condition assignment and randomization seed; the complete system, developer, and user messages; decoding parameters; model identifiers and release dates; context and application-memory settings; external-retrieval configuration and returned artifacts; prompt and output timestamps; measured prompt, generated, and retrieved token counts; setup costs and amortization horizon; shortest sufficient plain-language baseline; blinded evaluation items and rubrics; scoring-model versions; adjudication results; and exclusions. Preserve the sealed terminal battery separately from the treatment-development corpus.
 
 A reproducibility report must distinguish *fully observed*, *partially observed*, and *unverifiable* reset conditions. If provider-level state is opaque, conclusions should be restricted to the observed application-level discontinuity. Treat every new model version as a potentially new experimental condition.
+
+
+## Appendix D. Exploratory post-manuscript updates, October 9, 2026
+
+This appendix records the outcomes of subsequent exploratory pilot studies. It does **not** revise the prospective predictions to favor observed outcomes, add peer-reviewed validation, or promote the mechanism into a tested identity architecture. The original data remain in their separately versioned experiment directories.
+
+**Elementary in-context cue association, B0.** The [B0 calibration](../../experiments/SCH_FOLLOWUP_2026_10_09/RESULTS_STATUS.md) obtained strong within-context mapping and reversal behavior in two Qwen2.5 sizes for one-word invented cue-to-code associations. The performance did not demonstrate an economic advantage over short explicit mappings and did not persist across context resets. The more demanding B1 policy-induction study did not reproduce equally diagnostic rule reversals.
+
+**Integrated policy control, C1.** In the completed [C1 experiment](../../experiments/SCH_C1_INTEGRATED_CUE_POLICIES/RESULTS.md), both Qwen2.5-0.5B and Qwen2.5-1.5B answered \`SHARE\` to all twelve held-out scenarios after stable as well as reversed symbolic demonstrations. Both produced **zero of four diagnostic reversals**. The 1.5B model achieved 10/12 correctness with direct English rules, compared with 4/12 under the symbolic demonstrations, at 180 versus 472 average input-plus-output tokens per case. This outcome **fails to support** strong cue-based integration or a token-efficiency advantage in the tested setting. It does not negate the simpler B0 association capacity.
+
+**State availability and cue equivalence, D1.** The [D1 experiment](../../experiments/SCH_D1_EXTERNAL_RECONSTRUCTION/RESULTS.md) used two synthetic histories in new model contexts. Both models recovered 0/8 arbitrary, undisclosed personal code facts from a bare cue but 8/8 with a correct complete archive. The 1.5B model recovered 12/12 combined factual and policy cases with correctly selected excerpts, under both a symbolic marker and a neutral key, at about 28% fewer tokens than complete-record injection. Full-record symbolic and plain markers provided no evidence of a residual symbolic advantage. These observations are directionally compatible with SCH predictions P4 and P5, but do not constitute adequately powered confirmation, proof of equivalence, or a test of a real persistent agent. Correct information access did not guarantee correct policy use on the smaller model.
+
+**Provenance and safety failure.** When an archive with an intentionally different subject identity was injected, Qwen2.5-0.5B returned \`UNKNOWN\` on 0/12 cases and Qwen2.5-1.5B on just 1/12. Both frequently copied facts belonging to the wrong character. A [reference archive identity guard](../../experiments/SCH_D1_EXTERNAL_RECONSTRUCTION/archive_guard.py) was therefore created to reject mismatched subject identifiers and checksum failures before injection, with [10 passing unit tests](https://github.com/Azimn/Attractomancy/actions/runs/38021996965). Its checksum is an integrity check only and cannot independently authenticate the author of a record.
+
+**Resulting research boundary.** Across these studies, simple in-context label association, accurate explicit fact reconstruction, and integrated character policy enactment separate sharply. A realistic architecture needs trustworthy subject-scoped retrieval and independently checked decision constraints; the experiments do not support invoking symbols as a substitute for these components. The original three-timescale framework remains a causal research agenda, with its stronger symbol-specific benefits unproven and challenged by the current negative findings.
