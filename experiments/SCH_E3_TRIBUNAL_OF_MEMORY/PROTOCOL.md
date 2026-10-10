@@ -9,6 +9,8 @@
 
 **Implementation update:** The [Counterfactual Chamber calibration](CALIBRATION_PROTOCOL.md) is a separately labeled synthetic two-record experiment, not this blinded E3 trial. The [candidate-packet builder](blinded_packet.py) has passed an unlabeled [six-question E2 calibration dry run](packets/e2-calibration/packet_manifest.json), with 127 shuffled, deduplicated source excerpts and no committed organizer mapping. The reviewer protocol is in [PACKET_GUIDE.md](PACKET_GUIDE.md). No independently authored E3 main-case set, independent reviewers, blinded annotations, or confirmatory E3 results are claimed by these tools.
 
+**Execution update:** [Joint T1 Clerk results](CLERK_RESULTS.md), [isolated T1B Private Clerk results](ISOLATED_RESULTS.md), and [synthetic versioned cache tests](verified_fact_cache.py) are now verified. These model-dependent source-extraction studies do **not** replace the still-unexecuted human-blinded E3 trial.
+
 The name "Tribunal" is a mnemonic for an evidence-eligibility procedure, not a claim that the model judges itself, is conscious, or can validate the authenticity of its historical autobiography.
 
 ## 1. Motivation and target
