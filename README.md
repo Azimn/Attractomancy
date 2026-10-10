@@ -101,6 +101,8 @@ The [completed E2 multi-memory report](experiments/SCH_E2_MULTIMEMORY_DECISIONS/
 
 The [E3 Tribunal of Memory design](experiments/SCH_E3_TRIBUNAL_OF_MEMORY/PROTOCOL.md) now includes a [Counterfactual Chamber calibration](experiments/SCH_E3_TRIBUNAL_OF_MEMORY/CALIBRATION_PROTOCOL.md), [source-masked calibration reviewer packets](experiments/SCH_E3_TRIBUNAL_OF_MEMORY/PACKET_GUIDE.md), and a [strict independent-label validator](experiments/SCH_E3_TRIBUNAL_OF_MEMORY/adjudicate.py). The first synthetic fixture exposed a cross-bit event-ID leakage flaw, corrected in a separately versioned v2. E3's independent human-blinded evaluation has **not** been completed, and the calibration results must not be treated as canonical Pretorius memories.
 
+The [completed E3-T1 joint Clerk](experiments/SCH_E3_TRIBUNAL_OF_MEMORY/CLERK_RESULTS.md) and [record-isolated Private Clerk](experiments/SCH_E3_TRIBUNAL_OF_MEMORY/ISOLATED_RESULTS.md) quantify model-specific extraction layouts on corrected synthetic records. The [tested versioned fact cache](experiments/SCH_E3_TRIBUNAL_OF_MEMORY/verified_fact_cache.py) rejects stale and unsupported values. These are exploratory software/cognition-interface measurements, not a full E3 blinded study or live Pretorius update.
+
 ## Quality and change control
 
 Run `python scripts/audit_catalog.py` from the repository root after source additions, edge additions, or documentation changes. This validates CSV structure, stable IDs, cross-file references, source status and preservation codes, explicit duplicate-URL reviews, and the single current-state table above.
