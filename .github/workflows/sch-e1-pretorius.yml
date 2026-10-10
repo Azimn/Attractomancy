@@ -27,7 +27,7 @@ jobs:
       HF_HUB_DISABLE_TELEMETRY: "1"
       TOKENIZERS_PARALLELISM: "false"
       E1_DIR: experiments/SCH_E1_PRETORIUS_STATEFUL
-      E1_DB: ${{ runner.temp }}/e1-state-${{ matrix.slug }}.sqlite
+      E1_DB: e1-state-${{ matrix.slug }}.sqlite
       E1_OUTPUT: experiments/SCH_E1_PRETORIUS_STATEFUL/results/${{ matrix.slug }}-${{ github.run_id }}
     steps:
       - name: Checkout Attractomancy experiment code
