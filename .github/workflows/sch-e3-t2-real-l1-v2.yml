@@ -1,0 +1,98 @@
+name: SCH E3 T2 v2 clean L1 copying with no exemplar
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sch-e3-t2-v2-real-l1-v2.yml"
+      - "experiments/SCH_E3_TRIBUNAL_OF_MEMORY/l1_field_extraction_v2.py"
+      - "experiments/SCH_E3_TRIBUNAL_OF_MEMORY/test_l1_field_extraction_v2.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  source_pilot:
+    name: Real L1 field copying ${{ matrix.slug }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 57
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - slug: qwen25-05b
+            model: Qwen/Qwen2.5-0.5B-Instruct
+          - slug: qwen25-15b
+            model: Qwen/Qwen2.5-1.5B-Instruct
+    env:
+      PYTHONUNBUFFERED: "1"
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: Azimn/Pretorius-Connectome
+          ref: 6d2768211f5c2184c8bbdb833c06e169b5137197
+          path: pretorius_source
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install pinned local CPU model and source-access dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "torch==2.5.1" --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers==4.51.3" "safetensors==0.5.3" "sentencepiece==0.2.0"
+      - name: Verify canonical source checksum, target withholding and sample invariants
+        run: |
+          python -m unittest discover -s experiments/SCH_E3_TRIBUNAL_OF_MEMORY -p test_l1_field_extraction_v2.py -v
+          python experiments/SCH_E3_TRIBUNAL_OF_MEMORY/l1_field_extraction_v2.py --validate-only --source pretorius_source
+          python -m unittest discover -s experiments/SCH_D1_EXTERNAL_RECONSTRUCTION -p test_archive_guard.py -v
+      - name: Run 72 fresh real-source metadata extraction prompts
+        run: |
+          python experiments/SCH_E3_TRIBUNAL_OF_MEMORY/l1_field_extraction_v2.py \
+            --model ${{ matrix.model }} --source pretorius_source \
+            --output experiments/SCH_E3_TRIBUNAL_OF_MEMORY/results/l1-fields-v2-${{ matrix.slug }}-${{ github.run_id }}
+      - name: Independently verify original 72 generations and source manifest
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          p=pathlib.Path("experiments/SCH_E3_TRIBUNAL_OF_MEMORY/results/l1-fields-v2-${{ matrix.slug }}-${{ github.run_id }}")
+          summary=json.loads((p/"summary.json").read_text())
+          raw=[json.loads(x) for x in (p/"responses.jsonl").read_text().splitlines() if x.strip()]
+          assert len(raw)==72==summary["n"] and len({r["case"]["case_id"] for r in raw})==72
+          assert len(summary["selected_event_ids"])==12
+          assert len(set(summary["selected_episodes"]))==12
+          assert summary["source"]["record_count"]==450
+          assert len(summary["groups"])==3 and all(g["n"]==24 for g in summary["groups"])
+          assert all(r["case"]["expected"] is None for r in raw if r["case"]["arm"]=="target_withheld")
+          assert all(r["case"]["expected"] is not None for r in raw if r["case"]["arm"]!="target_withheld")
+          assert summary["model_revision"] and len(summary["model_revision"])>=12
+          assert summary["total_input_tokens"]==sum(r["prompt_tokens"] for r in raw)
+          assert summary["total_output_tokens"]==sum(r["output_tokens"] for r in raw)
+          print("E3T2_REAL_SOURCE_VERIFIED",summary["model"],summary["groups"])
+          PY
+      - name: Preserve original outputs on error
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sch-e3-t2-v2-${{ matrix.slug }}-${{ github.run_id }}
+          path: experiments/SCH_E3_TRIBUNAL_OF_MEMORY/results/l1-fields-v2-${{ matrix.slug }}-${{ github.run_id }}/
+          retention-days: 14
+          if-no-files-found: warn
+      - name: Commit complete original data with no archive mutation
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/SCH_E3_TRIBUNAL_OF_MEMORY/results/l1-fields-v2-${{ matrix.slug }}-${{ github.run_id }}
+          git commit -m "research: archive E3 T2 v2 real-L1 ${{ matrix.slug }} metadata copy and withholding [skip ci]"
+          for n in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo "CI results push failed: original workflow artifact retained" >&2
+          exit 1
