@@ -1,0 +1,49 @@
+name: Preserve completed SCH Experiment A pilot
+
+on:
+  push:
+    paths:
+      - ".github/workflows/preserve-synthematic-exp-a.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  archive:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download verified completed-generation artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: synthematic-exp-a-pilot-38013536840
+          run-id: 38013536840
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/results/pilot-open-model
+      - name: Verify model output manifest, 30 responses, and summary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path("experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/results/pilot-open-model")
+          meta = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
+          summ = json.loads((root / "summary.json").read_text(encoding="utf-8"))
+          records = [json.loads(x) for x in (root / "responses.jsonl").read_text(encoding="utf-8").splitlines() if x.strip()]
+          assert meta["cases_attempted"] == 30
+          assert summ["cases_completed"] == len(records) == 30
+          assert sum(r["generated_tokens"] for r in records) == summ["actual_generated_tokens"]
+          assert sum(r["prompt_tokens"] for r in records) == summ["actual_prompt_tokens"]
+          assert len({r["case_id"] for r in records}) == 30
+          assert meta["model_resolved_commit"] == "7ae557604adf67be50417f59c2c2f167def9a775"
+          print("ARCHIVE_VERIFICATION_PASS", len(records), summ["actual_generated_tokens"])
+          PY
+      - name: Preserve original generated files on main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/results/pilot-open-model
+          git commit -m "experiments: archive completed 30-case EXP-A pilot [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
