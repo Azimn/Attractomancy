@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - ".github/workflows/sch-e3-t1-clerk.yml"
+      - "experiments/SCH_E3_TRIBUNAL_OF_MEMORY/clerk_extraction.py"
+      - "experiments/SCH_E3_TRIBUNAL_OF_MEMORY/test_clerk.py"
   workflow_dispatch:
 
 permissions:
