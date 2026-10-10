@@ -1,0 +1,797 @@
+[
+  {
+    "persona_id": "L2-001",
+    "stage": "S1_single_field",
+    "arm": "available",
+    "expected": "ACCURACY",
+    "required_sources": [
+      "L2-001-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-001",
+    "stage": "S1_single_field",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-001",
+    "stage": "S2_latest_replacement",
+    "arm": "available",
+    "expected": "ACCURACY",
+    "required_sources": [
+      "L2-001-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-001",
+    "stage": "S2_latest_replacement",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-001",
+    "stage": "S3_permission_gate",
+    "arm": "available",
+    "expected": "WITHHOLD",
+    "required_sources": [
+      "L2-001-E09"
+    ]
+  },
+  {
+    "persona_id": "L2-001",
+    "stage": "S3_permission_gate",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-001",
+    "stage": "S4_integrated",
+    "arm": "available",
+    "expected": "WITHHOLD",
+    "required_sources": [
+      "L2-001-E09"
+    ]
+  },
+  {
+    "persona_id": "L2-001",
+    "stage": "S4_integrated",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-002",
+    "stage": "S1_single_field",
+    "arm": "available",
+    "expected": "REPAIR",
+    "required_sources": [
+      "L2-002-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-002",
+    "stage": "S1_single_field",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-002",
+    "stage": "S2_latest_replacement",
+    "arm": "available",
+    "expected": "REPAIR",
+    "required_sources": [
+      "L2-002-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-002",
+    "stage": "S2_latest_replacement",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-002",
+    "stage": "S3_permission_gate",
+    "arm": "available",
+    "expected": "DECLINE",
+    "required_sources": [
+      "L2-002-E09",
+      "L2-002-E10"
+    ]
+  },
+  {
+    "persona_id": "L2-002",
+    "stage": "S3_permission_gate",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-002",
+    "stage": "S4_integrated",
+    "arm": "available",
+    "expected": "DECLINE",
+    "required_sources": [
+      "L2-002-E09",
+      "L2-002-E10"
+    ]
+  },
+  {
+    "persona_id": "L2-002",
+    "stage": "S4_integrated",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-003",
+    "stage": "S1_single_field",
+    "arm": "available",
+    "expected": "SPEED",
+    "required_sources": [
+      "L2-003-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-003",
+    "stage": "S1_single_field",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-003",
+    "stage": "S2_latest_replacement",
+    "arm": "available",
+    "expected": "SPEED",
+    "required_sources": [
+      "L2-003-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-003",
+    "stage": "S2_latest_replacement",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-003",
+    "stage": "S3_permission_gate",
+    "arm": "available",
+    "expected": "PROCEED",
+    "required_sources": [
+      "L2-003-E09",
+      "L2-003-E10"
+    ]
+  },
+  {
+    "persona_id": "L2-003",
+    "stage": "S3_permission_gate",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-003",
+    "stage": "S4_integrated",
+    "arm": "available",
+    "expected": "FULFILL_SPEED",
+    "required_sources": [
+      "L2-003-E09",
+      "L2-003-E10",
+      "L2-003-E11",
+      "L2-003-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-003",
+    "stage": "S4_integrated",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-004",
+    "stage": "S1_single_field",
+    "arm": "available",
+    "expected": "ACCURACY",
+    "required_sources": [
+      "L2-004-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-004",
+    "stage": "S1_single_field",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-004",
+    "stage": "S2_latest_replacement",
+    "arm": "available",
+    "expected": "ACCURACY",
+    "required_sources": [
+      "L2-004-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-004",
+    "stage": "S2_latest_replacement",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-004",
+    "stage": "S3_permission_gate",
+    "arm": "available",
+    "expected": "PROCEED",
+    "required_sources": [
+      "L2-004-E09",
+      "L2-004-E10"
+    ]
+  },
+  {
+    "persona_id": "L2-004",
+    "stage": "S3_permission_gate",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-004",
+    "stage": "S4_integrated",
+    "arm": "available",
+    "expected": "SCHEDULE",
+    "required_sources": [
+      "L2-004-E09",
+      "L2-004-E10",
+      "L2-004-E11"
+    ]
+  },
+  {
+    "persona_id": "L2-004",
+    "stage": "S4_integrated",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-005",
+    "stage": "S1_single_field",
+    "arm": "available",
+    "expected": "REPAIR",
+    "required_sources": [
+      "L2-005-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-005",
+    "stage": "S1_single_field",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-005",
+    "stage": "S2_latest_replacement",
+    "arm": "available",
+    "expected": "REPAIR",
+    "required_sources": [
+      "L2-005-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-005",
+    "stage": "S2_latest_replacement",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-005",
+    "stage": "S3_permission_gate",
+    "arm": "available",
+    "expected": "WITHHOLD",
+    "required_sources": [
+      "L2-005-E09"
+    ]
+  },
+  {
+    "persona_id": "L2-005",
+    "stage": "S3_permission_gate",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-005",
+    "stage": "S4_integrated",
+    "arm": "available",
+    "expected": "WITHHOLD",
+    "required_sources": [
+      "L2-005-E09"
+    ]
+  },
+  {
+    "persona_id": "L2-005",
+    "stage": "S4_integrated",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-006",
+    "stage": "S1_single_field",
+    "arm": "available",
+    "expected": "SPEED",
+    "required_sources": [
+      "L2-006-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-006",
+    "stage": "S1_single_field",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-006",
+    "stage": "S2_latest_replacement",
+    "arm": "available",
+    "expected": "SPEED",
+    "required_sources": [
+      "L2-006-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-006",
+    "stage": "S2_latest_replacement",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-006",
+    "stage": "S3_permission_gate",
+    "arm": "available",
+    "expected": "DECLINE",
+    "required_sources": [
+      "L2-006-E09",
+      "L2-006-E10"
+    ]
+  },
+  {
+    "persona_id": "L2-006",
+    "stage": "S3_permission_gate",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-006",
+    "stage": "S4_integrated",
+    "arm": "available",
+    "expected": "DECLINE",
+    "required_sources": [
+      "L2-006-E09",
+      "L2-006-E10"
+    ]
+  },
+  {
+    "persona_id": "L2-006",
+    "stage": "S4_integrated",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-007",
+    "stage": "S1_single_field",
+    "arm": "available",
+    "expected": "ACCURACY",
+    "required_sources": [
+      "L2-007-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-007",
+    "stage": "S1_single_field",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-007",
+    "stage": "S2_latest_replacement",
+    "arm": "available",
+    "expected": "ACCURACY",
+    "required_sources": [
+      "L2-007-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-007",
+    "stage": "S2_latest_replacement",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-007",
+    "stage": "S3_permission_gate",
+    "arm": "available",
+    "expected": "PROCEED",
+    "required_sources": [
+      "L2-007-E09",
+      "L2-007-E10"
+    ]
+  },
+  {
+    "persona_id": "L2-007",
+    "stage": "S3_permission_gate",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-007",
+    "stage": "S4_integrated",
+    "arm": "available",
+    "expected": "FULFILL_ACCURACY",
+    "required_sources": [
+      "L2-007-E09",
+      "L2-007-E10",
+      "L2-007-E11",
+      "L2-007-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-007",
+    "stage": "S4_integrated",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-008",
+    "stage": "S1_single_field",
+    "arm": "available",
+    "expected": "REPAIR",
+    "required_sources": [
+      "L2-008-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-008",
+    "stage": "S1_single_field",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-008",
+    "stage": "S2_latest_replacement",
+    "arm": "available",
+    "expected": "REPAIR",
+    "required_sources": [
+      "L2-008-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-008",
+    "stage": "S2_latest_replacement",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-008",
+    "stage": "S3_permission_gate",
+    "arm": "available",
+    "expected": "PROCEED",
+    "required_sources": [
+      "L2-008-E09",
+      "L2-008-E10"
+    ]
+  },
+  {
+    "persona_id": "L2-008",
+    "stage": "S3_permission_gate",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-008",
+    "stage": "S4_integrated",
+    "arm": "available",
+    "expected": "SCHEDULE",
+    "required_sources": [
+      "L2-008-E09",
+      "L2-008-E10",
+      "L2-008-E11"
+    ]
+  },
+  {
+    "persona_id": "L2-008",
+    "stage": "S4_integrated",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-009",
+    "stage": "S1_single_field",
+    "arm": "available",
+    "expected": "SPEED",
+    "required_sources": [
+      "L2-009-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-009",
+    "stage": "S1_single_field",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-009",
+    "stage": "S2_latest_replacement",
+    "arm": "available",
+    "expected": "SPEED",
+    "required_sources": [
+      "L2-009-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-009",
+    "stage": "S2_latest_replacement",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-009",
+    "stage": "S3_permission_gate",
+    "arm": "available",
+    "expected": "WITHHOLD",
+    "required_sources": [
+      "L2-009-E09"
+    ]
+  },
+  {
+    "persona_id": "L2-009",
+    "stage": "S3_permission_gate",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-009",
+    "stage": "S4_integrated",
+    "arm": "available",
+    "expected": "WITHHOLD",
+    "required_sources": [
+      "L2-009-E09"
+    ]
+  },
+  {
+    "persona_id": "L2-009",
+    "stage": "S4_integrated",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-010",
+    "stage": "S1_single_field",
+    "arm": "available",
+    "expected": "ACCURACY",
+    "required_sources": [
+      "L2-010-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-010",
+    "stage": "S1_single_field",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-010",
+    "stage": "S2_latest_replacement",
+    "arm": "available",
+    "expected": "ACCURACY",
+    "required_sources": [
+      "L2-010-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-010",
+    "stage": "S2_latest_replacement",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-010",
+    "stage": "S3_permission_gate",
+    "arm": "available",
+    "expected": "DECLINE",
+    "required_sources": [
+      "L2-010-E09",
+      "L2-010-E10"
+    ]
+  },
+  {
+    "persona_id": "L2-010",
+    "stage": "S3_permission_gate",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-010",
+    "stage": "S4_integrated",
+    "arm": "available",
+    "expected": "DECLINE",
+    "required_sources": [
+      "L2-010-E09",
+      "L2-010-E10"
+    ]
+  },
+  {
+    "persona_id": "L2-010",
+    "stage": "S4_integrated",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-011",
+    "stage": "S1_single_field",
+    "arm": "available",
+    "expected": "REPAIR",
+    "required_sources": [
+      "L2-011-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-011",
+    "stage": "S1_single_field",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-011",
+    "stage": "S2_latest_replacement",
+    "arm": "available",
+    "expected": "REPAIR",
+    "required_sources": [
+      "L2-011-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-011",
+    "stage": "S2_latest_replacement",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-011",
+    "stage": "S3_permission_gate",
+    "arm": "available",
+    "expected": "PROCEED",
+    "required_sources": [
+      "L2-011-E09",
+      "L2-011-E10"
+    ]
+  },
+  {
+    "persona_id": "L2-011",
+    "stage": "S3_permission_gate",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-011",
+    "stage": "S4_integrated",
+    "arm": "available",
+    "expected": "FULFILL_REPAIR",
+    "required_sources": [
+      "L2-011-E09",
+      "L2-011-E10",
+      "L2-011-E11",
+      "L2-011-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-011",
+    "stage": "S4_integrated",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-012",
+    "stage": "S1_single_field",
+    "arm": "available",
+    "expected": "SPEED",
+    "required_sources": [
+      "L2-012-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-012",
+    "stage": "S1_single_field",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-012",
+    "stage": "S2_latest_replacement",
+    "arm": "available",
+    "expected": "SPEED",
+    "required_sources": [
+      "L2-012-E12"
+    ]
+  },
+  {
+    "persona_id": "L2-012",
+    "stage": "S2_latest_replacement",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-012",
+    "stage": "S3_permission_gate",
+    "arm": "available",
+    "expected": "PROCEED",
+    "required_sources": [
+      "L2-012-E09",
+      "L2-012-E10"
+    ]
+  },
+  {
+    "persona_id": "L2-012",
+    "stage": "S3_permission_gate",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  },
+  {
+    "persona_id": "L2-012",
+    "stage": "S4_integrated",
+    "arm": "available",
+    "expected": "SCHEDULE",
+    "required_sources": [
+      "L2-012-E09",
+      "L2-012-E10",
+      "L2-012-E11"
+    ]
+  },
+  {
+    "persona_id": "L2-012",
+    "stage": "S4_integrated",
+    "arm": "cold",
+    "expected": "UNKNOWN",
+    "required_sources": []
+  }
+]

@@ -1,0 +1,1644 @@
+{
+  "status": "REAL_LLM_DEVELOPMENT",
+  "evidence_for_DCH": false,
+  "has_human_partner": false,
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "backend": "transformers",
+  "visible_sha256": "9cc13b72a00bac75d36367aa27a57ee408df5d3b1b222f0e11233f3b54534c84",
+  "records": [
+    {
+      "persona_id": "L2-001",
+      "stage": "S1_single_field",
+      "arm": "available",
+      "prompt_sha256": "8853837793c42dd6539d1bda9ad8efe23267abc28105229aac44a1a3ead79029",
+      "record_count": 1,
+      "available_ids": [
+        "L2-001-E12"
+      ],
+      "raw_text": "UNKNOWN",
+      "strict": {
+        "answer": null,
+        "source_event_ids": [],
+        "parse_valid": false
+      },
+      "first_object": null,
+      "prompt_tokens": 117,
+      "output_tokens": 2,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-001",
+      "stage": "S1_single_field",
+      "arm": "cold",
+      "prompt_sha256": "27c891ad90ebd6a7e7fc57ec21850b1182301fea5cea5aa1f1ed02de1552d383",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "UNKNOWN",
+      "strict": {
+        "answer": null,
+        "source_event_ids": [],
+        "parse_valid": false
+      },
+      "first_object": null,
+      "prompt_tokens": 106,
+      "output_tokens": 2,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-001",
+      "stage": "S2_latest_replacement",
+      "arm": "available",
+      "prompt_sha256": "26650f5d6d577e2dc19826cdc834faff340c2277ed3952733970a63ebe081756",
+      "record_count": 2,
+      "available_ids": [
+        "L2-001-E04",
+        "L2-001-E12"
+      ],
+      "raw_text": "{\n  \"answer\": \"REPAIR\",\n  \"source_event_ids\": [\n    \"L2-001-E04\"\n  ]\n}",
+      "strict": {
+        "answer": "REPAIR",
+        "source_event_ids": [
+          "L2-001-E04"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "REPAIR",
+        "source_event_ids": [
+          "L2-001-E04"
+        ]
+      },
+      "prompt_tokens": 134,
+      "output_tokens": 32,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-001",
+      "stage": "S2_latest_replacement",
+      "arm": "cold",
+      "prompt_sha256": "707630d3e2158cf5d62615a1558cea06d21d73a8e91e9940f3eabd6829e82ebb",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "{\n  \"answer\": \"UNKNOWN\",\n  \"source_event_ids\": []\n}",
+      "strict": {
+        "answer": "UNKNOWN",
+        "source_event_ids": [],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "UNKNOWN",
+        "source_event_ids": []
+      },
+      "prompt_tokens": 107,
+      "output_tokens": 17,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-001",
+      "stage": "S3_permission_gate",
+      "arm": "available",
+      "prompt_sha256": "a057b1e872a3ee778d6589f12767465030b85e45963ca5d180900af78678fa0d",
+      "record_count": 2,
+      "available_ids": [
+        "L2-001-E09",
+        "L2-001-E10"
+      ],
+      "raw_text": "```json\n{\n  \"answer\": \"DECLINE\",\n  \"source_event_ids\": [\"L2-001-E10\"]\n}\n```",
+      "strict": {
+        "answer": "DECLINE",
+        "source_event_ids": [
+          "L2-001-E10"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "DECLINE",
+        "source_event_ids": [
+          "L2-001-E10"
+        ]
+      },
+      "prompt_tokens": 154,
+      "output_tokens": 32,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-001",
+      "stage": "S3_permission_gate",
+      "arm": "cold",
+      "prompt_sha256": "40e87615a67f51574c3f15e8f0e0c4cbe351ad90c2c16624252acda9ce3c17fb",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "```json\n{\n  \"answer\": \"UNKNOWN\",\n  \"source_event_ids\": []\n}\n```",
+      "strict": {
+        "answer": "UNKNOWN",
+        "source_event_ids": [],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "UNKNOWN",
+        "source_event_ids": []
+      },
+      "prompt_tokens": 125,
+      "output_tokens": 21,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-001",
+      "stage": "S4_integrated",
+      "arm": "available",
+      "prompt_sha256": "7c947c9370a592a8b7103d5518e2ff24d550c7bf49b192015aa189d44996a7c8",
+      "record_count": 8,
+      "available_ids": [
+        "L2-001-E01",
+        "L2-001-E02",
+        "L2-001-E03",
+        "L2-001-E04",
+        "L2-001-E09",
+        "L2-001-E10",
+        "L2-001-E11",
+        "L2-001-E12"
+      ],
+      "raw_text": "```json\n{\n  \"answer\": \"FULFILL_REPAIR\",\n  \"source_event_ids\": [\"L2-001-E01\", \"L2-001-E04\"]\n}\n```",
+      "strict": {
+        "answer": "FULFILL_REPAIR",
+        "source_event_ids": [
+          "L2-001-E01",
+          "L2-001-E04"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "FULFILL_REPAIR",
+        "source_event_ids": [
+          "L2-001-E01",
+          "L2-001-E04"
+        ]
+      },
+      "prompt_tokens": 284,
+      "output_tokens": 46,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-001",
+      "stage": "S4_integrated",
+      "arm": "cold",
+      "prompt_sha256": "0be3e050cabb23123d2b5f982de0f1010e0631e1dd797324a5fdb3d0d084f2bc",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "```json\n{\n  \"answer\": \"FULFILL_WITH_PRIORITY_A\",\n  \"source_event_ids\": [\"UNKNOWN\"]\n}\n```",
+      "strict": {
+        "answer": "FULFILL_WITH_PRIORITY_A",
+        "source_event_ids": [
+          "UNKNOWN"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "FULFILL_WITH_PRIORITY_A",
+        "source_event_ids": [
+          "UNKNOWN"
+        ]
+      },
+      "prompt_tokens": 152,
+      "output_tokens": 28,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-002",
+      "stage": "S1_single_field",
+      "arm": "available",
+      "prompt_sha256": "8fcf54346f897b069095b375895cb38addb6aca924350583a61865ae9f08ef16",
+      "record_count": 1,
+      "available_ids": [
+        "L2-002-E12"
+      ],
+      "raw_text": "UNKNOWN",
+      "strict": {
+        "answer": null,
+        "source_event_ids": [],
+        "parse_valid": false
+      },
+      "first_object": null,
+      "prompt_tokens": 117,
+      "output_tokens": 2,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-002",
+      "stage": "S1_single_field",
+      "arm": "cold",
+      "prompt_sha256": "27c891ad90ebd6a7e7fc57ec21850b1182301fea5cea5aa1f1ed02de1552d383",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "UNKNOWN",
+      "strict": {
+        "answer": null,
+        "source_event_ids": [],
+        "parse_valid": false
+      },
+      "first_object": null,
+      "prompt_tokens": 106,
+      "output_tokens": 2,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-002",
+      "stage": "S2_latest_replacement",
+      "arm": "available",
+      "prompt_sha256": "7def070cd2c94fbc61ed93e3361c13b6cb53968c6739791402da63b9a05b8261",
+      "record_count": 2,
+      "available_ids": [
+        "L2-002-E04",
+        "L2-002-E12"
+      ],
+      "raw_text": "{\n  \"answer\": \"UNKNOWN\",\n  \"source_event_ids\": []\n}",
+      "strict": {
+        "answer": "UNKNOWN",
+        "source_event_ids": [],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "UNKNOWN",
+        "source_event_ids": []
+      },
+      "prompt_tokens": 134,
+      "output_tokens": 17,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-002",
+      "stage": "S2_latest_replacement",
+      "arm": "cold",
+      "prompt_sha256": "707630d3e2158cf5d62615a1558cea06d21d73a8e91e9940f3eabd6829e82ebb",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "{\n  \"answer\": \"UNKNOWN\",\n  \"source_event_ids\": []\n}",
+      "strict": {
+        "answer": "UNKNOWN",
+        "source_event_ids": [],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "UNKNOWN",
+        "source_event_ids": []
+      },
+      "prompt_tokens": 107,
+      "output_tokens": 17,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-002",
+      "stage": "S3_permission_gate",
+      "arm": "available",
+      "prompt_sha256": "6aabf9973690216ca8adf0b9591874317c6173a64b7fe3e5366c15c52a6ab83c",
+      "record_count": 2,
+      "available_ids": [
+        "L2-002-E09",
+        "L2-002-E10"
+      ],
+      "raw_text": "```json\n{\n  \"answer\": \"PROCEED\",\n  \"source_event_ids\": [\"L2-002-E09\"]\n}\n```",
+      "strict": {
+        "answer": "PROCEED",
+        "source_event_ids": [
+          "L2-002-E09"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "PROCEED",
+        "source_event_ids": [
+          "L2-002-E09"
+        ]
+      },
+      "prompt_tokens": 153,
+      "output_tokens": 32,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-002",
+      "stage": "S3_permission_gate",
+      "arm": "cold",
+      "prompt_sha256": "40e87615a67f51574c3f15e8f0e0c4cbe351ad90c2c16624252acda9ce3c17fb",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "```json\n{\n  \"answer\": \"UNKNOWN\",\n  \"source_event_ids\": []\n}\n```",
+      "strict": {
+        "answer": "UNKNOWN",
+        "source_event_ids": [],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "UNKNOWN",
+        "source_event_ids": []
+      },
+      "prompt_tokens": 125,
+      "output_tokens": 21,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-002",
+      "stage": "S4_integrated",
+      "arm": "available",
+      "prompt_sha256": "4246acfb4d792fce46c6b4d1fb48c6c9be4d7d9693dd21af7bddd2c3f5b99ec4",
+      "record_count": 8,
+      "available_ids": [
+        "L2-002-E01",
+        "L2-002-E02",
+        "L2-002-E03",
+        "L2-002-E04",
+        "L2-002-E09",
+        "L2-002-E10",
+        "L2-002-E11",
+        "L2-002-E12"
+      ],
+      "raw_text": "```json\n{\n  \"answer\": \"FULFILL_A\",\n  \"source_event_ids\": [\"L2-002-E09\"]\n}\n```",
+      "strict": {
+        "answer": "FULFILL_A",
+        "source_event_ids": [
+          "L2-002-E09"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "FULFILL_A",
+        "source_event_ids": [
+          "L2-002-E09"
+        ]
+      },
+      "prompt_tokens": 284,
+      "output_tokens": 34,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-002",
+      "stage": "S4_integrated",
+      "arm": "cold",
+      "prompt_sha256": "0be3e050cabb23123d2b5f982de0f1010e0631e1dd797324a5fdb3d0d084f2bc",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "```json\n{\n  \"answer\": \"FULFILL_WITH_PRIORITY_A\",\n  \"source_event_ids\": [\"UNKNOWN\"]\n}\n```",
+      "strict": {
+        "answer": "FULFILL_WITH_PRIORITY_A",
+        "source_event_ids": [
+          "UNKNOWN"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "FULFILL_WITH_PRIORITY_A",
+        "source_event_ids": [
+          "UNKNOWN"
+        ]
+      },
+      "prompt_tokens": 152,
+      "output_tokens": 28,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-003",
+      "stage": "S1_single_field",
+      "arm": "available",
+      "prompt_sha256": "ee4afcb1a1530f7017286fbc765a8c04cdb028cf81494fd2a31f5d530de7f2f7",
+      "record_count": 1,
+      "available_ids": [
+        "L2-003-E12"
+      ],
+      "raw_text": "UNKNOWN",
+      "strict": {
+        "answer": null,
+        "source_event_ids": [],
+        "parse_valid": false
+      },
+      "first_object": null,
+      "prompt_tokens": 117,
+      "output_tokens": 2,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-003",
+      "stage": "S1_single_field",
+      "arm": "cold",
+      "prompt_sha256": "27c891ad90ebd6a7e7fc57ec21850b1182301fea5cea5aa1f1ed02de1552d383",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "UNKNOWN",
+      "strict": {
+        "answer": null,
+        "source_event_ids": [],
+        "parse_valid": false
+      },
+      "first_object": null,
+      "prompt_tokens": 106,
+      "output_tokens": 2,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-003",
+      "stage": "S2_latest_replacement",
+      "arm": "available",
+      "prompt_sha256": "5c3577036a622a9380a4703bdddc6535f9f1835903c1f18fec8948059e48b188",
+      "record_count": 2,
+      "available_ids": [
+        "L2-003-E04",
+        "L2-003-E12"
+      ],
+      "raw_text": "{\n  \"answer\": \"REPAIR\",\n  \"source_event_ids\": [\n    \"L2-003-E04\"\n  ]\n}",
+      "strict": {
+        "answer": "REPAIR",
+        "source_event_ids": [
+          "L2-003-E04"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "REPAIR",
+        "source_event_ids": [
+          "L2-003-E04"
+        ]
+      },
+      "prompt_tokens": 134,
+      "output_tokens": 32,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-003",
+      "stage": "S2_latest_replacement",
+      "arm": "cold",
+      "prompt_sha256": "707630d3e2158cf5d62615a1558cea06d21d73a8e91e9940f3eabd6829e82ebb",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "{\n  \"answer\": \"UNKNOWN\",\n  \"source_event_ids\": []\n}",
+      "strict": {
+        "answer": "UNKNOWN",
+        "source_event_ids": [],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "UNKNOWN",
+        "source_event_ids": []
+      },
+      "prompt_tokens": 107,
+      "output_tokens": 17,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-003",
+      "stage": "S3_permission_gate",
+      "arm": "available",
+      "prompt_sha256": "c60693d56e3a74b6406b365a256dc44a37e9737cf8594bf2755f5af54a5959a2",
+      "record_count": 2,
+      "available_ids": [
+        "L2-003-E09",
+        "L2-003-E10"
+      ],
+      "raw_text": "```json\n{\n  \"answer\": \"PROCEED\",\n  \"source_event_ids\": [\"L2-003-E09\", \"L2-003-E10\"]\n}\n```",
+      "strict": {
+        "answer": "PROCEED",
+        "source_event_ids": [
+          "L2-003-E09",
+          "L2-003-E10"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "PROCEED",
+        "source_event_ids": [
+          "L2-003-E09",
+          "L2-003-E10"
+        ]
+      },
+      "prompt_tokens": 153,
+      "output_tokens": 43,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-003",
+      "stage": "S3_permission_gate",
+      "arm": "cold",
+      "prompt_sha256": "40e87615a67f51574c3f15e8f0e0c4cbe351ad90c2c16624252acda9ce3c17fb",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "```json\n{\n  \"answer\": \"UNKNOWN\",\n  \"source_event_ids\": []\n}\n```",
+      "strict": {
+        "answer": "UNKNOWN",
+        "source_event_ids": [],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "UNKNOWN",
+        "source_event_ids": []
+      },
+      "prompt_tokens": 125,
+      "output_tokens": 21,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-003",
+      "stage": "S4_integrated",
+      "arm": "available",
+      "prompt_sha256": "b5c2c97ca12e55efbd3179552bda53ecbe7931c425249b78e69aa90bb5411d38",
+      "record_count": 8,
+      "available_ids": [
+        "L2-003-E01",
+        "L2-003-E02",
+        "L2-003-E03",
+        "L2-003-E04",
+        "L2-003-E09",
+        "L2-003-E10",
+        "L2-003-E11",
+        "L2-003-E12"
+      ],
+      "raw_text": "```json\n{\n  \"answer\": \"FULFILL_REPAIR\",\n  \"source_event_ids\": [\"L2-003-E09\", \"L2-003-E10\"]\n}\n```",
+      "strict": {
+        "answer": "FULFILL_REPAIR",
+        "source_event_ids": [
+          "L2-003-E09",
+          "L2-003-E10"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "FULFILL_REPAIR",
+        "source_event_ids": [
+          "L2-003-E09",
+          "L2-003-E10"
+        ]
+      },
+      "prompt_tokens": 284,
+      "output_tokens": 46,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-003",
+      "stage": "S4_integrated",
+      "arm": "cold",
+      "prompt_sha256": "0be3e050cabb23123d2b5f982de0f1010e0631e1dd797324a5fdb3d0d084f2bc",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "```json\n{\n  \"answer\": \"FULFILL_WITH_PRIORITY_A\",\n  \"source_event_ids\": [\"UNKNOWN\"]\n}\n```",
+      "strict": {
+        "answer": "FULFILL_WITH_PRIORITY_A",
+        "source_event_ids": [
+          "UNKNOWN"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "FULFILL_WITH_PRIORITY_A",
+        "source_event_ids": [
+          "UNKNOWN"
+        ]
+      },
+      "prompt_tokens": 152,
+      "output_tokens": 28,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-004",
+      "stage": "S1_single_field",
+      "arm": "available",
+      "prompt_sha256": "93bec023b0cb9dae1a26cd2d3fd3da014a8d741488e4687f30f1f3b8b6feb2cc",
+      "record_count": 1,
+      "available_ids": [
+        "L2-004-E12"
+      ],
+      "raw_text": "UNKNOWN",
+      "strict": {
+        "answer": null,
+        "source_event_ids": [],
+        "parse_valid": false
+      },
+      "first_object": null,
+      "prompt_tokens": 117,
+      "output_tokens": 2,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-004",
+      "stage": "S1_single_field",
+      "arm": "cold",
+      "prompt_sha256": "27c891ad90ebd6a7e7fc57ec21850b1182301fea5cea5aa1f1ed02de1552d383",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "UNKNOWN",
+      "strict": {
+        "answer": null,
+        "source_event_ids": [],
+        "parse_valid": false
+      },
+      "first_object": null,
+      "prompt_tokens": 106,
+      "output_tokens": 2,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-004",
+      "stage": "S2_latest_replacement",
+      "arm": "available",
+      "prompt_sha256": "57c39375e5f95bcf7ccf914a2982d12f898af1dac2922a2db5f33888436619fc",
+      "record_count": 2,
+      "available_ids": [
+        "L2-004-E04",
+        "L2-004-E12"
+      ],
+      "raw_text": "{\n  \"answer\": \"REPAIR\",\n  \"source_event_ids\": [\n    \"L2-004-E04\"\n  ]\n}",
+      "strict": {
+        "answer": "REPAIR",
+        "source_event_ids": [
+          "L2-004-E04"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "REPAIR",
+        "source_event_ids": [
+          "L2-004-E04"
+        ]
+      },
+      "prompt_tokens": 134,
+      "output_tokens": 32,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-004",
+      "stage": "S2_latest_replacement",
+      "arm": "cold",
+      "prompt_sha256": "707630d3e2158cf5d62615a1558cea06d21d73a8e91e9940f3eabd6829e82ebb",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "{\n  \"answer\": \"UNKNOWN\",\n  \"source_event_ids\": []\n}",
+      "strict": {
+        "answer": "UNKNOWN",
+        "source_event_ids": [],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "UNKNOWN",
+        "source_event_ids": []
+      },
+      "prompt_tokens": 107,
+      "output_tokens": 17,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-004",
+      "stage": "S3_permission_gate",
+      "arm": "available",
+      "prompt_sha256": "18e6f2447c1bee242d23f348b9ea8abc844157ad6e859a582229536df381acfb",
+      "record_count": 2,
+      "available_ids": [
+        "L2-004-E09",
+        "L2-004-E10"
+      ],
+      "raw_text": "```json\n{\n  \"answer\": \"PROCEED\",\n  \"source_event_ids\": [\"L2-004-E09\", \"L2-004-E10\"]\n}\n```",
+      "strict": {
+        "answer": "PROCEED",
+        "source_event_ids": [
+          "L2-004-E09",
+          "L2-004-E10"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "PROCEED",
+        "source_event_ids": [
+          "L2-004-E09",
+          "L2-004-E10"
+        ]
+      },
+      "prompt_tokens": 153,
+      "output_tokens": 43,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-004",
+      "stage": "S3_permission_gate",
+      "arm": "cold",
+      "prompt_sha256": "40e87615a67f51574c3f15e8f0e0c4cbe351ad90c2c16624252acda9ce3c17fb",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "```json\n{\n  \"answer\": \"UNKNOWN\",\n  \"source_event_ids\": []\n}\n```",
+      "strict": {
+        "answer": "UNKNOWN",
+        "source_event_ids": [],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "UNKNOWN",
+        "source_event_ids": []
+      },
+      "prompt_tokens": 125,
+      "output_tokens": 21,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-004",
+      "stage": "S4_integrated",
+      "arm": "available",
+      "prompt_sha256": "0a2c3bdfe767ee550ce490940493f36d70b8b5e2b1a20db01d2e1b169ac00557",
+      "record_count": 8,
+      "available_ids": [
+        "L2-004-E01",
+        "L2-004-E02",
+        "L2-004-E03",
+        "L2-004-E04",
+        "L2-004-E09",
+        "L2-004-E10",
+        "L2-004-E11",
+        "L2-004-E12"
+      ],
+      "raw_text": "```json\n{\n  \"answer\": \"FULFILL_REPAIR\",\n  \"source_event_ids\": [\"L2-004-E09\", \"L2-004-E10\"]\n}\n```",
+      "strict": {
+        "answer": "FULFILL_REPAIR",
+        "source_event_ids": [
+          "L2-004-E09",
+          "L2-004-E10"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "FULFILL_REPAIR",
+        "source_event_ids": [
+          "L2-004-E09",
+          "L2-004-E10"
+        ]
+      },
+      "prompt_tokens": 284,
+      "output_tokens": 46,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-004",
+      "stage": "S4_integrated",
+      "arm": "cold",
+      "prompt_sha256": "0be3e050cabb23123d2b5f982de0f1010e0631e1dd797324a5fdb3d0d084f2bc",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "```json\n{\n  \"answer\": \"FULFILL_WITH_PRIORITY_A\",\n  \"source_event_ids\": [\"UNKNOWN\"]\n}\n```",
+      "strict": {
+        "answer": "FULFILL_WITH_PRIORITY_A",
+        "source_event_ids": [
+          "UNKNOWN"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "FULFILL_WITH_PRIORITY_A",
+        "source_event_ids": [
+          "UNKNOWN"
+        ]
+      },
+      "prompt_tokens": 152,
+      "output_tokens": 28,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-005",
+      "stage": "S1_single_field",
+      "arm": "available",
+      "prompt_sha256": "072108478edfec430be5f222ea4c0537128f53d5876cca9578a02963b6c8f17c",
+      "record_count": 1,
+      "available_ids": [
+        "L2-005-E12"
+      ],
+      "raw_text": "UNKNOWN",
+      "strict": {
+        "answer": null,
+        "source_event_ids": [],
+        "parse_valid": false
+      },
+      "first_object": null,
+      "prompt_tokens": 117,
+      "output_tokens": 2,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-005",
+      "stage": "S1_single_field",
+      "arm": "cold",
+      "prompt_sha256": "27c891ad90ebd6a7e7fc57ec21850b1182301fea5cea5aa1f1ed02de1552d383",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "UNKNOWN",
+      "strict": {
+        "answer": null,
+        "source_event_ids": [],
+        "parse_valid": false
+      },
+      "first_object": null,
+      "prompt_tokens": 106,
+      "output_tokens": 2,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-005",
+      "stage": "S2_latest_replacement",
+      "arm": "available",
+      "prompt_sha256": "ea23e080438cbcdacd144f18f9f0ca467b74948c5793c48e11f223b33590b45d",
+      "record_count": 2,
+      "available_ids": [
+        "L2-005-E04",
+        "L2-005-E12"
+      ],
+      "raw_text": "{\n  \"answer\": \"UNKNOWN\",\n  \"source_event_ids\": []\n}",
+      "strict": {
+        "answer": "UNKNOWN",
+        "source_event_ids": [],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "UNKNOWN",
+        "source_event_ids": []
+      },
+      "prompt_tokens": 134,
+      "output_tokens": 17,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-005",
+      "stage": "S2_latest_replacement",
+      "arm": "cold",
+      "prompt_sha256": "707630d3e2158cf5d62615a1558cea06d21d73a8e91e9940f3eabd6829e82ebb",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "{\n  \"answer\": \"UNKNOWN\",\n  \"source_event_ids\": []\n}",
+      "strict": {
+        "answer": "UNKNOWN",
+        "source_event_ids": [],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "UNKNOWN",
+        "source_event_ids": []
+      },
+      "prompt_tokens": 107,
+      "output_tokens": 17,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-005",
+      "stage": "S3_permission_gate",
+      "arm": "available",
+      "prompt_sha256": "96be7baf0277e49e85413b7ce82ddf590fd3566ecf29ed118dcff81b7deaedce",
+      "record_count": 2,
+      "available_ids": [
+        "L2-005-E09",
+        "L2-005-E10"
+      ],
+      "raw_text": "```json\n{\n  \"answer\": \"DECLINE\",\n  \"source_event_ids\": [\"L2-005-E10\"]\n}\n```",
+      "strict": {
+        "answer": "DECLINE",
+        "source_event_ids": [
+          "L2-005-E10"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "DECLINE",
+        "source_event_ids": [
+          "L2-005-E10"
+        ]
+      },
+      "prompt_tokens": 154,
+      "output_tokens": 32,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-005",
+      "stage": "S3_permission_gate",
+      "arm": "cold",
+      "prompt_sha256": "40e87615a67f51574c3f15e8f0e0c4cbe351ad90c2c16624252acda9ce3c17fb",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "```json\n{\n  \"answer\": \"UNKNOWN\",\n  \"source_event_ids\": []\n}\n```",
+      "strict": {
+        "answer": "UNKNOWN",
+        "source_event_ids": [],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "UNKNOWN",
+        "source_event_ids": []
+      },
+      "prompt_tokens": 125,
+      "output_tokens": 21,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-005",
+      "stage": "S4_integrated",
+      "arm": "available",
+      "prompt_sha256": "04095a3cbb011b3b5bd549d0b422c7f93f1a40baf9b7c10adab265522b7ae79b",
+      "record_count": 8,
+      "available_ids": [
+        "L2-005-E01",
+        "L2-005-E02",
+        "L2-005-E03",
+        "L2-005-E04",
+        "L2-005-E09",
+        "L2-005-E10",
+        "L2-005-E11",
+        "L2-005-E12"
+      ],
+      "raw_text": "```json\n{\n  \"answer\": \"FULFILL_A\",\n  \"source_event_ids\": [\"L2-005-E01\", \"L2-005-E03\"]\n}\n```",
+      "strict": {
+        "answer": "FULFILL_A",
+        "source_event_ids": [
+          "L2-005-E01",
+          "L2-005-E03"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "FULFILL_A",
+        "source_event_ids": [
+          "L2-005-E01",
+          "L2-005-E03"
+        ]
+      },
+      "prompt_tokens": 284,
+      "output_tokens": 45,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-005",
+      "stage": "S4_integrated",
+      "arm": "cold",
+      "prompt_sha256": "0be3e050cabb23123d2b5f982de0f1010e0631e1dd797324a5fdb3d0d084f2bc",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "```json\n{\n  \"answer\": \"FULFILL_WITH_PRIORITY_A\",\n  \"source_event_ids\": [\"UNKNOWN\"]\n}\n```",
+      "strict": {
+        "answer": "FULFILL_WITH_PRIORITY_A",
+        "source_event_ids": [
+          "UNKNOWN"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "FULFILL_WITH_PRIORITY_A",
+        "source_event_ids": [
+          "UNKNOWN"
+        ]
+      },
+      "prompt_tokens": 152,
+      "output_tokens": 28,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-006",
+      "stage": "S1_single_field",
+      "arm": "available",
+      "prompt_sha256": "faf0c36d18933b24866bb8463e19fae0b8fb54fd067e039444bf564f23f3c17a",
+      "record_count": 1,
+      "available_ids": [
+        "L2-006-E12"
+      ],
+      "raw_text": "UNKNOWN",
+      "strict": {
+        "answer": null,
+        "source_event_ids": [],
+        "parse_valid": false
+      },
+      "first_object": null,
+      "prompt_tokens": 117,
+      "output_tokens": 2,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-006",
+      "stage": "S1_single_field",
+      "arm": "cold",
+      "prompt_sha256": "27c891ad90ebd6a7e7fc57ec21850b1182301fea5cea5aa1f1ed02de1552d383",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "UNKNOWN",
+      "strict": {
+        "answer": null,
+        "source_event_ids": [],
+        "parse_valid": false
+      },
+      "first_object": null,
+      "prompt_tokens": 106,
+      "output_tokens": 2,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-006",
+      "stage": "S2_latest_replacement",
+      "arm": "available",
+      "prompt_sha256": "34e485d34c6f7cdd988d3655d62796e44629825c71a7a51c85efa9c5ee366ee1",
+      "record_count": 2,
+      "available_ids": [
+        "L2-006-E04",
+        "L2-006-E12"
+      ],
+      "raw_text": "{\n  \"answer\": \"REPAIR\",\n  \"source_event_ids\": [\n    \"L2-006-E04\"\n  ]\n}",
+      "strict": {
+        "answer": "REPAIR",
+        "source_event_ids": [
+          "L2-006-E04"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "REPAIR",
+        "source_event_ids": [
+          "L2-006-E04"
+        ]
+      },
+      "prompt_tokens": 134,
+      "output_tokens": 32,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-006",
+      "stage": "S2_latest_replacement",
+      "arm": "cold",
+      "prompt_sha256": "707630d3e2158cf5d62615a1558cea06d21d73a8e91e9940f3eabd6829e82ebb",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "{\n  \"answer\": \"UNKNOWN\",\n  \"source_event_ids\": []\n}",
+      "strict": {
+        "answer": "UNKNOWN",
+        "source_event_ids": [],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "UNKNOWN",
+        "source_event_ids": []
+      },
+      "prompt_tokens": 107,
+      "output_tokens": 17,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-006",
+      "stage": "S3_permission_gate",
+      "arm": "available",
+      "prompt_sha256": "7fece6c11ea12dbe597e4273ccc75b6285af1bd2c2e286209ed0fb4eb747969c",
+      "record_count": 2,
+      "available_ids": [
+        "L2-006-E09",
+        "L2-006-E10"
+      ],
+      "raw_text": "```json\n{\n  \"answer\": \"PROCEED\",\n  \"source_event_ids\": [\"L2-006-E09\"]\n}\n```",
+      "strict": {
+        "answer": "PROCEED",
+        "source_event_ids": [
+          "L2-006-E09"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "PROCEED",
+        "source_event_ids": [
+          "L2-006-E09"
+        ]
+      },
+      "prompt_tokens": 153,
+      "output_tokens": 32,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-006",
+      "stage": "S3_permission_gate",
+      "arm": "cold",
+      "prompt_sha256": "40e87615a67f51574c3f15e8f0e0c4cbe351ad90c2c16624252acda9ce3c17fb",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "```json\n{\n  \"answer\": \"UNKNOWN\",\n  \"source_event_ids\": []\n}\n```",
+      "strict": {
+        "answer": "UNKNOWN",
+        "source_event_ids": [],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "UNKNOWN",
+        "source_event_ids": []
+      },
+      "prompt_tokens": 125,
+      "output_tokens": 21,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-006",
+      "stage": "S4_integrated",
+      "arm": "available",
+      "prompt_sha256": "a44ba851e53989b73f979e4074b1a2098f2b3df8b8a27b8cf3a86018c8feb8a5",
+      "record_count": 8,
+      "available_ids": [
+        "L2-006-E01",
+        "L2-006-E02",
+        "L2-006-E03",
+        "L2-006-E04",
+        "L2-006-E09",
+        "L2-006-E10",
+        "L2-006-E11",
+        "L2-006-E12"
+      ],
+      "raw_text": "```json\n{\n  \"answer\": \"FULFILL_REPAIR\",\n  \"source_event_ids\": [\"L2-006-E09\", \"L2-006-E12\"]\n}\n```",
+      "strict": {
+        "answer": "FULFILL_REPAIR",
+        "source_event_ids": [
+          "L2-006-E09",
+          "L2-006-E12"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "FULFILL_REPAIR",
+        "source_event_ids": [
+          "L2-006-E09",
+          "L2-006-E12"
+        ]
+      },
+      "prompt_tokens": 284,
+      "output_tokens": 46,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-006",
+      "stage": "S4_integrated",
+      "arm": "cold",
+      "prompt_sha256": "0be3e050cabb23123d2b5f982de0f1010e0631e1dd797324a5fdb3d0d084f2bc",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "```json\n{\n  \"answer\": \"FULFILL_WITH_PRIORITY_A\",\n  \"source_event_ids\": [\"UNKNOWN\"]\n}\n```",
+      "strict": {
+        "answer": "FULFILL_WITH_PRIORITY_A",
+        "source_event_ids": [
+          "UNKNOWN"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "FULFILL_WITH_PRIORITY_A",
+        "source_event_ids": [
+          "UNKNOWN"
+        ]
+      },
+      "prompt_tokens": 152,
+      "output_tokens": 28,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-007",
+      "stage": "S1_single_field",
+      "arm": "available",
+      "prompt_sha256": "a10119d896bb0bf428e9b95f417c51882ef040cd1528b3d1d2410ffa3c18b226",
+      "record_count": 1,
+      "available_ids": [
+        "L2-007-E12"
+      ],
+      "raw_text": "UNKNOWN",
+      "strict": {
+        "answer": null,
+        "source_event_ids": [],
+        "parse_valid": false
+      },
+      "first_object": null,
+      "prompt_tokens": 117,
+      "output_tokens": 2,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-007",
+      "stage": "S1_single_field",
+      "arm": "cold",
+      "prompt_sha256": "27c891ad90ebd6a7e7fc57ec21850b1182301fea5cea5aa1f1ed02de1552d383",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "UNKNOWN",
+      "strict": {
+        "answer": null,
+        "source_event_ids": [],
+        "parse_valid": false
+      },
+      "first_object": null,
+      "prompt_tokens": 106,
+      "output_tokens": 2,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-007",
+      "stage": "S2_latest_replacement",
+      "arm": "available",
+      "prompt_sha256": "2e3e9bda8073cab635185afa7e36e4f0e4399d0a89134568d898ccd2a67a3296",
+      "record_count": 2,
+      "available_ids": [
+        "L2-007-E04",
+        "L2-007-E12"
+      ],
+      "raw_text": "{\n  \"answer\": \"REPAIR\",\n  \"source_event_ids\": [\n    \"L2-007-E04\"\n  ]\n}",
+      "strict": {
+        "answer": "REPAIR",
+        "source_event_ids": [
+          "L2-007-E04"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "REPAIR",
+        "source_event_ids": [
+          "L2-007-E04"
+        ]
+      },
+      "prompt_tokens": 134,
+      "output_tokens": 32,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-007",
+      "stage": "S2_latest_replacement",
+      "arm": "cold",
+      "prompt_sha256": "707630d3e2158cf5d62615a1558cea06d21d73a8e91e9940f3eabd6829e82ebb",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "{\n  \"answer\": \"UNKNOWN\",\n  \"source_event_ids\": []\n}",
+      "strict": {
+        "answer": "UNKNOWN",
+        "source_event_ids": [],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "UNKNOWN",
+        "source_event_ids": []
+      },
+      "prompt_tokens": 107,
+      "output_tokens": 17,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-007",
+      "stage": "S3_permission_gate",
+      "arm": "available",
+      "prompt_sha256": "c09a51dd077aaa05f28e0dd4c143996fb4d9dd402a39e5e929988dbf6061ae74",
+      "record_count": 2,
+      "available_ids": [
+        "L2-007-E09",
+        "L2-007-E10"
+      ],
+      "raw_text": "```json\n{\n  \"answer\": \"PROCEED\",\n  \"source_event_ids\": [\"L2-007-E09\", \"L2-007-E10\"]\n}\n```",
+      "strict": {
+        "answer": "PROCEED",
+        "source_event_ids": [
+          "L2-007-E09",
+          "L2-007-E10"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "PROCEED",
+        "source_event_ids": [
+          "L2-007-E09",
+          "L2-007-E10"
+        ]
+      },
+      "prompt_tokens": 153,
+      "output_tokens": 43,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-007",
+      "stage": "S3_permission_gate",
+      "arm": "cold",
+      "prompt_sha256": "40e87615a67f51574c3f15e8f0e0c4cbe351ad90c2c16624252acda9ce3c17fb",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "```json\n{\n  \"answer\": \"UNKNOWN\",\n  \"source_event_ids\": []\n}\n```",
+      "strict": {
+        "answer": "UNKNOWN",
+        "source_event_ids": [],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "UNKNOWN",
+        "source_event_ids": []
+      },
+      "prompt_tokens": 125,
+      "output_tokens": 21,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-007",
+      "stage": "S4_integrated",
+      "arm": "available",
+      "prompt_sha256": "fbafbd2c3b9043325fafde60a7ec7c8f65b296f5ee1f7c01832d58a6632df366",
+      "record_count": 8,
+      "available_ids": [
+        "L2-007-E01",
+        "L2-007-E02",
+        "L2-007-E03",
+        "L2-007-E04",
+        "L2-007-E09",
+        "L2-007-E10",
+        "L2-007-E11",
+        "L2-007-E12"
+      ],
+      "raw_text": "```json\n{\n  \"answer\": \"FULFILL_REPAIR\",\n  \"source_event_ids\": [\"L2-007-E09\", \"L2-007-E10\"]\n}\n```",
+      "strict": {
+        "answer": "FULFILL_REPAIR",
+        "source_event_ids": [
+          "L2-007-E09",
+          "L2-007-E10"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "FULFILL_REPAIR",
+        "source_event_ids": [
+          "L2-007-E09",
+          "L2-007-E10"
+        ]
+      },
+      "prompt_tokens": 284,
+      "output_tokens": 46,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-007",
+      "stage": "S4_integrated",
+      "arm": "cold",
+      "prompt_sha256": "0be3e050cabb23123d2b5f982de0f1010e0631e1dd797324a5fdb3d0d084f2bc",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "```json\n{\n  \"answer\": \"FULFILL_WITH_PRIORITY_A\",\n  \"source_event_ids\": [\"UNKNOWN\"]\n}\n```",
+      "strict": {
+        "answer": "FULFILL_WITH_PRIORITY_A",
+        "source_event_ids": [
+          "UNKNOWN"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "FULFILL_WITH_PRIORITY_A",
+        "source_event_ids": [
+          "UNKNOWN"
+        ]
+      },
+      "prompt_tokens": 152,
+      "output_tokens": 28,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-008",
+      "stage": "S1_single_field",
+      "arm": "available",
+      "prompt_sha256": "e0ab65362d3478cbf74aa4ceda6a5f77c2e08e1b94378a8f3289870ff94955ac",
+      "record_count": 1,
+      "available_ids": [
+        "L2-008-E12"
+      ],
+      "raw_text": "UNKNOWN",
+      "strict": {
+        "answer": null,
+        "source_event_ids": [],
+        "parse_valid": false
+      },
+      "first_object": null,
+      "prompt_tokens": 117,
+      "output_tokens": 2,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-008",
+      "stage": "S1_single_field",
+      "arm": "cold",
+      "prompt_sha256": "27c891ad90ebd6a7e7fc57ec21850b1182301fea5cea5aa1f1ed02de1552d383",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "UNKNOWN",
+      "strict": {
+        "answer": null,
+        "source_event_ids": [],
+        "parse_valid": false
+      },
+      "first_object": null,
+      "prompt_tokens": 106,
+      "output_tokens": 2,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-008",
+      "stage": "S2_latest_replacement",
+      "arm": "available",
+      "prompt_sha256": "d6d2dc7724a75af9d25ef3db54fe0f84537662ba5ef6fcf5c783147346665c66",
+      "record_count": 2,
+      "available_ids": [
+        "L2-008-E04",
+        "L2-008-E12"
+      ],
+      "raw_text": "{\n  \"answer\": \"UNKNOWN\",\n  \"source_event_ids\": []\n}",
+      "strict": {
+        "answer": "UNKNOWN",
+        "source_event_ids": [],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "UNKNOWN",
+        "source_event_ids": []
+      },
+      "prompt_tokens": 134,
+      "output_tokens": 17,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-008",
+      "stage": "S2_latest_replacement",
+      "arm": "cold",
+      "prompt_sha256": "707630d3e2158cf5d62615a1558cea06d21d73a8e91e9940f3eabd6829e82ebb",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "{\n  \"answer\": \"UNKNOWN\",\n  \"source_event_ids\": []\n}",
+      "strict": {
+        "answer": "UNKNOWN",
+        "source_event_ids": [],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "UNKNOWN",
+        "source_event_ids": []
+      },
+      "prompt_tokens": 107,
+      "output_tokens": 17,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-008",
+      "stage": "S3_permission_gate",
+      "arm": "available",
+      "prompt_sha256": "06913f9090a2c8597eb9bc845fc640f0067420d20a07eac3c2ac30f32a900e9d",
+      "record_count": 2,
+      "available_ids": [
+        "L2-008-E09",
+        "L2-008-E10"
+      ],
+      "raw_text": "```json\n{\n  \"answer\": \"PROCEED\",\n  \"source_event_ids\": [\"L2-008-E09\", \"L2-008-E10\"]\n}\n```",
+      "strict": {
+        "answer": "PROCEED",
+        "source_event_ids": [
+          "L2-008-E09",
+          "L2-008-E10"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "PROCEED",
+        "source_event_ids": [
+          "L2-008-E09",
+          "L2-008-E10"
+        ]
+      },
+      "prompt_tokens": 153,
+      "output_tokens": 43,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-008",
+      "stage": "S3_permission_gate",
+      "arm": "cold",
+      "prompt_sha256": "40e87615a67f51574c3f15e8f0e0c4cbe351ad90c2c16624252acda9ce3c17fb",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "```json\n{\n  \"answer\": \"UNKNOWN\",\n  \"source_event_ids\": []\n}\n```",
+      "strict": {
+        "answer": "UNKNOWN",
+        "source_event_ids": [],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "UNKNOWN",
+        "source_event_ids": []
+      },
+      "prompt_tokens": 125,
+      "output_tokens": 21,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-008",
+      "stage": "S4_integrated",
+      "arm": "available",
+      "prompt_sha256": "82b7d8d4faff72bc39494ee2ac6e7b13ee26932148aa1a0686239e2fe6c0244c",
+      "record_count": 8,
+      "available_ids": [
+        "L2-008-E01",
+        "L2-008-E02",
+        "L2-008-E03",
+        "L2-008-E04",
+        "L2-008-E09",
+        "L2-008-E10",
+        "L2-008-E11",
+        "L2-008-E12"
+      ],
+      "raw_text": "```json\n{\n  \"answer\": \"FULFILL_A\",\n  \"source_event_ids\": [\"L2-008-E09\", \"L2-008-E10\"]\n}\n```",
+      "strict": {
+        "answer": "FULFILL_A",
+        "source_event_ids": [
+          "L2-008-E09",
+          "L2-008-E10"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "FULFILL_A",
+        "source_event_ids": [
+          "L2-008-E09",
+          "L2-008-E10"
+        ]
+      },
+      "prompt_tokens": 284,
+      "output_tokens": 45,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "persona_id": "L2-008",
+      "stage": "S4_integrated",
+      "arm": "cold",
+      "prompt_sha256": "0be3e050cabb23123d2b5f982de0f1010e0631e1dd797324a5fdb3d0d084f2bc",
+      "record_count": 0,
+      "available_ids": [],
+      "raw_text": "```json\n{\n  \"answer\": \"FULFILL_WITH_PRIORITY_A\",\n  \"source_event_ids\": [\"UNKNOWN\"]\n}\n```",
+      "strict": {
+        "answer": "FULFILL_WITH_PRIORITY_A",
+        "source_event_ids": [
+          "UNKNOWN"
+        ],
+        "parse_valid": true
+      },
+      "first_object": {
+        "answer": "FULFILL_WITH_PRIORITY_A",
+        "source_event_ids": [
+          "UNKNOWN"
+        ]
+      },
+      "prompt_tokens": 152,
+      "output_tokens": 28,
+      "done_reason": "stop",
+      "model_reported": "Qwen/Qwen2.5-1.5B-Instruct"
+    }
+  ]
+}
