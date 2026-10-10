@@ -1,6 +1,6 @@
 # Synthematic Cue Hypothesis
 
-**Status:** Working paper v0.2.4, October 9, 2026. Theoretical and methodological, with directional predictions and a cost-efficiency criterion. Not peer reviewed. No SCH experiments reported as completed.
+**Status:** Working paper v0.2.5, October 9, 2026. Theoretical and methodological, with directional predictions and a cost-efficiency criterion. Not peer reviewed. No SCH experiments reported as completed.
 
 [Read the full academic paper](PAPER.md)
 
@@ -23,3 +23,5 @@ The proposed research distinguishes symbol copying and stylistic priming from se
 **Stateful memory extension:** [E1 Pretorius L1 cue, alias, restart and decision-gate findings](../../experiments/SCH_E1_PRETORIUS_STATEFUL/RESULTS.md) are documented in Appendix E of the paper. The canonical 450-event source stayed unchanged. No symbol-specific retrieval or character-decision advantage was found over matched opaque keys in this adapter.
 
 **Further exploratory evidence:** [E2 complete multi-memory program](../../experiments/SCH_E2_MULTIMEMORY_DECISIONS/RESULTS.md) and [E3 blinded benchmark protocol](../../experiments/SCH_E3_TRIBUNAL_OF_MEMORY/PROTOCOL.md) are indexed by Appendix F. E2 found no supported advantage from editorial cues over neutral keys and showed that author-preferred answers could be produced without access to memories.
+
+The [E3C v2 calibration results](../../experiments/SCH_E3_TRIBUNAL_OF_MEMORY/CALIBRATION_RESULTS.md) and [full E3 protocol](../../experiments/SCH_E3_TRIBUNAL_OF_MEMORY/PROTOCOL.md) are now documented in manuscript Appendix G. The corrected two-Qwen synthetic source-dependence study remains negative; independent source adjudication has not been performed.
