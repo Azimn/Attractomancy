@@ -1,0 +1,71 @@
+name: SCH E3 reviewer packet dry run
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sch-e3-packet.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  packet:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: Azimn/Pretorius-Connectome
+          ref: 6d2768211f5c2184c8bbdb833c06e169b5137197
+          path: pretorius_source
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install existing source retrieval dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "numpy==1.26.4" "scipy==1.14.1" "scikit-learn==1.5.2"
+      - name: Build blinded-format calibration packet, no reviewer ratings
+        run: |
+          python experiments/SCH_E3_TRIBUNAL_OF_MEMORY/blinded_packet.py \
+            --source pretorius_source --calibration-only \
+            --output experiments/SCH_E3_TRIBUNAL_OF_MEMORY/packets/e2-calibration
+      - name: Assert no author labels or method identities leak into reviewer packet fields
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          d=pathlib.Path("experiments/SCH_E3_TRIBUNAL_OF_MEMORY/packets/e2-calibration")
+          items=[json.loads(s) for s in (d/"reviewer_packet.jsonl").read_text().splitlines() if s.strip()]
+          manifest=json.loads((d/"packet_manifest.json").read_text())
+          assert len(items)==6
+          assert manifest["annotations_received"]==0
+          assert manifest["case_mode"]=="E2_CALIBRATION_UNBLINDED"
+          assert sum(x["candidate_count"] for x in items)>60
+          for row in items:
+              assert row["example_not_blind_ground_truth"]
+              for cand in row["candidates"]:
+                  assert set(cand)=={"candidate_id","title","source_excerpt","source_status","reviewer_label","reviewer_rationale"}
+                  assert cand["candidate_id"].startswith("C")
+                  assert cand["reviewer_label"] is None
+          print("E3_CALIBRATION_PACKET_VALID",len(items),sum(x["candidate_count"] for x in items))
+          PY
+      - name: Commit reviewer packet and blank template only, never organizer mapping
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          dir=experiments/SCH_E3_TRIBUNAL_OF_MEMORY/packets/e2-calibration
+          git add "$dir/reviewer_packet.jsonl" "$dir/packet_manifest.json" "$dir/blank_adjudication_template.json"
+          git diff --cached --name-only | grep -q reviewer_packet.jsonl
+          ! git diff --cached --name-only | grep -q organizer_only_mapping
+          git commit -m "research: preserve unlabeled E3 calibration review packet [skip ci]"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo "Source packet could not be pushed" >&2
+          exit 1
