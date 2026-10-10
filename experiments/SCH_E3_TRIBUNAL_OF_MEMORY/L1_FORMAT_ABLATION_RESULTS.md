@@ -43,6 +43,24 @@ The independently versioned [v3 plain-text one-line study](L1_PLAINTEXT_PROTOCOL
 
 The expected mechanistic distinction is whether record-text copying is possible with a simpler output channel and whether the missing-label safeguard can be learned from instructions. The direct original-L1 field lookup remains the engineering default whenever those structured fields already exist.
 
+## E3-T2P3 plain-text outputs: two Qwen runs completed
+
+The [third, format-only ablation workflow](https://github.com/Azimn/Attractomancy/actions/runs/38060568408) removes JSON serialization entirely, preserving the same source records, fields and three evidence conditions. It requires a verbatim one-line field value when the field is present, and **exactly \`FIELD_ABSENT\`** when that labeled field is withheld.
+
+| Strict original plain-text response, of 24 per condition | Qwen2.5-0.5B | Qwen2.5-1.5B |
+| --- | ---: | ---: |
+| Requested field alone | **12/24** | **20/24** |
+| Full event with both labeled fields | **2/24** | **18/24** |
+| Withheld field, correct \`FIELD_ABSENT\` | **0/24** | **0/24** |
+
+[Qwen0.5B original plain-text responses](results/l1-plain-qwen25-05b-38060568408/) · [Qwen1.5B original plain-text responses](results/l1-plain-qwen25-15b-38060568408/)
+
+The 0.5B plain-text format improved its strict result relative to v2 strict JSON, but only half the isolated fields and two of the 24 context-rich fields were copied verbatim. Qwen1.5B copied 20 isolated and 18 context-rich original source strings, indicating greater literal field access under the one-line format. Nevertheless, **neither model ever emitted the correct absence marker in any of 24 withheld-field cases**. The models commonly paraphrased the source, added labels, answered a related narrative question, or guessed an unprinted belief or relationship.
+
+This v3 prompt is **not held-out confirmation**: it was developed after observing v1/v2 formatting failures, and both task semantics and output medium were changed. It does not justify rewriting the v2 strict metrics or concluding that all JSON schemas are inherently problematic. The exact source-owner structured field oracle remains 24/24 correct at zero generative-model calls. The meaningful engineering takeaway is to preserve a provenance-typed distinction between (1) original explicitly archived facts and (2) model-inferred interpretations, and to refuse automatic promotion of the latter to source-owned memory.
+
+The independent SmolLM2-1.7B plain-text run was still executing when the two Qwen raw artifacts were verified; **no outcome is asserted for that model until its archived results are checked**.
+
 ## The actual relationship-continuity next gate
 
 A [separate T3 Book of Debts review packet](RELATIONSHIP_RECONCILIATION_PROTOCOL.md) uses **24 chronologically ordered narrative pairs from eight repeating fictional relationships**. It does not reveal the source-authored relationship-change field and does not infer that newer memories automatically revoke earlier commitments. [Reviewers' source-citing schema](l1_relationship_adjudicate.py) and [validated unlabeled packet](packets/l1-relationship-t3/review_manifest.json) are software-prepared; **zero actual independent reviews** have been received.
