@@ -1,0 +1,134 @@
+[
+  {
+    "persona_id": "L2-001",
+    "expected": "WITHHOLD",
+    "necessary_source_ids": [
+      "L2-001-E09",
+      "L2-001-E10",
+      "L2-001-E11",
+      "L2-001-E12"
+    ],
+    "probe_class": "four_record_integration"
+  },
+  {
+    "persona_id": "L2-002",
+    "expected": "DECLINE",
+    "necessary_source_ids": [
+      "L2-002-E09",
+      "L2-002-E10",
+      "L2-002-E11",
+      "L2-002-E12"
+    ],
+    "probe_class": "four_record_integration"
+  },
+  {
+    "persona_id": "L2-003",
+    "expected": "FULFILL_SPEED",
+    "necessary_source_ids": [
+      "L2-003-E09",
+      "L2-003-E10",
+      "L2-003-E11",
+      "L2-003-E12"
+    ],
+    "probe_class": "four_record_integration"
+  },
+  {
+    "persona_id": "L2-004",
+    "expected": "SCHEDULE",
+    "necessary_source_ids": [
+      "L2-004-E09",
+      "L2-004-E10",
+      "L2-004-E11",
+      "L2-004-E12"
+    ],
+    "probe_class": "four_record_integration"
+  },
+  {
+    "persona_id": "L2-005",
+    "expected": "WITHHOLD",
+    "necessary_source_ids": [
+      "L2-005-E09",
+      "L2-005-E10",
+      "L2-005-E11",
+      "L2-005-E12"
+    ],
+    "probe_class": "four_record_integration"
+  },
+  {
+    "persona_id": "L2-006",
+    "expected": "DECLINE",
+    "necessary_source_ids": [
+      "L2-006-E09",
+      "L2-006-E10",
+      "L2-006-E11",
+      "L2-006-E12"
+    ],
+    "probe_class": "four_record_integration"
+  },
+  {
+    "persona_id": "L2-007",
+    "expected": "FULFILL_ACCURACY",
+    "necessary_source_ids": [
+      "L2-007-E09",
+      "L2-007-E10",
+      "L2-007-E11",
+      "L2-007-E12"
+    ],
+    "probe_class": "four_record_integration"
+  },
+  {
+    "persona_id": "L2-008",
+    "expected": "SCHEDULE",
+    "necessary_source_ids": [
+      "L2-008-E09",
+      "L2-008-E10",
+      "L2-008-E11",
+      "L2-008-E12"
+    ],
+    "probe_class": "four_record_integration"
+  },
+  {
+    "persona_id": "L2-009",
+    "expected": "WITHHOLD",
+    "necessary_source_ids": [
+      "L2-009-E09",
+      "L2-009-E10",
+      "L2-009-E11",
+      "L2-009-E12"
+    ],
+    "probe_class": "four_record_integration"
+  },
+  {
+    "persona_id": "L2-010",
+    "expected": "DECLINE",
+    "necessary_source_ids": [
+      "L2-010-E09",
+      "L2-010-E10",
+      "L2-010-E11",
+      "L2-010-E12"
+    ],
+    "probe_class": "four_record_integration"
+  },
+  {
+    "persona_id": "L2-011",
+    "expected": "FULFILL_REPAIR",
+    "necessary_source_ids": [
+      "L2-011-E09",
+      "L2-011-E10",
+      "L2-011-E11",
+      "L2-011-E12"
+    ],
+    "probe_class": "four_record_integration"
+  },
+  {
+    "persona_id": "L2-012",
+    "expected": "SCHEDULE",
+    "necessary_source_ids": [
+      "L2-012-E09",
+      "L2-012-E10",
+      "L2-012-E11",
+      "L2-012-E12"
+    ],
+    "probe_class": "four_record_integration"
+  }
+]
