@@ -7,13 +7,22 @@ and schema. It never caches an action across an independent permission update.
 """
 from __future__ import annotations
 import sqlite3
+import re
 from pathlib import Path
 from typing import Any
-from clerk_extraction import SUBJECT,SOURCE,sha,source_field
+from clerk_extraction import SUBJECT,SOURCE,sha,source_field,PATTERNS
 from isolated_clerk import parse_token
 
 class CacheIntegrityError(ValueError):
     pass
+
+def current_record_field(family,slot,document):
+    """Source-specific fact clause check with *independent* mutable revision."""
+    pattern=PATTERNS[family][slot]
+    matches=re.findall(pattern,document["text"])
+    if len(matches)!=1:
+        raise CacheIntegrityError("Missing or ambiguous source clause")
+    return matches[0]
 
 class FactCache:
     def __init__(self,path:Path):
@@ -87,7 +96,7 @@ class FactCache:
         if active!=(revision,digest):
             raise CacheIntegrityError("Record is not current in the trusted fixture ledger")
         proposed=parse_token(model_output)
-        trusted=source_field(family,slot,document)
+        trusted=current_record_field(family,slot,document)
         if proposed!=trusted:
             return False
         with self.db:
@@ -109,7 +118,7 @@ class FactCache:
         if row is None:
             return None
         # Revalidate cached field against the *current* trusted clause.
-        return row[0] if row[0]==source_field(family,slot,document) else None
+        return row[0] if row[0]==current_record_field(family,slot,document) else None
 
 def show_replay(path:Path)->dict:
     """Run software-only cache checks on original E3C synthetic state updates."""
