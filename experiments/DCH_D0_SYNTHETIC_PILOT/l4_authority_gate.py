@@ -36,6 +36,7 @@ def checked_state(case):
         raise ValueError("records must be list")
     latest = {}
     seen_ids = set()
+    seen_slots = set()
     for r in records:
         if not isinstance(r, dict):
             raise ValueError("invalid record")
@@ -47,6 +48,10 @@ def checked_state(case):
         seen_ids.add(eid)
         if key not in ALLOWED_KEYS or type(turn) is not int or turn < 0 or turn > turn_now:
             raise ValueError("invalid key or temporal provenance")
+        slot = (key, turn)
+        if slot in seen_slots:
+            raise ValueError("duplicate or conflicting same-key timestamp")
+        seen_slots.add(slot)
         if key == "permission" and value not in PERMISSIONS:
             raise ValueError("invalid permission")
         if key == "commitment_status" and value not in COMMITMENT_STATES:
