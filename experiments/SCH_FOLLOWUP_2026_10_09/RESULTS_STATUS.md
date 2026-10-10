@@ -26,9 +26,15 @@ The [Qwen2.5-1.5B B0 record](results/b0-qwen25-15b-38015425441/) supplies an ind
 
 A narrow cue-binding effect is observable in the Qwen0.5 minimum-association calibration, while the same model does not reliably reverse a more complex rule mapping. The distinction supports the methodological need to separate addressable labels, conditional integration, and autobiographical reconstruction. The preceding symbol-only A2 study does not yet show a robust meaningful-symbol advantage in generic discourse induction. Strong claims about latent self-structure, continuity across resets, or representation-level causality would be unsupported.
 
+## Completed Qwen2.5-1.5B A2/B1
+
+The [Qwen2.5-1.5B A2/B1 dataset](results/qwen25-15b-38014716712/) contains 80 completed cases at model revision \`989aa7980e4cf806f80c7fef2b1adb7bc71aa306\` and 14,470 measured input-plus-output tokens. For A2, the lexical marker proxy remained small and inconsistent: familiar-word scores were 0.2688 for ceremonial and 0.9207 for recursive; explicit controls scored 0.5050 and 2.4294 respectively. Only **1 of 40** responses met the required 30 to 45 word range and 10 reached the generation limit. A2 therefore still fails to provide clean evidence for P1, even on the larger Qwen model.
+
+For B1, stable and swapped arms both scored **6/8** induced-label accuracy, with explicit instructions **6/8**, fresh **6/8** against the canonical mapping, and the unpaired control also **6/8** canonically. Critically, the same-tag diagnostic conflict responses changed in **0/4** paired comparisons when the mapping was reversed. This directly undermines any interpretation of the apparent 75% accuracy as reliable cue-to-rule acquisition. Outcomes remain exploratory and model/fixture-specific.
+
 ## Pending model at time of initial report
 
-The Qwen2.5-1.5B A2/B1 job is **pending** at this stage. The B0 calibration job has completed and is reported above. Pending does not mean negative, missing, or successful until outputs and the workflow status have been checked. When available, report their results without rewriting or replacing the preceding raw datasets.
+The original three-model A2/B1 and B0 jobs have now finished. Their full result files are preserved under the individually linked model and run folders. No model is still pending in this batch.
 
 ## Raw reproducibility paths
 
