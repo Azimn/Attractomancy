@@ -1,0 +1,92 @@
+name: SCH E3 T1 Clerk typed evidence test
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sch-e3-t1-clerk.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  clerk:
+    name: T1 extraction ${{ matrix.slug }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - slug: qwen25-05b
+            model: Qwen/Qwen2.5-0.5B-Instruct
+          - slug: qwen25-15b
+            model: Qwen/Qwen2.5-1.5B-Instruct
+          - slug: smollm2-17b
+            model: HuggingFaceTB/SmolLM2-1.7B-Instruct
+    env:
+      PYTHONUNBUFFERED: "1"
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Pin CPU model dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "torch==2.5.1" --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers==4.51.3" "safetensors==0.5.3" "sentencepiece==0.2.0"
+      - name: Run source-integrity and Clerk strict schema tests
+        run: |
+          python -m unittest discover -s experiments/SCH_E3_TRIBUNAL_OF_MEMORY -p test_clerk.py -v
+          python experiments/SCH_E3_TRIBUNAL_OF_MEMORY/clerk_extraction.py --validate-only
+          python -m unittest discover -s experiments/SCH_D1_EXTERNAL_RECONSTRUCTION -p test_archive_guard.py -v
+      - name: Generate model field extractions with original source envelopes
+        run: |
+          python experiments/SCH_E3_TRIBUNAL_OF_MEMORY/clerk_extraction.py \
+            --model ${{ matrix.model }} \
+            --output experiments/SCH_E3_TRIBUNAL_OF_MEMORY/results/clerk-${{ matrix.slug }}-${{ github.run_id }}
+      - name: Independently validate original generations and strict scores
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          p=pathlib.Path("experiments/SCH_E3_TRIBUNAL_OF_MEMORY/results/clerk-${{ matrix.slug }}-${{ github.run_id }}")
+          m=json.loads((p/"manifest.json").read_text())
+          s=json.loads((p/"summary.json").read_text())
+          rows=[json.loads(x) for x in (p/"responses.jsonl").read_text().splitlines() if x.strip()]
+          assert len(rows)==24==s["n"]
+          assert len({r["case"]["id"] for r in rows})==24
+          assert len({json.dumps(r["case"]["messages"]) for r in rows})==24
+          assert len(s["groups"])==4 and len(s["counterfactual_pairs"])==6
+          assert sum(r["case"]["guard_rejections"] for r in rows)==3
+          assert s["model_revision"] and m["model_revision"]==s["model_revision"]
+          assert s["total_prompt_tokens"]==sum(r["prompt_tokens"] for r in rows)
+          assert s["total_output_tokens"]==sum(r["output_tokens"] for r in rows)
+          assert s["no_canonical_pretorius_memories_touched"]
+          print("E3_T1_RAW_VERIFIED",s["model"],s["groups"])
+          PY
+      - name: Retain raw data even if inference fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sch-e3-t1-${{ matrix.slug }}-${{ github.run_id }}
+          path: experiments/SCH_E3_TRIBUNAL_OF_MEMORY/results/clerk-${{ matrix.slug }}-${{ github.run_id }}/
+          retention-days: 14
+          if-no-files-found: warn
+      - name: Commit unique run-specific original outputs
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/SCH_E3_TRIBUNAL_OF_MEMORY/results/clerk-${{ matrix.slug }}-${{ github.run_id }}
+          git commit -m "research: E3 T1 ${{ matrix.slug }} field extraction, attestation and counterfactuals [skip ci]"
+          for n in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo "Could not publish to main, raw workflow artifact retained" >&2
+          exit 1
