@@ -62,6 +62,10 @@ def main():
     model=AutoModel.from_pretrained("sentence-transformers/all-MiniLM-L6-v2",trust_remote_code=False)
     model.eval()
     after_model=run_stage("after_minilm_model_load")
+    # Reproduce E2S's full encoder forward pass before its lexical scoring.
+    from semantic_retrieval import embeddings
+    vectors, docinfo=embeddings(model,tokenizer,[source[event_id]["memory_text"] for event_id in ids],"cpu")
+    after_forward=run_stage("after_full_minilm_forward")
     refpaths={
       "e2r":opts.archive/"retrieval-run-38023843107/retrieval_diagnostic.json",
       "e2g":opts.archive/"graph-run-38024055089/graph_retrieval.json",
@@ -89,7 +93,7 @@ def main():
     diff={
         name:{"max_abs_difference":max(float(np.max(np.abs(left-right))) for left,right in zip(original,stagevec)),
               "total_queries_with_any_score_difference":sum(bool(np.any(left!=right)) for left,right in zip(original,stagevec))}
-        for name,stagevec in [("after_torch_import",after_torch),("torch_set_4_threads",multithread),("after_minilm_model_load",after_model)]
+        for name,stagevec in [("after_torch_import",after_torch),("torch_set_4_threads",multithread),("after_minilm_model_load",after_model),("after_full_minilm_forward",after_forward)]
     }
     result={
       "study":"E2 lexical baseline stability audit",
@@ -99,6 +103,8 @@ def main():
       "scipy":scipy.__version__,"sklearn":sklearn.__version__,
       "torch":torch.__version__,"transformers":transformers.__version__,
       "encoder_revision":getattr(model.config,"_commit_hash",None),
+      "encoder_document_count":int(vectors.shape[0]),
+      "encoder_truncated_documents":docinfo["truncated"],
       "OMP_NUM_THREADS":os.environ.get("OMP_NUM_THREADS"),
       "OPENBLAS_NUM_THREADS":os.environ.get("OPENBLAS_NUM_THREADS"),
       "MKL_NUM_THREADS":os.environ.get("MKL_NUM_THREADS"),
