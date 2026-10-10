@@ -17,7 +17,7 @@ All numbers below are *prespecified strict JSON* exact-match passes per 24 promp
 
 [Original v1 Qwen0.5B](results/l1-fields-qwen25-05b-38057942612/) · [Original v1 Qwen1.5B](results/l1-fields-qwen25-15b-38057942612/) · [Original v2 Qwen0.5B](results/l1-fields-v2-qwen25-05b-38058419957/) · [Original v2 Qwen1.5B](results/l1-fields-v2-qwen25-15b-38058419957/)
 
-Each original run contains 72 independent generation calls and a full source manifest, original prompts, response strings and tokenizer costs: **288 model generations total**, with preserved correct provenance and six distinct condition/model datasets. The model revisions were pinned to \`7ae557604adf67be50417f59c2c2f167def9a775\` for 0.5B and \`989aa7980e4cf806f80c7fef2b1adb7bc71aa306\` for 1.5B.
+Each original run contains 72 independent generation calls and a full source manifest, original prompts, response strings and tokenizer costs: **288 model generations total**, with preserved source provenance across four distinct version-by-model datasets (each containing three evidence conditions). The model revisions were pinned to \`7ae557604adf67be50417f59c2c2f167def9a775\` for 0.5B and \`989aa7980e4cf806f80c7fef2b1adb7bc71aa306\` for 1.5B.
 
 **v1 was prompt-confounded.** Its system instruction included the concrete demonstration \`{"answer":"source text"}\`, and Qwen0.5B reproduced that exact dummy content in **70 of 72** responses, with only two other responses. This is a format-example echo rather than an interpretable inability to read L1. The 1.5B run was less vulnerable, successfully copying 22/24 explicit isolated fields and 13/24 full-event fields, but incorrectly guessed a value for all 24 deliberately absent target fields.
 
