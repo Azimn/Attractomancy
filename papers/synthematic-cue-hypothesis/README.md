@@ -25,3 +25,5 @@ The proposed research distinguishes symbol copying and stylistic priming from se
 **Further exploratory evidence:** [E2 complete multi-memory program](../../experiments/SCH_E2_MULTIMEMORY_DECISIONS/RESULTS.md) and [E3 blinded benchmark protocol](../../experiments/SCH_E3_TRIBUNAL_OF_MEMORY/PROTOCOL.md) are indexed by Appendix F. E2 found no supported advantage from editorial cues over neutral keys and showed that author-preferred answers could be produced without access to memories.
 
 The [E3C v2 calibration results](../../experiments/SCH_E3_TRIBUNAL_OF_MEMORY/CALIBRATION_RESULTS.md) and [full E3 protocol](../../experiments/SCH_E3_TRIBUNAL_OF_MEMORY/PROTOCOL.md) are now documented in manuscript Appendix G. The corrected two-Qwen synthetic source-dependence study remains negative; independent source adjudication has not been performed.
+
+[Appendix H](PAPER.md) documents E3-T1 joint and source-isolated fact extraction across three models and the separate source-version cache integrity drill. Neither proves learned autobiographical reasoning or the strong symbolic-cue hypothesis.
