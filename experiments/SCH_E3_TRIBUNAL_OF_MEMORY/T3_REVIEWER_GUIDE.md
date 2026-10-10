@@ -23,7 +23,8 @@ For any affirmative interpretation, provide one exact verbatim evidence quote fr
 
 For each \`pair_id\`, submit a JSONL object shaped like the following. This is a **schema illustration with placeholder values**, not a completed annotation:
 
-<escape>{
+```json
+{
   "pair_id": "COPY_FROM_PACKET",
   "reviewer_id": "YOUR_INDEPENDENT_ID",
   "reviewer_disclosure": {
@@ -43,7 +44,8 @@ For each \`pair_id\`, submit a JSONL object shaped like the following. This is a
   "later_exact_quote": null,
   "explicit_prior_commitment": null,
   "explicit_superseding_statement": null
-}</escape>
+}
+```
 
 This template represents an *insufficient evidence* placeholder; its flag values must never be mass-copied to real responses without reading the source. Use true/false judgments from the excerpts. When the supersession flag is true, both named commitment fields must contain exact quotations from earlier and later text.
 
@@ -59,6 +61,8 @@ Do not treat a continuity judgment as a literal current-day authorization. It is
 
 Once annotations genuinely exist as a JSONL file, validate them with:
 
-<escape>python l1_relationship_adjudicate.py --packet packets/l1-relationship-t3/reviewer_pairs.jsonl --reviews path/to/independent_reviews.jsonl --output path/to/validation_summary.json</escape>
+```bash
+python l1_relationship_adjudicate.py --packet packets/l1-relationship-t3/reviewer_pairs.jsonl --reviews path/to/independent_reviews.jsonl --output path/to/validation_summary.json
+```
 
 The resulting report checks submission completeness, verified text spans and label agreement. It does not authenticate reviewer identities or establish that all source interpretations are objectively true. **Do not run a new "character consistency" model benchmark until the review stage is actually completed**. A test suite full of synthetic review examples is not a substitute for the three reviewers.
