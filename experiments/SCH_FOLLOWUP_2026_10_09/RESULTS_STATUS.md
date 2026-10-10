@@ -19,13 +19,16 @@ The B0 fixture strips B1's conditional rule down to a simple invented tag-to-cod
 
 In [SmolLM2-360M B0](results/b0-smollm2-360m-38015425441/), stable and reversed strict accuracies were 2/8 and 4/8 respectively, and matched-prompt reversals occurred in **0/8**. Format compliance was inconsistent even for this simplest task, and no reliable association was isolated. Exact-string scoring and punctuation-tolerant sensitivity were both archived.
 
+
+The [Qwen2.5-1.5B B0 record](results/b0-qwen25-15b-38015425441/) supplies an independent model-size replication in the same Qwen family. In the prespecified **strict exact-output format**, the stable and reversed mappings were correct in 6/8 each. With a separately reported *post hoc, punctuation-tolerant parsing sensitivity*, each mapping was correct in 8/8 cases, and all **8 of 8** matched prompts changed response when the cue-to-codename mapping was reversed. The explicit sentence performed 7/8 strict and 8/8 relaxed at approximately half the total tokens per response (88.38 versus 174.5). The scrambled condition again agreed with the canonical mapping in 7/8 under strict parsing, so control contamination and sequence biases require further ablation. This replication strengthens the limited claim that arbitrary tags can acquire local associations, not a claim of persistent memory or a cue-driven efficiency advantage.
+
 ## Interpretation
 
 A narrow cue-binding effect is observable in the Qwen0.5 minimum-association calibration, while the same model does not reliably reverse a more complex rule mapping. The distinction supports the methodological need to separate addressable labels, conditional integration, and autobiographical reconstruction. The preceding symbol-only A2 study does not yet show a robust meaningful-symbol advantage in generic discourse induction. Strong claims about latent self-structure, continuity across resets, or representation-level causality would be unsupported.
 
 ## Pending model at time of initial report
 
-The Qwen2.5-1.5B A2/B1 job and B0 calibration job were still generating during the initial writing of this report. These are **pending**, not missing or negative, until outputs and complete workflow status are verified. When available, report their results without rewriting or replacing the preceding raw datasets.
+The Qwen2.5-1.5B A2/B1 job is **pending** at this stage. The B0 calibration job has completed and is reported above. Pending does not mean negative, missing, or successful until outputs and the workflow status have been checked. When available, report their results without rewriting or replacing the preceding raw datasets.
 
 ## Raw reproducibility paths
 
