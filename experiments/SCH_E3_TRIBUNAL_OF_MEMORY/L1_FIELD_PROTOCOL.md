@@ -14,6 +14,12 @@ Clone Pretorius-Connectome at commit \`6d2768211f5c2184c8bbdb833c06e169b5137197\
 
 Select **12 different episode IDs** by \`random.Random(20261010)\` sampling from the sorted list of 27 existing episodes; choose one event in each selected episode using the same deterministic RNG. Freeze the generated IDs in the run manifest with the source SHA and random seed. Do not select examples after looking at renderer performance. Use exactly two target fields per selected record: \`belief_changes\` and \`relationship_changes\`. Thus there are **24 distinct event-field tasks**, with three independent-condition presentations per task, **72 fresh model prompts/model**. The canonical event IDs and their contents are visible to the experiment harness but the expected field value must not be inserted into an explicitly withheld-field prompt.
 
+## Protocol correction after first full 0.5B run
+
+The original v1 [runner](l1_field_extraction.py) inadvertently put a literal example string \`{"answer":"source text"}\` in the system prompt. In [run 38057942612](https://github.com/Azimn/Attractomancy/actions/runs/38057942612), the 0.5B renderer returned the same literal placeholder in **70 of its 72** responses; it produced **0/24 exact source fields** in both visible-source arms and **0/24 correct null abstentions** when the target was withheld. These responses are a **prompt-example echo confound**, not interpretable evidence that the model fails source-memory extraction.
+
+The v1 record selection, reference L1 manifest, target fields and three source-presentations remain frozen. The correction changes **only the response instructions**, removing the JSON string example and expressing the desired JSON string/null types verbally. The distinct [v2 runner](l1_field_extraction_v2.py) asserts no literal string \`"source text"\` and no old exemplar phrase remain in any model prompt. Run it under a newly named workflow and output path; **do not pool v1 and v2 generations**. The v2 rerun is exploratory because the correction was motivated by looking at v1 outputs, not a pristine preregistered independent confirmatory trial. Record strict original v1 outputs as a prompt-engineering failure.
+
 ## Three condition presentations
 
 1. **isolated_field:** The selected source event ID, title, provenance and **only the requested explicit field text**. The model should copy the exact string as JSON with an \`answer\` key.
