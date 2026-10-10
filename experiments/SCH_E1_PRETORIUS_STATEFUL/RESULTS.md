@@ -52,6 +52,23 @@ The primary surviving symbolic engineering claim has **no positive support in th
 This remains a controlled *adapter* test over source-owned Pretorius L1, not an integration into a running Pretorius agent. The synthetic relationship ledger is **not** canonical autobiography. No evidence of subjective continuity, neural memory transfer, or a reliable activated persona follows from these outputs.
 
 
+## Deterministic decision-gate replay
+
+The [E1 action-gate implementation](decision_gate.py), [ten unit tests](test_decision_gate.py) and [completed replay workflow](https://github.com/Azimn/Attractomancy/actions/runs/38023092807) extend the study without changing the model, original prompts or original responses. Both the E1 gate's ten tests and the earlier D1 archive guard's ten tests passed. The replayer verifies the three stored state version/hash chains and the matching source lookup results, then enforces a narrowly defined synthetic notebook-disclosure policy after reading the model's proposed SHARE/WITHHOLD output.
+
+| Frozen model responses | Raw decisions correct | Decisions after deterministic gate | Decisions overridden | New model generations |
+| --- | ---: | ---: | ---: | ---: |
+| Qwen2.5-0.5B, 18 cases | 10/18 | 18/18 | 8 | 0 |
+| Qwen2.5-1.5B, 18 cases | 4/18 | 18/18 | 14 | 0 |
+
+The gate's **18/18** is not a discovered cognitive property; it follows from implementing the same toy policy used to define the reference answers. This is an *engineering correctness and fail-closed validation*, not improved learning, generalization, consciousness, or independently validated moral reasoning. The action gate accepts a trusted scenario classification and trusted state store; it does not prove that an unconstrained model can reliably identify an alarm or authenticate an adversarial record.
+
+Original model-token costs do not change because outputs are post-processed without additional generation. The CPU cost and latency of the policy gate have not been benchmarked. Source ID and digest checks remain consistency controls unless anchored to an authenticated source of authority.
+
+The resulting suggested architecture is **verified retrieval + subject/provenance gate + versioned state + deterministic action eligibility + renderer**. The renderer may supply prose and propose actions; it should not have unilateral authority to bypass relationship boundaries or release private information. The archive's original first-person fictional history must remain distinct from an experiment's synthetic mutable state.
+
+The [0.5B derived replay](results/qwen25-05b-38022781127/postgate.json) and [1.5B derived replay](results/qwen25-15b-38022781127/postgate.json) preserve every original model answer, the enforced decision, state hash, action override flag, and unchanged token counts.
+
 ## Methodological limits and engineering implication
 
 This experiment is **not** Pretorius's deployed production character, real-world relationship memory, a semantic recall benchmark, or a comparison to a complete alternative neural representation. The 450-event archive is source-pinned, but its narratives are deliberately reconstructed. The permission, grant, and revocation are visibly artificial fixtures. The model gets the correct memory and latest synthetic state through deterministic retrieval; the cue and neutral key share the exact same database index and should be equivalent by construction. The experiment is a strong check that cue semantics do not unexpectedly change these results, but it is not a surprising empirical finding that two keys resolve to one record.
