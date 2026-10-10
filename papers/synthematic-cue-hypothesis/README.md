@@ -1,6 +1,6 @@
 # Synthematic Cue Hypothesis
 
-**Status:** Working paper v0.2.1, October 9, 2026. Theoretical and methodological, with directional predictions and a cost-efficiency criterion. Not peer reviewed. No SCH experiments reported as completed.
+**Status:** Working paper v0.2.2, October 9, 2026. Theoretical and methodological, with directional predictions and a cost-efficiency criterion. Not peer reviewed. No SCH experiments reported as completed.
 
 [Read the full academic paper](PAPER.md)
 
@@ -17,3 +17,5 @@ The proposed research distinguishes symbol copying and stylistic priming from se
 **Related repository material:** [EXP-0001 information-matched baseline](../../experiments/EXP-0001_INFORMATION_MATCHED_BASELINE.md), [technique taxonomy](../../references/TECHNIQUE_TAXONOMY.md), [procedure overlap matrix](../../references/PROCEDURE_OVERLAP_MATRIX.md), and [case-study archive](../../references/cases/).
 
 **Publication control:** Add verified author names and affiliations only after confirmation. Freeze exact stimulus materials, model versions, and the terminal battery before treating subsequent outcomes as confirmatory.
+
+**Follow-up findings:** The [C1 results](../../experiments/SCH_C1_INTEGRATED_CUE_POLICIES/RESULTS.md) show failed multi-constraint cue induction on two Qwen2.5 sizes. The [D1 results](../../experiments/SCH_D1_EXTERNAL_RECONSTRUCTION/RESULTS.md) show strong reconstruction from correct synthetic records without a residual advantage for symbolic cues and significant wrong-person archive contamination. The paper's Appendix D records these observations without promoting pilot evidence to confirmation.
