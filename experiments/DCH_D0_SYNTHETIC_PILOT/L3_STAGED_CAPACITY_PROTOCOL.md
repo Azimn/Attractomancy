@@ -27,3 +27,11 @@ The anticipated calibration models use pinned Qwen2.5-1.5B-Instruct, greedy deco
 L3 is deliberately easier than L2 and must not be compared directly as if it were a randomized treatment of architecture. If S1/S2 work and S3/S4 do not, narrow the apparent capability bottleneck to conditional policy execution rather than raw memory access. If S1 already fails, pause the DCH dyad test and investigate model prompting. If all levels work in one model, proceed to information/budget-matched archive curation on independently authored histories. The full prospectus G1-G6 criteria remain untouched, and no L3 result will meet them alone.
 
 **Scientific status:** calibration only. All DCH efficacy hypotheses untested.
+
+## Locked engineering advancement thresholds, before L3 outputs
+
+Given only eight development histories per arm, treat thresholds as engineering checks rather than confirmatory statistical tests. A usable instrument should achieve first-object action accuracy >=6/8 in **available** S1 and S2, >=6/8 in available S3, and >=6/8 in available S4; the cold control should correctly abstain UNKNOWN on >=6/8 at each stage. Among correct available answers, >=75% should cite the branch-minimal authorized source certificate. Preserve strict whole-response scores regardless of diagnostic first-object recovery, and require >=6/8 strict parse compliance per stage for downstream automated evaluation. Every arm's source IDs must be fully attributable; invented citations are independently reported.
+
+If an early stage fails, stop interpreting harder stages as DCH evidence. If all stages pass on this tiny development set, advance only to independently authored and held-out calibration cases; do not launch human dyads solely from 8-item success. A true negative finding for human-specific curation requires a later test with real competing policies and sufficient power for equivalence under matched budgets.
+
+This section was fixed while the L3 model job was generating, **before any L3 score was retrieved or inspected**. It is therefore a documented calibration decision criterion, not a prospective registration of the already started execution.
