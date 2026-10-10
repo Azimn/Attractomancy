@@ -89,6 +89,8 @@ The [Synthematic Cue Hypothesis](papers/synthematic-cue-hypothesis/PAPER.md) (wo
 
 The [C1 integrated-policy experiment](experiments/SCH_C1_INTEGRATED_CUE_POLICIES/README.md) extends the B0 and B1 studies to two-character, multi-constraint decisions. It independently measures correctness under reversed cue mappings, the common risk veto, and the full token cost against concise explicit and compact-rule controls. It remains an exploratory experiment, not evidence of persistent identity.
 
+The [D1 external-record reconstruction experiment](experiments/SCH_D1_EXTERNAL_RECONSTRUCTION/README.md) separately tests whether symbolic recall cues contribute beyond identical injected memory records, and whether selecting relevant records improves token efficiency. D1 uses synthetic identities with explicit source-availability controls and makes no claim about continuous subjective identity.
+
 ## Quality and change control
 
 Run `python scripts/audit_catalog.py` from the repository root after source additions, edge additions, or documentation changes. This validates CSV structure, stable IDs, cross-file references, source status and preservation codes, explicit duplicate-URL reviews, and the single current-state table above.
