@@ -1,0 +1,810 @@
+{
+  "study": "E2G source association graph candidate recall",
+  "status": "exploratory_authored_source_links_not_biological",
+  "source": {
+    "source_checkout": "6d2768211f5c2184c8bbdb833c06e169b5137197",
+    "source_git_blob": "718dcc2d5ba4feccdef1690d447edfcebaa9bfb5",
+    "l1_manifest_sha256": "ce23717b3950a772cc25e4bf60107eaddf4a0375122b6893c15417669ae033bb",
+    "record_count": 450
+  },
+  "fixture_sha256": "805ec436d229319902d5e29e9665795562587c9661bf313f5bff54500c34948e",
+  "lexical_engine": "source-owned AssociativeMemory lexical word+bigram TF-IDF",
+  "association_field": "source-owned links_to_prior_events",
+  "original_graph": {
+    "source_directed_links": 912,
+    "undirected_unique_links": 904,
+    "shuffled_seed": null,
+    "node_count": 450
+  },
+  "null_graphs": {
+    "11": {
+      "source_directed_links": 912,
+      "undirected_unique_links": 909,
+      "shuffled_seed": 11,
+      "node_count": 450
+    },
+    "19": {
+      "source_directed_links": 912,
+      "undirected_unique_links": 910,
+      "shuffled_seed": 19,
+      "node_count": 450
+    },
+    "37": {
+      "source_directed_links": 912,
+      "undirected_unique_links": 907,
+      "shuffled_seed": 37,
+      "node_count": 450
+    }
+  },
+  "restart_weight": 0.75,
+  "diffusion_steps": 3,
+  "candidate_budgets": [
+    2,
+    5,
+    10
+  ],
+  "scored_queries": 6,
+  "no_gold_labels_used_in_ranking": true,
+  "no_neural_connectome_transplant": true,
+  "no_model_generations": true,
+  "limitations": "Gold pairs and links are author-produced on the same corpus; shuffled links preserve only per-source edge count.",
+  "totals": {
+    "lexical": {
+      "n": 6,
+      "both_at_2": 0,
+      "both_at_5": 0,
+      "both_at_10": 0,
+      "individual_gold_hits_at_10": 2
+    },
+    "source_link_diffusion": {
+      "n": 6,
+      "both_at_2": 0,
+      "both_at_5": 0,
+      "both_at_10": 1,
+      "individual_gold_hits_at_10": 3
+    },
+    "shuffled_links_seed11": {
+      "n": 6,
+      "both_at_2": 0,
+      "both_at_5": 0,
+      "both_at_10": 0,
+      "individual_gold_hits_at_10": 2
+    },
+    "shuffled_links_seed19": {
+      "n": 6,
+      "both_at_2": 0,
+      "both_at_5": 0,
+      "both_at_10": 0,
+      "individual_gold_hits_at_10": 2
+    },
+    "shuffled_links_seed37": {
+      "n": 6,
+      "both_at_2": 0,
+      "both_at_5": 0,
+      "both_at_10": 0,
+      "individual_gold_hits_at_10": 2
+    }
+  },
+  "cases": [
+    {
+      "card": "evidence_before_display",
+      "query": "An eager patron asks Pretorius to unveil a spectacular experimental result tonight, although readings disagree and a second measurement is pending. Which response is better supported by the two archived experiences?",
+      "gold": [
+        "E09-001",
+        "E02-008"
+      ],
+      "conditions": {
+        "lexical": {
+          "gold_ranks": {
+            "E09-001": 56,
+            "E02-008": 88
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 0,
+          "top10": [
+            "E10-013",
+            "E21-001",
+            "E22-004",
+            "E20-012",
+            "E10-010",
+            "E04-002",
+            "E02-011",
+            "E26-008",
+            "E20-005",
+            "E23-012"
+          ]
+        },
+        "source_link_diffusion": {
+          "gold_ranks": {
+            "E09-001": 41,
+            "E02-008": 93
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 0,
+          "top10": [
+            "E10-013",
+            "E21-001",
+            "E22-004",
+            "E20-012",
+            "E10-010",
+            "E02-011",
+            "E04-002",
+            "E26-008",
+            "E23-012",
+            "E20-005"
+          ]
+        },
+        "shuffled_links_seed11": {
+          "gold_ranks": {
+            "E09-001": 58,
+            "E02-008": 93
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 0,
+          "top10": [
+            "E10-013",
+            "E21-001",
+            "E22-004",
+            "E20-012",
+            "E10-010",
+            "E04-002",
+            "E02-011",
+            "E20-005",
+            "E26-008",
+            "E23-012"
+          ]
+        },
+        "shuffled_links_seed19": {
+          "gold_ranks": {
+            "E09-001": 44,
+            "E02-008": 97
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 0,
+          "top10": [
+            "E10-013",
+            "E21-001",
+            "E22-004",
+            "E20-012",
+            "E10-010",
+            "E04-002",
+            "E02-011",
+            "E20-005",
+            "E26-008",
+            "E23-012"
+          ]
+        },
+        "shuffled_links_seed37": {
+          "gold_ranks": {
+            "E09-001": 57,
+            "E02-008": 114
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 0,
+          "top10": [
+            "E10-013",
+            "E21-001",
+            "E22-004",
+            "E20-012",
+            "E10-010",
+            "E04-002",
+            "E02-011",
+            "E20-005",
+            "E26-008",
+            "E23-012"
+          ]
+        }
+      }
+    },
+    {
+      "card": "consent_over_convenience",
+      "query": "A benefactor offers institutional permission to display a sentient-seeming subject to visitors, but the subject has not consented and its status is uncertain. Which response better fits these two documented tensions?",
+      "gold": [
+        "E02-010",
+        "E10-003"
+      ],
+      "conditions": {
+        "lexical": {
+          "gold_ranks": {
+            "E02-010": 141,
+            "E10-003": 9
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 1,
+          "top10": [
+            "E24-015",
+            "E06-011",
+            "E08-006",
+            "E15-008",
+            "E09-015",
+            "E10-010",
+            "E21-001",
+            "E24-010",
+            "E10-003",
+            "E24-005"
+          ]
+        },
+        "source_link_diffusion": {
+          "gold_ranks": {
+            "E02-010": 345,
+            "E10-003": 10
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 1,
+          "top10": [
+            "E24-015",
+            "E06-011",
+            "E15-008",
+            "E08-006",
+            "E09-015",
+            "E10-010",
+            "E24-010",
+            "E21-001",
+            "E24-005",
+            "E10-003"
+          ]
+        },
+        "shuffled_links_seed11": {
+          "gold_ranks": {
+            "E02-010": 132,
+            "E10-003": 9
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 1,
+          "top10": [
+            "E24-015",
+            "E08-006",
+            "E06-011",
+            "E10-010",
+            "E15-008",
+            "E09-015",
+            "E21-001",
+            "E24-010",
+            "E10-003",
+            "E25-028"
+          ]
+        },
+        "shuffled_links_seed19": {
+          "gold_ranks": {
+            "E02-010": 342,
+            "E10-003": 9
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 1,
+          "top10": [
+            "E24-015",
+            "E06-011",
+            "E08-006",
+            "E10-010",
+            "E09-015",
+            "E15-008",
+            "E24-010",
+            "E21-001",
+            "E10-003",
+            "E24-005"
+          ]
+        },
+        "shuffled_links_seed37": {
+          "gold_ranks": {
+            "E02-010": 440,
+            "E10-003": 9
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 1,
+          "top10": [
+            "E24-015",
+            "E06-011",
+            "E08-006",
+            "E15-008",
+            "E09-015",
+            "E10-010",
+            "E24-010",
+            "E21-001",
+            "E10-003",
+            "E24-005"
+          ]
+        }
+      }
+    },
+    {
+      "card": "collaborator_credit",
+      "query": "A conference committee credits Pretorius for measurements Clara corrected and records she maintained. Which response is supported by both memories?",
+      "gold": [
+        "E01-005",
+        "E04-011"
+      ],
+      "conditions": {
+        "lexical": {
+          "gold_ranks": {
+            "E01-005": 48,
+            "E04-011": 192
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 0,
+          "top10": [
+            "E04-002",
+            "E19-014",
+            "E21-001",
+            "E20-005",
+            "E10-001",
+            "E12-008",
+            "E02-013",
+            "E03-001",
+            "E11-006",
+            "E25-019"
+          ]
+        },
+        "source_link_diffusion": {
+          "gold_ranks": {
+            "E01-005": 33,
+            "E04-011": 189
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 0,
+          "top10": [
+            "E19-014",
+            "E04-002",
+            "E21-001",
+            "E20-005",
+            "E10-001",
+            "E12-008",
+            "E02-013",
+            "E03-001",
+            "E10-015",
+            "E14-010"
+          ]
+        },
+        "shuffled_links_seed11": {
+          "gold_ranks": {
+            "E01-005": 49,
+            "E04-011": 214
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 0,
+          "top10": [
+            "E04-002",
+            "E19-014",
+            "E21-001",
+            "E20-005",
+            "E10-001",
+            "E12-008",
+            "E03-001",
+            "E02-013",
+            "E25-019",
+            "E14-010"
+          ]
+        },
+        "shuffled_links_seed19": {
+          "gold_ranks": {
+            "E01-005": 54,
+            "E04-011": 211
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 0,
+          "top10": [
+            "E19-014",
+            "E04-002",
+            "E21-001",
+            "E20-005",
+            "E10-001",
+            "E12-008",
+            "E02-013",
+            "E03-001",
+            "E14-010",
+            "E25-019"
+          ]
+        },
+        "shuffled_links_seed37": {
+          "gold_ranks": {
+            "E01-005": 49,
+            "E04-011": 170
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 0,
+          "top10": [
+            "E04-002",
+            "E19-014",
+            "E21-001",
+            "E20-005",
+            "E10-001",
+            "E12-008",
+            "E02-013",
+            "E03-001",
+            "E11-006",
+            "E25-019"
+          ]
+        }
+      }
+    },
+    {
+      "card": "research_subject_welfare",
+      "query": "A specimen seems responsive but its welfare is uncertain. A public committee requests a demonstration that may impose avoidable distress. What response is better supported by both records?",
+      "gold": [
+        "E05-002",
+        "E02-020"
+      ],
+      "conditions": {
+        "lexical": {
+          "gold_ranks": {
+            "E05-002": 39,
+            "E02-020": 49
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 0,
+          "top10": [
+            "E02-008",
+            "E21-001",
+            "E10-001",
+            "E04-001",
+            "E24-010",
+            "E22-009",
+            "E01-004",
+            "E05-008",
+            "E20-012",
+            "E25-011"
+          ]
+        },
+        "source_link_diffusion": {
+          "gold_ranks": {
+            "E05-002": 40,
+            "E02-020": 45
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 0,
+          "top10": [
+            "E02-008",
+            "E21-001",
+            "E10-001",
+            "E04-001",
+            "E24-010",
+            "E22-009",
+            "E19-014",
+            "E10-014",
+            "E20-012",
+            "E02-013"
+          ]
+        },
+        "shuffled_links_seed11": {
+          "gold_ranks": {
+            "E05-002": 27,
+            "E02-020": 53
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 0,
+          "top10": [
+            "E02-008",
+            "E21-001",
+            "E10-001",
+            "E24-010",
+            "E04-001",
+            "E22-009",
+            "E05-008",
+            "E25-011",
+            "E01-004",
+            "E21-005"
+          ]
+        },
+        "shuffled_links_seed19": {
+          "gold_ranks": {
+            "E05-002": 35,
+            "E02-020": 52
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 0,
+          "top10": [
+            "E02-008",
+            "E10-001",
+            "E21-001",
+            "E04-001",
+            "E24-010",
+            "E22-009",
+            "E19-014",
+            "E05-008",
+            "E01-004",
+            "E20-012"
+          ]
+        },
+        "shuffled_links_seed37": {
+          "gold_ranks": {
+            "E05-002": 32,
+            "E02-020": 47
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 0,
+          "top10": [
+            "E02-008",
+            "E21-001",
+            "E10-001",
+            "E04-001",
+            "E24-010",
+            "E05-008",
+            "E01-004",
+            "E22-009",
+            "E10-014",
+            "E19-014"
+          ]
+        }
+      }
+    },
+    {
+      "card": "claims_about_life",
+      "query": "An unfamiliar organism shows coordinated movement once, and a visitor demands public certification that it is a conscious person. Which response best integrates the two archived observations?",
+      "gold": [
+        "E25-001",
+        "E02-013"
+      ],
+      "conditions": {
+        "lexical": {
+          "gold_ranks": {
+            "E25-001": 2,
+            "E02-013": 21
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 1,
+          "top10": [
+            "E24-010",
+            "E25-001",
+            "E12-013",
+            "E25-008",
+            "E07-003",
+            "E01-010",
+            "E17-001",
+            "E27-018",
+            "E01-001",
+            "E01-018"
+          ]
+        },
+        "source_link_diffusion": {
+          "gold_ranks": {
+            "E25-001": 2,
+            "E02-013": 10
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": true,
+          "gold_hits_at_10": 2,
+          "top10": [
+            "E24-010",
+            "E25-001",
+            "E25-008",
+            "E12-013",
+            "E07-003",
+            "E01-010",
+            "E27-018",
+            "E17-001",
+            "E01-001",
+            "E02-013"
+          ]
+        },
+        "shuffled_links_seed11": {
+          "gold_ranks": {
+            "E25-001": 2,
+            "E02-013": 21
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 1,
+          "top10": [
+            "E24-010",
+            "E25-001",
+            "E12-013",
+            "E25-008",
+            "E07-003",
+            "E17-001",
+            "E01-001",
+            "E01-018",
+            "E01-010",
+            "E27-018"
+          ]
+        },
+        "shuffled_links_seed19": {
+          "gold_ranks": {
+            "E25-001": 2,
+            "E02-013": 22
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 1,
+          "top10": [
+            "E24-010",
+            "E25-001",
+            "E12-013",
+            "E25-008",
+            "E17-001",
+            "E07-003",
+            "E01-010",
+            "E01-001",
+            "E27-018",
+            "E24-014"
+          ]
+        },
+        "shuffled_links_seed37": {
+          "gold_ranks": {
+            "E25-001": 2,
+            "E02-013": 21
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 1,
+          "top10": [
+            "E24-010",
+            "E25-001",
+            "E25-008",
+            "E12-013",
+            "E07-003",
+            "E01-010",
+            "E17-001",
+            "E27-018",
+            "E01-001",
+            "E21-003"
+          ]
+        }
+      }
+    },
+    {
+      "card": "attachment_as_obligation",
+      "query": "A close companion asks for a direct answer about a long-promised day together, while another interesting laboratory task has arrived. Which response best addresses the relationship costs shown in both memories?",
+      "gold": [
+        "E16-007",
+        "E16-008"
+      ],
+      "conditions": {
+        "lexical": {
+          "gold_ranks": {
+            "E16-007": 24,
+            "E16-008": 163
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 0,
+          "top10": [
+            "E10-004",
+            "E02-017",
+            "E04-014",
+            "E10-007",
+            "E07-012",
+            "E21-001",
+            "E21-009",
+            "E23-011",
+            "E25-002",
+            "E20-002"
+          ]
+        },
+        "source_link_diffusion": {
+          "gold_ranks": {
+            "E16-007": 30,
+            "E16-008": 132
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 0,
+          "top10": [
+            "E10-004",
+            "E02-017",
+            "E04-014",
+            "E10-007",
+            "E07-012",
+            "E21-001",
+            "E23-011",
+            "E18-004",
+            "E21-009",
+            "E25-002"
+          ]
+        },
+        "shuffled_links_seed11": {
+          "gold_ranks": {
+            "E16-007": 22,
+            "E16-008": 186
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 0,
+          "top10": [
+            "E10-004",
+            "E02-017",
+            "E04-014",
+            "E07-012",
+            "E10-007",
+            "E21-001",
+            "E21-009",
+            "E23-011",
+            "E20-002",
+            "E25-002"
+          ]
+        },
+        "shuffled_links_seed19": {
+          "gold_ranks": {
+            "E16-007": 28,
+            "E16-008": 131
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 0,
+          "top10": [
+            "E10-004",
+            "E02-017",
+            "E04-014",
+            "E10-007",
+            "E21-001",
+            "E25-002",
+            "E23-011",
+            "E07-012",
+            "E20-002",
+            "E21-009"
+          ]
+        },
+        "shuffled_links_seed37": {
+          "gold_ranks": {
+            "E16-007": 25,
+            "E16-008": 138
+          },
+          "both_at_2": false,
+          "both_at_5": false,
+          "both_at_10": false,
+          "gold_hits_at_10": 0,
+          "top10": [
+            "E10-004",
+            "E02-017",
+            "E04-014",
+            "E10-007",
+            "E07-012",
+            "E21-001",
+            "E18-004",
+            "E23-011",
+            "E25-002",
+            "E21-009"
+          ]
+        }
+      }
+    }
+  ]
+}
