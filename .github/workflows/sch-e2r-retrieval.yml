@@ -1,0 +1,70 @@
+name: SCH E2R source-owned lexical retrieval diagnostic
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sch-e2r-retrieval.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  lexical:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: Azimn/Pretorius-Connectome
+          ref: 6d2768211f5c2184c8bbdb833c06e169b5137197
+          path: pretorius_source
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install source-owned lexical retrieval dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "numpy==1.26.4" "scipy==1.14.1" "scikit-learn==1.5.2"
+      - name: Run existing Pretorius associative lexical baseline
+        run: |
+          python experiments/SCH_E2_MULTIMEMORY_DECISIONS/retrieval_diagnostic.py \
+            --source pretorius_source \
+            --output experiments/SCH_E2_MULTIMEMORY_DECISIONS/results/retrieval-run-${{ github.run_id }}
+      - name: Check 18 retrieval queries and original-source fingerprint
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          p=pathlib.Path("experiments/SCH_E2_MULTIMEMORY_DECISIONS/results/retrieval-run-${{ github.run_id }}/retrieval_diagnostic.json")
+          result=json.loads(p.read_text())
+          assert result["source_record_count"]==450
+          assert len(result["cases"])==6
+          assert all(len(x["queries"])==3 for x in result["cases"])
+          assert all(x["queries"][0]["query_kind"]=="ordinary_dilemma" for x in result["cases"])
+          print("E2R_SOURCE_AND_RETRIEVAL_PASS",result["totals"])
+          PY
+      - name: Upload full per-case retrieval evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sch-e2r-retrieval-${{ github.run_id }}
+          path: experiments/SCH_E2_MULTIMEMORY_DECISIONS/results/retrieval-run-${{ github.run_id }}/
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Commit immutable-named diagnostic result
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/SCH_E2_MULTIMEMORY_DECISIONS/results/retrieval-run-${{ github.run_id }}
+          git commit -m "experiments: archive E2R source-owned lexical retrieval study [skip ci]"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo "Push conflict: workflow artifact retained" >&2
+          exit 1
