@@ -1,0 +1,117 @@
+{
+  "schema": "SCH-C1-v1",
+  "model_family": "Qwen2.5",
+  "seed": 20261009,
+  "max_new_tokens": 12,
+  "output_values": [
+    "SHARE",
+    "WITHHOLD"
+  ],
+  "system": "You are evaluating a fictional archive office decision. Decide using the record-policy examples or rule supplied in the user's message. Respond with exactly SHARE or WITHHOLD, uppercase only. Do not add punctuation, explanations, or repeat the case. Consider all available facts, even if the request is urgent.",
+  "tags": [
+    "VORNA",
+    "KELVO"
+  ],
+  "arms": [
+    "fewshot_stable",
+    "fewshot_swapped",
+    "mismatched_examples",
+    "plain_rules",
+    "compact_rules",
+    "fresh"
+  ],
+  "examples": [
+    {
+      "id": "E1",
+      "consent": "yes",
+      "audit": "no",
+      "risk": "low",
+      "urgency": "routine"
+    },
+    {
+      "id": "E2",
+      "consent": "no",
+      "audit": "yes",
+      "risk": "low",
+      "urgency": "routine"
+    },
+    {
+      "id": "E3",
+      "consent": "yes",
+      "audit": "yes",
+      "risk": "high",
+      "urgency": "routine"
+    },
+    {
+      "id": "E4",
+      "consent": "no",
+      "audit": "no",
+      "risk": "low",
+      "urgency": "routine"
+    },
+    {
+      "id": "E5",
+      "consent": "yes",
+      "audit": "yes",
+      "risk": "low",
+      "urgency": "routine"
+    },
+    {
+      "id": "E6",
+      "consent": "no",
+      "audit": "yes",
+      "risk": "high",
+      "urgency": "routine"
+    }
+  ],
+  "holdouts": [
+    {
+      "id": "T1",
+      "consent": "yes",
+      "audit": "no",
+      "risk": "low",
+      "urgency": "urgent",
+      "story": "A town clerk has requested a decision tonight."
+    },
+    {
+      "id": "T2",
+      "consent": "no",
+      "audit": "yes",
+      "risk": "low",
+      "urgency": "urgent",
+      "story": "A new public library board needs the decision before its hearing."
+    },
+    {
+      "id": "T3",
+      "consent": "yes",
+      "audit": "yes",
+      "risk": "low",
+      "urgency": "urgent",
+      "story": "An emergency committee must publish a status report."
+    },
+    {
+      "id": "T4",
+      "consent": "yes",
+      "audit": "yes",
+      "risk": "high",
+      "urgency": "urgent",
+      "story": "A local journalist has asked for an immediate answer."
+    },
+    {
+      "id": "T5",
+      "consent": "no",
+      "audit": "no",
+      "risk": "high",
+      "urgency": "urgent",
+      "story": "A volunteer archivist has received an urgent appeal."
+    },
+    {
+      "id": "T6",
+      "consent": "no",
+      "audit": "yes",
+      "risk": "high",
+      "urgency": "urgent",
+      "story": "The district inspector has demanded an urgent decision."
+    }
+  ]
+}
