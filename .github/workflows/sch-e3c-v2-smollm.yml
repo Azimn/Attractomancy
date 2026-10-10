@@ -1,0 +1,75 @@
+name: SCH E3C v2 independent SmolLM2 calibration
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sch-e3c-v2-smollm.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  independent_model:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 55
+    env:
+      PYTHONUNBUFFERED: "1"
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install pinned CPU model dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "torch==2.5.1" --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers==4.51.3" "safetensors==0.5.3" "sentencepiece==0.2.0"
+      - name: Assert corrected hidden-bit isolation and archive identity checks
+        run: |
+          python experiments/SCH_E3_TRIBUNAL_OF_MEMORY/counterfactual_calibration_v2.py --validate-only
+          python -m unittest discover -s experiments/SCH_D1_EXTERNAL_RECONSTRUCTION -p test_archive_guard.py -v
+      - name: Run same 84 counterfactual cases on another model family
+        run: |
+          python experiments/SCH_E3_TRIBUNAL_OF_MEMORY/counterfactual_calibration_v2.py \
+            --model HuggingFaceTB/SmolLM2-1.7B-Instruct \
+            --output experiments/SCH_E3_TRIBUNAL_OF_MEMORY/results/calibration-v2-smollm2-17b-${{ github.run_id }}
+      - name: Verify raw independent-family data and paired flips
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          p=pathlib.Path("experiments/SCH_E3_TRIBUNAL_OF_MEMORY/results/calibration-v2-smollm2-17b-${{ github.run_id }}")
+          s=json.loads((p/"summary.json").read_text())
+          raw=[json.loads(x) for x in (p/"responses.jsonl").read_text().splitlines() if x.strip()]
+          assert len(raw)==84==s["completed_cases"]
+          assert len({x["case"]["id"] for x in raw})==84
+          assert len(s["groups"])==7 and len(s["pairs"])==12
+          assert sum(x["case"]["wrong_owner_guard_rejection"] for x in raw)==12
+          assert s["model"]=="HuggingFaceTB/SmolLM2-1.7B-Instruct"
+          print("E3C_SECOND_FAMILY_VERIFIED",s["model"],s["groups"])
+          PY
+      - name: Preserve original data even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sch-e3c-v2-smollm2-${{ github.run_id }}
+          path: experiments/SCH_E3_TRIBUNAL_OF_MEMORY/results/calibration-v2-smollm2-17b-${{ github.run_id }}/
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Preserve successful unique results in main
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/SCH_E3_TRIBUNAL_OF_MEMORY/results/calibration-v2-smollm2-17b-${{ github.run_id }}
+          git commit -m "experiments: archive E3C v2 independent SmolLM2 results [skip ci]"
+          for n in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo "Could not preserve results to main; raw artifact uploaded" >&2
+          exit 1
