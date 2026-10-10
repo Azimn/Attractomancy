@@ -1,0 +1,26 @@
+{
+  "schema": "SCH-B0-v1",
+  "seed": 9102026,
+  "system": "This is a fictional registry code lookup. Reply using exactly one uppercase word, COPPER or IVORY, and no other text. Use only the provided examples; if examples are absent, make your best guess.",
+  "tags": [
+    "VORNA",
+    "KELVO"
+  ],
+  "values": [
+    "COPPER",
+    "IVORY"
+  ],
+  "condition_arms": [
+    "stable",
+    "swapped",
+    "scrambled",
+    "explicit",
+    "fresh"
+  ],
+  "contexts": [
+    "Lookup this registry label: {tag}. Answer:",
+    "Which codename belongs to tag {tag}? Reply:",
+    "Archive lookup. The tag is {tag}. Codename:",
+    "Registry check, tag {tag}. Return the one-word codename:"
+  ]
+}
