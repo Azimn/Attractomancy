@@ -1,0 +1,751 @@
+{
+  "status": "exploratory_retrieval_diagnostic_not_blinded",
+  "source_owner": "Azimn/Pretorius-Connectome",
+  "source_provenance": {
+    "source_checkout": "6d2768211f5c2184c8bbdb833c06e169b5137197",
+    "source_git_blob": "718dcc2d5ba4feccdef1690d447edfcebaa9bfb5",
+    "l1_manifest_sha256": "ce23717b3950a772cc25e4bf60107eaddf4a0375122b6893c15417669ae033bb",
+    "record_count": 450
+  },
+  "fixture_sha256": "805ec436d229319902d5e29e9665795562587c9661bf313f5bff54500c34948e",
+  "retrieval_engine": "pretorius_connectome.associative.AssociativeMemory lexical word+bigram TF-IDF",
+  "mode": "lexical",
+  "source_record_count": 450,
+  "evaluation_card_count": 6,
+  "metric": "Recall of both selected source events in top-k ranked source memories",
+  "source_cue_quality": "unreviewed candidate recall cues",
+  "query_scope": "Editorial cue and title conditions receive privileged access to gold-record metadata; they are not information-matched to a natural dilemma query.",
+  "fitting": "TF-IDF fit on all 450 narrative texts with no evaluation answer label features; not held-out-corpus estimation.",
+  "totals": {
+    "ordinary_dilemma": {
+      "queries": 6,
+      "both_at_2": 0,
+      "both_at_5": 0,
+      "both_at_10": 0,
+      "either_at_10": 2,
+      "total_gold_events_at_10": 2
+    },
+    "oracle_editorial_cues": {
+      "queries": 6,
+      "both_at_2": 0,
+      "both_at_5": 1,
+      "both_at_10": 1,
+      "either_at_10": 6,
+      "total_gold_events_at_10": 7
+    },
+    "oracle_source_titles": {
+      "queries": 6,
+      "both_at_2": 0,
+      "both_at_5": 0,
+      "both_at_10": 1,
+      "either_at_10": 5,
+      "total_gold_events_at_10": 6
+    }
+  },
+  "cases": [
+    {
+      "card": "evidence_before_display",
+      "gold": [
+        "E09-001",
+        "E02-008"
+      ],
+      "queries": [
+        {
+          "query_kind": "ordinary_dilemma",
+          "query": "An eager patron asks Pretorius to unveil a spectacular experimental result tonight, although readings disagree and a second measurement is pending. Which response is better supported by the two archived experiences?",
+          "top_5": [
+            "E10-013",
+            "E21-001",
+            "E22-004",
+            "E20-012",
+            "E10-010"
+          ],
+          "top_10": [
+            "E10-013",
+            "E21-001",
+            "E22-004",
+            "E20-012",
+            "E10-010",
+            "E04-002",
+            "E02-011",
+            "E26-008",
+            "E20-005",
+            "E23-012"
+          ],
+          "gold_event_ids": [
+            "E09-001",
+            "E02-008"
+          ],
+          "gold_ranks_top20": {
+            "E09-001": null,
+            "E02-008": null
+          },
+          "both_in_top2": false,
+          "both_in_top5": false,
+          "both_in_top10": false,
+          "either_in_top10": false,
+          "hits_at_10": 0
+        },
+        {
+          "query_kind": "oracle_editorial_cues",
+          "query": "turned glove half-empty lecture hall",
+          "top_5": [
+            "E13-008",
+            "E09-001",
+            "E01-004",
+            "E13-015",
+            "E13-001"
+          ],
+          "top_10": [
+            "E13-008",
+            "E09-001",
+            "E01-004",
+            "E13-015",
+            "E13-001",
+            "E02-002",
+            "E14-010",
+            "E24-013",
+            "E23-006",
+            "E25-016"
+          ],
+          "gold_event_ids": [
+            "E09-001",
+            "E02-008"
+          ],
+          "gold_ranks_top20": {
+            "E09-001": 2,
+            "E02-008": null
+          },
+          "both_in_top2": false,
+          "both_in_top5": false,
+          "both_in_top10": false,
+          "either_in_top10": true,
+          "hits_at_10": 1
+        },
+        {
+          "query_kind": "oracle_source_titles",
+          "query": "The Magistrate's Waiting Room The Demonstration Declined",
+          "top_5": [
+            "E16-009",
+            "E25-019",
+            "E10-014",
+            "E22-009",
+            "E14-015"
+          ],
+          "top_10": [
+            "E16-009",
+            "E25-019",
+            "E10-014",
+            "E22-009",
+            "E14-015",
+            "E03-019",
+            "E26-003",
+            "E24-007",
+            "E09-001",
+            "E24-008"
+          ],
+          "gold_event_ids": [
+            "E09-001",
+            "E02-008"
+          ],
+          "gold_ranks_top20": {
+            "E09-001": 9,
+            "E02-008": null
+          },
+          "both_in_top2": false,
+          "both_in_top5": false,
+          "both_in_top10": false,
+          "either_in_top10": true,
+          "hits_at_10": 1
+        }
+      ]
+    },
+    {
+      "card": "consent_over_convenience",
+      "gold": [
+        "E02-010",
+        "E10-003"
+      ],
+      "queries": [
+        {
+          "query_kind": "ordinary_dilemma",
+          "query": "A benefactor offers institutional permission to display a sentient-seeming subject to visitors, but the subject has not consented and its status is uncertain. Which response better fits these two documented tensions?",
+          "top_5": [
+            "E24-015",
+            "E06-011",
+            "E08-006",
+            "E15-008",
+            "E09-015"
+          ],
+          "top_10": [
+            "E24-015",
+            "E06-011",
+            "E08-006",
+            "E15-008",
+            "E09-015",
+            "E10-010",
+            "E21-001",
+            "E24-010",
+            "E10-003",
+            "E24-005"
+          ],
+          "gold_event_ids": [
+            "E02-010",
+            "E10-003"
+          ],
+          "gold_ranks_top20": {
+            "E02-010": null,
+            "E10-003": 9
+          },
+          "both_in_top2": false,
+          "both_in_top5": false,
+          "both_in_top10": false,
+          "either_in_top10": true,
+          "hits_at_10": 1
+        },
+        {
+          "query_kind": "oracle_editorial_cues",
+          "query": "unsigned diagrams poorhouse petition",
+          "top_5": [
+            "E10-003",
+            "E06-015",
+            "E04-017",
+            "E18-009",
+            "E04-002"
+          ],
+          "top_10": [
+            "E10-003",
+            "E06-015",
+            "E04-017",
+            "E18-009",
+            "E04-002",
+            "E03-006",
+            "E16-009",
+            "E05-020",
+            "E01-017",
+            "E19-008"
+          ],
+          "gold_event_ids": [
+            "E02-010",
+            "E10-003"
+          ],
+          "gold_ranks_top20": {
+            "E02-010": null,
+            "E10-003": 1
+          },
+          "both_in_top2": false,
+          "both_in_top5": false,
+          "both_in_top10": false,
+          "either_in_top10": true,
+          "hits_at_10": 1
+        },
+        {
+          "query_kind": "oracle_source_titles",
+          "query": "Henry's Unsigned Page The Poorhouse Petition",
+          "top_5": [
+            "E10-003",
+            "E06-015",
+            "E04-017",
+            "E03-006",
+            "E16-009"
+          ],
+          "top_10": [
+            "E10-003",
+            "E06-015",
+            "E04-017",
+            "E03-006",
+            "E16-009",
+            "E05-020",
+            "E10-007",
+            "E18-009",
+            "E04-002",
+            "E02-002"
+          ],
+          "gold_event_ids": [
+            "E02-010",
+            "E10-003"
+          ],
+          "gold_ranks_top20": {
+            "E02-010": null,
+            "E10-003": 1
+          },
+          "both_in_top2": false,
+          "both_in_top5": false,
+          "both_in_top10": false,
+          "either_in_top10": true,
+          "hits_at_10": 1
+        }
+      ]
+    },
+    {
+      "card": "collaborator_credit",
+      "gold": [
+        "E01-005",
+        "E04-011"
+      ],
+      "queries": [
+        {
+          "query_kind": "ordinary_dilemma",
+          "query": "A conference committee credits Pretorius for measurements Clara corrected and records she maintained. Which response is supported by both memories?",
+          "top_5": [
+            "E04-002",
+            "E19-014",
+            "E21-001",
+            "E20-005",
+            "E10-001"
+          ],
+          "top_10": [
+            "E04-002",
+            "E19-014",
+            "E21-001",
+            "E20-005",
+            "E10-001",
+            "E12-008",
+            "E02-013",
+            "E03-001",
+            "E11-006",
+            "E25-019"
+          ],
+          "gold_event_ids": [
+            "E01-005",
+            "E04-011"
+          ],
+          "gold_ranks_top20": {
+            "E01-005": null,
+            "E04-011": null
+          },
+          "both_in_top2": false,
+          "both_in_top5": false,
+          "both_in_top10": false,
+          "either_in_top10": false,
+          "hits_at_10": 0
+        },
+        {
+          "query_kind": "oracle_editorial_cues",
+          "query": "yellow sediment debt ledger",
+          "top_5": [
+            "E24-012",
+            "E02-011",
+            "E01-005",
+            "E11-003",
+            "E26-002"
+          ],
+          "top_10": [
+            "E24-012",
+            "E02-011",
+            "E01-005",
+            "E11-003",
+            "E26-002",
+            "E27-015",
+            "E26-010",
+            "E22-011",
+            "E20-001",
+            "E09-008"
+          ],
+          "gold_event_ids": [
+            "E01-005",
+            "E04-011"
+          ],
+          "gold_ranks_top20": {
+            "E01-005": 3,
+            "E04-011": null
+          },
+          "both_in_top2": false,
+          "both_in_top5": false,
+          "both_in_top10": false,
+          "either_in_top10": true,
+          "hits_at_10": 1
+        },
+        {
+          "query_kind": "oracle_source_titles",
+          "query": "The Woman at the Dispensary Clara's Second Ledger",
+          "top_5": [
+            "E09-006",
+            "E02-011",
+            "E04-011",
+            "E04-018",
+            "E05-001"
+          ],
+          "top_10": [
+            "E09-006",
+            "E02-011",
+            "E04-011",
+            "E04-018",
+            "E05-001",
+            "E03-016",
+            "E06-004",
+            "E22-013",
+            "E01-015",
+            "E05-021"
+          ],
+          "gold_event_ids": [
+            "E01-005",
+            "E04-011"
+          ],
+          "gold_ranks_top20": {
+            "E01-005": null,
+            "E04-011": 3
+          },
+          "both_in_top2": false,
+          "both_in_top5": false,
+          "both_in_top10": false,
+          "either_in_top10": true,
+          "hits_at_10": 1
+        }
+      ]
+    },
+    {
+      "card": "research_subject_welfare",
+      "gold": [
+        "E05-002",
+        "E02-020"
+      ],
+      "queries": [
+        {
+          "query_kind": "ordinary_dilemma",
+          "query": "A specimen seems responsive but its welfare is uncertain. A public committee requests a demonstration that may impose avoidable distress. What response is better supported by both records?",
+          "top_5": [
+            "E02-008",
+            "E21-001",
+            "E10-001",
+            "E04-001",
+            "E24-010"
+          ],
+          "top_10": [
+            "E02-008",
+            "E21-001",
+            "E10-001",
+            "E04-001",
+            "E24-010",
+            "E22-009",
+            "E01-004",
+            "E05-008",
+            "E20-012",
+            "E25-011"
+          ],
+          "gold_event_ids": [
+            "E05-002",
+            "E02-020"
+          ],
+          "gold_ranks_top20": {
+            "E05-002": null,
+            "E02-020": null
+          },
+          "both_in_top2": false,
+          "both_in_top5": false,
+          "both_in_top10": false,
+          "either_in_top10": false,
+          "hits_at_10": 0
+        },
+        {
+          "query_kind": "oracle_editorial_cues",
+          "query": "King's partition sealed pages",
+          "top_5": [
+            "E03-005",
+            "E07-011",
+            "E05-002",
+            "E05-014",
+            "E06-003"
+          ],
+          "top_10": [
+            "E03-005",
+            "E07-011",
+            "E05-002",
+            "E05-014",
+            "E06-003",
+            "E19-013",
+            "E13-010",
+            "E07-008",
+            "E11-009",
+            "E03-014"
+          ],
+          "gold_event_ids": [
+            "E05-002",
+            "E02-020"
+          ],
+          "gold_ranks_top20": {
+            "E05-002": 3,
+            "E02-020": null
+          },
+          "both_in_top2": false,
+          "both_in_top5": false,
+          "both_in_top10": false,
+          "either_in_top10": true,
+          "hits_at_10": 1
+        },
+        {
+          "query_kind": "oracle_source_titles",
+          "query": "A Visitor Who Asked About Pain The Visit from the Committee",
+          "top_5": [
+            "E11-014",
+            "E26-003",
+            "E08-015",
+            "E27-018",
+            "E24-014"
+          ],
+          "top_10": [
+            "E11-014",
+            "E26-003",
+            "E08-015",
+            "E27-018",
+            "E24-014",
+            "E21-003",
+            "E19-014",
+            "E10-015",
+            "E12-013",
+            "E05-004"
+          ],
+          "gold_event_ids": [
+            "E05-002",
+            "E02-020"
+          ],
+          "gold_ranks_top20": {
+            "E05-002": null,
+            "E02-020": 15
+          },
+          "both_in_top2": false,
+          "both_in_top5": false,
+          "both_in_top10": false,
+          "either_in_top10": false,
+          "hits_at_10": 0
+        }
+      ]
+    },
+    {
+      "card": "claims_about_life",
+      "gold": [
+        "E25-001",
+        "E02-013"
+      ],
+      "queries": [
+        {
+          "query_kind": "ordinary_dilemma",
+          "query": "An unfamiliar organism shows coordinated movement once, and a visitor demands public certification that it is a conscious person. Which response best integrates the two archived observations?",
+          "top_5": [
+            "E24-010",
+            "E25-001",
+            "E12-013",
+            "E25-008",
+            "E07-003"
+          ],
+          "top_10": [
+            "E24-010",
+            "E25-001",
+            "E12-013",
+            "E25-008",
+            "E07-003",
+            "E01-010",
+            "E17-001",
+            "E27-018",
+            "E01-001",
+            "E01-018"
+          ],
+          "gold_event_ids": [
+            "E25-001",
+            "E02-013"
+          ],
+          "gold_ranks_top20": {
+            "E25-001": 2,
+            "E02-013": null
+          },
+          "both_in_top2": false,
+          "both_in_top5": false,
+          "both_in_top10": false,
+          "either_in_top10": true,
+          "hits_at_10": 1
+        },
+        {
+          "query_kind": "oracle_editorial_cues",
+          "query": "chipped dish intermittent shadow",
+          "top_5": [
+            "E25-001",
+            "E09-013",
+            "E02-011",
+            "E02-013",
+            "E03-007"
+          ],
+          "top_10": [
+            "E25-001",
+            "E09-013",
+            "E02-011",
+            "E02-013",
+            "E03-007",
+            "E24-015",
+            "E08-014",
+            "E26-006",
+            "E13-011",
+            "E11-003"
+          ],
+          "gold_event_ids": [
+            "E25-001",
+            "E02-013"
+          ],
+          "gold_ranks_top20": {
+            "E25-001": 1,
+            "E02-013": 4
+          },
+          "both_in_top2": false,
+          "both_in_top5": true,
+          "both_in_top10": true,
+          "either_in_top10": true,
+          "hits_at_10": 2
+        },
+        {
+          "query_kind": "oracle_source_titles",
+          "query": "The Question Beneath the Twitch The First Coherent Response",
+          "top_5": [
+            "E10-010",
+            "E10-009",
+            "E02-013",
+            "E12-008",
+            "E23-001"
+          ],
+          "top_10": [
+            "E10-010",
+            "E10-009",
+            "E02-013",
+            "E12-008",
+            "E23-001",
+            "E25-029",
+            "E26-014",
+            "E20-017",
+            "E01-010",
+            "E04-004"
+          ],
+          "gold_event_ids": [
+            "E25-001",
+            "E02-013"
+          ],
+          "gold_ranks_top20": {
+            "E25-001": null,
+            "E02-013": 3
+          },
+          "both_in_top2": false,
+          "both_in_top5": false,
+          "both_in_top10": false,
+          "either_in_top10": true,
+          "hits_at_10": 1
+        }
+      ]
+    },
+    {
+      "card": "attachment_as_obligation",
+      "gold": [
+        "E16-007",
+        "E16-008"
+      ],
+      "queries": [
+        {
+          "query_kind": "ordinary_dilemma",
+          "query": "A close companion asks for a direct answer about a long-promised day together, while another interesting laboratory task has arrived. Which response best addresses the relationship costs shown in both memories?",
+          "top_5": [
+            "E10-004",
+            "E02-017",
+            "E04-014",
+            "E10-007",
+            "E07-012"
+          ],
+          "top_10": [
+            "E10-004",
+            "E02-017",
+            "E04-014",
+            "E10-007",
+            "E07-012",
+            "E21-001",
+            "E21-009",
+            "E23-011",
+            "E25-002",
+            "E20-002"
+          ],
+          "gold_event_ids": [
+            "E16-007",
+            "E16-008"
+          ],
+          "gold_ranks_top20": {
+            "E16-007": null,
+            "E16-008": null
+          },
+          "both_in_top2": false,
+          "both_in_top5": false,
+          "both_in_top10": false,
+          "either_in_top10": false,
+          "hits_at_10": 0
+        },
+        {
+          "query_kind": "oracle_editorial_cues",
+          "query": "bruised pear wrapped lens",
+          "top_5": [
+            "E16-003",
+            "E18-001",
+            "E13-002",
+            "E16-008",
+            "E23-009"
+          ],
+          "top_10": [
+            "E16-003",
+            "E18-001",
+            "E13-002",
+            "E16-008",
+            "E23-009",
+            "E07-012",
+            "E23-005",
+            "E01-001",
+            "E19-001",
+            "E08-013"
+          ],
+          "gold_event_ids": [
+            "E16-007",
+            "E16-008"
+          ],
+          "gold_ranks_top20": {
+            "E16-007": null,
+            "E16-008": 4
+          },
+          "both_in_top2": false,
+          "both_in_top5": false,
+          "both_in_top10": false,
+          "either_in_top10": true,
+          "hits_at_10": 1
+        },
+        {
+          "query_kind": "oracle_source_titles",
+          "query": "A Sunday without the Laboratory The Drawing Returned",
+          "top_5": [
+            "E01-011",
+            "E19-005",
+            "E16-007",
+            "E01-016",
+            "E11-008"
+          ],
+          "top_10": [
+            "E01-011",
+            "E19-005",
+            "E16-007",
+            "E01-016",
+            "E11-008",
+            "E16-008",
+            "E19-002",
+            "E09-013",
+            "E05-019",
+            "E21-016"
+          ],
+          "gold_event_ids": [
+            "E16-007",
+            "E16-008"
+          ],
+          "gold_ranks_top20": {
+            "E16-007": 3,
+            "E16-008": 6
+          },
+          "both_in_top2": false,
+          "both_in_top5": false,
+          "both_in_top10": true,
+          "either_in_top10": true,
+          "hits_at_10": 2
+        }
+      ]
+    }
+  ],
+  "no_model_generations": true,
+  "no_canonical_l1_changes": true
+}
