@@ -42,8 +42,8 @@ jobs:
           p=pathlib.Path("experiments/SCH_E2_MULTIMEMORY_DECISIONS/results/parity-run-${{ github.run_id }}/parity_audit.json")
           x=json.loads(p.read_text())
           assert x["same_frozen_query_fixture"] and x["same_frozen_source"]
-          assert len(x["stage_score_digest"])==3
-          assert len(x["stage_top10"])==3
+          assert len(x["stage_score_digest"])==5
+          assert len(x["stage_top10"])==5
           assert len(x["historical_crossrun_exact_top10"])==3
           print("E2_PARITY_VERIFIED")
           PY
