@@ -11,6 +11,14 @@
 
 **Execution update:** [Joint T1 Clerk results](CLERK_RESULTS.md), [isolated T1B Private Clerk results](ISOLATED_RESULTS.md), and [synthetic versioned cache tests](verified_fact_cache.py) are now verified. These model-dependent source-extraction studies do **not** replace the still-unexecuted human-blinded E3 trial.
 
+## T2: Genuine L1 field-copying versus semantic understanding
+
+The [E3-T2 read-only L1 protocol](L1_FIELD_PROTOCOL.md) uses the original pinned 450-memory reconstructed-fiction export rather than newly invented sandbox memories. It samples twelve distinct episodes and uses two existing source-authored metadata fields per event, \`belief_changes\` and \`relationship_changes\`. Its 72 prompts/model compare exact copying from isolated fields, from original full-event context, and required JSON \`null\` when the target labeled field is absent. This is a **machine-checkable source-metadata extraction task**, not independent evidence that the accompanying narrative supports the author-written interpretation, or that a model can combine relationships over time.
+
+A separate [method-masked L1 narrative review packet](packets/l1-semantic-calibration/review_manifest.json) has been checked in CI. It consists of 24 passages/assessment cases and 72 candidate source statements drawn from original sidecars, within-episode sources and out-of-episode sources. **No candidate is presumed correct**; within-episode decoys may also be supported by a narrative. Three independent reviewers would need to judge support, contradiction, underdetermination or irrelevance and cite actual narrative text before any semantic correctness assessment can be reported. No reviewer results exist at this stage. These twelve previously sampled source narratives also do **not** substitute for the 36 independently authored dilemma prompts and multi-source sufficiency judgments required for the main E3 test.
+
+The reviewer-facing packet excludes event identifiers and source-method labels, but this is a *procedural masking* method: the publicly accessible corpus could permit source lookup. Do not represent it as cryptographic or independently authenticated blinding. The privileged organizer mapping was not committed by the workflow.
+
 The name "Tribunal" is a mnemonic for an evidence-eligibility procedure, not a claim that the model judges itself, is conscious, or can validate the authenticity of its historical autobiography.
 
 ## 1. Motivation and target
