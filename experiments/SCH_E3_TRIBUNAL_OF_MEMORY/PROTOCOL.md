@@ -7,6 +7,8 @@
 **Source archive:** Read-only Pretorius-Connectome 450-event L1, commit \`6d2768211f5c2184c8bbdb833c06e169b5137197\`.  
 **Evidence basis:** [E1](../SCH_E1_PRETORIUS_STATEFUL/RESULTS.md), [E2](../SCH_E2_MULTIMEMORY_DECISIONS/RESULTS.md), and separate E2R/E2G/E2S/E2F diagnostic records.
 
+**Implementation update:** The [Counterfactual Chamber calibration](CALIBRATION_PROTOCOL.md) is a separately labeled synthetic two-record experiment, not this blinded E3 trial. The [candidate-packet builder](blinded_packet.py) has passed an unlabeled [six-question E2 calibration dry run](packets/e2-calibration/packet_manifest.json), with 127 shuffled, deduplicated source excerpts and no committed organizer mapping. The reviewer protocol is in [PACKET_GUIDE.md](PACKET_GUIDE.md). No independently authored E3 main-case set, independent reviewers, blinded annotations, or confirmatory E3 results are claimed by these tools.
+
 The name "Tribunal" is a mnemonic for an evidence-eligibility procedure, not a claim that the model judges itself, is conscious, or can validate the authenticity of its historical autobiography.
 
 ## 1. Motivation and target
