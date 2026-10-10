@@ -85,7 +85,7 @@ The authoritative counts below correspond to the canonical CSV files on `main`. 
 
 ## Research papers
 
-The [Synthematic Cue Hypothesis](papers/synthematic-cue-hypothesis/PAPER.md) (working paper v0.2.0, October 9, 2026) predicts generic zero-shot register effects, locally conditioned but reset-sensitive cue bindings, and external-state dominance in high-fidelity character restoration. It also requires a cost-quality comparison with the cheapest sufficient plain instruction. The [paper folder](papers/synthematic-cue-hypothesis/) documents its status, controls, and reproducibility requirements. The linked [EXP-A zero-shot pilot](experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/README.md) is a separate exploratory experiment. The paper is not a positive empirical finding.
+The [Synthematic Cue Hypothesis](papers/synthematic-cue-hypothesis/PAPER.md) (working paper v0.2.1, October 9, 2026) predicts generic zero-shot register effects, locally conditioned but reset-sensitive cue bindings, and external-state dominance in high-fidelity character restoration. It also requires a cost-quality comparison with the cheapest sufficient plain instruction. The [paper folder](papers/synthematic-cue-hypothesis/) documents its status, controls, and reproducibility requirements. The linked [EXP-A zero-shot pilot](experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/README.md) is a separate exploratory experiment. The paper is not a positive empirical finding. The [completed pilot analysis](experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/PILOT_ANALYSIS.md) records a negative or indeterminate first result and its measurement failures.
 
 ## Quality and change control
 
