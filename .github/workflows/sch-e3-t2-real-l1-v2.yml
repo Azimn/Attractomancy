@@ -3,9 +3,9 @@ name: SCH E3 T2 v2 clean L1 copying with no exemplar
 on:
   push:
     paths:
-      - ".github/workflows/sch-e3-t2-v2-real-l1-v2.yml"
+      - ".github/workflows/sch-e3-t2-real-l1-v2.yml"
       - "experiments/SCH_E3_TRIBUNAL_OF_MEMORY/l1_field_extraction_v2.py"
-      - "experiments/SCH_E3_TRIBUNAL_OF_MEMORY/test_l1_field_extraction_v2.py"
+      - "experiments/SCH_E3_TRIBUNAL_OF_MEMORY/test_l1_field_extraction.py"
   workflow_dispatch:
 
 permissions:
