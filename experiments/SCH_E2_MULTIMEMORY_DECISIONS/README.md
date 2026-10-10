@@ -36,3 +36,5 @@ This protocol is *not* a direct runtime integration into The Doctor Lives, BioCi
 Runner: [run.py](run.py); validation and tests: [test_e2.py](test_e2.py); workflow: [sch-e2-multimemory.yml](../../.github/workflows/sch-e2-multimemory.yml). The workflow checks out source SHA \`6d2768211f5c2184c8bbdb833c06e169b5137197\` as a read-only sibling. It runs 72 cases per renderer (6 cards × 2 option orders × 6 arms). The original E1 files and all 450 canonical memories remain untouched.
 
 **Interpretation prior:** The existing experiments do not support a symbolic advantage over the neutral key. The E2 result is valuable even if both conditions fail; it may reveal that context availability still fails to induce reliable behavior or abstention, and it may indicate where deterministic evidence and action gates are warranted.
+
+The next prospective [E3 Tribunal of Memory benchmark](../SCH_E3_TRIBUNAL_OF_MEMORY/PROTOCOL.md) requires independent, blinded evidence relevance and source-dependent choices. E3 has not been executed.
