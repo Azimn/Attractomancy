@@ -21,11 +21,27 @@ D1 restored arbitrary facts almost perfectly from valid records while models oft
 
 These results do **not** justify replacing Pretorius's motivational systems with a deterministic state machine. Motivations, values, relationship histories, and conflicting wants can remain graded, probabilistic or learned; hard limits on source identity and authorization should nevertheless have separately verified contracts. A renderer can voice ambivalence while the action gate still refuses an unpermitted disclosure.
 
+## T1 results: typed extraction is useful but model-dependent
+
+The executed [joint Clerk experiment](CLERK_RESULTS.md) and [source-isolated Private Clerk](ISOLATED_RESULTS.md) separated source-token extraction from a deterministic action calculator. All three tested models (Qwen2.5-0.5B, Qwen2.5-1.5B, SmolLM2-1.7B) produced run-pinned raw data under the original corrected synthetic E3-C v2 source contracts.
+
+| Model | Direct forced action | Joint typed two-record extraction + software | Isolated one-record extraction + cached software |
+| --- | ---: | ---: | ---: |
+| Qwen2.5-0.5B | 5/12 | 3/12 | **10/12** |
+| Qwen2.5-1.5B | 6/12 | **9/12** | 6/12 |
+| SmolLM2-1.7B | 5/12 | 4/12 | **8/12** |
+
+These are different prompt tasks and output pathways over twelve synthetic states, and the final rule is **software-computed** in the two staged paths. Their results do not establish an across-model gain from splitting memories: **the better extraction layout depends on the renderer**. T1B generated only twelve distinct model outputs per model and reused each verified record across two counterfactual combinations, so its twelve composed decisions are not twelve independent two-source model inferences.
+
+The newly tested [source-attested SQLite cache](verified_fact_cache.py) scopes a derived field by subject, source, event ID, source revision, content digest, extractor revision and field schema. Its [unit-tested revision drill](../../.github/workflows/sch-e3-fact-cache.yml) begins with a synthetic permission ALLOW, then advances to a new signed source clause requiring DENY. Prior cached fields are invalidated, and a new validated extraction is required. This is a useful integrity and replay **software guarantee**, not cryptographic proof of origin or autonomously learned model updating. No original Pretorius relationship or autobiographical record was mutated.
+
+**Design choice:** Keep the Clerk abstraction but do not hardwire isolated or joint prompts. Choose a renderer-specific extraction strategy only after held-out validation and with record-level provenance checks. Whether a real event demands one field, competing memories or relational narrative synthesis remains an independently labeled problem. Eligibility rules should not be inferred from model output alone.
+
 ## Implementation gates
 
 **Gate T0 (complete):** Existing independently versioned source archive, D1 subject guard, E1 durable state/alias controls, E2 error baselines and E3-C synthetic strict model calibration are present. The synthetic test is diagnostic and **not** a reason to claim persona emergence.
 
-**Gate T1 (next possible code):** Typed source-field extractor with per-field evidence span, missing-operand rejection, correct reference ID, and a fixed counterfactual rule evaluator. Compare direct prompt, evidence-extract-then-compute, and deterministic source-side extraction on exactly the same corrected fixture and costs. A model that can only succeed when software does all reasoning has not demonstrated cognitive integration.
+**Gate T1 (partial exploratory completion):** Typed synthetic-source extraction and software verification were executed on three local models, with strict source-attested output and missing-operand fail-closed behavior. A synthetic SQLite version and digest invalidation drill passed. This does **not** satisfy the stronger requirement for per-field evidence spans, independent source relevance adjudication, real-L1 data, or a production-integrated extractor. The staged calculator's correct answers are software-enforced, not independently reasoned by the renderer.
 
 **Gate T2 (not satisfied):** Independent blinded relevance annotations for at least 36 newly authored questions and a sufficient-set adjudication. Six E2 source-informed calibration questions do not count. At least three independent raters and multiple acceptable event sets are required.
 
