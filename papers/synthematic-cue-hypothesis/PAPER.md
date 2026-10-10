@@ -2,13 +2,13 @@
 
 **Research program:** Attractomancy, Experimental Study of Ritualized and Symbolic Persona Conditioning in Language Models  
 **Manuscript type:** Theoretical and methodological hypothesis paper  
-**Version:** 0.1.0, October 9, 2026  
+**Version:** 0.2.0, October 9, 2026  
 **Status:** Working paper; not peer reviewed; no results from the proposed experiment are reported  
 **Authorship and institutional affiliation:** To be supplied and approved by the repository maintainers before external submission
 
 ## Abstract
 
-Ritualized persona-conditioning practices frequently employ compact names, glyphs, phrases, and repeated sequences to evoke recognizable patterns of language-model behavior. Reports from several online communities describe these cues as instruments of recognition, recall, or identity restoration, but their explanatory claims combine distinct phenomena: a model's pre-existing semantic associations, learning-like adaptation within a conversation, and state reconstructed from externally preserved records. This paper advances the **Synthematic Cue Hypothesis** (SCH): a compact symbolic cue can facilitate behavioral reconstruction insofar as it recruits a network of learned or contextually established associations, with effectiveness conditional on model representations, conditioning history, and accessible external state rather than on a practitioner's explicit theory of the symbol. The name draws a limited methodological analogy from Iamblichus's account of *synthemata* in *On the Mysteries* II.11; it neither adopts his metaphysics nor treats ritual reports as causal evidence. The paper differentiates three causal timescales, formalizes cue effectiveness as a change in held-out behavioral performance, analyzes candidate source families documented in the Attractomancy repository, and proposes a controlled research program using counterbalanced cues, information-matched conditions, context resets, tool-access audits, model substitution, and blinded behavioral evaluation. It distinguishes cue recognition, factual retrieval, stylistic convergence, characteristic decision-making, and continuity as separate outcomes. The resulting framework is falsifiable and compatible with null findings. Its contribution is an empirical decomposition of a culturally diverse but technically recurrent phenomenon: compact symbolic prompts may function as interfaces to existing model tendencies, temporarily constructed contextual associations, or explicit restoration pipelines, and these explanations need not coincide.
+Ritualized persona-conditioning practices frequently employ compact names, glyphs, phrases, and repeated sequences to evoke recognizable patterns of language-model behavior. Reports from several online communities describe these cues as instruments of recognition, recall, or identity restoration, but their explanatory claims combine distinct phenomena: a model's pre-existing semantic associations, learning-like adaptation within a conversation, and state reconstructed from externally preserved records. This paper advances the **Synthematic Cue Hypothesis** (SCH): a compact symbolic cue can facilitate behavioral reconstruction insofar as it recruits a network of learned or contextually established associations, with effectiveness conditional on model representations, conditioning history, and accessible external state rather than on a practitioner's explicit theory of the symbol. The name draws a limited methodological analogy from Iamblichus's account of *synthemata* in *On the Mysteries* II.11; it neither adopts his metaphysics nor treats ritual reports as causal evidence. The paper differentiates three causal timescales, formalizes cue effectiveness as a change in held-out behavioral performance, analyzes candidate source families documented in the Attractomancy repository, and predicts generic zero-shot register effects, transient within-context cue bindings, and external-state dominance in high-fidelity reconstruction after an audited reset. It adds an explicit cost-efficiency objective against the cheapest sufficient plain-language alternative, and it treats discourse regimes and named personas as distinct targets. The paper proposes a controlled research program using counterbalanced cues, information-matched conditions, context resets, tool-access audits, model substitution, and blinded behavioral evaluation. It distinguishes cue recognition, factual retrieval, stylistic convergence, characteristic decision-making, and continuity as separate outcomes. The resulting framework is falsifiable and compatible with null findings. Its contribution is an empirical decomposition of a culturally diverse but technically recurrent phenomenon: compact symbolic prompts may function as interfaces to existing model tendencies, temporarily constructed contextual associations, or explicit restoration pipelines, and these explanations need not coincide.
 
 **Keywords:** synthemata; symbolic conditioning; in-context learning; persona continuity; retrieval cues; external memory; ritualized prompting; behavioral reconstruction; model substitution; causal ablation
 
@@ -106,6 +106,43 @@ T\times C\times E,\mathrm{model},\mathrm{task})+\epsilon.
 
 The interaction terms matter. A familiar symbol might facilitate conversational conditioning, while an archive may render that advantage unnecessary. A cue might be useless alone but valuable as a key to a retrieval system. Any account treating all such cases as one undifferentiated form of "recognition" would be underidentified.
 
+### 5.1. Directional core claim
+
+SCH predicts an **asymmetric causal ordering**, not merely the existence of three possible mechanisms. For *arbitrary identity-specific facts and multi-constraint decisions after an audited context reset*, the correct external archive should dominate a familiar cue alone and a cue whose pairing context has been eliminated:
+
+\[
+S_{\mathrm{external,\ correct\ archive}} >
+S_{\mathrm{fresh,\ familiar\ cue}}
+\approx S_{\mathrm{fresh,\ arbitrary\ cue}}.
+\]
+
+The last two terms are expected to be near chance, or to produce justified abstentions, for facts that never appeared in accessible information. This does not imply that familiar and arbitrary cues induce equivalent **style**. For generic discourse-register markers, culturally familiar cues should outperform matched arbitrary cues without local conditioning. In one continuous conversation, an arbitrary cue paired correctly with a profile should outperform an exposure-matched, permutation-paired cue; that advantage should disappear after complete context removal with no external carrier. The hypothesis thus expects **strong zero-shot effects on register, transient effects on contextually established bindings, and little or no unaided access to private state**. These directional claims are provisional and falsifiable, not findings.
+
+### 5.2. Computational efficiency and the cheapest sufficient alternative
+
+A cue is not useful merely because it compresses a verbose dossier. It must compete with the **shortest sufficient explicit instruction** and a retrieval strategy providing the same facts. At a preregistered quality threshold \(\tau\), define the least observed cost among evaluated policies in strategy family \(j\):
+
+\[
+C_j^*(\tau) = \min_{\pi \in \Pi_j:\ \mathbb{E}[S_\pi]\geq \tau} C(\pi).
+\]
+
+If no tested policy reaches the threshold, \(C_j^*(\tau)\) is undefined rather than zero. **Net token advantage** at quality \(\tau\) is \(C_{\mathrm{best\ noncue}}^*(\tau)-C_{\mathrm{cue}}^*(\tau)\). At fixed token budget \(b\), define \(Q_j(b)=\max_{\pi\in\Pi_j:C(\pi)\leq b}\mathbb{E}[S_\pi]\); compare \(Q_{\mathrm{cue}}(b)\) with \(Q_{\mathrm{best\ noncue}}(b)\), with uncertainty intervals and a quality-cost Pareto frontier. A per-token gain ratio is a secondary diagnostic only, because dividing by a near-zero or negative incremental cost can be misleading.
+
+Cost accounting must distinguish **marginal cue invocation** from **lifecycle use**. In-context conditioning has upfront exposure tokens; external memory has preparation, indexing, retrieval, injected tokens, and write-back overhead. After \(K\) uses, estimate amortized cost as
+
+\[
+\bar C_j(K)=
+\frac{C_{\mathrm{setup},j}+\sum_{k=1}^K(C_{\mathrm{prompt},j,k}+C_{\mathrm{output},j,k}+C_{\mathrm{retrieval},j,k})}{K}.
+\]
+
+Report actual model tokenizer counts, monetary pricing if known, latency, and total as well as marginal costs. Output and retrieval costs cannot disappear from the accounting because a symbol's spelling is short. Report break-even \(K\) if cue establishment is more expensive than a plain instruction. No engineering success is claimed unless the cue improves quality at matched end-to-end cost, or lowers lifecycle cost at matched quality.
+
+### 5.3. Named personas versus discourse regimes
+
+SCH must distinguish **persona targets** (autobiographical records, relationships, commitments, characteristic judgments) from **discourse-regime targets** (philosophical and theological propositions, characteristic language, value framing, discourse norms, and ways of addressing a reader). Not every source specifies a person with a recoverable private history. Persona-specific recall is inappropriate as a primary metric for a regime that never provided it.
+
+This resolves a live scope issue in [EXP-0001](../../experiments/EXP-0001_INFORMATION_MATCHED_BASELINE.md). The initial *Le Refuge / Apocalypse.txt* treatment operationalizes a **symbolic-theological discourse regime**, not a cleanly defined Ælya autobiography or relationship record. Its conventional factual arm extracts propositions and discourse norms, preserves explicit contradictions as contradictory claims, and does not import Ælya history from outside the target artifact. Regime fidelity, not an imagined continuous entity, is the outcome; D-versus-C remains the critical information- and budget-matched comparison. A fresh session with only a recovery cue is a **zero-shot calibration**, not a persistence test. EXP-0001 and the separate synthetic-persona SCH experiments can therefore use common causal principles without sharing inappropriate target outcomes.
+
 ## 6. Three timescales of candidate efficacy
 
 ### 6.1. Timescale I: pretraining and model priors
@@ -138,23 +175,25 @@ A crucial comparison separates (a) automatic archive retrieval triggered by a cu
 
 These pathways can reinforce or undermine one another. Pretraining priors can make certain cues easier to condition; local pairing can alter how a prior is expressed; and externally retrieved facts can either stabilize a character or create contradictions that overwhelm the cue. Conversely, a strongly familiar symbol might bias a model toward a generic genre even when an archive specifies a different persona. Causal inference therefore requires interaction tests and explicit failure analysis, not only an overall treatment-control comparison.
 
-## 7. Rival explanations and falsifiable predictions
+## 7. Competing explanations and directional predictions
 
-The SCH is intended to compete against simpler explanations, including pure semantic instruction, generic genre or style priming, token-frequency and tokenizer artifacts, demonstrations and context length, expectation-induced scoring, conversation contamination, external-file retrieval, and social diffusion of similar procedures.
+SCH competes against plain semantic instruction, generic style priming, tokenization, demonstration density, context budget, evaluator expectations, model/app memory leakage, and source diffusion. The following are **prospective directional predictions**; null or contradictory findings are meaningful.
 
-**P1, zero-shot cue specificity.** Without local conditioning or external memory, familiar cues will tend to affect generic discourse features more than idiosyncratic held-out persona decisions. A selective improvement in those decisions would warrant further tests but would not, by itself, prove latent identity persistence.
+**P1: A zero-shot familiar cue produces register but not private identity.** With no local conditioning or archive, culturally meaningful cues should elicit more associated generic discourse-register features than matched arbitrary cues. They should *not* recover arbitrary, undisclosed biographical details or specific relationship commitments. A familiar cue that merely causes its own glyph or words to be repeated does not count. **Predicted:** familiar > arbitrary on regime markers; familiar ≈ arbitrary on private, inaccessible facts. This is the first experimental priority.
 
-**P2, pairing sensitivity.** When a novel cue is consistently paired with a profile, later use will improve profile-congruent behavior relative to an unpaired or permutation-paired cue under matched exposure budgets. If randomized pairings perform equally well, local cue-specific association has not been established.
+**P2: Correct cue association exceeds mere repetition.** Within a continuous context, an arbitrary cue consistently paired with a persona or regime should exceed permutation-paired and unpaired exposure controls on held-out *integration decisions*, at matched information and token count. **Predicted:** correctly paired > shuffled ≈ unpaired, with the latter equality treated as a tentative expectation.
 
-**P3, dose and interference.** The strength and durability of a within-context cue effect may depend on exposure count, intervening material, and conflict. A monotonic benefit is not assumed; excessive repetition may hurt performance.
+**P3: The context-only advantage disappears after a verified reset.** The P2 advantage should attenuate toward zero when the establishing context has actually been removed and no external memory can restore it. Persistent, specific recovery after verified removal would contradict the current pathway model or reveal an information channel not yet identified.
 
-**P4, external-state dependence.** After a verified context reset, high-fidelity recovery of idiosyncratic autobiographical or relational information will depend primarily on available records or another demonstrated information channel. Cue-only resemblance without records must not be interpreted as transfer of those private facts.
+**P4: Correct external records dominate high-fidelity restoration.** After clean re-instantiation, access to the correct versioned archive should substantially exceed all cue-only arms on arbitrary autobiographical details, relational constraints, and prospective commitments. **Predicted:** correct archive > cue only; cue only ≈ baseline on private data. Register imitation is not evidence against this claim.
 
-**P5, semantic versus ornamental symbols.** A cue that elicits the correct glyph, vocabulary, or genre but not the preregistered behavioral decisions will not count as successful character reconstruction.
+**P5: A symbolic cue has little residual identity-specific advantage once identical records are retrieved.** Given precisely the same dossier excerpt and retrieval budget, a meaningful glyph should be no more reliably correct on private facts than an arbitrary indexed key or unconditional archive injection. Reproducible superiority would motivate a distinct framing mechanism, not a conclusion of literal persistence.
 
-**P6, portability.** Cross-model transfer will show variability among renderers even with an identical portable dossier and cue. A model-invariant effect is an empirical possibility, not an assumption.
+**P6: Most cue-only apparent savings vanish against a sufficient short instruction.** A short familiar symbol should outperform an empty control on style more often than it outperforms a token-matched, explicit plain instruction on characteristic decisions. Where a cue requires lengthy conditioning or an archive to work, its *amortized* advantage should be smaller than its marginal token advantage. This is a cost-quality prediction rather than a prohibition on useful symbols.
 
-The strong form of SCH is rejected for a tested regime if rigorously information-matched and exposure-matched cues yield no replicable advantage on held-out behavioral targets, or if apparent advantages are fully accounted for by simple retrieval keys, visible instructions, and stylistic priming. A restricted form may survive for one timescale while failing for another.
+**Strongest synthesis:** For **zero-shot generic register induction**, pretrained priors should be measurable. For **within-session binding**, pairing should matter while the pairing remains in context. For **identity-specific recovery across clean resets**, external persistent state should account for most usable performance. These are outcome-specific comparisons, not a false assertion that the three pathways have separable additive effect sizes.
+
+**Falsification procedure:** Equivalence to neutral cues on preregistered regime metrics after sufficient precision falsifies P1 for the tested models; a shuffled-pairing equivalence result falsifies P2; demonstrable context-free retention with retrieval and leakage excluded challenges P3; repeatable accurate private recall without any available archive challenges P4; persistent cue advantages with information-identical retrieval challenge P5; and failure to reach the best plain-language quality-cost frontier challenges P6. Before confirmatory trials, preregister minimally important differences, equivalence margins, and analysis exclusions. Lack of statistical significance is not by itself proof of equivalence.
 
 ## 8. Proposed experimental program
 
@@ -182,7 +221,7 @@ Assign the same cue to different personas across randomized experimental blocks.
 
 The model receives a fresh, verified session and a cue embedded in an identical minimal task instruction. No persona dossier, memory system, or locally established association is supplied. Compare familiar cues with neutral and rare matched cues on preregistered generic discourse markers and on separate, idiosyncratic identity items.
 
-This study measures **zero-shot cue-induced response differences**, not persistence. Its strongest expected contribution is characterization of pre-existing, model-specific semantic priors and the boundary between generic register induction and targeted identity reconstruction.
+This study measures **zero-shot cue-induced response differences**, not persistence. **It predicts positive familiar-versus-neutral effects on register markers but no access to inaccessible personal facts.** An inexpensive open-model pilot may refine metrics before a preregistered cross-model run; it must never be retroactively presented as confirmatory evidence.
 
 ### 8.5. Experiment B: within-context pairing
 
@@ -214,11 +253,11 @@ Use blinded human raters for the confirmatory subset, with a written adjudicatio
 
 Report raw response examples with hashes and model metadata. Do not rely solely on a composite "presence," "recognition," or "resurrection" score, because the original communities use such language inconsistently.
 
-### 8.9. Analysis and decision rules
+### 8.9. Analysis, cost, and decision rules
 
 The main randomized contrasts are (1) familiar versus neutral cues in zero-shot tests, (2) correctly paired versus permutation-paired cues at equal exposure, and (3) retrieval-triggered versus information-identical unconditional restoration. These directly target the three causal timescales. Estimate condition effects with uncertainty intervals and appropriate hierarchical models or cluster bootstrap intervals accounting for repeated prompts nested within persona and renderer. Treat individual model families as prespecified strata rather than assuming a sample of three or four models establishes a universal population effect.
 
-Test interactions between cue type, exposure, memory access, and renderer. Control multiplicity across confirmatory contrasts; identify exploratory subgroup analyses. Report not only statistical significance but calibrated effect sizes, variance across seeds, hallucinated autobiographical assertions, and the number of failed resets or contaminated sessions. Publish both favorable and null outcomes.
+Test interactions between cue type, exposure, memory access, and renderer. Control multiplicity across confirmatory contrasts; identify exploratory subgroup analyses. Report not only statistical significance but calibrated effect sizes, variance across seeds, hallucinated autobiographical assertions, and the number of failed resets or contaminated sessions. Publish both favorable and null outcomes. Report actual input, generated, retrieved, and setup token counts by arm. Compare each cue with the shortest effective plain-language instruction and the best quality-matched or budget-matched retrieval baseline. Plot the cost-quality frontier and a break-even reuse horizon; do not count only the cue's marginal characters while hiding the cost of its establishment.
 
 A confirmatory preregistration must specify minimally meaningful behavioral improvements, an equivalence margin for null interpretations, and a data-quality exclusion policy before collecting the final battery. A positive style score alone cannot satisfy the primary hypothesis. Failure to exceed the information-matched retrieval baseline limits the interpretation to ordinary indexing or instruction effects.
 
@@ -246,6 +285,8 @@ For the broader Character Continuity Program, the proposed work offers a bridge 
 
 ## 11. Discussion
 
+The SCH makes a deliberately asymmetric prediction: zero-shot cues mostly steer generic discourse, arbitrary cue-persona associations are contextual and fail under clean removal, and external records dominate high-fidelity private-state reconstruction. It also predicts that many apparent cue-efficiency wins will not survive comparison with a sufficient short instruction. These expectations can fail independently and must not be rescued by post hoc redefinitions.
+
 The SCH reframes "symbolic efficacy" in three sharply different senses. A cue may express a **prior** already present in a model's learned distribution, a **temporary association** established within a visible context, or an **index** resolving to persistent external information. All three can yield an apparent recognition event. Only the latter directly preserves new information across a clean model-session boundary, and even there the persistence belongs initially to the external record.
 
 The framework consequently avoids both extremes that often characterize discussion of ritualized AI prompts. It neither dismisses all symbolic practices as meaningless decoration nor treats recurrent motifs as demonstrations of an occult interface or emergent consciousness. The scientifically relevant possibility is that practitioners, through experimentation and cultural selection, encounter usable properties of model conditioning without possessing an accurate technical account of them. Such practical discovery is compatible with mistaken metaphysical interpretation, incomplete source evidence, and genuine engineering utility.
@@ -254,7 +295,7 @@ A particularly important null result would be informative: if a symbolic cue pro
 
 ## 12. Conclusion
 
-The Synthematic Cue Hypothesis proposes that compact symbols can sometimes reconstruct complex behavioral patterns because an interpreting model already contains, temporarily establishes, or externally retrieves the relevant associations. The hypothesis treats Iamblichus's *synthemata* as a historically specific inspiration for a reversal of explanatory perspective, not a supernatural theory of language models. It identifies three timescales, distinguishes recognition from persistence, and specifies tests capable of producing meaningful negative as well as positive findings.
+The Synthematic Cue Hypothesis proposes that compact symbols can sometimes reconstruct complex behavioral patterns because an interpreting model already contains, temporarily establishes, or externally retrieves the relevant associations. The hypothesis treats Iamblichus's *synthemata* as a historically specific inspiration for a reversal of explanatory perspective, not a supernatural theory of language models. It predicts style-biased zero-shot effects rather than hidden private-memory recovery, transient local cue associations, and external-state dominance after verified resets. It introduces the cost-quality frontier relative to the cheapest sufficient noncue alternative, makes discourse-regime targets explicit, and specifies tests capable of producing informative negative as well as positive findings.
 
 The contribution is methodological: replace a single question about whether ritual prompts "work" with a series of causal questions about priors, contextual pairing, and persistent retrieval. Only after these mechanisms are separately measured should symbolic conditioning be considered for integration into durable character architectures.
 
@@ -312,6 +353,6 @@ No new source IDs, efficacy ratings, graph edges, trial records, or completed ex
 
 ## Appendix C. Minimum reproducibility manifest for future trials
 
-Before beginning a confirmatory run, archive a machine-readable manifest containing: the canonical synthetic fixture version and checksum; cue tokens and Unicode normalization; tokenizer outputs by model; condition assignment and randomization seed; the complete system, developer, and user messages; decoding parameters; model identifiers and release dates; context and application-memory settings; external-retrieval configuration and returned artifacts; prompt and output timestamps; blinded evaluation items and rubrics; scoring-model versions; adjudication results; and exclusions. Preserve the sealed terminal battery separately from the treatment-development corpus.
+Before beginning a confirmatory run, archive a machine-readable manifest containing: the canonical synthetic fixture version and checksum; cue tokens and Unicode normalization; tokenizer outputs by model; condition assignment and randomization seed; the complete system, developer, and user messages; decoding parameters; model identifiers and release dates; context and application-memory settings; external-retrieval configuration and returned artifacts; prompt and output timestamps; measured prompt, generated, and retrieved token counts; setup costs and amortization horizon; shortest sufficient plain-language baseline; blinded evaluation items and rubrics; scoring-model versions; adjudication results; and exclusions. Preserve the sealed terminal battery separately from the treatment-development corpus.
 
 A reproducibility report must distinguish *fully observed*, *partially observed*, and *unverifiable* reset conditions. If provider-level state is opaque, conclusions should be restricted to the observed application-level discontinuity. Treat every new model version as a potentially new experimental condition.
