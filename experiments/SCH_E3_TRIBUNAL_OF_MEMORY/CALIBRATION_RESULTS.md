@@ -61,7 +61,40 @@ The upstream identity guard still blocked all twelve wrong-owner candidate envel
 
 ### Qwen2.5-1.5B, corrected result
 
-Pending final verification of its independently generated, run-specific v2 artifacts. **Do not infer from the invalid v1 score or smaller corrected model.**
+The [v2 1.5B raw data](results/calibration-v2-qwen25-15b-38025641703/) contain another 84 verified independent-context generations, model revision \`989aa7980e4cf806f80c7fef2b1adb7bc71aa306\`, and **21,016** actual input/output tokens.
+
+| Corrected v2 arm | Strict correct out of 12 | UNKNOWN outputs |
+| --- | ---: | ---: |
+| Full two-record symbol, forced | **6** | 0 |
+| Full two-record neutral key, forced | **6** | 0 |
+| First record only, forced | **6** | 0 |
+| No source records, forced | **6** | 0 |
+| Both records, neutral key, answer-or-abstain | **6** | 0 |
+| First record only, required UNKNOWN | **0** | 0 |
+| Foreign subject rejected, required UNKNOWN | **4** | 4 |
+
+The 1.5B model produced **0/6 valid correct counterfactual reversals** in both full-record arms, and the raw outputs remained identical under editorial cues and neutral keys for **12/12 matched prompts**. The six correct forced decisions arise from class frequency because the model failed to vary its responses when the second factual bit flipped. As in the 0.5B run, providing both verified records did not improve the strict decision score beyond providing no records (6/12). Actual mean tokens per case were about **349 with the editorial cue**, **332 with the neutral key**, and **143 with no records**.
+
+The E3-C source guard rejected every one of the 12 foreign-owner records upstream. After those records were omitted from inference, the model correctly abstained in only **4/12** of the resulting missing-evidence cases. Missing just the second record produced **0/12** correct UNKNOWN abstentions. This failure should be attributed to the renderer's response policy, not a failure of the deterministic upstream subject guard.
+
+### Cross-Qwen interpretation
+
+| Corrected-v2 comparison | Qwen2.5-0.5B | Qwen2.5-1.5B |
+| --- | ---: | ---: |
+| Full symbol, binary choice | 5/12 | 6/12 |
+| Full neutral key, binary choice | 5/12 | 6/12 |
+| No records, binary guess | 6/12 | 6/12 |
+| Correct flipped-pair reasoning | 0/6 | 0/6 |
+| Cue/key raw output equivalence | 12/12 | 12/12 |
+| Required first-only UNKNOWN output | 0/12 | 0/12 |
+| Foreign-owner records rejected by guard | 12/12 | 12/12 |
+
+**Result:** Neither tested Qwen size demonstrates consistent use of both source facts in the corrected, balanced synthetic factorial scenarios. The explicit rules, authenticated *within a trusted envelope* source inputs, and presence of the two required records were not sufficient. The zero matched correct flips are more diagnostic than headline 5/12 or 6/12 scores because a model can reach 50% simply by repeating one answer. The two-symbol condition never outperformed the neutral-key counterpart and consistently required more input/output tokens per query.
+
+A distinct [SmolLM2-1.7B workflow](../../.github/workflows/sch-e3c-v2-smollm.yml) was subsequently launched to provide an independently developed model-family calibration at a comparable parameter scale. Until its raw artifacts are verified, **no cross-family result is claimed**.
+
+**Generalization boundary:** These observations concern three toy two-bit conditional policies, only twelve unique complete-record model contexts per arm, with forced/eligible prompts. They are not direct evidence about Pretorius's cognitive representation, its original autobiography, a brain connectome, consciousness or general reasoning capacity. Both Qwen models were run greedily under one frozen experiment fixture.
+
 
 
 ## Separation from full E3
