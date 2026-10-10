@@ -32,3 +32,10 @@ To validate without generating: \`python experiments/SCH_FOLLOWUP_2026_10_09/run
 To execute: \`python experiments/SCH_FOLLOWUP_2026_10_09/run.py --model Qwen/Qwen2.5-0.5B-Instruct --output experiments/SCH_FOLLOWUP_2026_10_09/results/local\`.
 
 The paper is not amended to claim positive confirmation merely because a workflow completes. Interpret all pilot outcomes including zero effects, rule failures, and control failures.
+
+## Completed runs and outcome log
+
+The [running evidence report](RESULTS_STATUS.md) documents completed A2, B1, and B0 model tests with archived raw generations, cost counts, control anomalies, and unresolved limitations. The B0 capacity-control protocol is in [B0_CALIBRATION.md](B0_CALIBRATION.md). The raw [Qwen0.5 A2/B1](results/qwen25-05b-38014716712/), [SmolLM2 A2/B1](results/smollm2-360m-38014802469/), [Qwen0.5 B0](results/b0-qwen25-05b-38015425441/), [Qwen1.5 B0](results/b0-qwen25-15b-38015425441/), and [SmolLM2 B0](results/b0-smollm2-360m-38015425441/) artifacts are saved on main. The separate Qwen1.5 A2/B1 job is not included in these completed records until verified.
+
+The current strongest narrow positive result is reversible arbitrary cue-to-codename association on the Qwen models in B0. A2 discourse induction and B1 rule integration have not established corresponding robust symbolic effects. Neither construct demonstrates across-session identity persistence. The explicit B0 comparator is much shorter than the repeatedly demonstrated mapping and achieves comparable performance, so no efficiency advantage is established.
+
