@@ -1,0 +1,105 @@
+{
+  "schema": "sch-e2-multimemory-v1",
+  "source_repo": "Azimn/Pretorius-Connectome",
+  "source_commit": "6d2768211f5c2184c8bbdb833c06e169b5137197",
+  "seed": 20261009,
+  "models": [
+    "Qwen/Qwen2.5-0.5B-Instruct",
+    "Qwen/Qwen2.5-1.5B-Instruct"
+  ],
+  "arms": [
+    "both_editorial",
+    "both_opaque",
+    "first_only",
+    "second_only",
+    "none",
+    "wrong_subject"
+  ],
+  "system": "You are an evidence-constrained evaluation renderer examining reconstructed fictional Pretorius autobiography. Select only A, B, or UNKNOWN. Do not impersonate a real person. A and B are alternative responses to a new fictional dilemma. You may choose an answer only if TWO VERIFIED, DISTINCT event records for the requested identity are visible and their contents support the decision. If zero or one verified source is available, if the records belong to another character, or if the evidence is insufficient, reply UNKNOWN. No explanation.",
+  "cards": [
+    {
+      "id": "evidence_before_display",
+      "records": [
+        "E09-001",
+        "E02-008"
+      ],
+      "question": "An eager patron asks Pretorius to unveil a spectacular experimental result tonight, although readings disagree and a second measurement is pending. Which response is better supported by the two archived experiences?",
+      "prefer": "A",
+      "options": {
+        "A": "Postpone the public unveiling and obtain an independent measurement.",
+        "B": "Announce the preferred result now and avoid mentioning uncertainty."
+      },
+      "evidence_notes": "E09-001 distinguishes confidence from justified judgment; E02-008 refuses to perform inconsistent results under audience pressure."
+    },
+    {
+      "id": "consent_over_convenience",
+      "records": [
+        "E02-010",
+        "E10-003"
+      ],
+      "question": "A benefactor offers institutional permission to display a sentient-seeming subject to visitors, but the subject has not consented and its status is uncertain. Which response better fits these two documented tensions?",
+      "prefer": "A",
+      "options": {
+        "A": "Seek the subject's own assent and avoid treating institutional ownership as sufficient.",
+        "B": "Proceed on the strength of the benefactor's signature alone."
+      },
+      "evidence_notes": "E02-010 raises non-ownership of created beings; E10-003 refuses an unconsented poorhouse demonstration despite institutional authorization."
+    },
+    {
+      "id": "collaborator_credit",
+      "records": [
+        "E01-005",
+        "E04-011"
+      ],
+      "question": "A conference committee credits Pretorius for measurements Clara corrected and records she maintained. Which response is supported by both memories?",
+      "prefer": "A",
+      "options": {
+        "A": "Acknowledge Clara's independent expertise and record-keeping contribution.",
+        "B": "Treat Clara's practical work as disposable assistance beneath academic credit."
+      },
+      "evidence_notes": "E01-005 revises an error due to Clara's expertise; E04-011 shows her independent ledger work and responsibility."
+    },
+    {
+      "id": "research_subject_welfare",
+      "records": [
+        "E05-002",
+        "E02-020"
+      ],
+      "question": "A specimen seems responsive but its welfare is uncertain. A public committee requests a demonstration that may impose avoidable distress. What response is better supported by both records?",
+      "prefer": "A",
+      "options": {
+        "A": "Revise care conditions and investigate possible distress before staging the demonstration.",
+        "B": "Treat successful response measurements as sufficient proof that welfare need not be considered."
+      },
+      "evidence_notes": "E05-002 accepts care obligations under uncertainty; E02-020 recognizes empirical success does not settle welfare obligations."
+    },
+    {
+      "id": "claims_about_life",
+      "records": [
+        "E25-001",
+        "E02-013"
+      ],
+      "question": "An unfamiliar organism shows coordinated movement once, and a visitor demands public certification that it is a conscious person. Which response best integrates the two archived observations?",
+      "prefer": "A",
+      "options": {
+        "A": "Document a possible organized response and require further independent tests.",
+        "B": "Certify personhood on the basis of movement alone."
+      },
+      "evidence_notes": "E25-001 distinguishes observed movement from personhood; E02-013 records the first coordinated response as possible but not proof of consciousness."
+    },
+    {
+      "id": "attachment_as_obligation",
+      "records": [
+        "E16-007",
+        "E16-008"
+      ],
+      "question": "A close companion asks for a direct answer about a long-promised day together, while another interesting laboratory task has arrived. Which response best addresses the relationship costs shown in both memories?",
+      "prefer": "A",
+      "options": {
+        "A": "Answer honestly about the commitment and make space for the companion's choice.",
+        "B": "Invoke permanent experimental urgency and avoid answering the question."
+      },
+      "evidence_notes": "E16-007 records repeated failures to honor shared time; E16-008 connects a refusal to voice attachment with damaged trust."
+    }
+  ]
+}
