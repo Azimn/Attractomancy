@@ -1,0 +1,78 @@
+name: SCH B0 arbitrary cue-binding calibration
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sch-b0.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  b0:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - slug: qwen25-05b
+            model: Qwen/Qwen2.5-0.5B-Instruct
+          - slug: qwen25-15b
+            model: Qwen/Qwen2.5-1.5B-Instruct
+          - slug: smollm2-360m
+            model: HuggingFaceTB/SmolLM2-360M-Instruct
+    env:
+      PYTHONUNBUFFERED: "1"
+      HF_HUB_DISABLE_TELEMETRY: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Prepare inference
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "torch==2.5.1" --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers==4.51.3" "safetensors==0.5.3" "sentencepiece==0.2.0"
+      - name: Validate B0 fixtures
+        run: python experiments/SCH_FOLLOWUP_2026_10_09/b0.py --validate-only
+      - name: Generate B0
+        run: |
+          python experiments/SCH_FOLLOWUP_2026_10_09/b0.py \
+            --model ${{ matrix.model }} \
+            --output experiments/SCH_FOLLOWUP_2026_10_09/results/b0-${{ matrix.slug }}-${{ github.run_id }}
+      - name: Upload raw B0 data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sch-b0-${{ matrix.slug }}-${{ github.run_id }}
+          path: experiments/SCH_FOLLOWUP_2026_10_09/results/b0-${{ matrix.slug }}-${{ github.run_id }}/
+          retention-days: 14
+          if-no-files-found: warn
+      - name: Validate and commit raw dataset
+        if: success()
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          d=pathlib.Path("experiments/SCH_FOLLOWUP_2026_10_09/results/b0-${{ matrix.slug }}-${{ github.run_id }}")
+          s=json.loads((d/"summary.json").read_text())
+          r=[json.loads(x) for x in (d/"responses.jsonl").read_text().splitlines() if x.strip()]
+          assert len(r)==s["cases_completed"]==40
+          assert len({x["case"]["id"] for x in r})==40
+          assert sum(x["prompt_tokens"] for x in r)==s["prompt_tokens"]
+          print("VERIFICATION_PASS",s["model"])
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/SCH_FOLLOWUP_2026_10_09/results/b0-${{ matrix.slug }}-${{ github.run_id }}
+          git commit -m "experiments: archive B0 ${{ matrix.slug }} calibration [skip ci]"
+          for n in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo "GIT_PUSH_REJECTED: artifact retained" >&2
+          exit 1
