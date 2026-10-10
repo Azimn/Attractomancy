@@ -1,0 +1,82 @@
+name: SCH C1 integrated policy and efficiency pilot
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sch-c1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  c1:
+    name: Integrated policy on ${{ matrix.slug }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - slug: qwen25-05b
+            model: Qwen/Qwen2.5-0.5B-Instruct
+          - slug: qwen25-15b
+            model: Qwen/Qwen2.5-1.5B-Instruct
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    env:
+      PYTHONUNBUFFERED: "1"
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install CPU model inference libraries
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "torch==2.5.1" --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers==4.51.3" "safetensors==0.5.3" "sentencepiece==0.2.0"
+      - name: Validate C1 prospective fixture
+        run: python experiments/SCH_C1_INTEGRATED_CUE_POLICIES/run.py --validate-only
+      - name: Run 72 cold-start integrated-policy cases
+        run: |
+          python experiments/SCH_C1_INTEGRATED_CUE_POLICIES/run.py \
+            --model ${{ matrix.model }} \
+            --output experiments/SCH_C1_INTEGRATED_CUE_POLICIES/results/${{ matrix.slug }}-${{ github.run_id }}
+      - name: Upload immutable-named raw result artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sch-c1-${{ matrix.slug }}-${{ github.run_id }}
+          path: experiments/SCH_C1_INTEGRATED_CUE_POLICIES/results/${{ matrix.slug }}-${{ github.run_id }}/
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Verify all responses and archive in repository
+        if: success()
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          p=pathlib.Path("experiments/SCH_C1_INTEGRATED_CUE_POLICIES/results/${{ matrix.slug }}-${{ github.run_id }}")
+          summary=json.loads((p/"summary.json").read_text())
+          manifest=json.loads((p/"manifest.json").read_text())
+          rows=[json.loads(line) for line in (p/"responses.jsonl").read_text().splitlines() if line.strip()]
+          assert len(rows)==72==summary["cases_completed"]
+          assert len({r["case"]["id"] for r in rows})==72
+          assert len([r for r in rows if r["case"]["diagnostic"]])==24
+          assert summary["prompt_tokens"]==sum(r["prompt_tokens"] for r in rows)
+          assert summary["generated_tokens"]==sum(r["generated_tokens"] for r in rows)
+          assert manifest["fixture_sha256"]==summary["fixture_sha256"]
+          print("VERIFIED_C1",summary["model"],summary["cases_completed"])
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/SCH_C1_INTEGRATED_CUE_POLICIES/results/${{ matrix.slug }}-${{ github.run_id }}
+          git commit -m "experiments: archive C1 ${{ matrix.slug }} raw pilot [skip ci]"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo "ARCHIVE_GIT_PUSH_FAILED: raw artifact retained" >&2
+          exit 1
