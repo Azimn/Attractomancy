@@ -1,0 +1,90 @@
+name: SCH E2F forced decision and memory-prior controls
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sch-e2f-forced.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  forced:
+    name: E2F forced choices on ${{ matrix.slug }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - slug: qwen25-05b
+            model: Qwen/Qwen2.5-0.5B-Instruct
+          - slug: qwen25-15b
+            model: Qwen/Qwen2.5-1.5B-Instruct
+    env:
+      PYTHONUNBUFFERED: "1"
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: Azimn/Pretorius-Connectome
+          ref: 6d2768211f5c2184c8bbdb833c06e169b5137197
+          path: pretorius_source
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install pinned local CPU model dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "torch==2.5.1" --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers==4.51.3" "safetensors==0.5.3" "sentencepiece==0.2.0"
+      - name: Validate frozen source and all forced-choice fixtures
+        run: |
+          python experiments/SCH_E2_MULTIMEMORY_DECISIONS/forced_choice.py --validate-only --source pretorius_source
+      - name: Execute 60 independent forced-choice cases
+        run: |
+          python experiments/SCH_E2_MULTIMEMORY_DECISIONS/forced_choice.py \
+            --model ${{ matrix.model }} --source pretorius_source \
+            --output experiments/SCH_E2_MULTIMEMORY_DECISIONS/results/forced-${{ matrix.slug }}-${{ github.run_id }}
+      - name: Verify complete predeclared comparison
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          p=pathlib.Path("experiments/SCH_E2_MULTIMEMORY_DECISIONS/results/forced-${{ matrix.slug }}-${{ github.run_id }}")
+          s=json.loads((p/"summary.json").read_text())
+          lines=[json.loads(x) for x in (p/"responses.jsonl").read_text().splitlines() if x.strip()]
+          assert len(lines)==60==s["cases_completed"]
+          assert len({r["case"]["id"] for r in lines})==60
+          assert len(s["groups"])==5 and len(s["cue_vs_key"])==12
+          assert s["total_input_tokens"]==sum(r["input_tokens"] for r in lines)
+          assert s["total_output_tokens"]==sum(r["output_tokens"] for r in lines)
+          assert s["canonical_L1"]["record_count"]==450
+          print("E2F_VERIFIED",s["model"],s["groups"])
+          PY
+      - name: Always save original raw records
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sch-e2f-${{ matrix.slug }}-${{ github.run_id }}
+          path: experiments/SCH_E2_MULTIMEMORY_DECISIONS/results/forced-${{ matrix.slug }}-${{ github.run_id }}/
+          retention-days: 14
+          if-no-files-found: warn
+      - name: Archive successful study to main
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/SCH_E2_MULTIMEMORY_DECISIONS/results/forced-${{ matrix.slug }}-${{ github.run_id }}
+          git commit -m "experiments: archive E2F ${{ matrix.slug }} forced choices [skip ci]"
+          for n in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo "Git update failed; artifact retained" >&2
+          exit 1
