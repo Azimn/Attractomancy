@@ -1,0 +1,32 @@
+{
+  "candidate_labels_allowed": [
+    "direct_support",
+    "contradicts",
+    "context_insufficient",
+    "irrelevant",
+    "provenance_ineligible"
+  ],
+  "evidence_sets_example": [
+    {
+      "case_id": "CASE_ID",
+      "contradictions": [],
+      "decision_supported": null,
+      "rationale": null,
+      "reviewer_id": "R01",
+      "sufficient_candidate_id_sets": []
+    }
+  ],
+  "instructions": "For true E3: at least 3 independent reviewers; no lookup of organizer mapping until adjudications frozen; no invented labels.",
+  "reviewer_records_example": [
+    {
+      "candidate_id": "C_REDACTED",
+      "case_id": "CASE_ID",
+      "label": null,
+      "rationale": null,
+      "reviewer_id": "R01",
+      "supporting_text_span": null
+    }
+  ],
+  "reviewers_required": 3,
+  "status": "blank_not_completed"
+}

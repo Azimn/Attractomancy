@@ -1,0 +1,24 @@
+{
+  "annotations_received": 0,
+  "candidate_method_hidden_in_reviewer_packet": true,
+  "case_mode": "E2_CALIBRATION_UNBLINDED",
+  "case_seed": 20261009,
+  "content_warning": "Source author and original public repo remain accessible; masking does not prevent a reviewer from deliberately seeking provenance.",
+  "independence_warning": "E2 calibration questions were authored with prior source inspection and can never qualify as independent E3 test data.",
+  "independent_reviewer_target": 3,
+  "per_method_candidates": 10,
+  "pool_methods": [
+    "lexical",
+    "source_graph",
+    "random"
+  ],
+  "protocol": "E3 blind packet v0.1",
+  "question_count": 6,
+  "source": {
+    "l1_manifest_sha256": "ce23717b3950a772cc25e4bf60107eaddf4a0375122b6893c15417669ae033bb",
+    "record_count": 450,
+    "source_checkout": "6d2768211f5c2184c8bbdb833c06e169b5137197",
+    "source_git_blob": "718dcc2d5ba4feccdef1690d447edfcebaa9bfb5"
+  },
+  "source_event_ids_hidden_in_reviewer_packet": true
+}
