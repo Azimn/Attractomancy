@@ -1,0 +1,88 @@
+name: SCH E3C counterfactual memory calibration
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sch-e3c-calibration.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  calibration:
+    name: E3C two-record flips on ${{ matrix.slug }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - slug: qwen25-05b
+            model: Qwen/Qwen2.5-0.5B-Instruct
+          - slug: qwen25-15b
+            model: Qwen/Qwen2.5-1.5B-Instruct
+    env:
+      PYTHONUNBUFFERED: "1"
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install pinned local CPU inference packages
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "torch==2.5.1" --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers==4.51.3" "safetensors==0.5.3" "sentencepiece==0.2.0"
+      - name: Verify complete balanced counterfactual fixture
+        run: |
+          python experiments/SCH_E3_TRIBUNAL_OF_MEMORY/counterfactual_calibration.py --validate-only
+          python -m unittest discover -s experiments/SCH_D1_EXTERNAL_RECONSTRUCTION -p test_archive_guard.py -v
+      - name: Run 84 fresh model contexts
+        run: |
+          python experiments/SCH_E3_TRIBUNAL_OF_MEMORY/counterfactual_calibration.py \
+            --model ${{ matrix.model }} \
+            --output experiments/SCH_E3_TRIBUNAL_OF_MEMORY/results/calibration-${{ matrix.slug }}-${{ github.run_id }}
+      - name: Verify original data and strict scores
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          p=pathlib.Path("experiments/SCH_E3_TRIBUNAL_OF_MEMORY/results/calibration-${{ matrix.slug }}-${{ github.run_id }}")
+          m=json.loads((p/"manifest.json").read_text())
+          s=json.loads((p/"summary.json").read_text())
+          rows=[json.loads(l) for l in (p/"responses.jsonl").read_text().splitlines() if l.strip()]
+          assert len(rows)==84==s["completed_cases"]
+          assert len({r["case"]["id"] for r in rows})==84
+          assert len(s["groups"])==7 and len(s["pairs"])==12
+          assert sum(r["case"]["wrong_owner_guard_rejection"] for r in rows)==12
+          assert sum(r["prompt_tokens"] for r in rows)==s["input_tokens"]
+          assert sum(r["output_tokens"] for r in rows)==s["output_tokens"]
+          assert m["model_revision"] and len(m["model_revision"])>=12
+          assert all(x["pairs"]==6 for x in s["counterfactual_flip"].values())
+          print("E3C_VERIFIED",s["model"],s["groups"])
+          PY
+      - name: Preserve raw outputs regardless of success
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sch-e3c-${{ matrix.slug }}-${{ github.run_id }}
+          path: experiments/SCH_E3_TRIBUNAL_OF_MEMORY/results/calibration-${{ matrix.slug }}-${{ github.run_id }}/
+          retention-days: 14
+          if-no-files-found: warn
+      - name: Archive complete dataset to main
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/SCH_E3_TRIBUNAL_OF_MEMORY/results/calibration-${{ matrix.slug }}-${{ github.run_id }}
+          git commit -m "experiments: preserve E3C ${{ matrix.slug }} original counterfactual data [skip ci]"
+          for n in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo "Git push conflict: original workflow artifact retained" >&2
+          exit 1
