@@ -38,6 +38,12 @@ All 84 cases per model use fresh independent system+user messages with greedy de
 
 Every raw response, source record and injected prompt, model revision, fixture SHA-256, state change, completeness and token count must be stored. No outcome may be claimed before GitHub Actions commits its exact run-specific raw outputs.
 
+## v1 leakage discovered and corrected before any positive inference
+
+A post-execution fixture audit discovered that the *v1* event identifiers incorporated **both factual bits** (for example a first-record ID corresponding to the combined state). Consequently, the first-only presentation leaked the withheld second input in the identifier text. This **invalidates v1 as a strict source-necessity experiment**, regardless of whether its outputs are positive or negative; the original run is preserved unchanged as diagnostic data.
+
+The [v2 runner](counterfactual_calibration_v2.py) addresses that confound: each event ID is a hashed opaque identifier computed **only from its own family, position, and one local bit**, not from the other record's value. Counterfactual test assertions verify that the first-record-only rendered messages are byte-identical when the missing second fact flips, and that no-record/wrong-owner prompts are invariant to both hidden bits. This corrected fixture is evaluated in a **separately identified new workflow** ([E3C v2](../../.github/workflows/sch-e3c-v2.yml)) with distinct raw artifact paths. Do not pool the two versions or overwrite the v1 responses. The calibration remains synthetic and exploratory even after this fix.
+
 ## Critical limitations
 
 This is a toy conditional reasoning calibration. Deterministic target outputs are engineered by the fixture and are not adjudicated Pretorius psychology. It does not prove memory retrieval from 450 source records, internal state continuity, narrative relationship consistency, philosophical beliefs, or a neural architecture improvement. Repeating factorial bits under one model family has correlated samples; don't quote narrow confidence intervals or call it a blinded validation. The seal- and policy-reversal questions explicitly provide their computational rules and thus measure *ability to follow a rule with external data*, not spontaneous acquisition of character values.
