@@ -43,6 +43,10 @@ VOCAB={
 def sha(text):
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
+def save(path,obj):
+    path.parent.mkdir(parents=True,exist_ok=True)
+    path.write_text(json.dumps(obj,indent=2,ensure_ascii=False,sort_keys=True)+"\n",encoding="utf-8")
+
 def verified_docs(family,a,b):
     docs,question,target=two_records(family,a,b)
     for doc in docs:
