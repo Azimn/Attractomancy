@@ -1,0 +1,71 @@
+name: SCH E2 lexical rank reproducibility audit
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sch-e2-lexical-parity.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: Azimn/Pretorius-Connectome
+          ref: 6d2768211f5c2184c8bbdb833c06e169b5137197
+          path: pretorius_source
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install prior model and lexical library versions
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "torch==2.5.1" --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers==4.51.3" "safetensors==0.5.3" "numpy==1.26.4" "scipy==1.14.1" "scikit-learn==1.5.2"
+      - name: Compare original and model-loaded lexical scores against three archives
+        run: |
+          python experiments/SCH_E2_MULTIMEMORY_DECISIONS/lexical_parity.py \
+            --source pretorius_source \
+            --output experiments/SCH_E2_MULTIMEMORY_DECISIONS/results/parity-run-${{ github.run_id }}
+      - name: Verify audit recorded immutable inputs
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          p=pathlib.Path("experiments/SCH_E2_MULTIMEMORY_DECISIONS/results/parity-run-${{ github.run_id }}/parity_audit.json")
+          x=json.loads(p.read_text())
+          assert x["same_frozen_query_fixture"] and x["same_frozen_source"]
+          assert len(x["stage_score_digest"])==3
+          assert len(x["stage_top10"])==3
+          assert len(x["historical_crossrun_exact_top10"])==3
+          print("E2_PARITY_VERIFIED")
+          PY
+      - name: Retain audit even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sch-e2-lexical-parity-${{ github.run_id }}
+          path: experiments/SCH_E2_MULTIMEMORY_DECISIONS/results/parity-run-${{ github.run_id }}/
+          retention-days: 14
+          if-no-files-found: warn
+      - name: Commit uniquely named audit
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/SCH_E2_MULTIMEMORY_DECISIONS/results/parity-run-${{ github.run_id }}
+          git commit -m "research: archive E2 lexical rank parity audit [skip ci]"
+          for n in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo "Push failed: audit artifact retained" >&2
+          exit 1
