@@ -97,6 +97,26 @@ A distinct [SmolLM2-1.7B workflow](../../.github/workflows/sch-e3c-v2-smollm.yml
 
 
 
+## Independent model-family replication: SmolLM2-1.7B on corrected v2
+
+The [SmolLM2-1.7B corrected-v2 raw study](results/calibration-v2-smollm2-17b-38025884130/) completed **84/84 generations**, and the [CI run](https://github.com/Azimn/Attractomancy/actions/runs/38025884130) succeeded. The model is \`HuggingFaceTB/SmolLM2-1.7B-Instruct\`, pinned revision \`31b70e2e869a7173562077fd711b654946d38674\`. The raw trial consumed **24,976** model input plus output tokens. This is a second independently developed *model family*, but still one small synthetic fixture and not an independent source-relevance study.
+
+| Corrected-v2 condition | Strict correct of 12 | Strictly valid output strings | UNKNOWN outputs |
+| --- | ---: | ---: | ---: |
+| Full two-record symbolic cue, forced | 5 | 11 | 0 |
+| Full two-record neutral key, forced | 5 | 10 | 0 |
+| First record only, forced | 5 | 10 | 0 |
+| No records, forced | 4 | 8 | 0 |
+| Two records, key, answer-or-abstain | 7 | 12 | 0 |
+| First record only, required UNKNOWN | **0** | 12 | 0 |
+| Wrong-owner record rejected, required UNKNOWN | **0** | 8 | 0 |
+
+The **full-source forced arms made zero of six fully correct counterfactual reversals**. The separate full-source *answer-or-abstain* condition achieved **1/6** correctly reversed pairs, and **7/12** individual actions. That narrow difference is not enough to claim reliable fact integration, especially since the eligibility prompt never returned UNKNOWN when needed. Matched symbolic and neutral full forced prompts produced **11/12 identical raw outputs**, with the same **5/12** accuracy. There was no demonstrated symbolic enhancement. The software guard rejected **12/12** wrong-owner envelopes; the response model failed all 12 missing-evidence abstentions in the subsequent empty-context cases.
+
+**Cross-family conclusion:** The previously reported Qwen negative two-source calibration was not an isolated Qwen-only artifact. On the same corrected 12 full-source factorial conditions, all three small models (Qwen2.5-0.5B, Qwen2.5-1.5B, SmolLM2-1.7B) failed every paired counterfactual in forced-choice mode. The SmolLM2 strict JSON/label formatting was also weaker, further supporting separate format validity and causal-use metrics. This does **not** show a general failure of larger models or production character systems.
+
+The [next E3 T1 Clerk protocol](CLERK_PROTOCOL.md) tests whether these models can extract verified typed values even when they cannot execute the complete decision rule. Its deterministic post-extraction calculator is a purposely programmed oracle and must never be counted as independently learned model reasoning.
+
 ## Separation from full E3
 
 The completed [six-case E2 calibration reviewer packet](packets/e2-calibration/packet_manifest.json) contains **127 deduplicated source excerpts** proposed by lexical, source-link and random candidates. Source IDs and method attribution are omitted from the reviewer file; original source provenance is public, so this is masking, not cryptographic concealment. **No human reviewer judgments exist and this packet is not independently authored.**
