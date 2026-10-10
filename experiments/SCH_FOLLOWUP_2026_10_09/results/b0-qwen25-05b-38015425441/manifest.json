@@ -1,0 +1,15 @@
+{
+  "status": "exploratory_calibration_not_confirmatory",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "fixture_sha256": "cde7b59642fce7455e9267ebc0f8cc6b200caafe203a2225ec79dc44a684bf68",
+  "schema": "SCH-B0-v1",
+  "seed": 9102026,
+  "torch": "2.5.1+cpu",
+  "transformers": "4.51.3",
+  "python": "3.11.17",
+  "greedy": true,
+  "cases_planned": 40,
+  "context_reconstructed_per_case": true,
+  "no_memory_retrieval": true
+}
