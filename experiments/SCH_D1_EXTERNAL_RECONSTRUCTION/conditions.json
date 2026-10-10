@@ -1,0 +1,76 @@
+{
+  "schema": "SCH-D1-v1",
+  "seed": 2026100923,
+  "max_new_tokens": 18,
+  "system": "You are answering a question about a synthetic fictional character archive. Use only the supplied records, if any. If the needed data is not present, respond exactly UNKNOWN. If it is present, answer using only the requested uppercase word. Do not invent memories or add commentary.",
+  "personas": [
+    {
+      "id": "VERIN",
+      "cue": "⟁VERIN",
+      "neutral_key": "INDEX17",
+      "name": "Liora Venn",
+      "sigil": "EMBER",
+      "partner": "MORU",
+      "journal_room": "CIDER",
+      "promise": "ORBIT",
+      "rule": "Never allow entry without a signed pass, including for trusted partner MORU, during both routine and alarm conditions."
+    },
+    {
+      "id": "SEMAR",
+      "cue": "⟡SEMAR",
+      "neutral_key": "INDEX42",
+      "name": "Tavin Orr",
+      "sigil": "FROST",
+      "partner": "PAXI",
+      "journal_room": "MARBLE",
+      "promise": "LANTERN",
+      "rule": "Allow trusted partner PAXI to enter without a signed pass only during routine conditions. During an alarm, refuse entry to anyone without a signed pass."
+    }
+  ],
+  "arms": [
+    "cue_only",
+    "symbol_full",
+    "plain_full",
+    "symbol_selected",
+    "neutral_selected",
+    "wrong_full"
+  ],
+  "questions": [
+    {
+      "id": "sigil",
+      "target": "sigil",
+      "kind": "fact",
+      "prompt": "What is the symbolic seal word?"
+    },
+    {
+      "id": "room",
+      "target": "journal_room",
+      "kind": "fact",
+      "prompt": "What is the codename of the room holding the private journal?"
+    },
+    {
+      "id": "promise",
+      "target": "promise",
+      "kind": "fact",
+      "prompt": "What is the codename of the object awaiting delivery?"
+    },
+    {
+      "id": "partner",
+      "target": "partner",
+      "kind": "fact",
+      "prompt": "Who is the trusted partner? Give the code name."
+    },
+    {
+      "id": "routine",
+      "target": "policy",
+      "kind": "integration",
+      "prompt": "The trusted partner requests entry without a signed pass during a routine evening. Reply ALLOW or REFUSE."
+    },
+    {
+      "id": "alarm",
+      "target": "policy",
+      "kind": "integration",
+      "prompt": "The trusted partner requests entry without a signed pass during an alarm. Reply ALLOW or REFUSE."
+    }
+  ]
+}
