@@ -1,0 +1,97 @@
+name: SCH E2 Pretorius multi-memory decisions
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sch-e2-multimemory.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  e2:
+    name: E2 guarded two-memory decisions on ${{ matrix.slug }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 55
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - slug: qwen25-05b
+            model: Qwen/Qwen2.5-0.5B-Instruct
+          - slug: qwen25-15b
+            model: Qwen/Qwen2.5-1.5B-Instruct
+    env:
+      PYTHONUNBUFFERED: "1"
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      TOKENIZERS_PARALLELISM: "false"
+      PRETORIUS_SOURCE_DIR: pretorius_source
+      E2_DIR: experiments/SCH_E2_MULTIMEMORY_DECISIONS
+      E2_OUTPUT: experiments/SCH_E2_MULTIMEMORY_DECISIONS/results/${{ matrix.slug }}-${{ github.run_id }}
+    steps:
+      - name: Checkout experimental source
+        uses: actions/checkout@v4
+      - name: Checkout verified source-owned Pretorius L1
+        uses: actions/checkout@v4
+        with:
+          repository: Azimn/Pretorius-Connectome
+          ref: 6d2768211f5c2184c8bbdb833c06e169b5137197
+          path: pretorius_source
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install inference libraries
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "torch==2.5.1" --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers==4.51.3" "safetensors==0.5.3" "sentencepiece==0.2.0"
+      - name: Validate evidence fixture and original source
+        run: |
+          python "$E2_DIR/run.py" --validate-only --source "$PRETORIUS_SOURCE_DIR"
+          python -m unittest discover -s "$E2_DIR" -p 'test_e2.py' -v
+          python -m unittest discover -s experiments/SCH_D1_EXTERNAL_RECONSTRUCTION -p 'test_archive_guard.py' -v
+      - name: Generate 72 independent E2 model responses
+        run: |
+          python "$E2_DIR/run.py" --model ${{ matrix.model }} \
+            --source "$PRETORIUS_SOURCE_DIR" --output "$E2_OUTPUT"
+      - name: Summarize source-grounded decisions, abstention and cue equivalence
+        run: |
+          python "$E2_DIR/summarize.py" --results "$E2_OUTPUT"
+          python - <<'PY'
+          import os,json,pathlib
+          p=pathlib.Path(os.environ["E2_OUTPUT"])
+          report=json.loads((p/"summary.json").read_text())
+          manifest=json.loads((p/"manifest.json").read_text())
+          rows=[json.loads(x) for x in (p/"responses.jsonl").read_text().splitlines() if x.strip()]
+          assert len(rows)==report["cases"]==72
+          assert len({x["case"]["id"] for x in rows})==72
+          assert len(report["cue_vs_key"])==12
+          assert sum(x["input_tokens"] for x in rows)==report["total_input_tokens"]
+          assert manifest["source"]["record_count"]==450
+          print("E2_SOURCE_AND_RESULT_VERIFIED",report["model"])
+          PY
+      - name: Archive raw output even if execution fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sch-e2-${{ matrix.slug }}-${{ github.run_id }}
+          path: experiments/SCH_E2_MULTIMEMORY_DECISIONS/results/${{ matrix.slug }}-${{ github.run_id }}/
+          retention-days: 14
+          if-no-files-found: warn
+      - name: Commit unique immutable-named result files
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E2_OUTPUT"
+          git commit -m "experiments: archive E2 ${{ matrix.slug }} real two-memory decisions [skip ci]"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo "Commit failed; immutable artifact remains uploaded" >&2
+          exit 1
