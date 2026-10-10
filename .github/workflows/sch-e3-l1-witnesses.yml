@@ -1,0 +1,70 @@
+name: SCH E3 original L1 field witnesses audit
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sch-e3-l1-witnesses.yml"
+      - "experiments/SCH_E3_TRIBUNAL_OF_MEMORY/l1_witness_adapter.py"
+      - "experiments/SCH_E3_TRIBUNAL_OF_MEMORY/verify_l1_witnesses.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  witness_audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: Azimn/Pretorius-Connectome
+          ref: 6d2768211f5c2184c8bbdb833c06e169b5137197
+          path: pretorius_source
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Derive source metadata witnesses at exact original character spans
+        run: |
+          python experiments/SCH_E3_TRIBUNAL_OF_MEMORY/verify_l1_witnesses.py \
+            --source pretorius_source \
+            --output experiments/SCH_E3_TRIBUNAL_OF_MEMORY/results/l1-witnesses-${{ github.run_id }}
+      - name: Verify 24 witnesses and immutable input scope
+        run: |
+          python - <<'PY'
+          import json,pathlib,hashlib
+          p=pathlib.Path("experiments/SCH_E3_TRIBUNAL_OF_MEMORY/results/l1-witnesses-${{ github.run_id }}")
+          s=json.loads((p/"summary.json").read_text())
+          rows=[json.loads(x) for x in (p/"witnesses.jsonl").read_text().splitlines()]
+          assert len(rows)==24==s["n_witnesses"]
+          assert len({r["event_id"] for r in rows})==12
+          assert len({r["episode_id"] for r in rows})==12
+          assert s["correct_by_construction"]==24
+          assert s["model_inference_calls"]==0
+          assert all(r["source_manifest_sha256"]==s["source_manifest_sha256"] for r in rows)
+          print("E3_L1_ORIGINAL_WITNESS_AUDIT_PASS")
+          PY
+      - name: Preserve source references as original experiment output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sch-e3-l1-witnesses-${{ github.run_id }}
+          path: experiments/SCH_E3_TRIBUNAL_OF_MEMORY/results/l1-witnesses-${{ github.run_id }}/
+          retention-days: 14
+          if-no-files-found: warn
+      - name: Commit only derived witness references to research repo
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/SCH_E3_TRIBUNAL_OF_MEMORY/results/l1-witnesses-${{ github.run_id }}
+          git commit -m "research: pin exact source metadata witness spans and integrity audit [skip ci]"
+          for n in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          exit 1
