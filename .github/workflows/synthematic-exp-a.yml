@@ -3,7 +3,6 @@ name: SCH Experiment A zero-shot pilot
 on:
   push:
     paths:
-      - ".github/workflows/synthematic-exp-a.yml"
       - "experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/run.py"
       - "experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/conditions.json"
   workflow_dispatch:
@@ -44,7 +43,7 @@ jobs:
         run: |
           python experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/run.py \
             --model Qwen/Qwen2.5-0.5B-Instruct \
-            --output experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/results/pilot-open-model
+            --output experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/results/pilot-${{ github.run_id }}
       - name: Preserve raw generations and manifest
         if: always()
         uses: actions/upload-artifact@v4
@@ -53,16 +52,17 @@ jobs:
           if-no-files-found: warn
           retention-days: 7
           path: |
-            experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/results/pilot-open-model/
+            experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/results/pilot-${{ github.run_id }}/
       - name: Commit exploratory pilot results to repository
         if: success()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/results/pilot-open-model
+          git add experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/results/pilot-${{ github.run_id }}
           if git diff --cached --quiet; then
             echo "No new experimental output files"
           else
             git commit -m "experiments: preserve EXP-A open-model exploratory outputs [skip ci]"
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
