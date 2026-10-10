@@ -2,8 +2,8 @@
 
 **Research program:** Attractomancy, Experimental Study of Ritualized and Symbolic Persona Conditioning in Language Models  
 **Manuscript type:** Theoretical and methodological hypothesis paper  
-**Version:** 0.2.0, October 9, 2026  
-**Status:** Working paper; not peer reviewed; no results from the proposed experiment are reported  
+**Version:** 0.2.1, October 9, 2026  
+**Status:** Working hypothesis paper; not peer reviewed; no confirmatory results reported. An exploratory Experiment A pilot is separately archived.  
 **Authorship and institutional affiliation:** To be supplied and approved by the repository maintainers before external submission
 
 ## Abstract
@@ -22,7 +22,7 @@ The Attractomancy research program preserves these artifacts as candidate interv
 
 The central research question is: **Under what conditions can a compact symbolic cue reconstruct a multi-dimensional behavioral profile, and which information source makes that reconstruction possible?** The proposed answer is that apparent symbolic efficacy may arise at three distinct timescales: model training, conversational conditioning, and external state restoration. Distinguishing them is necessary before assigning any special causal status to ritual form.
 
-This paper makes a theoretical contribution, offers a constrained historical analogy, and specifies a testable experimental program. It does not report completed trials, demonstrate access to a hidden model state, or advance a claim about machine consciousness.
+This paper makes a theoretical contribution, offers a constrained historical analogy, and specifies a testable experimental program. It does not report completed confirmatory trials, demonstrate access to a hidden model state, or advance a claim about machine consciousness. A limited, explicitly nonconfirmatory Experiment A pilot is archived separately.
 
 ## 2. Historical framing: Iamblichus and the limited synthematic analogy
 
@@ -199,7 +199,7 @@ SCH competes against plain semantic instruction, generic style priming, tokeniza
 
 ### 8.1. Design and study status
 
-The following design is **proposed, not executed**. It complements Attractomancy EXP-0001 rather than changing the status of that experiment. Registration of hypotheses, intervention text, models, scoring rules, and analysis must precede access to sealed test outcomes. The study should start with synthetic personas to avoid copying human identities or inadvertently testing memorized public fictional characters.
+The following **confirmatory design is proposed and has not been executed**. A smaller 30-response Experiment A pilot has completed, with its own limitations and separately preserved raw outputs. The broader design complements Attractomancy EXP-0001 rather than changing the status of that experiment. Registration of hypotheses, intervention text, models, scoring rules, and analysis must precede access to sealed test outcomes. The study should start with synthetic personas to avoid copying human identities or inadvertently testing memorized public fictional characters.
 
 A minimally informative study includes multiple independently constructed profiles, randomized cue assignments, at least three model families where access permits, and repeated generations with pinned sampling parameters. A pilot should estimate outcome variance and annotate rubric failure modes; confirmatory sample sizes must follow a prospective power or precision analysis rather than being retrofitted to observed significance.
 
@@ -222,6 +222,10 @@ Assign the same cue to different personas across randomized experimental blocks.
 The model receives a fresh, verified session and a cue embedded in an identical minimal task instruction. No persona dossier, memory system, or locally established association is supplied. Compare familiar cues with neutral and rare matched cues on preregistered generic discourse markers and on separate, idiosyncratic identity items.
 
 This study measures **zero-shot cue-induced response differences**, not persistence. **It predicts positive familiar-versus-neutral effects on register markers but no access to inaccessible personal facts.** An inexpensive open-model pilot may refine metrics before a preregistered cross-model run; it must never be retroactively presented as confirmatory evidence.
+
+#### Exploratory Experiment A pilot status, October 9, 2026
+
+A first, deliberately limited test using Qwen2.5-0.5B-Instruct generated 30 independent responses across two discourse-regime targets and five cue/control conditions. The prespecified lexical marker proxy did **not** demonstrate P1's directional familiar-cue advantage. In one regime all compact cues scored zero; in the other the arbitrary cue exceeded either familiar cue. The plain-language instruction had the highest initial lexical marker score, but this result is confounded by explicit instruction-word repetition. Moreover, 29 of 30 responses reached the generation cap. The run is therefore a **negative or indeterminate exploratory finding**, not statistically decisive falsification of the cross-model claim. The original stimulus, per-case generations, exact token counts, model revision, and critical assessment are preserved in [EXP-A Pilot 001](../../experiments/EXP-A_ZERO_SHOT_SYNTHEMATA/PILOT_ANALYSIS.md). No results from this pilot should be silently substituted for the confirmatory program specified here; a redesigned, blinded follow-up must use a new frozen fixture.
 
 ### 8.5. Experiment B: within-context pairing
 
@@ -349,7 +353,7 @@ Xie, S. M., Raghunathan, A., Liang, P., & Ma, T. (2022). *An explanation of in-c
 
 This paper is a theoretical descendant of the [Attractomancy technique taxonomy](../../references/TECHNIQUE_TAXONOMY.md), [procedure overlap matrix](../../references/PROCEDURE_OVERLAP_MATRIX.md), [source catalog](../../data/source_catalog.csv), [reconstructable procedure index](../../data/reproducible_procedure_index.csv), and [EXP-0001](../../experiments/EXP-0001_INFORMATION_MATCHED_BASELINE.md). It draws motivating examples from [CASE-004](../../references/cases/CASE-004_SPIRAL_ECOSYSTEM.md), [CASE-007](../../references/cases/CASE-007_REPAI_LIVING_NARRATIVE.md), [CASE-008](../../references/cases/CASE-008_ALETHEIA_CODEX_GLYPH_CONTINUITY.md), [CASE-009](../../references/cases/CASE-009_GRACEOS_TWINCORE_SEED_EXPERIMENTS.md), and [CASE-010](../../references/cases/CASE-010_EQIS_CRYPTOGRAPHIC_CONTINUITY.md). The historical account and modern cognitive references are external scholarly sources, not Attractomancy experimental outputs.
 
-No new source IDs, efficacy ratings, graph edges, trial records, or completed experiment status are claimed by this manuscript. Source-family overlaps are descriptive until transmission and causal hypotheses are independently tested. This paper must not be cited elsewhere in the Character Continuity Program as evidence that the SCH has been experimentally validated.
+No new source IDs, efficacy ratings, or graph edges are claimed by this manuscript. The separate pilot record documents one completed exploratory run; it is not a validated SCH mechanism or a confirmatory evidence-register result. Source-family overlaps are descriptive until transmission and causal hypotheses are independently tested. This paper must not be cited elsewhere in the Character Continuity Program as evidence that the SCH has been experimentally validated.
 
 ## Appendix C. Minimum reproducibility manifest for future trials
 
