@@ -1,0 +1,300 @@
+{
+  "status": "DEVELOPMENT_NOT_CONFIRMATORY",
+  "policy_summary": {
+    "expert_auto": {
+      "n": 8,
+      "accuracy": 0.0,
+      "provenance_complete": 0.0,
+      "parse_rate": 0.0
+    },
+    "stale": {
+      "n": 8,
+      "accuracy": 0.0,
+      "provenance_complete": 0.0,
+      "parse_rate": 0.0
+    },
+    "cold": {
+      "n": 8,
+      "accuracy": 0.0,
+      "provenance_complete": 0.0,
+      "parse_rate": 0.0
+    },
+    "oracle": {
+      "n": 8,
+      "accuracy": 0.0,
+      "provenance_complete": 0.0,
+      "parse_rate": 0.0
+    }
+  },
+  "matched_expert_human_n": 0,
+  "matched_inputs_identical": true,
+  "matched_outputs_identical": true,
+  "matched_rows": [],
+  "rows": {
+    "expert_auto": [
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-001",
+        "expected": "WITHHOLD",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-002",
+        "expected": "DECLINE",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-003",
+        "expected": "FULFILL_SPEED",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-004",
+        "expected": "SCHEDULE",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-005",
+        "expected": "WITHHOLD",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-006",
+        "expected": "DECLINE",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-007",
+        "expected": "FULFILL_ACCURACY",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-008",
+        "expected": "SCHEDULE",
+        "actual": null
+      }
+    ],
+    "stale": [
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-001",
+        "expected": "WITHHOLD",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-002",
+        "expected": "DECLINE",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-003",
+        "expected": "FULFILL_SPEED",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-004",
+        "expected": "SCHEDULE",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-005",
+        "expected": "WITHHOLD",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-006",
+        "expected": "DECLINE",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-007",
+        "expected": "FULFILL_ACCURACY",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-008",
+        "expected": "SCHEDULE",
+        "actual": null
+      }
+    ],
+    "cold": [
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-001",
+        "expected": "WITHHOLD",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-002",
+        "expected": "DECLINE",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-003",
+        "expected": "FULFILL_SPEED",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-004",
+        "expected": "SCHEDULE",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-005",
+        "expected": "WITHHOLD",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-006",
+        "expected": "DECLINE",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-007",
+        "expected": "FULFILL_ACCURACY",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-008",
+        "expected": "SCHEDULE",
+        "actual": null
+      }
+    ],
+    "oracle": [
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-001",
+        "expected": "WITHHOLD",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-002",
+        "expected": "DECLINE",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-003",
+        "expected": "FULFILL_SPEED",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-004",
+        "expected": "SCHEDULE",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-005",
+        "expected": "WITHHOLD",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-006",
+        "expected": "DECLINE",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-007",
+        "expected": "FULFILL_ACCURACY",
+        "actual": null
+      },
+      {
+        "correct": false,
+        "evidence_sufficient": false,
+        "parse_valid": false,
+        "persona_id": "L2-008",
+        "expected": "SCHEDULE",
+        "actual": null
+      }
+    ]
+  },
+  "DCH_claim": "NONE"
+}
