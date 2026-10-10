@@ -1,0 +1,69 @@
+name: DCH L2 capacity replication Qwen 1.5B
+on:
+  push:
+    branches:
+      - research/dch-d0-pilot-20261009
+    paths:
+      - '.github/workflows/dch-l2-capacity-15b.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  capacity:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      PYTHONUNBUFFERED: '1'
+      HF_HUB_DISABLE_TELEMETRY: '1'
+      TOKENIZERS_PARALLELISM: 'false'
+      DCH: experiments/DCH_D0_SYNTHETIC_PILOT
+      RUN_DIR: experiments/DCH_D0_SYNTHETIC_PILOT/results/qwen25-15b-l2-${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: CPU dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "torch==2.5.1" --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers==4.51.3" "safetensors==0.5.3" "sentencepiece==0.2.0"
+      - name: Unit tests
+        working-directory: experiments/DCH_D0_SYNTHETIC_PILOT
+        run: python -m unittest discover -s tests -v
+      - name: Generate original frozen L2 cases
+        run: python "$DCH/integration_v2.py" prepare --folder "$RUN_DIR" --count 12
+      - name: Run 1.5B on 8 histories x 4 memory arms
+        run: |
+          python "$DCH/integration_v2.py" run --folder "$RUN_DIR"             --backend transformers --model Qwen/Qwen2.5-1.5B-Instruct             --max-cases 8 --policies expert_auto stale cold oracle
+      - name: Score against separately stored answer keys
+        run: |
+          python "$DCH/integration_v2.py" evaluate --folder "$RUN_DIR"
+          python - <<'PY'
+          import os,json,pathlib
+          p=pathlib.Path(os.environ['RUN_DIR'])
+          raw=json.loads((p/'dev_raw.json').read_text())
+          ev=json.loads((p/'dev_eval.json').read_text())
+          assert raw['status']=='DEVELOPMENT_LLM'
+          assert len(raw['records'])==32
+          assert all(x['model_reported']=='Qwen/Qwen2.5-1.5B-Instruct' for x in raw['records'])
+          print('L2_15B_RESULTS',json.dumps(ev['policy_summary'],sort_keys=True))
+          PY
+      - name: Preserve raw traces even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dch-l2-qwen15b-${{ github.run_id }}
+          path: ${{ env.RUN_DIR }}
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Commit immutable named raw artifacts to branch
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f "$RUN_DIR"
+          git commit -m "experiment(dch): archive frozen L2 Qwen1.5B capacity comparator [skip ci]"
+          git fetch origin research/dch-d0-pilot-20261009
+          git rebase origin/research/dch-d0-pilot-20261009
+          git push origin HEAD:research/dch-d0-pilot-20261009
