@@ -5,6 +5,8 @@ on:
       - research/dch-d0-pilot-20261009
     paths:
       - '.github/workflows/dch-l3-capacity.yml'
+      - 'experiments/DCH_D0_SYNTHETIC_PILOT/l3_capacity_ladder.py'
+      - 'experiments/DCH_D0_SYNTHETIC_PILOT/tests/test_l3_capacity_ladder.py'
   workflow_dispatch:
 permissions:
   contents: write
