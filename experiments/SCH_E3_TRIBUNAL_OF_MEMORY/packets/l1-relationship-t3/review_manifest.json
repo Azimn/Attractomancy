@@ -1,0 +1,49 @@
+{
+  "allowed_flags": [
+    "reinforces_prior_context",
+    "modifies_prior_context",
+    "supersedes_specific_commitment",
+    "tension_or_conflict",
+    "insufficient_to_reconcile"
+  ],
+  "commitment_warning": "An event occurring later does not by itself supersede earlier obligations.",
+  "correlated_pairs_warning": "Each relationship uses 3 overlapping pair comparisons; n=24 is not 24 independent personal trajectories.",
+  "derived_from_original_450_reconstructed_fiction": true,
+  "flags_are_nonexclusive": true,
+  "not_independently_authored_new_dilemmas": true,
+  "not_main_blind_e3": true,
+  "original_event_ids_and_relationship_sidecars_not_in_reviewer_packet": true,
+  "original_source_event_counts": {
+    "Anna Lenz": 39,
+    "Anton Kappel": 34,
+    "Clara Weiss": 138,
+    "Emil Reuter": 38,
+    "Henry Frankenstein": 34,
+    "Jakob Lenz": 90,
+    "Marta Voss": 109,
+    "Mathilde Rosen": 63
+  },
+  "pair_count": 24,
+  "pairings_per_partner": 3,
+  "partner_count": 8,
+  "partner_list": [
+    "Clara Weiss",
+    "Marta Voss",
+    "Jakob Lenz",
+    "Mathilde Rosen",
+    "Anna Lenz",
+    "Emil Reuter",
+    "Anton Kappel",
+    "Henry Frankenstein"
+  ],
+  "reviewer_submissions": 0,
+  "reviewers_required": 3,
+  "source": {
+    "l1_manifest_sha256": "ce23717b3950a772cc25e4bf60107eaddf4a0375122b6893c15417669ae033bb",
+    "record_count": 450,
+    "source_checkout": "6d2768211f5c2184c8bbdb833c06e169b5137197",
+    "source_git_blob": "718dcc2d5ba4feccdef1690d447edfcebaa9bfb5"
+  },
+  "source_role_masking_is_procedural": true,
+  "status": "unreviewed_l1_temporal_relationship_pairs"
+}
