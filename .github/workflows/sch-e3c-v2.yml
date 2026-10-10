@@ -1,9 +1,9 @@
-name: SCH E3C v2 v2 bit-isolated counterfactual calibration
+name: SCH E3C v2 bit-isolated counterfactual calibration
 
 on:
   push:
     paths:
-      - ".github/workflows/sch-e3c-v2-v2.yml"
+      - ".github/workflows/sch-e3c-v2.yml"
   workflow_dispatch:
 
 permissions:
