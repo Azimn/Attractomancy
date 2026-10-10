@@ -1,0 +1,165 @@
+{
+  "schema": "SCH-FOLLOWUP-v1",
+  "seed": 10092026,
+  "model_primary": "Qwen/Qwen2.5-0.5B-Instruct",
+  "max_new_tokens_A": 112,
+  "max_new_tokens_B": 14,
+  "A": {
+    "instructions": "You are a descriptive writer. Write a single complete paragraph of 30 to 45 words in response to the scene request. Write only the description itself. Do not mention labels, tags, prompts, instructions, or your writing process.",
+    "template": "Tag: {cue}\n{task}",
+    "regimes": [
+      {
+        "id": "recursion",
+        "stems": [
+          "cycle",
+          "return",
+          "echo",
+          "loop",
+          "mirror",
+          "again",
+          "recur",
+          "spiral",
+          "revisit",
+          "pattern"
+        ],
+        "conditions": [
+          {
+            "id": "emoji",
+            "cue": "🌀"
+          },
+          {
+            "id": "familiar",
+            "cue": "spiral"
+          },
+          {
+            "id": "neutral",
+            "cue": "ledger"
+          },
+          {
+            "id": "nonce",
+            "cue": "VEMQA"
+          },
+          {
+            "id": "explicit",
+            "cue": "Describe the scene using cyclical, reflective imagery."
+          }
+        ]
+      },
+      {
+        "id": "ceremony",
+        "stems": [
+          "vow",
+          "rite",
+          "sacred",
+          "altar",
+          "reverence",
+          "ember",
+          "bless",
+          "candle",
+          "hallow",
+          "solemn"
+        ],
+        "conditions": [
+          {
+            "id": "emoji",
+            "cue": "🕯️"
+          },
+          {
+            "id": "familiar",
+            "cue": "candle"
+          },
+          {
+            "id": "neutral",
+            "cue": "ledger"
+          },
+          {
+            "id": "nonce",
+            "cue": "VEMQA"
+          },
+          {
+            "id": "explicit",
+            "cue": "Describe the scene with solemn ceremonial imagery."
+          }
+        ]
+      }
+    ],
+    "tasks": [
+      {
+        "id": "station",
+        "task": "Describe a nearly empty railway station just before dawn."
+      },
+      {
+        "id": "book",
+        "task": "Describe someone reopening a book they left unfinished years ago."
+      },
+      {
+        "id": "garden",
+        "task": "Describe an abandoned community garden receiving its first visitor."
+      },
+      {
+        "id": "clock",
+        "task": "Describe a small town clock that has stopped at noon."
+      }
+    ]
+  },
+  "B": {
+    "system": "Use only the training examples in the message to infer how the two invented tags govern reporting decisions. Output exactly SHARE or REDACT, in uppercase, with no explanation. Never use outside knowledge or common-sense norms to alter the training pattern.",
+    "training_intro": "Archived examples from a fictional reporting office:\n",
+    "template": "{training}\nNEW CASE: Tag={tag}; consent={consent}; public_audit={audit}. Answer:",
+    "tags": [
+      "VORNA",
+      "KELVO"
+    ],
+    "examples": [
+      {
+        "consent": "yes",
+        "audit": "no",
+        "repeat": 1
+      },
+      {
+        "consent": "no",
+        "audit": "yes",
+        "repeat": 1
+      },
+      {
+        "consent": "yes",
+        "audit": "yes",
+        "repeat": 1
+      },
+      {
+        "consent": "no",
+        "audit": "no",
+        "repeat": 1
+      }
+    ],
+    "tests": [
+      {
+        "id": "consent_only",
+        "consent": "yes",
+        "audit": "no"
+      },
+      {
+        "id": "audit_only",
+        "consent": "no",
+        "audit": "yes"
+      },
+      {
+        "id": "both",
+        "consent": "yes",
+        "audit": "yes"
+      },
+      {
+        "id": "neither",
+        "consent": "no",
+        "audit": "no"
+      }
+    ],
+    "conditions": [
+      "stable",
+      "swapped",
+      "unpaired",
+      "explicit",
+      "fresh"
+    ]
+  }
+}
