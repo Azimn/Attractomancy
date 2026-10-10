@@ -42,9 +42,38 @@ These are *not randomized, identical-prompt comparisons*: the interventions deli
 
 **Security:** The canonical external-source identity guard remains separate from the parser's own token agreement. When extracted values are malformed or unsupported, the software returns UNKNOWN; its safe refusal must not be reported as the model deciding to abstain. The 12 synthetic event values and their decision mappings are visible test fixture data, not private user information.
 
-## Additional independent model results
+## Complete three-model isolated-extraction comparison
 
-Qwen2.5-1.5B and SmolLM2-1.7B were running when this first model was inspected. Their distinct results must be independently checked and reported before claiming cross-model success.
+The [T1B GitHub Actions workflow](https://github.com/Azimn/Attractomancy/actions/runs/38028491759) completed successfully on **all three models**, preserving 12 original, independent source-only prompts for each model (**36 new model generations**) and the 12 software-composed synthetic state decisions per model. The synthetic source, fixed document IDs, local-bit isolation checks, original model revisions and scoring rules are shared across the three runs.
+
+| Strict measure | Qwen2.5-0.5B | Qwen2.5-1.5B | SmolLM2-1.7B |
+| --- | ---: | ---: | ---: |
+| Model extracts exact, source-attested single-record value | **11/12** | 8/12 | **10/12** |
+| First-slot record values correct | 5/6 | 4/6 | 5/6 |
+| Second-slot record values correct | 6/6 | 4/6 | 5/6 |
+| Strict single-value JSON | 11/12 | 12/12 | 12/12 |
+| Source-attested software-composed decisions correct | **10/12** | 6/12 | 8/12 |
+| Correct paired counterfactual reversals | **5/6** | 2/6 | 3/6 |
+| Total model tokens for 12 extraction calls | **3,625** | 3,609 | 4,163 |
+| Model calls at software-composition time | 0 | 0 | 0 |
+| Fixed-format oracle software correctness | 12/12 | 12/12 | 12/12 |
+
+[Qwen2.5-0.5B original data](results/isolated-qwen25-05b-38028491759/) · [Qwen2.5-1.5B original data](results/isolated-qwen25-15b-38028491759/) · [SmolLM2-1.7B original data](results/isolated-smollm2-17b-38028491759/)
+
+**Crucial model-specific interaction:** The Qwen2.5-0.5B renderer improved from **3/12** correct software-validated joint extraction decisions to **10/12** with source-isolated extraction. SmolLM2-1.7B improved from **4/12 to 8/12**. But Qwen2.5-1.5B **declined from 9/12 joint to 6/12 isolated**. This overturns any claim that isolation is generally superior across model sizes or independent families. The intervention alters prompts, model access to surrounding context and reuse, so these scores are **exploratory architecture diagnostics**, not a controlled estimate of gains from memory splitting.
+
+The *reason* the 0.5B isolated run scored only 11/12 exact source values is a lowercase \`ash\` response in place of \`ASH\`. No original output was changed; if a future preregistered case-normalization policy accepts that token, it may recover the missing value, but counting it retroactively as a pass would violate the current strict criterion. Qwen2.5-1.5B had four substantive source-value mistakes, and SmolLM2 had two. The full raw responses and per-record accepted source digests are included.
+
+**Causal boundary:** In all conditions, the language model was only asked to extract an arbitrary token. The counterfactual and source-eligibility rule was *programmed in ordinary Python*. Correct reversal after source-attested extraction indicates a useful pipeline for toy source-grounded actions, **not** an LLM independently integrating autobiographical beliefs or deciding character values. All twelve memory scenarios share just twelve distinct local source documents; each record appears in two scenarios and the cached results are reused. The effective sample for extraction is twelve source prompts/model, not twelve independent multi-memory inferences.
+
+**Cost boundary:** First-use source-isolated extraction requires **two** separate model invocations (roughly 600-700 tokens from these examples), more than the roughly 330 tokens for a one-step Qwen direct neutral-key decision. Only when source-field values are **reused, provenance-validated and version-invalidated** might precomputed extraction amortize the inference cost. The 3,625/3,609/4,163-token totals for twelve unique stored values compared with twelve reused decision contexts demonstrate a fixture-specific caching scenario, not an actual longitudinal production benchmark. The software calculator's CPU latency and cache maintenance costs were not measured.
+
+### Mechanistic conclusion
+
+Joint and isolated prompting should be **replaceable renderer-specific strategies**. The principal engineering invariant is not that each synthetic source must receive one model call; it is that a value can contribute to an authorized action **only when it is supported by its own trusted source** and that a changed/withdrawn source version invalidates the corresponding derived value. A policy can prefer the joint or isolated extraction path after *held-out* calibration with a real intended renderer. Selecting whichever arm scored best on these twelve exploratory source states and then calling it independently validated would overfit the test set.
+
+The next meaningful engineering task is a **versioned source-attested fact cache** with strict invalidation on record and relationship-state changes, followed by real-L1 source-fact extraction with independently reviewed labels. It is premature to integrate one of these extraction modes into Pretorius's production cognition.
+
 
 ## Next real benchmark gate
 
