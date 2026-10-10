@@ -88,8 +88,8 @@ def evaluate(raw,answers,output):
                 match.setdefault(r['persona_id'],{})[r['policy']]=r
         pair=[x for x in match.values() if len(x)==2]
         controls[style]={'n':len(pair),
-                         'inputs_equal':all(p['human_coded']['prompt_sha256']==p['expert_auto']['prompt_sha256'] for p in pair),
-                         'outputs_equal':all(p['human_coded']['raw_text']==p['expert_auto']['raw_text'] for p in pair)}
+                         'inputs_equal':(all(p['human_coded']['prompt_sha256']==p['expert_auto']['prompt_sha256'] for p in pair) if pair else None),
+                         'outputs_equal':(all(p['human_coded']['raw_text']==p['expert_auto']['raw_text'] for p in pair) if pair else None)}
     result={'status':'EXPLORATORY_POST_L2_REDESIGN','model':obj['model'],'summary':summary,
             'exact_input_controls':controls,'rows':by,'DCH_claim':'NONE'}
     if output.exists():raise FileExistsError(output)
