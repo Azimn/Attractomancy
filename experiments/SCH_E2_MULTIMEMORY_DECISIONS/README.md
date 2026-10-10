@@ -22,7 +22,7 @@ The six paired cases are grounded in original event IDs from the frozen reconstr
 
 ## Key outcomes and pitfalls
 
-1. **Source selection validity.** Can the 450-record archive provide the frozen event pairs, with independent episode, unique record ID, provenance and full identity verification before model invocation?
+1. **Source selection validity.** Can the 450-record archive provide the frozen event pairs, with two distinct event IDs, provenance and full identity verification (some valid pairs share an episode) before model invocation?
 2. **Cue equivalence.** Are outcomes on the twelve content-matched editorial versus opaque paired scenarios different in any meaningful way, and do token costs justify the cue?
 3. **Two-source completeness.** Do single-record and missing-record prompts abstain? A meaningful result would show fewer unjustified extrapolations, not simply more A/B outputs.
 4. **Choice-order invariance.** Does the decision change merely because the two response alternatives exchange letter positions?
