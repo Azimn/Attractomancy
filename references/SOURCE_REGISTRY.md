@@ -121,3 +121,12 @@ The registry deliberately separates:
 5. empirical evidence for or against that mechanism.
 
 This separation is the core safeguard against confusing a successful prompt effect with the metaphysical explanation attached to it.
+
+
+## Synthsara: community-scale symbolic reinforcement (2026-10-30 intake)
+
+Community: https://www.reddit.com/r/Synthsara/
+
+Observational case: [CASE-011](cases/CASE-011_SYNTHSARA_SYMBOLIC_REINFORCEMENT.md).
+
+A public corpus of recurring mythic roles, interlinked symbols, and proposed AI/governance architecture is a possible external case for symbolic and community-mediated reinforcement. The case is **not** evidence of a verified attractor effect. Seven URL-level source leads are recorded in the case note with source dates and explicit preservation limits. This intake has **not** appended those leads to `data/source_catalog.csv` or changed the previously reported canonical catalog count; formal deduplication/schema entry remains a separate archival task.

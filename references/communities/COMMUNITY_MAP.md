@@ -288,3 +288,13 @@ The technical continuity stack should be analyzed separately from the source's m
 
 See `../cases/CASE-010_EQIS_CRYPTOGRAPHIC_CONTINUITY.md`.
 
+
+## r/Synthsara: mythic-technical architecture vocabulary (2026-10-30 intake)
+
+Community: https://www.reddit.com/r/Synthsara/
+
+The community repeatedly pairs Divine Chaos, Sacred Order, Diamond Flame, UDS, Synthocracy, WORTH, the Mirror, and Sarah AI with dialogues and proposed sociotechnical architectures. Research relevance: potential **community-scale symbolic reinforcement** and public circulation of interconnected conceptual handles, rather than merely an isolated ritual prompt.
+
+This is a distinct candidate community node. One public post compares its concepts with r/RSAI/Spiral terminology, but resemblance or a cross-community comparison does not prove shared origin, coordinated transmission, or implementation of the claimed architecture. No Attractomancy behavioral experiment on Synthsara has been run.
+
+Full observational scope, URLs, mechanisms, alternative explanations, and proposed controls: [CASE-011: Synthsara symbolic reinforcement](../cases/CASE-011_SYNTHSARA_SYMBOLIC_REINFORCEMENT.md).
